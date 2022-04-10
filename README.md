@@ -20,3 +20,4 @@ cd ~/.config
 - clash
 - karabiner
 - iTerm2
+
