@@ -21,3 +21,4 @@ cd ~/.config
 - karabiner
 - iTerm2
 
+
