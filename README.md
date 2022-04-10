@@ -1,5 +1,11 @@
 # OSX迁移基础配置
-
+## 资料打包
+### 代码：github/gitee/gitlab
+### app自存储（iCloud）：DT、Xmind、mindnode、Drafts、Marginnote
+### 分类打包：
+- 图片、视频
+- pdf等电子书
+- 项目资料：按照项目整理
 ## 系统重装
 
 ```
