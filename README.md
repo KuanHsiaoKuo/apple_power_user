@@ -46,3 +46,5 @@ Appstore: option+a
 - alfred: 依次安装alfred_workflows中的workflow
 ### 7. zsh/tmux config + relate plugins
 [KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
+
+### 8. DT/Marginnote3/xmind

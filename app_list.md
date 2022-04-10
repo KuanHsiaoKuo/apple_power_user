@@ -12,6 +12,7 @@
 - [Paw – The most advanced API tool for Mac](https://paw.cloud/)
 - [Molunerfinn/PicGo: A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder](https://github.com/Molunerfinn/PicGo)
 - [SnippetsLab - Keep Your Code At Your Fingertips](https://www.renfei.org/snippets-lab/)
+- [Warp: The terminal for the 21st century](https://www.warp.dev/)
 
 
 ## 效率相关
