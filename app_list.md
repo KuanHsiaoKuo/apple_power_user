@@ -6,6 +6,7 @@
 ## 效率相关
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 - [octotree](https://www.octotree.io/)
+- [Amphetamine on the App Store](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
 
 
 ## 输出相关
