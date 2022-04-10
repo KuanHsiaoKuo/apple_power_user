@@ -26,5 +26,13 @@ cd ~/.config
 ### 1. iTerm2
 ### 2. github ssh key
 ### 3. vim config
+[KuanHsiaoKuo/vim_config: my custom vim configurations](https://github.com/KuanHsiaoKuo/vim_config)
 ### 4. karabiner
+- 首先GUI配置两个按键切换：caps_lock -> left_control; right_command -> escape
+- 然后会自动生成配置文件：
+```
+~/.config/karabiner/karaginer.json
+```
+- 将karabiner.md里面的配置文件复制进去即可
 ### 5. zsh/tmux config + relate plugins
+[KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
