@@ -22,3 +22,9 @@ cd ~/.config
 - iTerm2
 
 
+## 最优安装顺序
+### 1. iTerm2
+### 2. github ssh key
+### 3. vim config
+### 4. karabiner
+### 5. zsh/tmux config + relate plugins
