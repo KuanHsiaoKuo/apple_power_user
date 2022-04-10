@@ -5,6 +5,7 @@
 
 ## 效率相关
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
+- [octotree](https://www.octotree.io/)
 
 
 ## 输出相关
