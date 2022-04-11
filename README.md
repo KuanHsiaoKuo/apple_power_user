@@ -43,6 +43,8 @@ cd ~/.config
 
 ### 2. iTerm2
 
+> 详见iterm2
+
 ### 3. github ssh key
 
 ### 4. vim config
@@ -72,9 +74,12 @@ Appstore: option+a
 - moom：设置快捷建cmd+m
 - alfred: 依次安装alfred_workflows中的workflow
 
-### 7. zsh/tmux config + relate plugins
-
-[KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
+### 7. iTerm2 inner: homebrew + zsh/tmux config + relate plugins
+- [The Missing Package Manager for macOS (or Linux) — Homebrew](https://brew.sh/)
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- [KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
 
 ### 8. DT/Marginnote3/xmind
 
