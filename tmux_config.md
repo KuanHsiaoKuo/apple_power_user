@@ -219,8 +219,6 @@ bind-key u capture-pane -S - -E - -e -b lesshist \; new-window -n "history" 'tmu
 # 解绑前缀，改为和screen一样的
 unbind C-b
 set -g prefix C-a
-# bind a reload key
-bind r source-file ~/.tmux.conf ; display-message "Config reloaded.."
 # 切换分窗格方式
 bind | split-window -h
 bind - split-window -v
