@@ -80,6 +80,7 @@ Appstore: option+a
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 - [KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
+- tmux配置：tmux_config.md
 
 ### 8. DT/Marginnote3/xmind
 
