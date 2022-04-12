@@ -57,3 +57,5 @@ CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(
 - [zsh-users/zsh-history-substring-search: 🐠 ZSH port of Fish history search (up arrow)](https://github.com/zsh-users/zsh-history-substring-search)
 - [romkatv/powerlevel10k: A Zsh theme(需配合nerd-fonts)](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 - zsh config
+
+3. iterm_around.sh未完善，请一条条执行
