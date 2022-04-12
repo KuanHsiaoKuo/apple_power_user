@@ -8,16 +8,6 @@
 	<integer>0</integer>
 	<key>AlternateMouseScroll</key>
 	<true/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Command</key>
 	<string>/Users/kuanhsiaokuo/.ssh/logins/aliyun_zaifan</string>
 	<key>Default Bookmark Guid</key>
@@ -10518,7 +10508,7 @@
 				<real>1</real>
 			</dict>
 			<key>Badge Text</key>
-			<string>yuncong(10.137.42.42)</string>
+			<string>云从(172.34.77.60)</string>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -10613,7 +10603,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux attach-session -t lanchn</string>
+			<string>tmux attach-session -t work</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>

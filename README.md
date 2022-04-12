@@ -1,19 +1,21 @@
 # OSX迁移基础配置
 
-## 资料打包迁移
+# 一、资料打包迁移
 
-### 代码：github/gitee/gitlab
+## 代码：github/gitee/gitlab
 
-### app自存储（iCloud）：DT、Xmind、mindnode、Drafts、Marginnote
+## app自存储（iCloud）：DT、Xmind、mindnode、Drafts、Marginnote
 
-### 分类打包：
+## 分类打包：
 
 - 图片、视频
 - pdf等电子书
 - 项目资料：按照项目整理
 - logins: 放在~/.ssh/logins里面的登陆用脚本
 
-## 系统重装
+---
+
+# 二、系统重装
 
 ```
 关机 >> 重启的同时按住cmd+R >> 磁盘工具 >> 抹除 >> 重装
@@ -21,11 +23,12 @@
 
 > 重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；
 
-## 系统设置
+---
+# 三、系统设置
 
 - 触控板拖移：系统偏好设置 >> 辅助功能 >> 指针控制 >> 触控板选项：启动拖移 > 三指拖移
 
-## 系统自带配置目录：
+- 系统自带配置目录：
 
 ```
 cd ~/.config
@@ -37,21 +40,23 @@ cd ~/.config
 - karabiner
 - iTerm2
 
-## 最优安装顺序
+---
 
-### 1. ClashX
+# 四、最优安装顺序
 
-### 2. iTerm2
+## 1. ClashX
+
+## 2. iTerm2
 
 > 详见iterm2
 
-### 3. github ssh key
+## 3. github ssh key
 
-### 4. vim config
+## 4. vim config
 
 [KuanHsiaoKuo/vim_config: my custom vim configurations](https://github.com/KuanHsiaoKuo/vim_config)
 
-### 5. karabiner
+## 5. karabiner
 
 - 首先GUI配置两个按键切换：caps_lock -> left_control; right_command -> escape
 - 然后会自动生成配置文件：
@@ -62,7 +67,7 @@ cd ~/.config
 
 - 将karabiner.md里面的配置文件复制进去即可
 
-### 6. manico/moom/popclip/Alfred
+## 6. manico/moom/popclip/Alfred
 
 - manico: 配置快捷键
 
@@ -74,17 +79,12 @@ Appstore: option+a
 - moom：设置快捷建cmd+m
 - alfred: 依次安装alfred_workflows中的workflow
 
-### 7. iTerm2 inner: homebrew + zsh/tmux config + relate plugins
-- [The Missing Package Manager for macOS (or Linux) — Homebrew](https://brew.sh/)
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-- [KuanHsiaoKuo/zsh_config](https://github.com/KuanHsiaoKuo/zsh_config)
-- tmux配置：tmux_config.md
+## 7. iTerm2 Around:
+- iterm2/iterm2_around.sh
 
-### 8. DT/Marginnote3/xmind
+## 8. DT/Marginnote3/xmind
 
-### 9. Jetbrains Sync
+## 9. Jetbrains Sync
 
 包含：IDEA、Pycharm、Webstorm、Goland等 Jetbrains有两种同步配置方式, 都是插件，首次安装时自带：
 
