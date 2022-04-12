@@ -92,4 +92,10 @@ Appstore: option+a
 - settings repository: 使用git同步配置，不包含插件。
 
 > 注意，二者只能激活其一，其中第二种激活后会自动覆盖第一种方式。
+
 > 推荐第一种方式，同步更全面无痕。
+
+> 第二种是idea默认开启，需要主动去关闭：
+```
+Preferences >> Plugins >> search "Settings Repository" >> unabled
+```
