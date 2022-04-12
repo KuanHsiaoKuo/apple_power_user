@@ -1,0 +1,14 @@
+alias opengrok_index='sudo docker exec opengrok /scripts/index.sh'
+alias attach='func() {tmux attach-session -t $1}; func'
+alias vvvbox_dev="python manage.py runserver 0.0.0.0:7700 --settings=bdwk_robot.settings.development"
+alias share_dev="python manage.py runserver 0.0.0.0:7777"
+alias mitm_dev="mitmdump --mode transparent --showhost -s mitm_operator.py --set block_global=false"
+# 默认激活当前项目根目录下的虚拟环境, python -m venv <虚拟环境名字>
+alias venv_activate="source ./project_venv/bin/activate"
+# 更新当前虚拟环境的requirements
+alias venv_freeze="rm requirements.txt && pip freeze > requirements.txt"
+alias github_sync="git pull github master && git push github master"
+alias origin_sync="git pull origin master && git push origin master"
+alias ls="lsd"
+# brew执行指令时不自动更新
+export HOMEBREW_NO_AUTO_UPDATE=true

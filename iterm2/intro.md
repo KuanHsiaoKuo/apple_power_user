@@ -1,3 +1,5 @@
+## iTerm2配置
+### [Status Bar](https://iterm2.com/documentation-status-bar.html): 很多内容，值得管理
 ## 同步配置方式
 1. 下载此文件夹
 2. 设置同步方式

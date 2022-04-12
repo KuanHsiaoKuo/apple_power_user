@@ -1,0 +1,36 @@
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+#tl = tmux list-sessions
+#tkss = tmux kill-session -t
+#ta = tmux attach -t
+#ts = tmux new-session -s
+
+plugins=(
+        alias-finder # 查找当前zsh提供的alias
+        autopep8 # 自动符合pep8标准
+        git
+        gitignore # 一键生成.gitignore, gi python > .gitignore
+        # git-flow # gitflow 插件
+        git-prompt # 在提示符显示git同步情况
+        httpie # 类似curl
+        command-not-found
+        pep8
+        tmux # tmux命令简写
+        wd
+        extract # 一键解压
+        vi-mode # 在终端用vim模式, Use ESC or CTRL-[ to enter Normal mode.
+        sudo
+        zsh-autosuggestions # git clone 安装
+        zsh-syntax-highlighting # git clone 安装
+        zsh-history-substring-search # git clone 安装
+        # zsh-completions # 下方fpath配置
+        )
+
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM="$ZSH/custom"
+export LC_ALL=en_US.UTF-8
+source ~/zsh_config/alias_collections
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+source $ZSH/oh-my-zsh.sh
+
