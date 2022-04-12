@@ -1,0 +1,460 @@
+/*
+This document has been created with Marked.app <http://marked2app.com>, Copyright 2013 Brett Terpstra
+Content is property of the document author
+Please leave this notice in place, along with any additional credits below.
+---------------------------------------------------------------
+Title: GitHub
+Author: Brett Terpstra
+Description: Github README style. Includes theme for Pygmentized code blocks.
+---------------------------------------------------------------
+
+Modified by Olivier Spinnler (OpSpl, dr-spinnler.ch):
+
+	* nice colors imitating pen on paper
+	* font family
+	* maximum column width of 50 rem
+	* column centered and not into window borders
+	* table caption
+	* figure caption
+	* built-in paper background + ornament for separating lines (<hr> element)
+	* special care of the vertical spacing
+	* links and footnote markers are visible but discreet; they are hightlighted when hovered
+	* vertical text positionning inside table cells and headers
+	* easy to configure via variables at the top of the file
+
+	Version date: 2020-10-10
+
+*/
+
+:root{
+    --font-size-normal:         17px;
+    --line-height:				1.4rem;		/* line spacing, relative to the font size	*/
+    --max-width:				50rem;		/* line length, relative to the font size	*/
+	--font-family:				"ITC Stone Sans Std", Lato, "Noto Sans", "PT Sans", "Palatino Sans Com",  "Frutiger Neue LT Pro", "IBM Plex Sans", "Between 2", "Helvetica Neue", Optima, Candara, "Avenir Next", Avenir, Verdana, sans-serif;
+	/*	—————— If you prefer a “Serifs” version, uncomment this font family, for example ——————
+	--font-family:				"PT Serif", "Palatino eText", "ITC Stone Serif Com", "ITC Stone Informal Std", "IBM Plex Serif", "Gentium Plus", "Frutiger Serif LT Pro", "Gentium Book Basic", "Warnock Pro", Constantia, Cochin, Optima, Cambria, Georgia, serif;
+	*/
+	--blockquote-font-family:	"ITC Stone Serif Com", Cochin, Optima, Cambria, "Times New Roman", serif;	/* 	OpSpl: was: "Lucida Grande", Lucida, Verdana, sans-serif; */
+	--blockquote-font-size:		17px;
+	--blockquote-color:			#5463a9;
+	--text-color:				#042264;			/* deep blue ink									*/
+	--link-color:				#4183c4;			/* light blue, kind of sky blue						*/
+	--link-hover-bg-color:		#FFE5BA;			/* kind of beige									*/
+	--link-hover-color:			#619FDF;			/* still light blue, but more readable over beige	*/
+	--table-head-bkg-color:		hsl(38, 55%, 90%);	/* for the header row of tables						*/
+	--table-alt-row-color:		hsl(38, 55%, 93%);	/* for the alternating rows of tables				*/
+    --font-size-code:           15px;
+    --font-size-h1:             2rem;
+    --font-size-h2:             1.5rem;
+    --font-size-h3:             1.3rem;
+    --font-size-h4:             1.15rem;
+    --font-size-h5:             1rem;
+    --font-size-h6:             1rem;
+    --font-weight-h1:			600;				/* semibold is enough and more readable		*/
+    --font-weight-h2:			550;				/* bolder is not necessary…					*/
+    --font-weight-h3:			600;				/* semibold is enough and more readable		*/
+    --font-weight-h4:			700;				/* to make them really stand up	as headers	*/
+    --font-weight-h5:			700;				/* to make them really stand up	as headers	*/
+    --font-weight-h6:			700;				/* to make them really stand up	as headers	*/
+    --img-max-height:			25rem;				/* to prevent images with portrait proportions from overwhelming text; put "100%" if you don’t like this idea*/
+}
+
+
+html, body {
+	background-color: 		ivory;			/* OpSpl		*/
+	background: url(data:image/jpeg;base64,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) 0% 0% repeat scroll;
+	background-size: 		auto;
+  	font-family: 			var(--font-family);
+  	font-size:				var(--font-size-normal);
+	color: 					var(--text-color);
+	line-height: 			var(--line-height);
+	max-width: 				var(--max-width);
+	margin-left: 			auto;	/*	to center the content inside the window, left and right margins are set to “auto” */
+	margin-right:			auto;
+	border-bottom-color:	var(--text-color);
+	padding-left: 			.75rem;	/* “padding” to offset content from window edges */
+	padding-right: 			.75rem;
+}
+
+p {
+	margin-top: 	0.6rem;
+	margin-bottom:	0;
+	padding-top:	0;
+	padding-bottom:	0;
+}
+
+/* OpSpl — to prevent “bold” from being too bold; if the font has a *semibold* variant, it will be preferred */
+strong {
+  font-weight: 600;
+}
+
+*:not('#mkdbuttons') {
+	margin:		0;
+	padding:	0;
+}
+
+a {
+	color: 				var(--link-color);
+	text-decoration: 	none;
+}
+
+a:hover {
+	background-color: 	var(--link-hover-bg-color);
+	text-decoration: 	none;
+	color: 				var(--link-hover-color);
+	border-top: 		.2rem solid var(--link-hover-bg-color);
+	border-bottom: 		.2rem solid var(--link-hover-bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 	1.7;
+	cursor: 		text;
+	position: 		relative;
+	padding: 		0;
+	margin-top:		1.3em;
+	margin-bottom: 	0em;
+}
+
+h1 {
+	font-size: 		var(--font-size-h1);
+	font-weight: 	var(--font-weight-h1);
+	border-bottom:	.12em solid;
+	font-variant:	small-caps;
+	margin-top:		0;		/* As this H1 generally appears at the top of a note or of a page, it’s not necessary to push it further down. Thus, we have more room for text on display, without sacrifycing aesthetics. */
+	margin-bottom:	1em;	/* But we want some breathing room below it.		*/
+}
+
+h2 {
+	font-size: 		var(--font-size-h2);
+	font-weight: 	var(--font-weight-h2);
+	border-bottom:	0.12em solid;
+	margin-bottom:	1em;	/* Here too, we want some breathing room. 		*/
+}
+
+h3 {
+	font-size: 		var(--font-size-h3);
+	font-weight: 	var(--font-weight-h3);
+	margin-bottom:	0;
+	font-style:		italic;
+}
+
+h4 {
+	font-size: 		var(--font-size-h4);
+	font-weight: 	var(--font-weight-h4);
+	margin-bottom:	0;
+	font-style:		italic;
+}
+
+h5 {
+	font-size: 		var(--font-size-h5);
+	font-weight: 	var(--font-weight-h5);
+	margin-bottom:	0;
+	font-style: 	italic;
+}
+
+h6 {
+	font-size: 		var(--font-size-h6);
+	font-weight: 	var(--font-weight-h6);
+	margin-bottom: 	0;
+	font-style:		italic;
+}
+
+blockquote, table, pre {
+	margin: .75em 0 0 1em;
+}
+
+/* ———————————— Lists ————————————*/
+ul, ol {
+	margin-left: 			1.5rem;
+	margin-right: 			0;
+	margin-top: 			0;
+	padding-top: 			0;
+	padding-bottom: 		0;
+	padding-left: 			0;
+	padding-right: 			0;
+	list-style-position:	outside;
+	list-style-image: 		none;
+}
+
+/* every “list item” gets a small space above */
+li {
+	margin-top:	.6rem;
+}
+
+li p {
+	margin-top:	.5rem;
+}
+
+
+ul  li :last-child,
+ol  li :last-child {
+	margin-top: .3rem;
+	margin-bottom: .4rem;
+}
+
+/* unordered or ordered list following a body paragraph */
+p + ul,
+p + ol {
+  	padding-top: 	0;
+  	margin-top: 	.5rem;
+  	padding-bottom:	0;
+  	margin-bottom:	0.6rem;
+}
+
+ol li {
+	padding-left: 0;
+}
+
+
+ul li,
+ol li
+{ /* selects every “list item” inside an “unordered list” or an “ordered list” */
+	margin-top:	.3rem;
+}
+
+
+/* ———————————— Definition lists ————————————*/
+dl {
+	padding: 0;
+}
+
+dl dt {
+	font-size:		14px;
+	font-weight:	600;				/* OpSpl: was: bold;		*/
+	font-style:		italic;
+	padding:		0;
+	margin:			15px 0 5px;
+}
+
+dl dt:first-child {
+	padding: 0;
+}
+
+dl dt > :first-child {
+	margin-top: 0;
+}
+
+dl dt > :last-child {
+	margin-bottom: 0;
+}
+
+dl dd {
+	margin: 	0 0 15px;
+	padding: 	0 15px;
+}
+
+dl dd > :first-child {
+	margin-top: 0;
+}
+
+dl dd > :last-child {
+	margin-bottom: 0;
+}
+
+/* ------------------ Block quotes ------------------ */
+blockquote {
+	border-left:	6px solid ;			/* KD: was 4px; OpSpl changed #DDD to blockquote color	*/
+	margin:			30px;				/* KD 			*/
+	padding: 		0 20px;				/* KD; was 15px	*/
+	color: 			var(--blockquote-color);
+	font-family: 	var(--blockquote-font-family);
+	font-size:		var(--blockquote-font-size);
+	font-style:		italic;
+}
+
+blockquote > :first-child {
+	margin-top: 0;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
+hr {					/*	swirl elaborated by OpSpl		*/
+	height:			2rem;
+	background:			url(data:image/png;base64,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);
+	background-repeat:	no-repeat;
+	background-position: center;
+	width:				100%;
+	max-width:			100%;
+	margin-top:			30px;
+	margin-bottom:		30px;
+	border-style:		none;
+}
+
+/* ———————————— Tables ————————————————*/
+table {
+	border-collapse:	collapse;
+	border-spacing:		0;
+	font-size:			100%;
+	font:				inherit;
+	margin:				1em auto;
+	border:				0.1em solid var(--text-color);
+}
+
+table th {
+	font-weight:		600;
+	// border-width: 	2px;
+	// border-style: 	solid;
+	padding:				.3em .5em .4em;
+	background-color:	var(--table-head-bkg-color);
+	font-size: 			1.1em;
+	border-right-style: none;
+	vertical-align:		bottom;
+}
+
+table td {
+	padding: 			.4em .5em .4em .4em;
+	border-width:		2em;
+	border-style:		none;
+	line-height:		1.2em;
+	border-right-style: none;
+	vertical-align:		top;
+}
+
+/*
+table tr {
+	border-width: 		2px;
+	border-style: 		solid;
+	// background-color: #fff;
+	border-right-style: none;
+}
+*/
+
+table tr:nth-child(2n) {
+	background-color: var(--table-alt-row-color);
+}
+
+table caption {
+	font-weight:	600;			/* OpSpl: was bold	*/
+	font-style:		italic;
+	padding-bottom: .4em;
+	padding-top:	.4em;
+	font-size:		1.1em;
+	caption-side:	top;
+}
+
+/* ———————————— Images ————————————————*/
+figure {
+	margin: 2em 0 2em 0em;
+}
+
+figure img {		/* OpSpl added a frame via outline property */
+	outline:		2px solid var(--text-color);
+	outline-offset: 10px;
+	left:			10px;
+	position:		relative;
+	margin-bottom:	7px;
+}
+
+figcaption {		/* OpSpl: adjusted to frame and overall styling		*/
+	font-weight:	600;
+	font-style:		italic;
+	padding-bottom: 1em;
+	padding-top:	.4em;
+	padding-left:	.6em;
+	font-size:		.9em;
+}
+
+img {				/* OpSpl: preventing images from overwhelming text	*/
+	max-width:	100%;
+	max-height: var(--img-max-height);
+}
+
+/* ———————————— Code ————————————————*/
+code, tt {
+	margin:				0 2px;
+	padding:			0 5px;
+	white-space:		nowrap;
+	border:				1px solid #eaeaea;
+	background-color:	#f8f8f8;
+	border-radius:		3px;
+	font-family:		Menlo, Consolas, 'Liberation Mono', Courier, monospace;
+	font-size:			var(--font-size-code);
+	color:				#333333;
+}
+
+pre > code {
+	margin: 		0;
+	padding:		0;
+	white-space:	pre;
+	border:			none;
+	background:		transparent;
+}
+
+.highlight pre {
+	background-color:	#f8f8f8;
+	border:				1px solid #ccc;
+	font-size:			13px;
+	line-height:		19px;
+	overflow:			auto;
+	padding:			6px 10px;
+	border-radius:		3px;
+}
+
+pre {
+	background-color:	#f8f8f8;
+	border:				1px solid #ccc;
+	font-size:			14px;
+	line-height:		19px;
+	overflow:			auto;
+	padding:			6px 10px;
+	border-radius:		3px;
+	margin:				26px 0;
+}
+
+pre code, pre tt {
+	background-color:	transparent;
+	border:				none;
+}
+
+
+.poetry pre {
+	font-family:	Georgia, Garamond, serif !important;
+	font-style:		italic;
+	font-size:		110% !important;
+	line-height:	1.6em;
+	display:		block;
+	margin-left:	1em;
+}
+
+.poetry pre code {
+	font-family:	Georgia, Garamond, serif !important;
+	word-break:		break-all;
+	word-break:		break-word;
+		/* Non standard for webkit */
+	-webkit-hyphens:	auto;
+	-moz-hyphens:	auto;
+	hyphens:		auto;
+	white-space:	pre-wrap;
+}
+
+sup, sub, a.footnote {
+	font-size:		1.4ex;
+	height:			0;
+	line-height:	1;
+	vertical-align:	super;
+	position:		relative;
+}
+
+a.footnote {
+	height:			0;
+	line-height:	1;
+	vertical-align: super;
+	position:		relative;
+	color:			var(--link-color);
+	font-size:		.9em;
+}
+
+a.footnote:hover {
+	background-color:	var(--link-hover-bg-color);
+	/*	text-decoration: underline;	*/
+	color: 				var(--link-hover-color);
+	border-top: 		.2rem solid var(--link-hover-bg-color);
+	border-bottom: 		.2rem solid var(--link-hover-bg-color);
+}
+
+sub {
+	vertical-align:	sub;
+	top:			-1px;
+}
