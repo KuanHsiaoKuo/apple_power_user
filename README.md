@@ -4,12 +4,13 @@
 > 定期整理到~/Document/migrations, 备份到外接硬盘。
 ## 代码：github/gitee/gitlab
 
-## app自存储（iCloud）：
+## app自存储：
 ### DT: 本地数据库配置
 1. 安装后登陆[网站](https://www.devontechnologies.com)激活
-2. Menu >> File >> Open Database...
-3. 打开～Document/migrations/DEVONThink_Databases
-4. 打开iCloud同步：Preferences >> Sync >> check iCloud(CloudKit)
+2. 配置css显示：Preferences >> Web >> Style Sheet >> 选择dt_extras里面的样式表
+3. Menu >> File >> Open Database...
+4. 打开～Document/migrations/DEVONThink_Databases
+5. 打开iCloud同步：Preferences >> Sync >> check iCloud(CloudKit)
 > 这将会合并在线数据库与步骤3导入的数据库，耗时较长
 ### Eagle: 本地数据库配置
 1. 保存路径：～/Document/migrations/Eagle_Libraries
