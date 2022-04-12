@@ -30,7 +30,7 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom"
 export LC_ALL=en_US.UTF-8
-source ~/zsh_config/alias_collections
+source alias_collections
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
