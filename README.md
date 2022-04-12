@@ -5,6 +5,8 @@
 ## 代码：github/gitee/gitlab
 
 ## app自存储（iCloud）：DT、Xmind、mindnode、Drafts、Marginnote
+- DT: 本地数据库
+- xmind/mindnode/drafts/marginnote：iCloud
 
 ## 分类打包：
 
