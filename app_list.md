@@ -21,6 +21,7 @@
 - [Amphetamine on the App Store](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [Alfred - Productivity App for macOS](https://www.alfredapp.com/)
 - [CleanShot X for Mac](https://cleanshot.com/)
+> 需要登陆网站 >> License Manager >> 获取下载链接
 - [Downie - YouTube Video Downloader for macOS - Charlie Monroe Software](https://software.charliemonroe.net/downie/)
 - [Focus - Time Management on the App Store](https://apps.apple.com/us/app/focus-time-management/id777233759?mt=12)
 - [「GIF Brewery 3 by Gfycat」をApp Storeで](https://apps.apple.com/jp/app/gif-brewery-3-by-gfycat/id1081413713?mt=12)
