@@ -11,6 +11,7 @@
 ## 代码：github/gitee/gitlab
 
 ## app自存储：
+### wechat: 备份数据之后再恢复
 ### DT: 本地数据库配置
 1. 安装后登陆[网站](https://www.devontechnologies.com)激活
 2. 配置css显示：Preferences >> Web >> Style Sheet >> 选择dt_extras里面的样式表
