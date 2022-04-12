@@ -59,7 +59,11 @@ cd ~/.config
 
 > 详见iterm2
 
-## 3. github ssh key
+## 3. github/gitlab ssh key
+
+```
+ssh-keygen -t rsa -C "your_email@example.com"
+```
 
 ## 4. vim config
 
