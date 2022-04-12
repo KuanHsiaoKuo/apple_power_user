@@ -17,9 +17,9 @@
 
 ## 分类打包：
 
-- 图片、视频
-- pdf等电子书
-- 项目资料：按照项目整理
+- 图片、视频: ~/Documents/media
+- pdf等电子书: 有用的放dt，没用的删除
+- 项目资料：按照项目整理，～/Documents/Projects
 - logins: 放在~/.ssh/logins里面的登陆用脚本
 
 ---
