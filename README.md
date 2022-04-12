@@ -1,12 +1,19 @@
 # OSX迁移基础配置
 
-# 一、资料打包迁移
-
+# 一、资料打包迁移: 
+> 定期整理到~/Document/migrations, 备份到外接硬盘。
 ## 代码：github/gitee/gitlab
 
-## app自存储（iCloud）：DT、Xmind、mindnode、Drafts、Marginnote
-- DT: 本地数据库
-- xmind/mindnode/drafts/marginnote：iCloud
+## app自存储（iCloud）：
+### DT: 本地数据库配置
+1. 安装后登陆[网站](https://www.devontechnologies.com)激活
+2. Menu >> File >> Open Database...
+3. 打开～Document/migrations/DEVONThink_Databases
+4. 打开iCloud同步：Preferences >> Sync >> check iCloud(CloudKit)
+> 这将会合并在线数据库与步骤3导入的数据库，耗时较长
+### Eagle: 本地数据库配置
+1. 保存路径：～/Document/migrations/Eagle_Libraries
+### xmind/mindnode/drafts/marginnote：iCloud
 
 ## 分类打包：
 
