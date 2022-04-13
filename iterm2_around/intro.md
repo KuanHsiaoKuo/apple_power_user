@@ -42,10 +42,7 @@ iTerm2 + config + plugins
 ```
 2. Around: brew install xxx
 - [pyenv/pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
-> osx系统需要打补丁
-```
-CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib" pyenv install --patch 3.7.5 < <(curl -sSL https://github.com/python/cpython/commit/8ea6353.patch\?full_index\=1)
-```
+> osx系统更新了clang++, 一些老版本的python无法安装，比如3.7.5。 pyenv install 3.10.3就没问题
 ### tmux配置：tmux_config.md
 ### zsh/Oh my zsh + plugins
 - [tldr-pages/tldr: 📚 Collaborative cheatsheets for console commands](https://github.com/tldr-pages/tldr)
