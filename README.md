@@ -12,13 +12,22 @@
 
 ## app自存储：
 ### wechat: 备份数据之后再恢复
-### DT: 本地数据库配置
+### DT:
+#### 本地数据库配置
 1. 安装后登陆[网站](https://www.devontechnologies.com)激活
 2. 配置css显示：Preferences >> Web >> Style Sheet >> 选择dt_extras里面的样式表
 3. Menu >> File >> Open Database...
 4. 打开～/Migrations/DEVONThink_Databases
 5. 打开iCloud同步：Preferences >> Sync >> check iCloud(CloudKit)
 > 这将会合并在线数据库与步骤3导入的数据库，耗时较长
+#### PDF Expert: 作为dt中pdf的外置阅读器
+#### typora：作为dt中md的外置阅读器
+1. picGo上传配置: [Upload Images - Typora Support](https://support.typora.io/Upload-Image/)
+2. [PicGo](https://molunerfinn.com/PicGo/)
+3. 快捷键配置及配置文件同步: [Shortcut Keys - Typora Support](https://support.typora.io/Shortcut-Keys/#change-shortcut-keys)
+#### SingleFile: 可以将网页保存为单独文件后存入dt
+- [gildas-lormeau/SingleFile: Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file](https://github.com/gildas-lormeau/SingleFile#command-line-interface)
+- 这个方式可以完美保存网页，将所有图片、代码都放在一个文件中
 ### Eagle: 本地数据库配置
 1. 保存路径：～/Migrations/Eagle_Libraries
 ### xmind/mindnode/drafts/marginnote：iCloud

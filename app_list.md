@@ -50,6 +50,7 @@
 - [Drafts | Where Text Starts](https://getdrafts.com/)
 - [Your Journal for Life | Day One - Your Journal for Life | Day One](https://dayoneapp.com/)
 - [Ulysses](https://ulysses.app/)
+- [Typora 官方中文站](https://typoraio.cn/)
 - [jgraph/drawio-desktop: Official electron build of diagrams.net](https://github.com/jgraph/drawio-desktop)
 - [GoodNotes | Best Note-Taking App for iPad](https://www.goodnotes.com/)
 - [Mind Map & Brainstorm Ideas - MindNode](https://www.mindnode.com/)
