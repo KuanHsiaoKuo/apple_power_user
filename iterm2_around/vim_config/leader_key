@@ -1,0 +1,17 @@
+" leader键配置
+let mapleader="\<Space>"
+" (osx)设置快捷键将选中文本块复制至系统剪贴板
+nmap <Leader>a ggVG
+" (osx)设置快捷键将系统剪贴板内容粘贴至 vim
+vnoremap <Leader>y :w !pbcopy<CR><CR>
+nmap <Leader>p :r !pbpaste<CR><CR>
+" (非osx)设置快捷键将选中文本块复制至系统剪贴板
+"vmap <Leader>y "+y
+" (非osx)设置快捷键将系统剪贴板内容粘贴至 vim
+"nmap <Leader>p "+p
+nmap <Leader>w :w!<cr>
+nmap <Leader>f :find<cr>
+"strip all trailing whitespace in the current file
+"nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" leader+o配置可以打开tabedit
+nmap <Leader>o :tabedit 
