@@ -11,6 +11,7 @@
 - [Download The World's Best VPN | OpenVPN](https://openvpn.net/download-open-vpn/)
 - [Paw – The most advanced API tool for Mac](https://paw.cloud/)
 - [Molunerfinn/PicGo: A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder](https://github.com/Molunerfinn/PicGo)
+- [picgo aws s3插件：wayjam/picgo-plugin-s3: PicGo S3 插件](https://github.com/wayjam/picgo-plugin-s3)
 - [SnippetsLab - Keep Your Code At Your Fingertips](https://www.renfei.org/snippets-lab/)
 - [Warp: The terminal for the 21st century](https://www.warp.dev/)
 
