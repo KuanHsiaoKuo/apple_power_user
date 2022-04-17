@@ -56,6 +56,12 @@
 - [GoodNotes | Best Note-Taking App for iPad](https://www.goodnotes.com/)
 - [Mind Map & Brainstorm Ideas - MindNode](https://www.mindnode.com/)
 - [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
+- [Graph-easy: Ascii DSL](http://bloodgate.com/perl/graph/manual/syntax.html)
+```
+brew install graph-easy
+cpan
+sudo cpan Graph:Easy
+```
 
 
 ## 沟通协作
