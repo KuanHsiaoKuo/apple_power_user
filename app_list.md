@@ -58,7 +58,7 @@
 - [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
 - [Graph-easy: Ascii DSL](http://bloodgate.com/perl/graph/manual/syntax.html)
 ```
-brew install graph-easy
+brew install graphviz
 cpan
 sudo cpan Graph:Easy
 ```
