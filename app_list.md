@@ -14,7 +14,8 @@
 - [picgo aws s3插件：wayjam/picgo-plugin-s3: PicGo S3 插件](https://github.com/wayjam/picgo-plugin-s3)
 - [SnippetsLab - Keep Your Code At Your Fingertips](https://www.renfei.org/snippets-lab/)
 - [Warp: The terminal for the 21st century](https://www.warp.dev/)
-
+- [Script Debugger](https://latenightsw.com/): Applescript编辑器
+> Script Debugger是Macintosh计算机的源代码编辑器和调试环境，适用于AppleScript编程语言以及其他基于Apple Inc.的开放脚本体系结构的语言。它是Late Night Software的产品。
 
 ## 效率相关
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
