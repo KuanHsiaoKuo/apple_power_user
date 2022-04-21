@@ -25,6 +25,21 @@
 1. picGo上传配置: [Upload Images - Typora Support](https://support.typora.io/Upload-Image/)
 2. [PicGo](https://molunerfinn.com/PicGo/)
 3. 快捷键配置及配置文件同步: [Shortcut Keys - Typora Support](https://support.typora.io/Shortcut-Keys/#change-shortcut-keys)
+#### 自动化脚本
+1. dt_md_export: dt_extras/scripts
+```applescript
+tell application id "DNtp"
+	set theSelection to the selection
+	if theSelection is {} then error "Please select some documents."
+	set md_result to ""
+	repeat with this_record in theSelection
+		set md_link to (("[" & name of this_record as string) & "]" & "(" & reference URL of this_record as string) & ")"
+		set md_result to md_result & "- " & md_link & return & return
+	end repeat
+	--display dialog md_result
+	set the clipboard to md_result
+end tell
+```
 #### SingleFile: 可以将网页保存为单独文件后存入dt
 - [gildas-lormeau/SingleFile: Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file](https://github.com/gildas-lormeau/SingleFile#command-line-interface)
 - 这个方式可以完美保存网页，将所有图片、代码都放在一个文件中
