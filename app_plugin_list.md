@@ -19,7 +19,6 @@
 
 ## 效率相关
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
-- [octotree](https://www.octotree.io/)
 - [Amphetamine on the App Store](https://apps.apple.com/us/app/amphetamine/id937984704?mt=12)
 - [Alfred - Productivity App for macOS](https://www.alfredapp.com/)
 - [CleanShot X for Mac](https://cleanshot.com/)
@@ -73,3 +72,8 @@ sudo cpan Graph:Easy
 
 ## OmniGroup Series
 - [The Omni Group](https://www.omnigroup.com/)
+
+## 插件相关(Chrome、DEVONThink)
+- [octotree](https://www.octotree.io/): github侧边栏插件
+- [Rust Search Extension - The ultimate search extension for Rust](https://rust.extension.sh/)
+![](https://rust.extension.sh/demonstration.gif)
