@@ -74,6 +74,33 @@ sudo cpan Graph:Easy
 - [The Omni Group](https://www.omnigroup.com/)
 
 ## 插件相关(Chrome、DEVONThink)
+> 如果对某个chrome插件感兴趣，可以在插件链接后面加'/related'
 - [octotree](https://www.octotree.io/): github侧边栏插件
+- [GitHub Isometric Contributions - Chrome 网上应用店](https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien)
+![](https://lh3.googleusercontent.com/Ew7xMlpcHhsOKfJB25HfKYgmpkfPTGvOPL-9JERL-x0j3H98crueLTtkmLOr4mIyAcMbhaib8wCbte1VVEGx7xV4eSs=w640-h400-e365-rj-sc0x00ffffff)
+- [gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file](https://github.com/gildas-lormeau/SingleFile)
 - [Rust Search Extension - The ultimate search extension for Rust](https://rust.extension.sh/)
 ![](https://rust.extension.sh/demonstration.gif)
+- [macro_railroad - Chrome 网上应用店](https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp)
+![](https://lh3.googleusercontent.com/CVNeetRxO-OrVyShZ_E-G12DAt4ByHC2CzMVfJI7fA6R92ntDv3o_RCqhGjjJp2w0ZRh6Sx0m6xlqty1eJBUooVec10=w640-h400-e365-rj-sc0x00ffffff)
+- [Smart TOC - Chrome 网上应用店](https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba)
+> Displays a table of contents for every web page, making it easier to read/navigate long articles, documentations and online books
+- [Vimium - Chrome 网上应用店](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
+- [Omni - Bookmark, History, & Tab Manager - Chrome 网上应用店](https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi)
+> [alyssaxuu/omni: The all-in-one tool to supercharge your productivity ⌨️](https://github.com/alyssaxuu/omni)
+![](https://lh3.googleusercontent.com/P4tnISAD7L4I1ePDn5_CGr5mQTsVWWOKa35hZSwTW4z5fOOkWMBPR8z7xltoHkwfNqKT8E3CRYpzCThio30Pq2-E=w640-h400-e365-rj-sc0x00ffffff)
+![](https://github.com/alyssaxuu/omni/raw/master/preview.gif)
+- [alyssaxuu/flowy: The minimal javascript library to create flowcharts ✨](https://github.com/alyssaxuu/flowy)
+![](https://camo.githubusercontent.com/44ec31fb7ec2f102092ca50ad4c9a53da743394a26a3551f6cefa0d6c2f45244/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6476314335364f7977725037436e32306e722f67697068792e676966)
+- [alyssaxuu/screenity: The most powerful screen recorder & annotation tool for Chrome 🎥](https://github.com/alyssaxuu/screenity)
+![](https://camo.githubusercontent.com/2df3304a36460e1d49e8d08acd108a4d8222e73c5366c823eed8c833ec500c33/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3668633730396e4645596e45747a4949794e2f67697068792e676966)
+- [alyssaxuu/animockup: Create animated mockups in the browser 🔥](https://github.com/alyssaxuu/animockup)
+![](https://github.com/alyssaxuu/animockup/raw/master/preview.gif)
+- [微信读书助手 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%8A%A9%E6%89%8B/ekpegdfbihlbocepglfimeodnpiohcba/related)
+- [微信读书笔记助手 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E5%8A%A9%E6%89%8B/cmlenojlebcodibpdhmklglnbaghpdcg/related)
+- [Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇](https://relingo.net/zh/guide)
+![](https://lh3.googleusercontent.com/yastKTfHxC93tRjYDRI0wWukcK77OyUV3fwpUtUtOcUxqjhXXxW5A4rWmK82qUTR3XsGw6oWZGAxxd8eoXz6U6zR=w640-h400-e365-rj-sc0x00ffffff)
+- [context-note - Chrome 网上应用店](https://chrome.google.com/webstore/detail/context-note/enmeffcefbiehghanidhebgiccljmncl)
+![](https://lh3.googleusercontent.com/IH73wSfg0_HRUlOCNlPnkXgOk3j6Cok49LqRziflseBYpj0EeqrCqff82Dn-yd-IZfX8_TpotcmDwm6nuWNmmak6VQ=w640-h400-e365-rj-sc0x00ffffff)
+> This extension is a note-taking tool that help users take notes on the web with their context. Most of the time we use bookmark to manage the websites link that are important. However, in some specific scenes such as reading an article or browsing some key information, we also need to mark down the specific sentence and its context. When reviewing these notes, we can simply jump back to that sentence rather than reading the whole page again, where this extension is to extract the text and location information of these notes.
+- [RSS Reader Extension (by Inoreader) - Chrome 网上应用店](https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related)
