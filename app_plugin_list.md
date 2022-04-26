@@ -73,7 +73,8 @@ sudo cpan Graph:Easy
 ## OmniGroup Series
 - [The Omni Group](https://www.omnigroup.com/)
 
-## 插件相关(Chrome、DEVONThink)
+## 插件相关(Chrome、DEVONThink、Alfred)
+### Chrome
 > 如果对某个chrome插件感兴趣，可以在插件链接后面加'/related'
 - [octotree](https://www.octotree.io/): github侧边栏插件
 - [GitHub Isometric Contributions - Chrome 网上应用店](https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien)
@@ -101,4 +102,9 @@ sudo cpan Graph:Easy
 - [RSS Reader Extension (by Inoreader) - Chrome 网上应用店](https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related)
 - [Hypothesis - Web & PDF Annotation - Chrome 网上应用店](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek)
 > 一个高度可定制化的网页&PDF标注工具。具体使用可见：[开源、可定制的网页批注工具——Hypothesis - 少数派](https://web.archive.org/web/20220426111110/https://sspai.com/post/63033)
+
 > 可以配合插件备份之后使用：[Wayback Machine - Chrome 网上应用店](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
+### DEVONThink
+### Alfred
+- [alfredapp/shortcuts-workflow: Run installled macOS shortcuts](https://github.com/alfredapp/shortcuts-workflow#readme)
+![](https://camo.githubusercontent.com/ddc8b010d0940f328c8b579d3b66267492186e71d982f358ad2b5a71242da3e2/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67)
