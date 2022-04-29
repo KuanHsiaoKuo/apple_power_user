@@ -31,6 +31,9 @@
 - [Navicat Premium | Connects to multiple databases on a single GUI](https://www.navicat.com/en/products/navicat-premium)
 - [PopClip for Mac](https://pilotmoon.com/popclip/)
 - [The Unarchiver | Top Free Unarchiving Software for macOS](https://theunarchiver.com/)
+- [Trickster - Your recently used files, at your fingertips!](https://www.apparentsoft.com/trickster)
+![](https://web.archive.org/web/20210706144332im_/https://www.devontechnologies.com/media/pages/blog/20210706-integrate-trickster-devonthink/1649238563-1625577236/trickster_devonthink.png)
+> Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
 
 
 ## 学习工具
