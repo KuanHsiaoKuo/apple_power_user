@@ -115,6 +115,13 @@ sudo cpan Graph:Easy
 > Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
 - [Hook – Links beat searching](https://hookproductivity.com/)
 ![](https://discourse.apparentsoft.com/uploads/default/optimized/1X/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png)
+> Hook is an easy way to copy links to files, emails, web pages and more. Paste and use them anywhere. Even bidirectionally link ("hook") items together
+> Replace the frustration of searching your Mac with the pleasure of using contextually relevant links. Use Hook to copy robust links to anything on your Mac or elsewhere (files, emails, tasks, PDFs, web pages, etc). 
+> Paste them anywhere. Hook automatically stores your links as bookmarks and optionally syncs them in iCloud.
+> [Help – Hook](https://hookproductivity.com/help)
 ### Alfred
 - [alfredapp/shortcuts-workflow: Run installled macOS shortcuts](https://github.com/alfredapp/shortcuts-workflow#readme)
 ![](https://camo.githubusercontent.com/ddc8b010d0940f328c8b579d3b66267492186e71d982f358ad2b5a71242da3e2/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67)
+- [Alfred workflows for Trickster - User Manual - Docs - Apparent Software Forum](https://discourse.apparentsoft.com/docs?topic=56)
+- [Get Latest Files from Trickster | Packal](http://www.packal.org/workflow/get-latest-files-trickster)
+![](https://discourse.apparentsoft.com/uploads/default/original/1X/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif)

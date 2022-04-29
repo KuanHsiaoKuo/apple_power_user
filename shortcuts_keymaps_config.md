@@ -35,3 +35,4 @@
 
 ### 二、self_host
 - trickster: ctrl + z
+- hook: right_cmd + space
