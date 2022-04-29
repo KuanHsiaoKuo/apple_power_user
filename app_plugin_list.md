@@ -55,6 +55,11 @@
 - [jgraph/drawio-desktop: Official electron build of diagrams.net](https://github.com/jgraph/drawio-desktop)
 - [GoodNotes | Best Note-Taking App for iPad](https://www.goodnotes.com/)
 - [Mind Map & Brainstorm Ideas - MindNode](https://www.mindnode.com/)
+- [Monodraw for macOS — Helftone](https://monodraw.helftone.com/)
+![](https://monodraw.helftone.com/static/images/screenshots/shot-drawing-tools.png)
+> Monodraw 是一款专业强大的 ASCII 文本编辑器。可以基于纯文本轻松创建漂亮的代码说明注释、终端欢迎界面等。
+> 支持画笔及形状，可以任意绘制。你甚至可以用它绘制纯文本图表、流程图，直观地来表示算法，数据结构，二进制格式等等。
+> 因为它们都是文本，所以可以轻松嵌入几乎任何代码中。另外，还支持导出为图像 PNG 和 SVG 图片
 - [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
 - [Graph-easy: Ascii DSL](http://bloodgate.com/perl/graph/manual/syntax.html)
 ```
@@ -108,6 +113,8 @@ sudo cpan Graph:Easy
 - [Trickster - Your recently used files, at your fingertips!](https://www.apparentsoft.com/trickster)
   ![](https://web.archive.org/web/20210706144332im_/https://www.devontechnologies.com/media/pages/blog/20210706-integrate-trickster-devonthink/1649238563-1625577236/trickster_devonthink.png)
 > Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
+- [Hook – Links beat searching](https://hookproductivity.com/)
+![](https://discourse.apparentsoft.com/uploads/default/optimized/1X/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png)
 ### Alfred
 - [alfredapp/shortcuts-workflow: Run installled macOS shortcuts](https://github.com/alfredapp/shortcuts-workflow#readme)
 ![](https://camo.githubusercontent.com/ddc8b010d0940f328c8b579d3b66267492186e71d982f358ad2b5a71242da3e2/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67)
