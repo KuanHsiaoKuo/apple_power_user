@@ -2,20 +2,22 @@
 
 ## 开发相关
 - [Another Redis Desktop Manager | 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值](https://goanother.com/cn/)
-- [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
+- [clashX](https://github.com/yichengchen/clashX)
+- [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
+![](https://kapeli.com/img/dash-256.png)
 - [Docker Desktop - Docker](https://www.docker.com/products/docker-desktop/)
-- [yichengchen/clashX](https://github.com/yichengchen/clashX)
 - [GitHub Desktop | Simple collaboration from your desktop](https://desktop.github.com/)
+- [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
 - [IntelliJ IDEA：JetBrains 功能强大、符合人体工程学的 Java IDE](https://www.jetbrains.com/zh-cn/idea/)
 - [JetBrains Fleet：由 JetBrains 打造的下一代 IDE](https://www.jetbrains.com/zh-cn/fleet/)
-- [Download The World's Best VPN | OpenVPN](https://openvpn.net/download-open-vpn/)
+- [OpenVPN](https://openvpn.net/download-open-vpn/)
 - [Paw – The most advanced API tool for Mac](https://paw.cloud/)
-- [Molunerfinn/PicGo: A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder](https://github.com/Molunerfinn/PicGo)
-- [picgo aws s3插件：wayjam/picgo-plugin-s3: PicGo S3 插件](https://github.com/wayjam/picgo-plugin-s3)
+- [PicGo: A simple & beautiful tool for pictures uploading built by vue-cli-electron-builder](https://github.com/Molunerfinn/PicGo)
+> [picgo aws s3插件：wayjam/picgo-plugin-s3: PicGo S3 插件](https://github.com/wayjam/picgo-plugin-s3)
 - [SnippetsLab - Keep Your Code At Your Fingertips](https://www.renfei.org/snippets-lab/)
-- [Warp: The terminal for the 21st century](https://www.warp.dev/)
 - [Script Debugger](https://latenightsw.com/): Applescript编辑器
 > Script Debugger是Macintosh计算机的源代码编辑器和调试环境，适用于AppleScript编程语言以及其他基于Apple Inc.的开放脚本体系结构的语言。它是Late Night Software的产品。
+- [Warp: The terminal for the 21st century](https://www.warp.dev/)
 
 ## 效率相关
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/)
