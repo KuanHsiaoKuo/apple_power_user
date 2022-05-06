@@ -5,6 +5,7 @@
 - [clashX](https://github.com/yichengchen/clashX)
 - [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
 ![](https://kapeli.com/img/dash-256.png)
+> [gdelmas/IntelliJDashPlugin: A smart and simple plugin that provides keyboard shortcut access for Dash, Velocity or Zeal in IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm and Android Studio.](https://github.com/gdelmas/IntelliJDashPlugin#readme)
 - [Docker Desktop - Docker](https://www.docker.com/products/docker-desktop/)
 - [GitHub Desktop | Simple collaboration from your desktop](https://desktop.github.com/)
 - [iTerm2 - macOS Terminal Replacement](https://iterm2.com/)
