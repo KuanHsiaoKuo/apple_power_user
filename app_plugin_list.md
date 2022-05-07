@@ -33,6 +33,8 @@
 - [Moom on the App Store](https://apps.apple.com/us/app/moom/id419330170?mt=12)
 - [Navicat Premium | Connects to multiple databases on a single GUI](https://www.navicat.com/en/products/navicat-premium)
 - [PopClip for Mac](https://pilotmoon.com/popclip/)
+- [Paste - Clipboard manager for Mac, iPhone, and iPad](https://pasteapp.io/)
+![](https://pasteapp.io/_next/image?url=%2Fimages%2Fpaste-mac-icon.png&w=384&q=75)
 - [The Unarchiver | Top Free Unarchiving Software for macOS](https://theunarchiver.com/)
 
 
