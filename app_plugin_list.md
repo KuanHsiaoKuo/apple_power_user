@@ -69,6 +69,7 @@
 - [Typora 官方中文站](https://typoraio.cn/)
 - [jgraph/drawio-desktop: Official electron build of diagrams.net](https://github.com/jgraph/drawio-desktop)
 - [GoodNotes | Best Note-Taking App for iPad](https://www.goodnotes.com/)
+
 - [Mind Map & Brainstorm Ideas - MindNode](https://www.mindnode.com/)
 - [Monodraw for macOS — Helftone](https://monodraw.helftone.com/)
   ![](https://monodraw.helftone.com/static/images/screenshots/shot-drawing-tools.png)
@@ -76,7 +77,7 @@
 > Monodraw 是一款专业强大的 ASCII 文本编辑器。可以基于纯文本轻松创建漂亮的代码说明注释、终端欢迎界面等。
 > 支持画笔及形状，可以任意绘制。你甚至可以用它绘制纯文本图表、流程图，直观地来表示算法，数据结构，二进制格式等等。
 > 因为它们都是文本，所以可以轻松嵌入几乎任何代码中。另外，还支持导出为图像 PNG 和 SVG 图片
-
+### 两类思维导图：   
 - [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
 - [Scapple | Literature & Latte](https://www.literatureandlatte.com/scapple/overview)
 > [高效学习法-利用Scapple打造10倍效率的笔记 - 知乎](https://web.archive.org/web/20220513063421/https://zhuanlan.zhihu.com/p/65473026)
