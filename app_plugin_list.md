@@ -168,6 +168,9 @@ sudo cpan Graph:Easy
 
 > 可以配合插件备份之后使用：[Wayback Machine - Chrome 网上应用店](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)
 
+#### [Zotero Connector - Chrome 网上应用店](https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related)
+![](https://lh3.googleusercontent.com/gL0Ky3a-hyp7sGQLnbWpPcebnUj8ituzsdstiVfsSq-OxA9QNZiA9ABhNf42-1oa6He3tN2kSk1B3uo80yZ1Ge1WZQ=w640-h400-e365-rj-sc0x00ffffff)
+
 ### 2. DEVONThink
 
 #### [Trickster - Your recently used files, at your fingertips!](https://www.apparentsoft.com/trickster)
@@ -183,7 +186,13 @@ sudo cpan Graph:Easy
 > Paste them anywhere. Hook automatically stores your links as bookmarks and optionally syncs them in iCloud.
 > [Help – Hook](https://hookproductivity.com/help)
 
-#### Alfred
+#### [Zotero | Your personal research assistant](https://www.zotero.org/)
+> Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
+![](https://www.zotero.org/static/images/icons/zotero-icon-147-160@2x.png)
+- [start [Zotero Documentation]](https://www.zotero.org/support/)
+- [DEVONthink with Zotero Workflow - DEVONthink - DEVONtechnologies Community](https://discourse.devontechnologies.com/t/devonthink-with-zotero-workflow/62464/8)
+- [How can I use Devonthink 3, PDF Expert and Zotero together? - Software - MPU Talk](https://talk.macpowerusers.com/t/how-can-i-use-devonthink-3-pdf-expert-and-zotero-together/26604)
+### 3. Alfred
 
 - [alfredapp/shortcuts-workflow: Run installled macOS shortcuts](https://github.com/alfredapp/shortcuts-workflow#readme)
   ![](https://camo.githubusercontent.com/ddc8b010d0940f328c8b579d3b66267492186e71d982f358ad2b5a71242da3e2/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67)
