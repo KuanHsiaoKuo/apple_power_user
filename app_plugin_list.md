@@ -79,8 +79,9 @@
 > 支持画笔及形状，可以任意绘制。你甚至可以用它绘制纯文本图表、流程图，直观地来表示算法，数据结构，二进制格式等等。
 > 因为它们都是文本，所以可以轻松嵌入几乎任何代码中。另外，还支持导出为图像 PNG 和 SVG 图片
 
-### [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
-### [Scapple | Literature & Latte](https://www.literatureandlatte.com/scapple/overview)
+### 两类思维导图：
+#### [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
+#### [Scapple | Literature & Latte](https://www.literatureandlatte.com/scapple/overview)
 > 与Scrivener是一家
 > [高效学习法-利用Scapple打造10倍效率的笔记 - 知乎](https://web.archive.org/web/20220513063421/https://zhuanlan.zhihu.com/p/65473026)
 ![](https://web.archive.org/web/20220513063421/https://pic2.zhimg.com/v2-10936f202d420386da963354b92a2cb1_b.jpg)
