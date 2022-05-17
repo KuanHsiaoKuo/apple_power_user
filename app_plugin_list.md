@@ -241,7 +241,7 @@ sudo cpan Graph:Easy
 > [Help – Hook](https://hookproductivity.com/help)
 
 - hook作者还是链接宣言的发起者： [让链接无处不在——《泛在链接宣言》的理论与理想 - 少数派](https://web.archive.org/web/20220516030303/https://sspai.com/post/70648)
-
+![](https://web.archive.org/web/20220516030303im_/https://cdn.sspai.com/article/4513147f-c57b-d9aa-e37b-69aecfbd91ca.png?imageMogr2/auto-orient/quality/95/thumbnail/!1420x708r/gravity/Center/crop/1420x708/interlace/1)
 #### [Zotero | Your personal research assistant](https://www.zotero.org/)
 
 > Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
