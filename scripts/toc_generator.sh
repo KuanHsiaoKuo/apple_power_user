@@ -8,6 +8,10 @@
 # TEST:
 #   sudo chmod 777 toc_generator.sh
 #   curl -s https://raw.githubusercontent.com/felixge/node-mysql/master/Readme.md | ./toc_generator.sh 2 2
+# ADD TO COMMAND:
+# 1. 将指令添加到alias_collection
+# 2. source ~/.zshrc
+# 3. curl -s https://raw.githubusercontent.com/felixge/node-mysql/master/Readme.md | toc 2 2
 
 grep -E "^#{${1:-1},${2:-2}} " | \
 sed -E 's/(#+) (.+)/\1:\2:\2/g' | \
