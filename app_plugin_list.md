@@ -5,7 +5,6 @@
 
 [TOC]
 
-
 ## 一、开发相关
 
 ### [Another Redis Desktop Manager | 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值](https://goanother.com/cn/)
@@ -244,8 +243,13 @@ sudo cpan Graph:Easy
 > Paste them anywhere. Hook automatically stores your links as bookmarks and optionally syncs them in iCloud.
 > [Help – Hook](https://hookproductivity.com/help)
 
-- hook作者还是链接宣言的发起者： [让链接无处不在——《泛在链接宣言》的理论与理想 - 少数派](https://web.archive.org/web/20220516030303/https://sspai.com/post/70648)
+-
+
+hook作者还是链接宣言的发起者： [让链接无处不在——《泛在链接宣言》的理论与理想 - 少数派](https://web.archive.org/web/20220516030303/https://sspai.com/post/70648)
 ![](https://web.archive.org/web/20220516030303im_/https://cdn.sspai.com/article/4513147f-c57b-d9aa-e37b-69aecfbd91ca.png?imageMogr2/auto-orient/quality/95/thumbnail/!1420x708r/gravity/Center/crop/1420x708/interlace/1)
+
+- [Hook：如何高效双向链接不同类型的信息资源？ - 少数派](https://web.archive.org/web/20220518031631/https://sspai.com/post/68344)
+
 #### [Zotero | Your personal research assistant](https://www.zotero.org/)
 
 > Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
