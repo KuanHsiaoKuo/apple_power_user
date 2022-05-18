@@ -1,7 +1,7 @@
 on:
   push:
     branches: [main]
-    paths: ['app_plugin_list_toc.md']
+    paths: ['app_plugin_list.md']
   pull_request:
     branches: [main]
     paths: ['README.md']
@@ -15,7 +15,7 @@ jobs:
       - run: |
           curl https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc -o gh-md-toc
           chmod a+x gh-md-toc
-          ./gh-md-toc --insert --no-backup app_plugin_list_toc.md
+          ./gh-md-toc --insert --no-backup app_plugin_list.md
           rm -f ./gh-md-toc
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
