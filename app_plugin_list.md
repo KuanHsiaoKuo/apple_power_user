@@ -252,12 +252,29 @@
 
 [Eagle - 图片收集及管理必备工具](https://cn.eagle.cool/)
 
-### TotalFinder: Finder的完美替代工具
+### TotalFinder: Finder的完美强化插件
+
+> TotalFinder is a plugin, not a replacement
 
 ![](https://web.archive.org/web/20220531023426mp_/https://static.binaryage.com/5316853f_images_showcase_full-clabels.png)
 
 [About TotalFinder](https://web.archive.org/web/20220531023426/https://totalfinder.binaryage.com/about)
-
+- [Tabs in TotalFinder](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/tabs)
+![](https://web.archive.org/web/20220503143107mp_/https://static.binaryage.com/96a07616_images_showcase_full-tabs.png)
+- [Dual Mode in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/dual-mode)
+![](https://web.archive.org/web/20220503143108mp_/https://static.binaryage.com/ea54495a_images_showcase_full-dual.png)
+- [Visor in TotalFinder](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/visor)
+![](https://web.archive.org/web/20220503143109mp_/https://static.binaryage.com/622eee9d_images_showcase_full-visor.png)
+- [Show System Files in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/show-system-files)
+![](https://web.archive.org/web/20220503143108mp_/https://static.binaryage.com/fa800004_images_show-system-files.png)
+- [Colored Labels in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/colored-labels)
+![](https://web.archive.org/web/20220503143108/https://static.binaryage.com/c1243899_images_colored-labels-icon-view.png)
+- [Folders on Top in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/folders-on-top)
+![](https://web.archive.org/web/20220503143108im_/https://static.binaryage.com/815c386d_images_showcase_full-fot.png)
+- [TotalFinder Context Menus](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/menus)
+![](https://web.archive.org/web/20220503143107mp_/https://static.binaryage.com/dfe3f13e_images_context-menu-path.png)
+- [TotalFinder Tweaks](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/tweaks)
+![](https://web.archive.org/web/20220503143109im_/https://static.binaryage.com/e5214dd1_images_sidebar.png)
 ## 五、输出相关
 
 ### Drafts: 随手记终极解决工具
