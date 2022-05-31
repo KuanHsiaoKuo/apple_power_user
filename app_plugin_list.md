@@ -41,7 +41,7 @@
       * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
       * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
       * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
-      * [TotalFinder: Finder的完美替代工具](#totalfinder-finder的完美替代工具)
+      * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
    * [五、输出相关](#五输出相关)
       * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
       * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
@@ -86,7 +86,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue May 31 02:36:59 UTC 2022 -->
+<!-- Added by: runner, at: Tue May 31 02:48:10 UTC 2022 -->
 
 <!--te-->
 
