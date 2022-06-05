@@ -1,4 +1,4 @@
-name: CI
+name: UPDATE_TOC_CI
 
 on:
   push:
@@ -21,6 +21,13 @@ jobs:
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
           echo "$(pwd)/bin" >> $GITHUB_PATH
       # - run: mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
+      - name: Update Toc
+        run: |
+          chmod a+x scripts/update_toc_raw
+          scripts/update_toc_raw
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Auto update markdown TOC
       - run: mdbook build
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
