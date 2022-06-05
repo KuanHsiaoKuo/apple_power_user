@@ -1,0 +1,67 @@
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
+syntax on
+" Read file when modified outside Vim
+set autoread
+"统一配色vim为solarized
+syntax enable
+set t_Co=256  
+"let g:solarized_termcolors=256 
+set background=dark
+colorscheme solarized
+" 突出显示当前列
+"set cursorcolumn
+" 突出显示当前行
+set cursorline
+
+" 自动缩进
+set autoindent
+set cindent
+
+" 括号配对情况, 跳转并高亮一下匹配的括号
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set matchtime=2
+
+"manage my line wrapping settings and also show a colored column at 85 characters
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+"set colorcolumn=85
+
+"show invisible characters with the same characters that TextMate uses
+set list
+set listchars=tab:▸\ ,eol:¬
+
+"退出插入模式
+inoremap <c-j> <esc>
+autocmd BufWritePre *.pl %s/\s\+$//e
+"显示行数，设置软回车和缩进还有语法
+set number
+set shiftwidth=4
+set autoindent
+
+"一行的字符超出80个的话就把那些字符的背景设为红色
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
+match OverLength /\%81v.\+/
+
+" 设置文内智能搜索提示
+" 高亮search命中的文本
+set hlsearch
+" 打开增量搜索模式,随着键入即时搜索
+set incsearch
+" 搜索时忽略大小写
+set ignorecase
+" 有一个或以上大写字母时仍大小写敏感
+set smartcase
+
+"最上方显示文件名和路径
+let &titlestring = expand("%:p")
+"if &term == "screen"
+"  set t_ts=^[k
+"  set t_fs=^[\
+"endif
+"if &term == "screen" || &term == "xterm"
+"  set title
+"endif

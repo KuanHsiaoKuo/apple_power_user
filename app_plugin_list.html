@@ -1,0 +1,588 @@
+<!DOCTYPE HTML>
+<html lang="cn" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>macOS/iOS 应用及插件推荐 - Apple Power User</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item "><a href="macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item expanded "><a href="app_plugin_list.html" class="active"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item "><a href="shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Apple Power User</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="app列表"><a class="header" href="#app列表">app列表</a></h1>
+<!--ts-->
+<ul>
+<li><a href="#app%E5%88%97%E8%A1%A8">app列表</a>
+<ul>
+<li><a href="#%E4%B8%80%E5%BC%80%E5%8F%91%E7%9B%B8%E5%85%B3">一、开发相关</a>
+<ul>
+<li><a href="#another-redis-desktop-manager">Another Redis Desktop Manager</a></li>
+<li><a href="#clashx-%E6%A2%AF%E5%AD%90">ClashX: 梯子</a></li>
+<li><a href="#dash-%E6%96%87%E6%A1%A3%E6%9F%A5%E9%98%85%E5%B7%A5%E5%85%B7">Dash: 文档查阅工具</a></li>
+<li><a href="#osx-docker">OSX Docker</a></li>
+<li><a href="#github-desktop">Github Desktop</a></li>
+<li><a href="#iterm2-%E7%BB%88%E7%AB%AF%E7%A5%9E%E5%99%A8">iTerm2: 终端神器</a></li>
+<li><a href="#idea-fleet%E5%87%BA%E6%9D%A5%E4%B9%8B%E5%89%8D%E7%9A%84%E9%80%89%E6%8B%A9">IDEA: Fleet出来之前的选择</a></li>
+<li><a href="#fleet-%E6%9C%9F%E5%BE%85%E7%9A%84%E4%B8%8B%E4%B8%80%E4%BB%A3jetbrains%E7%BB%BC%E5%90%88%E7%BC%96%E8%BE%91%E5%99%A8">Fleet: 期待的下一代Jetbrains综合编辑器</a></li>
+<li><a href="#navicat-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7">Navicat: 数据库工具</a></li>
+<li><a href="#openvpn-vpn%E5%B7%A5%E5%85%B7">OpenVPN: vpn工具</a></li>
+<li><a href="#pawmac%E5%B9%B3%E5%8F%B0%E4%B8%8A%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E7%A5%9E%E5%99%A8%E6%AF%94postman%E6%9B%B4%E5%A5%BD">Paw：Mac平台上接口测试神器，比postman更好</a></li>
+<li><a href="#picgo-%E6%9C%AC%E5%9C%B0%E4%B8%8A%E4%BC%A0%E5%9B%BE%E5%BA%8A%E5%B7%A5%E5%85%B7">PicGo: 本地上传图床工具</a></li>
+<li><a href="#snippetslab%E8%84%9A%E6%9C%AC%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">SnippetsLab：脚本片段管理工具</a></li>
+<li><a href="#script-debugger-applescript-%E7%BC%96%E8%BE%91%E5%99%A8">Script Debugger: AppleScript 编辑器</a></li>
+<li><a href="#warp-%E8%A7%82%E6%9C%9B%E4%B8%AD%E7%9A%84%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%B0%91%E4%BA%86%E5%BE%88%E5%A4%9A%E8%87%AA%E5%AE%9A%E4%B9%89">Warp: 观望中的终端工具，少了很多自定义</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C%E6%95%88%E7%8E%87%E7%9B%B8%E5%85%B3">二、效率相关</a>
+<ul>
+<li><a href="#karabiner-elements-%E6%94%B9%E9%94%AE%E7%A5%9E%E5%99%A8">Karabiner-Elements: 改键神器</a></li>
+<li><a href="#amphetamine-mac%E9%98%B2%E4%BC%91%E7%9C%A0">Amphetamine: mac防休眠</a></li>
+<li><a href="#alfred-%E6%AD%A3%E5%A6%82%E5%85%B6%E5%90%8Dmac%E8%80%81%E7%AE%A1%E5%AE%B6">Alfred: 正如其名，Mac老管家</a></li>
+<li><a href="#cleanshot-x-%E6%88%AA%E5%9B%BE%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7">CleanShot X: 截图标注工具</a></li>
+<li><a href="#downie-%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8youtube%E7%AD%89%E9%80%9A%E5%90%83">Downie: 视频下载神器，youtube等通吃</a></li>
+<li><a href="#focus-%E4%B8%93%E6%B3%A8%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7">Focus: 专注效率工具</a></li>
+<li><a href="#gif-brewery-3-gif%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7">GIF Brewery 3: gif制作工具</a></li>
+<li><a href="#manico-%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7%E7%B1%BB%E4%BC%BChook">Manico: 应用快速切换快捷键配置工具，类似hook</a></li>
+<li><a href="#moom-%E7%AA%97%E5%8F%A3%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">Moom: 窗口管理工具</a></li>
+<li><a href="#popclip-%E5%89%AA%E8%B4%B4%E6%9D%BF%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7">PopClip: 剪贴板效率工具</a></li>
+<li><a href="#paste-%E5%89%AA%E8%B4%B4%E6%9D%BF%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">Paste: 剪贴板管理工具</a></li>
+<li><a href="#the-unarchiver-%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7">The Unarchiver: 压缩解压缩工具</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7">三、学习工具</a>
+<ul>
+<li><a href="#anki%E6%8A%BD%E5%8D%A1%E8%AF%86%E8%AE%B0%E5%B7%A5%E5%85%B7">Anki：抽卡识记工具</a></li>
+<li><a href="#marginnote%E5%9F%BA%E4%BA%8E%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E7%9A%84%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7">Marginnote：基于思维导图的阅读学习工具</a></li>
+<li><a href="#movist-%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%B7%A5%E5%85%B7">Movist: 视频播放工具</a></li>
+<li><a href="#pdf-expert-pdf%E9%98%85%E8%AF%BB%E5%B7%A5%E5%85%B7">Pdf Expert: pdf阅读工具</a></li>
+<li><a href="#drawboard-pdf-%E5%8A%9F%E8%83%BD%E5%85%A8%E9%9D%A2%E5%B0%A4%E5%85%B6%E6%98%AF%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7">Drawboard PDF: 功能全面，尤其是笔记工具</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86">四、数据管理</a>
+<ul>
+<li><a href="#devonthink-%E5%90%84%E8%87%AA%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E4%B8%80%E7%AB%99%E5%BC%8F%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">DEVONThink: 各自数据格式一站式管理工具</a></li>
+<li><a href="#calibre-%E4%B9%A6%E7%B1%8D%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7">Calibre: 书籍格式转换工具</a></li>
+<li><a href="#cleanmymac-%E7%94%B5%E8%84%91%E6%B8%85%E7%90%86%E5%B7%A5%E5%85%B7%E4%B8%8D%E8%BF%87%E6%88%91%E6%9B%B4%E5%96%9C%E6%AC%A2%E6%A0%BC%E7%9B%98%E9%87%8D%E8%A3%85">CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装</a></li>
+<li><a href="#eagle-%E5%9B%BE%E7%89%87%E6%94%B6%E9%9B%86%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7">Eagle: 图片收集管理工具</a></li>
+<li><a href="#totalfinder-finder%E7%9A%84%E5%AE%8C%E7%BE%8E%E5%BC%BA%E5%8C%96%E6%8F%92%E4%BB%B6">TotalFinder: Finder的完美强化插件</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94%E8%BE%93%E5%87%BA%E7%9B%B8%E5%85%B3">五、输出相关</a>
+<ul>
+<li><a href="#drafts-%E9%9A%8F%E6%89%8B%E8%AE%B0%E7%BB%88%E6%9E%81%E8%A7%A3%E5%86%B3%E5%B7%A5%E5%85%B7">Drafts: 随手记终极解决工具</a></li>
+<li><a href="#day-one-%E9%A2%9C%E5%80%BC%E4%B8%8E%E5%8A%9F%E8%83%BD%E5%B9%B6%E4%B8%BE%E7%9A%84%E6%97%A5%E8%AE%B0%E5%B7%A5%E5%85%B7">Day One: 颜值与功能并举的日记工具</a></li>
+<li><a href="#ulysses-%E9%A2%9C%E5%80%BC%E4%BC%98%E5%85%88%E7%9A%84%E9%95%BF%E6%96%87%E4%B9%A6%E5%86%99%E5%B7%A5%E5%85%B7">Ulysses: 颜值优先的长文书写工具</a></li>
+<li><a href="#typora-%E5%B0%86markdown%E7%8E%A9%E9%80%8F%E7%9A%84%E7%AC%94%E8%AE%B0%E5%B7%A5%E5%85%B7">Typora: 将Markdown玩透的笔记工具</a></li>
+<li><a href="#drawio-uml%E5%9B%BE%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">drawio: UML图解决方案</a></li>
+<li><a href="#goodnotes-%E6%89%BE%E5%9B%9E%E4%B9%A6%E5%86%99%E7%9A%84%E6%84%9F%E8%A7%89">GoodNotes: 找回书写的感觉</a></li>
+<li><a href="#mindnode-%E9%A2%9C%E5%80%BC%E4%B8%8D%E9%94%99%E7%9A%84%E7%AE%80%E5%8D%95%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7">MindNode: 颜值不错的简单思维导图工具</a></li>
+<li><a href="#monodrawascii%E5%9B%BE%E7%9A%84%E7%BB%88%E6%9E%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">Monodraw：ASCII图的终极解决方案</a></li>
+<li><a href="#%E4%B8%A4%E7%B1%BB%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE">两类思维导图：</a>
+<ul>
+<li><a href="#xmind%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE--xmind%E4%B8%AD%E6%96%87%E5%AE%98%E6%96%B9%E7%BD%91%E7%AB%99"><a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a></a></li>
+<li><a href="#scapple--literature--latte"><a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a></a></li>
+</ul>
+</li>
+<li><a href="#scrivener-%E6%AF%94ulysses%E6%9B%B4%E9%95%BF%E7%9A%84%E6%96%87%E7%AB%A0%E4%B9%A6%E5%86%99%E5%B7%A5%E5%85%B7">Scrivener: 比Ulysses更长的文章书写工具</a></li>
+<li><a href="#graph-easy-ascii-dsl%E8%AF%AD%E8%A8%80%E5%B7%A5%E5%85%B7">Graph-easy: ASCII DSL语言工具</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AD%E6%B2%9F%E9%80%9A%E5%8D%8F%E4%BD%9C">六、沟通协作</a>
+<ul>
+<li><a href="#slack">Slack</a></li>
+<li><a href="#todesk">ToDesk</a></li>
+<li><a href="#trello">Trello</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83omnigroup-series">七、OmniGroup Series</a>
+<ul>
+<li><a href="#the-omni-group"><a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a></a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AB%E6%8F%92%E4%BB%B6%E7%9B%B8%E5%85%B3chromedevonthinkalfred">八、插件相关(Chrome、DEVONThink、Alfred)</a>
+<ul>
+<li><a href="#1-chrome">1. Chrome</a>
+<ul>
+<li><a href="#octotree-github%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%8F%92%E4%BB%B6"><a href="https://www.octotree.io/" rel="nofollow">octotree</a>: github侧边栏插件</a></li>
+<li><a href="#github-isometric-contributions---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien" rel="nofollow">GitHub Isometric Contributions - Chrome 网上应用店</a></a></li>
+<li><a href="#gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file"><a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a></a></li>
+<li><a href="#rust-search-extension---the-ultimate-search-extension-for-rust"><a href="https://rust.extension.sh/" rel="nofollow">Rust Search Extension - The ultimate search extension for Rust</a></a></li>
+<li><a href="#macro_railroad---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp" rel="nofollow">macro_railroad - Chrome 网上应用店</a></a></li>
+<li><a href="#smart-toc---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba" rel="nofollow">Smart TOC - Chrome 网上应用店</a></a></li>
+<li><a href="#vimium---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb" rel="nofollow">Vimium - Chrome 网上应用店</a></a></li>
+<li><a href="#omni---bookmark-history--tab-manager---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi" rel="nofollow">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a></a></li>
+<li><a href="#alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-"><a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts <g-emoji class="g-emoji" alias="sparkles" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></a></a></li>
+<li><a href="#alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-"><a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome <g-emoji class="g-emoji" alias="movie_camera" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png">🎥</g-emoji></a></a></li>
+<li><a href="#alyssaxuuanimockup-create-animated-mockups-in-the-browser-"><a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser <g-emoji class="g-emoji" alias="fire" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png">🔥</g-emoji></a></a></li>
+<li><a href="#relingo--%E9%98%85%E8%AF%BB%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E8%8B%B1%E8%AF%AD%E6%96%87%E7%AB%A0%E8%A7%82%E7%9C%8B%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E8%A7%86%E9%A2%91%E6%B8%90%E8%BF%9B%E5%BC%8F%E6%8E%8C%E6%8F%A1%E8%AF%8D%E6%B1%87"><a href="https://relingo.net/zh/guide" rel="nofollow">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a></a></li>
+<li><a href="#rss-reader-extension-by-inoreader---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related" rel="nofollow">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a></a></li>
+<li><a href="#hypothesis---web--pdf-annotation---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek" rel="nofollow">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a></a></li>
+<li><a href="#zotero-connector---chrome-%E7%BD%91%E4%B8%8A%E5%BA%94%E7%94%A8%E5%BA%97"><a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related" rel="nofollow">Zotero Connector - Chrome 网上应用店</a></a></li>
+</ul>
+</li>
+<li><a href="#2-devonthink">2. DEVONThink</a>
+<ul>
+<li><a href="#trickster---your-recently-used-files-at-your-fingertips"><a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a></a></li>
+<li><a href="#hook--links-beat-searching"><a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a></a></li>
+<li><a href="#zotero--your-personal-research-assistant"><a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a></a></li>
+</ul>
+</li>
+<li><a href="#3-alfred">3. Alfred</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun  5 16:06:46 CST 2022 -->
+<!--te-->
+<p>[TOC]</p>
+<h2 id="一开发相关"><a class="header" href="#一开发相关">一、开发相关</a></h2>
+<h3 id="another-redis-desktop-manager"><a class="header" href="#another-redis-desktop-manager">Another Redis Desktop Manager</a></h3>
+<p><a href="https://goanother.com/cn/">Another Redis Desktop Manager | 更快、更好、更稳定的Redis桌面(GUI)管理客户端，兼容Windows、Mac、Linux，性能出众，轻松加载海量键值</a></p>
+<h3 id="clashx-梯子"><a class="header" href="#clashx-梯子">ClashX: 梯子</a></h3>
+<p><a href="https://github.com/yichengchen/clashX">clashX</a></p>
+<h3 id="dash-文档查阅工具"><a class="header" href="#dash-文档查阅工具">Dash: 文档查阅工具</a></h3>
+<p><a href="https://kapeli.com/dash">Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli</a></p>
+<p><img src="https://kapeli.com/img/dash-256.png" alt="" /></p>
+<blockquote>
+<p><a href="https://github.com/gdelmas/IntelliJDashPlugin#readme">gdelmas/IntelliJDashPlugin: A smart and simple plugin that provides keyboard shortcut access for Dash, Velocity or Zeal in IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm and Android Studio.</a></p>
+</blockquote>
+<h3 id="osx-docker"><a class="header" href="#osx-docker">OSX Docker</a></h3>
+<p><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop - Docker</a></p>
+<h3 id="github-desktop"><a class="header" href="#github-desktop">Github Desktop</a></h3>
+<p><a href="https://desktop.github.com/">GitHub Desktop | Simple collaboration from your desktop</a></p>
+<h3 id="iterm2-终端神器"><a class="header" href="#iterm2-终端神器">iTerm2: 终端神器</a></h3>
+<p><a href="https://iterm2.com/">iTerm2 - macOS Terminal Replacement</a></p>
+<h3 id="idea-fleet出来之前的选择"><a class="header" href="#idea-fleet出来之前的选择">IDEA: Fleet出来之前的选择</a></h3>
+<p><a href="https://www.jetbrains.com/zh-cn/idea/">IntelliJ IDEA：JetBrains 功能强大、符合人体工程学的 Java IDE</a></p>
+<h3 id="fleet-期待的下一代jetbrains综合编辑器"><a class="header" href="#fleet-期待的下一代jetbrains综合编辑器">Fleet: 期待的下一代Jetbrains综合编辑器</a></h3>
+<p><a href="https://www.jetbrains.com/zh-cn/fleet/">JetBrains Fleet：由 JetBrains 打造的下一代 IDE</a></p>
+<h3 id="navicat-数据库工具"><a class="header" href="#navicat-数据库工具">Navicat: 数据库工具</a></h3>
+<p><a href="https://www.navicat.com/en/products/navicat-premium">Navicat Premium | Connects to multiple databases on a single GUI</a></p>
+<h3 id="openvpn-vpn工具"><a class="header" href="#openvpn-vpn工具">OpenVPN: vpn工具</a></h3>
+<p><a href="https://openvpn.net/download-open-vpn/">OpenVPN</a></p>
+<h3 id="pawmac平台上接口测试神器比postman更好"><a class="header" href="#pawmac平台上接口测试神器比postman更好">Paw：Mac平台上接口测试神器，比postman更好</a></h3>
+<p><a href="https://paw.cloud/">Paw – The most advanced API tool for Mac</a></p>
+<h3 id="picgo-本地上传图床工具"><a class="header" href="#picgo-本地上传图床工具">PicGo: 本地上传图床工具</a></h3>
+<p><a href="https://github.com/Molunerfinn/PicGo">PicGo: A simple &amp; beautiful tool for pictures uploading built by vue-cli-electron-builder</a></p>
+<blockquote>
+<p><a href="https://github.com/wayjam/picgo-plugin-s3">picgo aws s3插件：wayjam/picgo-plugin-s3: PicGo S3 插件</a></p>
+</blockquote>
+<h3 id="snippetslab脚本片段管理工具"><a class="header" href="#snippetslab脚本片段管理工具">SnippetsLab：脚本片段管理工具</a></h3>
+<p><a href="https://wwwu.renfei.org/snippets-lab/">SnippetsLab - Keep Your Code At Your Fingertips</a></p>
+<h3 id="script-debugger-applescript-编辑器"><a class="header" href="#script-debugger-applescript-编辑器">Script Debugger: AppleScript 编辑器</a></h3>
+<p><a href="https://latenightsw.com/">Script Debugger</a>:</p>
+<blockquote>
+<p>Script Debugger是Macintosh计算机的源代码编辑器和调试环境，适用于AppleScript编程语言以及其他基于Apple Inc.的开放脚本体系结构的语言。它是Late Night Software的产品。</p>
+</blockquote>
+<h3 id="warp-观望中的终端工具少了很多自定义"><a class="header" href="#warp-观望中的终端工具少了很多自定义">Warp: 观望中的终端工具，少了很多自定义</a></h3>
+<p><a href="https://www.warp.dev/">Warp: The terminal for the 21st century</a></p>
+<h2 id="二效率相关"><a class="header" href="#二效率相关">二、效率相关</a></h2>
+<h3 id="karabiner-elements-改键神器"><a class="header" href="#karabiner-elements-改键神器">Karabiner-Elements: 改键神器</a></h3>
+<p><a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a></p>
+<h3 id="amphetamine-mac防休眠"><a class="header" href="#amphetamine-mac防休眠">Amphetamine: mac防休眠</a></h3>
+<p><a href="https://apps.apple.com/us/app/amphetamine/id937984704?mt=12">Amphetamine on the App Store</a></p>
+<h3 id="alfred-正如其名mac老管家"><a class="header" href="#alfred-正如其名mac老管家">Alfred: 正如其名，Mac老管家</a></h3>
+<p><a href="https://www.alfredapp.com/">Alfred - Productivity App for macOS</a></p>
+<h3 id="cleanshot-x-截图标注工具"><a class="header" href="#cleanshot-x-截图标注工具">CleanShot X: 截图标注工具</a></h3>
+<p><a href="https://cleanshot.com/">CleanShot X for Mac</a></p>
+<blockquote>
+<p>需要登陆网站 &gt;&gt; License Manager &gt;&gt; 获取下载链接</p>
+</blockquote>
+<h3 id="downie-视频下载神器youtube等通吃"><a class="header" href="#downie-视频下载神器youtube等通吃">Downie: 视频下载神器，youtube等通吃</a></h3>
+<p><a href="https://software.charliemonroe.net/downie/">Downie - YouTube Video Downloader for macOS - Charlie Monroe Software</a></p>
+<h3 id="focus-专注效率工具"><a class="header" href="#focus-专注效率工具">Focus: 专注效率工具</a></h3>
+<p><a href="https://apps.apple.com/us/app/focus-time-management/id777233759?mt=12">Focus - Time Management on the App Store</a></p>
+<h3 id="gif-brewery-3-gif制作工具"><a class="header" href="#gif-brewery-3-gif制作工具">GIF Brewery 3: gif制作工具</a></h3>
+<p><a href="https://apps.apple.com/jp/app/gif-brewery-3-by-gfycat/id1081413713?mt=12">「GIF Brewery 3 by Gfycat」をApp Storeで</a></p>
+<h3 id="manico-应用快速切换快捷键配置工具类似hook"><a class="header" href="#manico-应用快速切换快捷键配置工具类似hook">Manico: 应用快速切换快捷键配置工具，类似hook</a></h3>
+<p><a href="https://manico.im/">Manico - macOS 下的快速 App 切换器</a></p>
+<h3 id="moom-窗口管理工具"><a class="header" href="#moom-窗口管理工具">Moom: 窗口管理工具</a></h3>
+<p><a href="https://apps.apple.com/us/app/moom/id419330170?mt=12">Moom on the App Store</a></p>
+<h3 id="popclip-剪贴板效率工具"><a class="header" href="#popclip-剪贴板效率工具">PopClip: 剪贴板效率工具</a></h3>
+<p><a href="https://pilotmoon.com/popclip/">PopClip for Mac</a></p>
+<h3 id="paste-剪贴板管理工具"><a class="header" href="#paste-剪贴板管理工具">Paste: 剪贴板管理工具</a></h3>
+<p><a href="https://pasteapp.io/">Paste - Clipboard manager for Mac, iPhone, and iPad</a></p>
+<p><img src="https://pasteapp.io/_next/image?url=%2Fimages%2Fpaste-mac-icon.png&amp;w=384&amp;q=75" alt="" /></p>
+<h3 id="the-unarchiver-压缩解压缩工具"><a class="header" href="#the-unarchiver-压缩解压缩工具">The Unarchiver: 压缩解压缩工具</a></h3>
+<p><a href="https://theunarchiver.com/">The Unarchiver | Top Free Unarchiving Software for macOS</a></p>
+<h2 id="三学习工具"><a class="header" href="#三学习工具">三、学习工具</a></h2>
+<h3 id="anki抽卡识记工具"><a class="header" href="#anki抽卡识记工具">Anki：抽卡识记工具</a></h3>
+<p><a href="https://apps.ankiweb.net/">Anki - powerful, intelligent flashcards</a></p>
+<h3 id="marginnote基于思维导图的阅读学习工具"><a class="header" href="#marginnote基于思维导图的阅读学习工具">Marginnote：基于思维导图的阅读学习工具</a></h3>
+<p><a href="https://www.marginnote.com/">Marginnote</a></p>
+<h3 id="movist-视频播放工具"><a class="header" href="#movist-视频播放工具">Movist: 视频播放工具</a></h3>
+<p><a href="https://movistprime.com/">Movist</a></p>
+<h3 id="pdf-expert-pdf阅读工具"><a class="header" href="#pdf-expert-pdf阅读工具">Pdf Expert: pdf阅读工具</a></h3>
+<p><a href="https://pdfexpert.com/zh">面向 Mac 的优秀 PDF 阅读应用 | 免费试用 | PDF 点睛</a></p>
+<h3 id="drawboard-pdf-功能全面尤其是笔记工具"><a class="header" href="#drawboard-pdf-功能全面尤其是笔记工具">Drawboard PDF: 功能全面，尤其是笔记工具</a></h3>
+<p><a href="https://www.drawboard.com/pdf">Drawboard PDF</a></p>
+<ol>
+<li>主打iOS平台，iPad/iPhone的体验惊人</li>
+<li>桌面端使用浏览器代替。</li>
+</ol>
+<h2 id="四数据管理"><a class="header" href="#四数据管理">四、数据管理</a></h2>
+<h3 id="devonthink-各自数据格式一站式管理工具"><a class="header" href="#devonthink-各自数据格式一站式管理工具">DEVONThink: 各自数据格式一站式管理工具</a></h3>
+<p><a href="https://www.devontechnologies.com/apps/devonthink">DEVONtechnologies | DEVONthink, professional document and information management for the Mac and iOS</a></p>
+<h3 id="calibre-书籍格式转换工具"><a class="header" href="#calibre-书籍格式转换工具">Calibre: 书籍格式转换工具</a></h3>
+<p><a href="https://calibre-ebook.com/">calibre - E-book management</a></p>
+<h3 id="cleanmymac-电脑清理工具不过我更喜欢格盘重装"><a class="header" href="#cleanmymac-电脑清理工具不过我更喜欢格盘重装">CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装</a></h3>
+<p><a href="https://cleanmymac.macpaw.com/21?campaign=cmmx_search_brand_ww_al&amp;ci=105097326&amp;adgroupid=5816104326&amp;adpos=&amp;ck=cleanmymac&amp;targetid=kwd-12573386450&amp;match=%7Bif:e%7D&amp;gnetwork=g&amp;creative=432800397793&amp;placement=&amp;placecat=&amp;accname=cmm&amp;gclid=Cj0KCQjwgMqSBhDCARIsAIIVN1WYTCu2ac_ZYKmwoMOQ8V2Va_uhd47y9DBeAYr9VlSLL3Gbas9hWesaAgogEALw_wcB">CleanMyMac X: The Only Legit Mac Cleanup App. Get a Cleaner Mac in Minutes</a></p>
+<h3 id="eagle-图片收集管理工具"><a class="header" href="#eagle-图片收集管理工具">Eagle: 图片收集管理工具</a></h3>
+<p><a href="https://cn.eagle.cool/">Eagle - 图片收集及管理必备工具</a></p>
+<h3 id="totalfinder-finder的完美强化插件"><a class="header" href="#totalfinder-finder的完美强化插件">TotalFinder: Finder的完美强化插件</a></h3>
+<blockquote>
+<p>TotalFinder is a plugin, not a replacement</p>
+</blockquote>
+<p><img src="https://web.archive.org/web/20220531023426mp_/https://static.binaryage.com/5316853f_images_showcase_full-clabels.png" alt="" /></p>
+<p><a href="https://web.archive.org/web/20220531023426/https://totalfinder.binaryage.com/about">About TotalFinder</a></p>
+<ul>
+<li><a href="https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/tabs">Tabs in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143107mp_/https://static.binaryage.com/96a07616_images_showcase_full-tabs.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/dual-mode">Dual Mode in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143108mp_/https://static.binaryage.com/ea54495a_images_showcase_full-dual.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/visor">Visor in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143109mp_/https://static.binaryage.com/622eee9d_images_showcase_full-visor.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/show-system-files">Show System Files in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143108mp_/https://static.binaryage.com/fa800004_images_show-system-files.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/colored-labels">Colored Labels in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143108/https://static.binaryage.com/c1243899_images_colored-labels-icon-view.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/folders-on-top">Folders on Top in TotalFinder</a>
+<img src="https://web.archive.org/web/20220503143108im_/https://static.binaryage.com/815c386d_images_showcase_full-fot.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/menus">TotalFinder Context Menus</a>
+<img src="https://web.archive.org/web/20220503143107mp_/https://static.binaryage.com/dfe3f13e_images_context-menu-path.png" alt="" /></li>
+<li><a href="https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/tweaks">TotalFinder Tweaks</a>
+<img src="https://web.archive.org/web/20220503143109im_/https://static.binaryage.com/e5214dd1_images_sidebar.png" alt="" /></li>
+</ul>
+<h2 id="五输出相关"><a class="header" href="#五输出相关">五、输出相关</a></h2>
+<h3 id="drafts-随手记终极解决工具"><a class="header" href="#drafts-随手记终极解决工具">Drafts: 随手记终极解决工具</a></h3>
+<p><a href="https://getdrafts.com/">Drafts | Where Text Starts</a></p>
+<h3 id="day-one-颜值与功能并举的日记工具"><a class="header" href="#day-one-颜值与功能并举的日记工具">Day One: 颜值与功能并举的日记工具</a></h3>
+<p><a href="https://dayoneapp.com/">Your Journal for Life | Day One - Your Journal for Life | Day One</a></p>
+<h3 id="ulysses-颜值优先的长文书写工具"><a class="header" href="#ulysses-颜值优先的长文书写工具">Ulysses: 颜值优先的长文书写工具</a></h3>
+<p><a href="https://ulysses.app/">Ulysses</a></p>
+<h3 id="typora-将markdown玩透的笔记工具"><a class="header" href="#typora-将markdown玩透的笔记工具">Typora: 将Markdown玩透的笔记工具</a></h3>
+<p><a href="https://typoraio.cn/">Typora 官方中文站</a></p>
+<h3 id="drawio-uml图解决方案"><a class="header" href="#drawio-uml图解决方案">drawio: UML图解决方案</a></h3>
+<p><a href="https://github.com/jgraph/drawio-desktop">jgraph/drawio-desktop: Official electron build of diagrams.net</a></p>
+<h3 id="goodnotes-找回书写的感觉"><a class="header" href="#goodnotes-找回书写的感觉">GoodNotes: 找回书写的感觉</a></h3>
+<p><a href="https://www.goodnotes.com/">GoodNotes | Best Note-Taking App for iPad</a></p>
+<h3 id="mindnode-颜值不错的简单思维导图工具"><a class="header" href="#mindnode-颜值不错的简单思维导图工具">MindNode: 颜值不错的简单思维导图工具</a></h3>
+<p><a href="https://www.mindnode.com/">Mind Map &amp; Brainstorm Ideas - MindNode</a></p>
+<h3 id="monodrawascii图的终极解决方案"><a class="header" href="#monodrawascii图的终极解决方案">Monodraw：ASCII图的终极解决方案</a></h3>
+<p><a href="https://monodraw.helftone.com/">Monodraw for macOS — Helftone</a></p>
+<p><img src="https://monodraw.helftone.com/static/images/screenshots/shot-drawing-tools.png" alt="" /></p>
+<blockquote>
+<p>Monodraw 是一款专业强大的 ASCII 文本编辑器。可以基于纯文本轻松创建漂亮的代码说明注释、终端欢迎界面等。
+支持画笔及形状，可以任意绘制。你甚至可以用它绘制纯文本图表、流程图，直观地来表示算法，数据结构，二进制格式等等。
+因为它们都是文本，所以可以轻松嵌入几乎任何代码中。另外，还支持导出为图像 PNG 和 SVG 图片</p>
+</blockquote>
+<h3 id="两类思维导图"><a class="header" href="#两类思维导图">两类思维导图：</a></h3>
+<h4 id="xmind思维导图--xmind中文官方网站"><a class="header" href="#xmind思维导图--xmind中文官方网站"><a href="https://www.xmind.cn/">XMind思维导图 | XMind中文官方网站</a></a></h4>
+<h4 id="scapple--literature--latte"><a class="header" href="#scapple--literature--latte"><a href="https://www.literatureandlatte.com/scapple/overview">Scapple | Literature &amp; Latte</a></a></h4>
+<blockquote>
+<p>与Scrivener是一家
+<a href="https://web.archive.org/web/20220513063421/https://zhuanlan.zhihu.com/p/65473026">高效学习法-利用Scapple打造10倍效率的笔记 - 知乎</a>
+<img src="https://web.archive.org/web/20220513063421/https://pic2.zhimg.com/v2-10936f202d420386da963354b92a2cb1_b.jpg" alt="" />
+<img src="https://www.literatureandlatte.com/assets/image/slide-images/scapple/beginning-middle-loose-ends.jpg?crop=713%2C713%2C0%2C0&amp;fit=crop&amp;w=713&amp;h=713" alt="" />
+<img src="https://www.literatureandlatte.com/assets/image/scapple/scapple-main.jpg" alt="" />
+纸和软件结合 第一，先在A4纸上或者自己的笔记本上做即时性笔记——记录一些学习时的零散的关键信息点。 第二，回到家，使用Scapple，将这些零散的关键信息点誊抄在上面 第三，对照这些零散的关键信息点，进入专注模式，进行索引式回顾，并在Scapple写下这些关键信息点的详细内容 第四，构建这些关键信息点之间的联系。
+纯软件, 不做任何即时性笔记。 第一，直接使用Scapple，进入发散模式，不断的思考能够记住的一些关键信息点。 第二，构建这些关键信息点之间的联系。 Scapple之所以非常适合做笔记，是因为它是就人体大脑的思维模式所设计的。 当你不断创建内容（Notes）时，你通常处在发散模式； 当你对照内容去思考深挖详细信息时，你通常处在专注模式； 当你在构建Notes间的连接时，你更可能处于发散模式。</p>
+</blockquote>
+<h3 id="scrivener-比ulysses更长的文章书写工具"><a class="header" href="#scrivener-比ulysses更长的文章书写工具">Scrivener: 比Ulysses更长的文章书写工具</a></h3>
+<p><a href="https://www.literatureandlatte.com/scrivener/overview">Scrivener | Literature &amp; Latte</a></p>
+<p><img src="https://www.literatureandlatte.com/assets/image/slide-images/scrivener/forest-or-trees.jpg?crop=713%2C713%2C0%2C0&amp;fit=crop&amp;w=713&amp;h=713" alt="" />
+<img src="https://www.literatureandlatte.com/assets/image/slide-images/scrivener/rewrite-reorder-rejoice.jpg?crop=713%2C713%2C0%2C0&amp;fit=crop&amp;w=713&amp;h=713" alt="" />
+<img src="https://www.literatureandlatte.com/assets/image/slide-images/scrivener/research-within-reach.jpg?crop=713%2C713%2C0%2C0&amp;fit=crop&amp;w=713&amp;h=713" alt="" /></p>
+<ul>
+<li><a href="https://web.archive.org/web/20220515154849/https://sspai.com/post/67363">用 Scrivener 写小说 - 少数派</a></li>
+</ul>
+<blockquote>
+<p>区分提要与便签
+<img src="https://web.archive.org/web/20220515154849im_/https://cdn.sspai.com/2021/06/22/74c6016fb891b842bfb32c7b6cb1f645.gif" alt="" /></p>
+</blockquote>
+<h3 id="graph-easy-ascii-dsl语言工具"><a class="header" href="#graph-easy-ascii-dsl语言工具">Graph-easy: ASCII DSL语言工具</a></h3>
+<p><a href="http://bloodgate.com/perl/graph/manual/syntax.html">Graph-easy: Ascii DSL</a></p>
+<pre><code>brew install graphviz
+cpan
+sudo cpan Graph:Easy
+</code></pre>
+<h2 id="六沟通协作"><a class="header" href="#六沟通协作">六、沟通协作</a></h2>
+<h3 id="slack"><a class="header" href="#slack">Slack</a></h3>
+<p><a href="https://slack.com/intl/zh-cn/">Slack 是未来的工作场所</a></p>
+<h3 id="todesk"><a class="header" href="#todesk">ToDesk</a></h3>
+<p><a href="https://www.todesk.com/download.html">ToDesk远程控制软件下载-电脑客户端，移动app官网下载-ToDesk官网</a></p>
+<h3 id="trello"><a class="header" href="#trello">Trello</a></h3>
+<p><a href="https://trello.com/">Trello</a></p>
+<h2 id="七omnigroup-series"><a class="header" href="#七omnigroup-series">七、OmniGroup Series</a></h2>
+<h3 id="the-omni-group"><a class="header" href="#the-omni-group"><a href="https://www.omnigroup.com/">The Omni Group</a></a></h3>
+<h2 id="八插件相关chromedevonthinkalfred"><a class="header" href="#八插件相关chromedevonthinkalfred">八、插件相关(Chrome、DEVONThink、Alfred)</a></h2>
+<h3 id="1-chrome"><a class="header" href="#1-chrome">1. Chrome</a></h3>
+<blockquote>
+<p>如果对某个chrome插件感兴趣，可以在插件链接后面加'/related'</p>
+</blockquote>
+<h4 id="octotree-github侧边栏插件"><a class="header" href="#octotree-github侧边栏插件"><a href="https://www.octotree.io/">octotree</a>: github侧边栏插件</a></h4>
+<h4 id="github-isometric-contributions---chrome-网上应用店"><a class="header" href="#github-isometric-contributions---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien">GitHub Isometric Contributions - Chrome 网上应用店</a></a></h4>
+<p><img src="https://lh3.googleusercontent.com/Ew7xMlpcHhsOKfJB25HfKYgmpkfPTGvOPL-9JERL-x0j3H98crueLTtkmLOr4mIyAcMbhaib8wCbte1VVEGx7xV4eSs=w640-h400-e365-rj-sc0x00ffffff" alt="" /></p>
+<h4 id="gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file"><a class="header" href="#gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file"><a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a></a></h4>
+<h4 id="rust-search-extension---the-ultimate-search-extension-for-rust"><a class="header" href="#rust-search-extension---the-ultimate-search-extension-for-rust"><a href="https://rust.extension.sh/">Rust Search Extension - The ultimate search extension for Rust</a></a></h4>
+<p><img src="https://rust.extension.sh/demonstration.gif" alt="" /></p>
+<h4 id="macro_railroad---chrome-网上应用店"><a class="header" href="#macro_railroad---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp">macro_railroad - Chrome 网上应用店</a></a></h4>
+<p><img src="https://lh3.googleusercontent.com/CVNeetRxO-OrVyShZ_E-G12DAt4ByHC2CzMVfJI7fA6R92ntDv3o_RCqhGjjJp2w0ZRh6Sx0m6xlqty1eJBUooVec10=w640-h400-e365-rj-sc0x00ffffff" alt="" /></p>
+<h4 id="smart-toc---chrome-网上应用店"><a class="header" href="#smart-toc---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba">Smart TOC - Chrome 网上应用店</a></a></h4>
+<blockquote>
+<p>Displays a table of contents for every web page, making it easier to read/navigate long articles, documentations and online books</p>
+</blockquote>
+<h4 id="vimium---chrome-网上应用店"><a class="header" href="#vimium---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium - Chrome 网上应用店</a></a></h4>
+<h4 id="omni---bookmark-history--tab-manager---chrome-网上应用店"><a class="header" href="#omni---bookmark-history--tab-manager---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a></a></h4>
+<blockquote>
+<p><a href="https://github.com/alyssaxuu/omni">alyssaxuu/omni: The all-in-one tool to supercharge your productivity ⌨️</a>
+<img src="https://lh3.googleusercontent.com/P4tnISAD7L4I1ePDn5_CGr5mQTsVWWOKa35hZSwTW4z5fOOkWMBPR8z7xltoHkwfNqKT8E3CRYpzCThio30Pq2-E=w640-h400-e365-rj-sc0x00ffffff" alt="" />
+<img src="https://github.com/alyssaxuu/omni/raw/master/preview.gif" alt="" /></p>
+</blockquote>
+<h4 id="alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-"><a class="header" href="#alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-"><a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts ✨</a></a></h4>
+<p><img src="https://camo.githubusercontent.com/44ec31fb7ec2f102092ca50ad4c9a53da743394a26a3551f6cefa0d6c2f45244/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6476314335364f7977725037436e32306e722f67697068792e676966" alt="" /></p>
+<h4 id="alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-"><a class="header" href="#alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-"><a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome 🎥</a></a></h4>
+<p><img src="https://camo.githubusercontent.com/2df3304a36460e1d49e8d08acd108a4d8222e73c5366c823eed8c833ec500c33/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3668633730396e4645596e45747a4949794e2f67697068792e676966" alt="" /></p>
+<h4 id="alyssaxuuanimockup-create-animated-mockups-in-the-browser-"><a class="header" href="#alyssaxuuanimockup-create-animated-mockups-in-the-browser-"><a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser 🔥</a></a></h4>
+<p><img src="https://github.com/alyssaxuu/animockup/raw/master/preview.gif" alt="" /></p>
+<h4 id="relingo--阅读感兴趣的英语文章观看感兴趣的视频渐进式掌握词汇"><a class="header" href="#relingo--阅读感兴趣的英语文章观看感兴趣的视频渐进式掌握词汇"><a href="https://relingo.net/zh/guide">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a></a></h4>
+<p><img src="https://lh3.googleusercontent.com/yastKTfHxC93tRjYDRI0wWukcK77OyUV3fwpUtUtOcUxqjhXXxW5A4rWmK82qUTR3XsGw6oWZGAxxd8eoXz6U6zR=w640-h400-e365-rj-sc0x00ffffff" alt="" /></p>
+<h4 id="rss-reader-extension-by-inoreader---chrome-网上应用店"><a class="header" href="#rss-reader-extension-by-inoreader---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a></a></h4>
+<h4 id="hypothesis---web--pdf-annotation---chrome-网上应用店"><a class="header" href="#hypothesis---web--pdf-annotation---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a></a></h4>
+<blockquote>
+<p>一个高度可定制化的网页&amp;PDF标注工具。具体使用可见：<a href="https://web.archive.org/web/20220426111110/https://sspai.com/post/63033">开源、可定制的网页批注工具——Hypothesis - 少数派</a></p>
+</blockquote>
+<blockquote>
+<p>可以配合插件备份之后使用：<a href="https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak">Wayback Machine - Chrome 网上应用店</a></p>
+</blockquote>
+<h4 id="zotero-connector---chrome-网上应用店"><a class="header" href="#zotero-connector---chrome-网上应用店"><a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related">Zotero Connector - Chrome 网上应用店</a></a></h4>
+<p><img src="https://lh3.googleusercontent.com/gL0Ky3a-hyp7sGQLnbWpPcebnUj8ituzsdstiVfsSq-OxA9QNZiA9ABhNf42-1oa6He3tN2kSk1B3uo80yZ1Ge1WZQ=w640-h400-e365-rj-sc0x00ffffff" alt="" /></p>
+<h3 id="2-devonthink"><a class="header" href="#2-devonthink">2. DEVONThink</a></h3>
+<h4 id="trickster---your-recently-used-files-at-your-fingertips"><a class="header" href="#trickster---your-recently-used-files-at-your-fingertips"><a href="https://www.apparentsoft.com/trickster">Trickster - Your recently used files, at your fingertips!</a></a></h4>
+<p><img src="https://web.archive.org/web/20210706144332im_/https://www.devontechnologies.com/media/pages/blog/20210706-integrate-trickster-devonthink/1649238563-1625577236/trickster_devonthink.png" alt="" /></p>
+<blockquote>
+<p>Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。</p>
+</blockquote>
+<h4 id="hook--links-beat-searching"><a class="header" href="#hook--links-beat-searching"><a href="https://hookproductivity.com/">Hook – Links beat searching</a></a></h4>
+<p><img src="https://discourse.apparentsoft.com/uploads/default/optimized/1X/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png" alt="" /></p>
+<blockquote>
+<p>Hook is an easy way to copy links to files, emails, web pages and more. Paste and use them anywhere. Even bidirectionally link (&quot;hook&quot;) items together
+Replace the frustration of searching your Mac with the pleasure of using contextually relevant links. Use Hook to copy robust links to anything on your Mac or elsewhere (files, emails, tasks, PDFs, web pages, etc).
+Paste them anywhere. Hook automatically stores your links as bookmarks and optionally syncs them in iCloud.
+<a href="https://hookproductivity.com/help">Help – Hook</a></p>
+</blockquote>
+<ul>
+<li>
+<p>hook作者还是链接宣言的发起者：
+<a href="https://web.archive.org/web/20220516030303/https://sspai.com/post/70648">让链接无处不在——《泛在链接宣言》的理论与理想 - 少数派</a>
+<img src="https://web.archive.org/web/20220516030303im_/https://cdn.sspai.com/article/4513147f-c57b-d9aa-e37b-69aecfbd91ca.png?imageMogr2/auto-orient/quality/95/thumbnail/!1420x708r/gravity/Center/crop/1420x708/interlace/1" alt="" /></p>
+</li>
+<li>
+<p><a href="https://web.archive.org/web/20220518031631/https://sspai.com/post/68344">Hook：如何高效双向链接不同类型的信息资源？ - 少数派</a></p>
+</li>
+</ul>
+<h4 id="zotero--your-personal-research-assistant"><a class="header" href="#zotero--your-personal-research-assistant"><a href="https://www.zotero.org/">Zotero | Your personal research assistant</a></a></h4>
+<blockquote>
+<p>Zotero is a free, easy-to-use tool to help you collect, organize, cite, and share research.
+<img src="https://www.zotero.org/static/images/icons/zotero-icon-147-160@2x.png" alt="" /></p>
+</blockquote>
+<ul>
+<li><a href="https://www.zotero.org/support/">start [Zotero Documentation]</a></li>
+<li><a href="https://discourse.devontechnologies.com/t/devonthink-with-zotero-workflow/62464/8">DEVONthink with Zotero Workflow - DEVONthink - DEVONtechnologies Community</a></li>
+<li><a href="https://talk.macpowerusers.com/t/how-can-i-use-devonthink-3-pdf-expert-and-zotero-together/26604">How can I use Devonthink 3, PDF Expert and Zotero together? - Software - MPU Talk</a></li>
+</ul>
+<h3 id="3-alfred"><a class="header" href="#3-alfred">3. Alfred</a></h3>
+<ul>
+<li><a href="https://github.com/alfredapp/shortcuts-workflow#readme">alfredapp/shortcuts-workflow: Run installled macOS shortcuts</a>
+<img src="https://camo.githubusercontent.com/ddc8b010d0940f328c8b579d3b66267492186e71d982f358ad2b5a71242da3e2/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67" alt="" /></li>
+<li><a href="https://discourse.apparentsoft.com/docs?topic=56">Alfred workflows for Trickster - User Manual - Docs - Apparent Software Forum</a></li>
+<li><a href="http://www.packal.org/workflow/get-latest-files-trickster">Get Latest Files from Trickster | Packal</a>
+<img src="https://discourse.apparentsoft.com/uploads/default/original/1X/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif" alt="" /></li>
+</ul>
+
+                    </main>
+
+                    <script src="https://utteranc.es/client.js"
+                    repo="RustMagazine/rust_magazine_2022"
+                    issue-term="title"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async></script>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="macos_ios_tips.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="shortcuts_keymaps_config.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="macos_ios_tips.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="shortcuts_keymaps_config.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+        <script type="text/javascript" src="smart-anchor.js"></script>
+    </body>
+</html>
