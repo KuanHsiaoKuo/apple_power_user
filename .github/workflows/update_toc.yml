@@ -1,7 +1,7 @@
 on:
   push:
     branches: [main]
-    paths: ['app_plugin_list.md']
+
 
 jobs:
   build:
@@ -10,10 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          curl https://raw.githubusercontent.com/KuanHsiaoKuo/github-markdown-toc/master/gh-md-toc -o gh-md-toc
-          chmod a+x gh-md-toc
-          ./gh-md-toc --insert --no-backup app_plugin_list.md
-          rm -f ./gh-md-toc
+          chmod a+x scripts/update_toc
+          scripts/update_toc
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Auto update markdown TOC
