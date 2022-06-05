@@ -1,0 +1,13 @@
+find . -type f -name '*.md' > temp
+mds=`sort temp | uniq`
+for md in $mds:
+do
+  if echo $md | grep -q -E '\.md$'
+  then
+    echo $md
+  else
+    echo $md' not md'
+  fi
+  # scripts/gh-md-toc --insert --no-backup $md
+done
+#rm temp
