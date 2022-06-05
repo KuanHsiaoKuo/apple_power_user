@@ -234,6 +234,13 @@
 
 [面向 Mac 的优秀 PDF 阅读应用 | 免费试用 | PDF 点睛](https://pdfexpert.com/zh)
 
+### Drawboard PDF: 功能全面，尤其是笔记工具
+
+[Drawboard PDF](https://www.drawboard.com/pdf)
+
+1. 主打iOS平台，iPad/iPhone的体验惊人
+2. 桌面端使用浏览器代替。
+
 ## 四、数据管理
 
 ### DEVONThink: 各自数据格式一站式管理工具
