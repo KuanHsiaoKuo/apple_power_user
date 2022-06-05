@@ -5,9 +5,9 @@ do
   if echo $md | grep -q -E '\.md$'
   then
     echo $md
+    scripts/gh-md-toc --insert --no-backup $md
   else
     echo $md' not md'
   fi
-  # scripts/gh-md-toc --insert --no-backup $md
 done
-#rm temp
+rm temp

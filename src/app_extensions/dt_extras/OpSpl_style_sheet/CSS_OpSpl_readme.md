@@ -1,5 +1,12 @@
 # Customizing a CSS<br>The minimum to know
 <!--ts-->
+* [Customizing a CSS<br>The minimum to know](#customizing-a-cssthe-minimum-to-know)
+   * [Some hints about OpSpl.CSS](#some-hints-about-opsplcss)
+   * [History and credentials](#history-and-credentials)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun  5 16:51:50 CST 2022 -->
+
 <!--te-->
 I’m not a designer, nor a programmer. So I went through some tutorials and some reference material in order to arrive to something satisfactory, at least for me — and it took some time. So, I’d like, here, to give other laymen/laywomen in CSS the barely minimal knowledge so they can edit a CSS to their personal taste.
 

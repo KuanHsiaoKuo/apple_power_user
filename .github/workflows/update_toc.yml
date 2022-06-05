@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          chmod a+x scripts/update_toc
-          scripts/update_toc
+          chmod a+x scripts/update_toc_raw
+          scripts/update_toc_raw
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Auto update markdown TOC

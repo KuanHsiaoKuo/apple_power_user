@@ -1,5 +1,10 @@
 # osx系统设置
 <!--ts-->
+* [osx系统设置](#osx系统设置)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun  5 16:52:00 CST 2022 -->
+
 <!--te-->
 1. 指定后缀名打开方式
 找一个对应后缀名的文件 >> cmd + i >> 弹窗里面修改打开方式

@@ -1,5 +1,29 @@
 # *MultiMarkdown* test document
 <!--ts-->
+* [<em>MultiMarkdown</em> test document](#multimarkdown-test-document)
+      * [Line length](#line-length)
+* [Header 1](#header-1)
+   * [Header 2](#header-2)
+      * [Header 3](#header-3)
+         * [Header 4](#header-4)
+            * [Header 5](#header-5)
+               * [Header 6](#header-6)
+      * [“Emphasis” and “Strong”](#emphasis-and-strong)
+      * [URLs](#urls)
+      * [Numbered lists, multilevel](#numbered-lists-multilevel)
+      * [Bulleted lists](#bulleted-lists)
+      * [Intermixed lists](#intermixed-lists)
+      * [Images](#images)
+      * [Footnotes](#footnotes)
+      * [Blockquotes](#blockquotes)
+      * [Tables](#tables)
+      * [A little trick](#a-little-trick)
+      * [Code and verbatim](#code-and-verbatim)
+      * [Some non-standard but useful specialities](#some-non-standard-but-useful-specialities)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun  5 16:51:51 CST 2022 -->
+
 <!--te-->
 As any *Markdown* user knows or should know, beside the [*CommonMark*](https://commonmark.org/) initiative and [specification](spec.commonmark.org), there’s nothing really “standard” with *Markdown* syntax, only “vastly agreed upon” practices. As long as you don’t stray too far away from this “common practice”, you shouldn’t run into issues. This document, unless explicitly mentioned, strives to stay within these limits.
 
