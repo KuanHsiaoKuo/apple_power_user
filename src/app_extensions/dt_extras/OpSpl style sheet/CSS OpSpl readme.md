@@ -1,5 +1,6 @@
 # Customizing a CSS<br>The minimum to know
-
+<!--ts-->
+<!--te-->
 I’m not a designer, nor a programmer. So I went through some tutorials and some reference material in order to arrive to something satisfactory, at least for me — and it took some time. So, I’d like, here, to give other laymen/laywomen in CSS the barely minimal knowledge so they can edit a CSS to their personal taste.
 
 Let’s dive in.

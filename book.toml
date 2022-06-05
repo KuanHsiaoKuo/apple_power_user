@@ -1,0 +1,29 @@
+[book]
+authors = ["kuanhsiaokuo"]
+description = "主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作"
+language = "cn"
+multilingual = false
+src = "src"
+title = "Apple Power User"
+
+
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+
+[output.html]
+theme = "mytheme"
+default-theme = "rust"
+git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
+additional-js = ["mermaid.min.js", "mermaid-init.js", "smart-anchor.js"]
+mathjax-support = true
+
+
+[output.html.playground]
+editable = true
+copy-js = true
+
+[output.html.fold]
+enable = true
+level = 0

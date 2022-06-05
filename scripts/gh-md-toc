@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# [ekalinin/github-markdown-toc: Easy TOC creation for GitHub README.md](https://github.com/ekalinin/github-markdown-toc)
+# [ekalinin/github-markdown-toc: Easy TOC creation for GitHub macos_essentials.md](https://github.com/ekalinin/github-markdown-toc)
 # Steps:
 #
-#  1. Download corresponding html file for some README.md:
+#  1. Download corresponding html file for some macos_essentials.md:
 #       curl -s $1
 #
 #  2. Discard rows where no substring 'user-content-' (github's markup):
@@ -28,7 +28,7 @@ gh_toc_version="0.8.0"
 gh_user_agent="gh-md-toc v$gh_toc_version"
 
 #
-# Download rendered into html README.md by its url.
+# Download rendered into html macos_essentials.md by its url.
 #
 #
 gh_toc_load() {
