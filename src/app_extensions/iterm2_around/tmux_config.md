@@ -5,7 +5,7 @@
    * [Linux(Simplified)](#linuxsimplified)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Sun Jun  5 16:51:55 CST 2022 -->
+<!-- Added by: runner, at: Sun Jun  5 08:53:20 UTC 2022 -->
 
 <!--te-->
 ## OSX
