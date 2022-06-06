@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item "><a href="macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item "><a href="app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item "><a href="shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item "><a href="overview.html"><strong aria-hidden="true">5.</strong> Power User Need Know</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="app_extensions/workflows/workflows.html"><strong aria-hidden="true">5.1.</strong> 工作流</a></li><li class="chapter-item "><a href="app_extensions/Anki_around/anki_around.html"><strong aria-hidden="true">5.2.</strong> Anki扩展使用</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item "><a href="macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item "><a href="app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item "><a href="shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item "><a href="overview.html"><strong aria-hidden="true">5.</strong> Power User Need Know</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="app_extensions/workflows/workflows.html"><strong aria-hidden="true">5.1.</strong> 工作流</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="app_extensions/workflows/marginnote_anki.html"><strong aria-hidden="true">5.1.1.</strong> Anki与marginnote协同</a></li></ol></li><li class="chapter-item "><a href="app_extensions/Anki_around/anki_around.html"><strong aria-hidden="true">5.2.</strong> Anki扩展使用</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="app_extensions/Anki_around/custom_md_template.html"><strong aria-hidden="true">5.2.1.</strong> 自定义Anki卡片md模版</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -183,7 +183,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jun  6 16:18:22 UTC 2022 -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:27 UTC 2022 -->
 <!--te-->
 <h1 id="一资料打包迁移"><a class="header" href="#一资料打包迁移">一、资料打包迁移:</a></h1>
 <blockquote>
@@ -339,7 +339,7 @@ Appstore: option+a
 <li><a href="macos_ios_tips.html#osx%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">osx系统设置</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jun  6 16:18:22 UTC 2022 -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:27 UTC 2022 -->
 <!--te-->
 <ol>
 <li>指定后缀名打开方式
@@ -470,7 +470,7 @@ Appstore: option+a
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jun  6 16:18:22 UTC 2022 -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:27 UTC 2022 -->
 <!--te-->
 <p>[TOC]</p>
 <h2 id="一开发相关"><a class="header" href="#一开发相关">一、开发相关</a></h2>
@@ -789,29 +789,181 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 </blockquote>
 <!--ts-->
 <ul>
-<li><a href="app_extensions/workflows/workflows.html#%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%95%B4%E7%90%86">工作流整理</a>
+<li><a href="app_extensions/workflows/workflows.html#%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%95%B4%E7%90%86">工作流整理</a></li>
+</ul>
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:26 UTC 2022 -->
+<!--te-->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="关于marginnote使用自定义模版"><a class="header" href="#关于marginnote使用自定义模版">关于marginnote使用自定义模版</a></h1>
+<blockquote>
+<p>由于marginnote自带的模版太简单，所以找了一下如何使用自定义模版导出</p>
+</blockquote>
+<!--ts-->
 <ul>
-<li><a href="app_extensions/workflows/workflows.html#anki%E4%B8%8Emarginnote%E5%8D%8F%E5%90%8C"><a href="app_extensions/workflows/./marginnote_anki.html">Anki与marginnote协同</a></a></li>
+<li><a href="app_extensions/workflows/marginnote_anki.html#%E5%85%B3%E4%BA%8Emarginnote%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E7%89%88">关于marginnote使用自定义模版</a>
+<ul>
+<li><a href="app_extensions/workflows/marginnote_anki.html#%E4%B8%80%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E7%89%88%E5%AF%BC%E5%87%BA%E4%B8%8D%E5%8F%AF%E8%A1%8C">一、自定义模版导出：不可行</a></li>
+<li><a href="app_extensions/workflows/marginnote_anki.html#%E4%BA%8C%E8%87%AA%E5%8A%A8%E5%9C%A8anki%E4%B8%AD%E4%BF%AE%E6%94%B9%E6%A8%A1%E7%89%88">二、自动在anki中修改模版</a></li>
 </ul>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jun  6 16:18:22 UTC 2022 -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:26 UTC 2022 -->
 <!--te-->
-<h2 id="anki与marginnote协同"><a class="header" href="#anki与marginnote协同"><a href="app_extensions/workflows/./marginnote_anki.html">Anki与marginnote协同</a></a></h2>
+<h2 id="一自定义模版导出不可行"><a class="header" href="#一自定义模版导出不可行">一、自定义模版导出：不可行</a></h2>
+<ul>
+<li><a href="https://bbs.marginnote.cn/t/topic/17640">Anki 導出自定義模板後，在 MN 中 Fields 丢失 - 方法、技巧、工作流 / Anki专区——记忆宫殿 - MarginNote 中文社区</a></li>
+<li><a href="https://manual.marginnote.cn/review/#anki%E5%8D%A1%E7%89%87%E7%BB%84%E5%AD%97%E6%AE%B5%E5%90%AB%E4%B9%89">功能点快速参考手册</a></li>
+</ul>
+<h2 id="二自动在anki中修改模版"><a class="header" href="#二自动在anki中修改模版">二、自动在anki中修改模版</a></h2>
+<ul>
+<li>对照字段更换模版可行</li>
+<li>需要解决MNLink的超链接问题</li>
+<li><a href="https://ankiweb.net/shared/info/1214415810">HTML Window source - AnkiWeb</a></li>
+<li>showdown卡片模版添加MNLink字段</li>
+<li>只要卡片标题不修改，就不会覆盖更新</li>
+<li>正面备注都会出现在标题</li>
+<li>背面备注都在back里面</li>
+</ul>
+<p>最终结果放在<a href="app_extensions/workflows/../Anki_around/custom_md_template.html">《自定义anki模版》</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki周边使用及扩展"><a class="header" href="#anki周边使用及扩展">Anki周边使用及扩展</a></h1>
 <!--ts-->
 <ul>
-<li><a href="app_extensions/Anki_around/anki_around.html#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a>
+<li><a href="app_extensions/Anki_around/anki_around.html#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a></li>
+</ul>
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:25 UTC 2022 -->
+<!--te-->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="自定义anki模版"><a class="header" href="#自定义anki模版">自定义Anki模版</a></h1>
+<blockquote>
+<p>由于本人最为习惯md语法，再加上mermaid、语法高亮等需求，所以折腾一下，制作了一个anki卡片模版: showdown-hightlight-mermaid. 另外在<a href="app_extensions/Anki_around/../workflows/marginnote_anki.html">《marginnote使用自定义模版》</a>一文中的折腾过程，添加了一个MNLink的字段。</p>
+</blockquote>
+<!--ts-->
 <ul>
-<li><a href="app_extensions/Anki_around/anki_around.html#%E8%87%AA%E5%AE%9A%E4%B9%89anki%E5%8D%A1%E7%89%87md%E6%A8%A1%E7%89%88"><a href="app_extensions/Anki_around/./custom_md_template.html">自定义Anki卡片md模版</a></a></li>
+<li><a href="app_extensions/Anki_around/custom_md_template.html#%E8%87%AA%E5%AE%9A%E4%B9%89anki%E6%A8%A1%E7%89%88">自定义Anki模版</a>
+<ul>
+<li><a href="app_extensions/Anki_around/custom_md_template.html#%E6%AD%A3%E9%9D%A2%E6%A8%A1%E7%89%88">正面模版</a></li>
+<li><a href="app_extensions/Anki_around/custom_md_template.html#%E8%83%8C%E9%9D%A2%E6%A8%A1%E7%89%88">背面模版</a></li>
+<li><a href="app_extensions/Anki_around/custom_md_template.html#%E8%AF%B4%E6%98%8E">说明</a></li>
 </ul>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jun  6 16:18:21 UTC 2022 -->
+<!-- Added by: runner, at: Mon Jun  6 16:26:25 UTC 2022 -->
 <!--te-->
-<h2 id="自定义anki卡片md模版"><a class="header" href="#自定义anki卡片md模版"><a href="app_extensions/Anki_around/./custom_md_template.html">自定义Anki卡片md模版</a></a></h2>
+<h2 id="正面模版"><a class="header" href="#正面模版">正面模版</a></h2>
+<p><img src="app_extensions/Anki_around/image/image-20220606234758347.png" alt="image-20220606234758347" /></p>
+<pre><code class="language-javascript">&lt;div class=&quot;section&quot;&gt;
+    &lt;div class=&quot;Description md-content&quot;&gt;{{Question}}&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    function addStylesheet(src, callback) {
+    var s = document.createElement('link');
+    s.rel = 'stylesheet';
+    s.href = src;
+    s.onload = callback;
+    document.head.appendChild(s);
+}
+    function addScript(src, callback) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.type = &quot;text/javascript&quot;;
+    s.onload = callback;
+    document.body.appendChild(s);
+}
+
+    function addMermaid() {
+    // 开始mermaid配置
+    addScript(mermaidUrl, function () {
+        let config = {
+            startOnLoad: true,
+            theme: 'neutral',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'Basis'
+            },
+            securityLevel: 'loose'
+        }
+        //mermaid.initialize(config)
+        mermaid.init()
+    });
+}
+
+    function replaceAllWhitespaceWithSpace(str) {
+    return str.replace(/[\t\v\f \u00a0\u2000-\u200b\u2028-\u2029\u3000]/g, ' ');
+}
+    // anki本地存放多媒体文件路径： ~/Library/Application Support/Anki2/
+    &lt;account&gt;/collection.media
+        var highlightcssUrl = &quot;_highlight.default.min.css&quot;;
+        var showdownsCssUrl = &quot;_showdowns.min.css&quot;
+        var showdownUrl = &quot;_showdown.min.js&quot;;
+        var showdownsUrl = &quot;_showdowns.min.js&quot;;
+        // https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js
+        var mermaidUrl = &quot;_mermaid.min.js&quot;;
+        var highlightjsUrl = &quot;_highlight.min.js&quot;;
+        addStylesheet(highlightcssUrl, function () {});
+        addStylesheet(showdownsCssUrl, function () {});
+        addScript(showdownUrl, function () {
+            addScript(highlightjsUrl, function () {
+                function processShowdownDivs() {
+                    var showdownConverter = new showdown.Converter({tables: true}); // 打开表格支持
+                    showdownConverter.setFlavor('github');
+                    document.querySelectorAll('div.md-content').forEach((div) =&gt; {
+                        var rawText = div.innerText.replace(/&lt;\/div&gt;/g, &quot;&quot;); // div.innerHTML.replace(/&lt;\/div&gt;/g, &quot;&quot;); //innerText;
+                        var classes = div.className.replace(/md-content/g, &quot;&quot;);
+                        var text = replaceAllWhitespaceWithSpace(rawText); //.replace(/&lt;br&gt;|&lt;div&gt;/g, &quot;\n&quot;);
+                        var html = showdownConverter.makeHtml(text);
+                        var newDiv = document.createElement('div');
+                        newDiv.innerHTML = html;
+                        newDiv.className = classes;
+
+                        newDiv.querySelectorAll('pre code').forEach((block) =&gt; {
+                            hljs.highlightBlock(block);
+                        });
+
+                        div.parentNode.insertBefore(newDiv, div.nextSibling);
+                        div.style.display = 'none';
+                        addMermaid();
+                    });
+                };
+
+                processShowdownDivs();
+            });
+
+        });
+
+&lt;/script&gt;
+</code></pre>
+<h2 id="背面模版"><a class="header" href="#背面模版">背面模版</a></h2>
+<p><img src="app_extensions/Anki_around/image/image-20220606234940109.png" alt="image-20220606234940109" /></p>
+<pre><code class="language-html">{{FrontSide}}
+
+&lt;hr id=answer&gt;
+
+&lt;div class=&quot;section&quot;&gt;
+    &lt;div id=&quot;back&quot; class=&quot;Description md-content&quot;&gt;感悟：&lt;/br&gt;{{Tips}}&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;section&quot;&gt;
+    &lt;div id=&quot;back&quot; class=&quot;Description md-content&quot;&gt;回答： &lt;/br&gt;{{Answer}}&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;section&quot;&gt;
+    &lt;div id=&quot;back&quot; class=&quot;Description md-content&quot;&gt;来源: &lt;/br&gt;{{Origin}}&lt;/div&gt;
+&lt;/div&gt;
+{{MNLink}}
+</code></pre>
+<h2 id="说明"><a class="header" href="#说明">说明</a></h2>
+<ol>
+<li>anki本地存放多媒体文件路径：</li>
+</ol>
+<pre><code class="language-shell">~/Library/Application Support/Anki2/&lt;account&gt;/collection.media
+</code></pre>
+<ol start="2">
+<li>相关js文件可在github main分支的scripts/anki_md_js里面找到</li>
+</ol>
 
                     </main>
 
