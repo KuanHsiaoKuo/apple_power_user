@@ -9,4 +9,4 @@
 
 <!--te-->
 
-## [自定义Anki卡片md模版](custom_md_template.md)
+## [自定义Anki卡片md模版](./custom_md_template.md)

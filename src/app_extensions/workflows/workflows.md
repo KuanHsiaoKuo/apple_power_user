@@ -11,4 +11,4 @@
 
 <!--te-->
 
-## [Anki与marginnote协同](marginnote_anki.md)
+## [Anki与marginnote协同](./marginnote_anki.md)
