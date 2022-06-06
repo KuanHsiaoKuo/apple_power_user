@@ -10,5 +10,3 @@
 <!-- Added by: runner, at: Mon Jun  6 16:18:22 UTC 2022 -->
 
 <!--te-->
-
-## [Anki与marginnote协同](./marginnote_anki.md)
