@@ -3,6 +3,14 @@
 > 由于本人最为习惯md语法，再加上mermaid、语法高亮等需求，所以折腾一下，制作了一个anki卡片模版: showdown-hightlight-mermaid. 另外在[《marginnote使用自定义模版》](../workflows/marginnote_anki.md)一文中的折腾过程，添加了一个MNLink的字段。
 
 <!--ts-->
+* [自定义Anki模版](#自定义anki模版)
+   * [正面模版](#正面模版)
+   * [背面模版](#背面模版)
+   * [说明](#说明)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Mon Jun  6 16:06:11 UTC 2022 -->
+
 <!--te-->
 
 ## 正面模版

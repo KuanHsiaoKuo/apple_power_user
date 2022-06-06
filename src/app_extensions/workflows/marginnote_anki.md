@@ -1,6 +1,13 @@
 # 关于marginnote使用自定义模版
 > 由于marginnote自带的模版太简单，所以找了一下如何使用自定义模版导出
 <!--ts-->
+* [关于marginnote使用自定义模版](#关于marginnote使用自定义模版)
+   * [一、自定义模版导出：不可行](#一自定义模版导出不可行)
+   * [二、自动在anki中修改模版](#二自动在anki中修改模版)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Mon Jun  6 16:06:13 UTC 2022 -->
+
 <!--te-->
 ## 一、自定义模版导出：不可行
 - [Anki 導出自定義模板後，在 MN 中 Fields 丢失 - 方法、技巧、工作流 / Anki专区——记忆宫殿 - MarginNote 中文社区](https://bbs.marginnote.cn/t/topic/17640)
