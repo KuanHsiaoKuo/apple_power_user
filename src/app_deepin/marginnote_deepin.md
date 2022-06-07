@@ -1,6 +1,13 @@
 # Marginnote深度使用整理
 
 <!--ts-->
+* [Marginnote深度使用整理](#marginnote深度使用整理)
+   * [文档模式](#文档模式)
+      * [朗读模式](#朗读模式)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Tue Jun  7 12:17:23 UTC 2022 -->
+
 <!--te-->
 
 
