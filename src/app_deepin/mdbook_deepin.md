@@ -75,11 +75,9 @@ tree -L 2                                                                       
 
 ### 图片资源与git lfs
 
-#### git lfs
-
-![](imgs/graphic.gif)
 
 #### git lfs使用场景
+![](imgs/graphic.gif)
 
 Git LFS 是 Github 开发的一个 Git 的扩展，用于实现 Git 对大文件的支持. 比如在游戏开发过程中,设计资源占用了很大一部分空间. 像png,psd等文件是二进制(blob)
 的,体积也很庞大.但git的diff/patch等是基于文件行的.对于二进制文件来说. git需要存储每次commit的改动.每次当二进制文件修改,发生变化的时候.
