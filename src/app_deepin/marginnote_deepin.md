@@ -3,9 +3,18 @@
 <!--ts-->
 * [Marginnote深度使用整理](#marginnote深度使用整理)
    * [朗读模式](#朗读模式)
+   * [多屏模式](#多屏模式)
+      * [打开定位功能](#打开定位功能)
+      * [cmd + n 打开新窗口](#cmd--n-打开新窗口)
+      * [多屏功能无法将卡片集中在当前焦点](#多屏功能无法将卡片集中在当前焦点)
+   * [卡片制作规范](#卡片制作规范)
+      * [卡片标题](#卡片标题)
+      * [卡片内容](#卡片内容)
+      * [卡片评论](#卡片评论)
+      * [卡片追加](#卡片追加)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun  8 02:38:30 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jun  8 07:00:33 UTC 2022 -->
 
 <!--te-->
 

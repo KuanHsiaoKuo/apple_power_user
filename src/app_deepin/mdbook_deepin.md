@@ -8,10 +8,20 @@
       * [图片资源与git lfs](#图片资源与git-lfs)
          * [git lfs使用场景](#git-lfs使用场景)
          * [对mdbook的影响](#对mdbook的影响)
+   * [Rust特供功能](#rust特供功能)
+      * [隐藏代码行](#隐藏代码行)
+      * [Rust Playground页面执行](#rust-playground页面执行)
+      * [包含文件自动渲染为md](#包含文件自动渲染为md)
+         * [全文件包含](#全文件包含)
+         * [指定行数](#指定行数)
+         * [指定锚点部分](#指定锚点部分)
+      * [插入代码](#插入代码)
+         * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
+         * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun  8 02:38:30 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jun  8 07:00:34 UTC 2022 -->
 
 <!--te-->
 
