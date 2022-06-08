@@ -156,12 +156,31 @@
 </li>
 </ul>
 </li>
+<li><a href="#rust%E7%89%B9%E4%BE%9B%E5%8A%9F%E8%83%BD">Rust特供功能</a>
+<ul>
+<li><a href="#%E9%9A%90%E8%97%8F%E4%BB%A3%E7%A0%81%E8%A1%8C">隐藏代码行</a></li>
+<li><a href="#rust-playground%E9%A1%B5%E9%9D%A2%E6%89%A7%E8%A1%8C">Rust Playground页面执行</a></li>
+<li><a href="#%E5%8C%85%E5%90%AB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%B8%B2%E6%9F%93%E4%B8%BAmd">包含文件自动渲染为md</a>
+<ul>
+<li><a href="#%E5%85%A8%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB">全文件包含</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E8%A1%8C%E6%95%B0">指定行数</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E9%94%9A%E7%82%B9%E9%83%A8%E5%88%86">指定锚点部分</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8F%92%E5%85%A5%E4%BB%A3%E7%A0%81">插入代码</a>
+<ul>
+<li><a href="#%E6%8F%92%E5%85%A5%E5%8F%AF%E8%BF%90%E8%A1%8C%E4%BB%A3%E7%A0%81-%E5%8F%AA%E6%94%AF%E6%8C%81rust">插入可运行代码: 只支持rust</a></li>
+<li><a href="#%E9%A1%B5%E9%9D%A2%E7%9B%B4%E6%8E%A5%E7%BC%96%E8%BE%91%E4%BB%A3%E7%A0%81--editable">页面直接编辑代码: *, editable</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5">资源链接</a></li>
 </ul>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun  8 02:38:30 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jun  8 07:00:34 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -231,6 +250,128 @@
 <p><img src="imgs/1200-20220608102711994.png" alt="" /></p>
 <h4 id="对mdbook的影响"><a class="header" href="#对mdbook的影响">对mdbook的影响</a></h4>
 <p>因为mdbook默认是在src里面直接引用静态资源，所以如果用git lfs打开对应的资源存储就会导致发布后的github pages找不到静态资源。</p>
+<h2 id="rust特供功能"><a class="header" href="#rust特供功能">Rust特供功能</a></h2>
+<h3 id="隐藏代码行"><a class="header" href="#隐藏代码行">隐藏代码行</a></h3>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">fn main() {
+</span>    let x = 5;
+    let y = 6;
+
+    println!(&quot;{}&quot;, x + y);
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="rust-playground页面执行"><a class="header" href="#rust-playground页面执行">Rust Playground页面执行</a></h3>
+<ul>
+<li>默认支持</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">#![allow(unused)]
+fn main() {
+println!(&quot;Hello, World!&quot;);
+}
+</code></pre></pre>
+<ul>
+<li>指定不支持</li>
+</ul>
+<pre><code class="language-rust noplayground">let mut name = String::new();
+std::io::stdin().read_line(&amp;mut name).expect(&quot;failed to read line&quot;);
+println!(&quot;Hello {}!&quot;, name);
+</code></pre>
+<h3 id="包含文件自动渲染为md"><a class="header" href="#包含文件自动渲染为md">包含文件自动渲染为md</a></h3>
+<h4 id="全文件包含"><a class="header" href="#全文件包含">全文件包含</a></h4>
+<pre><code>```
+{{#include ../../scripts/update_toc_raw}}
+```
+</code></pre>
+<blockquote>
+<p>渲染后：</p>
+</blockquote>
+<pre><code class="language-shell">find . -type f -name '*.md' &gt; temp
+mds=`sort temp | uniq`
+for md in $mds:
+do
+  if echo $md | grep -q -E '\.md$'
+  then
+    echo $md
+    scripts/gh-md-toc --insert --no-backup $md
+  else
+    echo $md' not md'
+  fi
+done
+rm temp
+</code></pre>
+<h4 id="指定行数"><a class="header" href="#指定行数">指定行数</a></h4>
+<ol>
+<li>指定一行</li>
+</ol>
+<pre><code>```
+{{#include ../../scripts/update_toc_raw:1}}
+```
+</code></pre>
+<blockquote>
+<p>渲染后：</p>
+</blockquote>
+<pre><code class="language-shell">find . -type f -name '*.md' &gt; temp
+</code></pre>
+<ol start="2">
+<li>指定一行开始</li>
+</ol>
+<pre><code>```
+{{#include ../../scripts/update_toc_raw:1:}}
+```
+</code></pre>
+<blockquote>
+<p>渲染后：</p>
+</blockquote>
+<pre><code class="language-shell">find . -type f -name '*.md' &gt; temp
+mds=`sort temp | uniq`
+for md in $mds:
+do
+  if echo $md | grep -q -E '\.md$'
+  then
+    echo $md
+    scripts/gh-md-toc --insert --no-backup $md
+  else
+    echo $md' not md'
+  fi
+done
+rm temp
+</code></pre>
+<ol start="3">
+<li>指定范围</li>
+</ol>
+<pre><code>```
+{{#include ../../scripts/update_toc_raw:1:5}}
+```
+</code></pre>
+<blockquote>
+<p>渲染后：</p>
+</blockquote>
+<pre><code class="language-shell">find . -type f -name '*.md' &gt; temp
+mds=`sort temp | uniq`
+for md in $mds:
+do
+  if echo $md | grep -q -E '\.md$'
+</code></pre>
+<ol start="4">
+<li>指定到某行</li>
+</ol>
+<pre><code>```
+{{#include ../../scripts/update_toc_raw::6}}
+```
+</code></pre>
+<blockquote>
+<p>渲染后：</p>
+</blockquote>
+<pre><code class="language-shell">find . -type f -name '*.md' &gt; temp
+mds=`sort temp | uniq`
+for md in $mds:
+do
+  if echo $md | grep -q -E '\.md$'
+  then
+</code></pre>
+<h4 id="指定锚点部分"><a class="header" href="#指定锚点部分">指定锚点部分</a></h4>
+<h3 id="插入代码"><a class="header" href="#插入代码">插入代码</a></h3>
+<h4 id="插入可运行代码-只支持rust"><a class="header" href="#插入可运行代码-只支持rust">插入可运行代码: 只支持rust</a></h4>
+<h4 id="页面直接编辑代码--editable"><a class="header" href="#页面直接编辑代码--editable">页面直接编辑代码: *, editable</a></h4>
 <h2 id="资源链接"><a class="header" href="#资源链接">资源链接</a></h2>
 <ul>
 <li>
@@ -241,6 +382,9 @@
 </li>
 <li>
 <p><a href="https://git-lfs.github.com/">Git Large File Storage | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.</a></p>
+</li>
+<li>
+<p><a href="https://rust-lang.github.io/mdBook/format/mdbook.html">mdBook-specific features - mdBook Documentation</a></p>
 </li>
 </ul>
 
