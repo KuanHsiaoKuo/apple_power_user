@@ -1,6 +1,19 @@
 # Mdbook电子书发布工具使用说明
 
 <!--ts-->
+* [Mdbook电子书发布工具使用说明](#mdbook电子书发布工具使用说明)
+   * [使用要点](#使用要点)
+      * [基本结构](#基本结构)
+      * [Summary](#summary)
+      * [图片资源与git lfs](#图片资源与git-lfs)
+         * [git lfs](#git-lfs)
+         * [git lfs使用场景](#git-lfs使用场景)
+         * [对mdbook的影响](#对mdbook的影响)
+   * [资源链接](#资源链接)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Wed Jun  8 02:35:20 UTC 2022 -->
+
 <!--te-->
 
 ## 使用要点
