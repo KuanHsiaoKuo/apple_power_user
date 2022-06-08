@@ -7,6 +7,7 @@
 - [Power User Need Know](overview.md)
   - [主力App深度使用](app_deepin/app_deepin.md)
     - [Marginnote](app_deepin/marginnote_deepin.md)
+    - [Mdbook](app_deepin/mdbook_deepin.md)
   - [工作流](app_extensions/workflows/workflows.md)
     - [Anki与marginnote协同](app_extensions/workflows/marginnote_anki.md)
   - [Anki扩展使用](app_extensions/Anki_around/anki_around.md)
