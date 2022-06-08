@@ -94,9 +94,105 @@ Git LFS 是 Github 开发的一个 Git 的扩展，用于实现 Git 对大文件
 
 因为mdbook默认是在src里面直接引用静态资源，所以如果用git lfs打开对应的资源存储就会导致发布后的github pages找不到静态资源。
 
+## Rust特供功能
+
+### 隐藏代码行
+
+```rust
+# fn main() {
+    let x = 5;
+    let y = 6;
+
+    println!("{}", x + y);
+# }
+```
+
+### Rust Playground页面执行
+
+- 默认支持
+
+```rust
+#![allow(unused)]
+fn main() {
+println!("Hello, World!");
+}
+```
+
+- 指定不支持
+
+```rust,noplayground
+let mut name = String::new();
+std::io::stdin().read_line(&mut name).expect("failed to read line");
+println!("Hello {}!", name);
+```
+
+### 包含文件自动渲染为md
+#### 全文件包含
+````
+```
+\{{#include ../../scripts/update_toc_raw}}
+```
+````
+> 渲染后：
+```shell
+{{#include ../../scripts/update_toc_raw}}
+```
+
+#### 指定行数
+1. 指定一行
+````
+```
+\{{#include ../../scripts/update_toc_raw:1}}
+```
+````
+> 渲染后：
+```shell
+{{#include ../../scripts/update_toc_raw:1}}
+```
+2. 指定一行开始
+````
+```
+\{{#include ../../scripts/update_toc_raw:1:}}
+```
+````
+> 渲染后：
+```shell
+{{#include ../../scripts/update_toc_raw:1:}}
+```
+3. 指定范围
+````
+```
+\{{#include ../../scripts/update_toc_raw:1:5}}
+```
+````
+> 渲染后：
+```shell
+{{#include ../../scripts/update_toc_raw:1:5}}
+```
+4. 指定到某行
+````
+```
+\{{#include ../../scripts/update_toc_raw::6}}
+```
+````
+> 渲染后：
+```shell
+{{#include ../../scripts/update_toc_raw::6}}
+```
+
+#### 指定锚点部分
+
+### 插入代码
+#### 插入可运行代码: 只支持rust
+
+#### 页面直接编辑代码: *, editable
+
+
 ## 资源链接
 
 - [rust-lang/mdBook: Create book from markdown files. Like Gitbook but implemented in Rust](https://github.com/rust-lang/mdBook)
 - [Introduction - mdBook Documentation](https://rust-lang.github.io/mdBook/)
 
 - [Git Large File Storage | Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.](https://git-lfs.github.com/)
+
+- [mdBook-specific features - mdBook Documentation](https://rust-lang.github.io/mdBook/format/mdbook.html)
