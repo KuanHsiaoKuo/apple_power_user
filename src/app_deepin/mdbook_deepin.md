@@ -6,13 +6,12 @@
       * [基本结构](#基本结构)
       * [Summary](#summary)
       * [图片资源与git lfs](#图片资源与git-lfs)
-         * [git lfs](#git-lfs)
          * [git lfs使用场景](#git-lfs使用场景)
          * [对mdbook的影响](#对mdbook的影响)
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun  8 02:35:20 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jun  8 02:38:30 UTC 2022 -->
 
 <!--te-->
 
