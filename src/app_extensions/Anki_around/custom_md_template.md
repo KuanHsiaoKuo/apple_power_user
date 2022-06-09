@@ -9,13 +9,13 @@
    * [说明](#说明)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun  8 07:00:34 UTC 2022 -->
+<!-- Added by: runner, at: Tue Jun  7 15:57:34 UTC 2022 -->
 
 <!--te-->
 
 ## 正面模版
 
-![image-20220606234758347](image/image-20220606234758347.png)
+![image-20220606234758347](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220606234758347.png)
 
 ```javascript
 <div class="section">
@@ -104,7 +104,7 @@
 
 ## 背面模版
 
-![image-20220606234940109](image/image-20220606234940109.png)
+![image-20220606234940109](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220606234940109.png)
 
 ```html
 {{FrontSide}}

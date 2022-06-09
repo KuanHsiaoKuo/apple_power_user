@@ -86,19 +86,19 @@ tree -L 2                                                                       
 
 
 #### git lfs使用场景
-![](imgs/graphic.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/graphic.gif)
 
 Git LFS 是 Github 开发的一个 Git 的扩展，用于实现 Git 对大文件的支持. 比如在游戏开发过程中,设计资源占用了很大一部分空间. 像png,psd等文件是二进制(blob)
 的,体积也很庞大.但git的diff/patch等是基于文件行的.对于二进制文件来说. git需要存储每次commit的改动.每次当二进制文件修改,发生变化的时候.
 都会产生额外的提交量.导致clone和pull的数据量大增.在线仓库的体积也会迅速增长.
 
-![](imgs/1200.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/1200.png)
 > LFS(Large File Storage) 就是为了解决这一问题而产生的工具.
 
 - 它将你所标记的大文件保存至另外的仓库,而在主仓库仅保留其轻量级指针.
 - 那么在你检出版本时,根据指针的变化情况下更新对应的大文件.而不是在本地保存所有版本的大文件
 
-![](imgs/1200-20220608102711994.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/1200-20220608102711994.png)
 
 #### 对mdbook的影响
 

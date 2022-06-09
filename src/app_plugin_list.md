@@ -107,7 +107,7 @@
 
 [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
 
-![](./imgs/dash-256.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/dash-256.png)
 
 > [gdelmas/IntelliJDashPlugin: A smart and simple plugin that provides keyboard shortcut access for Dash, Velocity or Zeal in IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm and Android Studio.](https://github.com/gdelmas/IntelliJDashPlugin#readme)
 
@@ -264,25 +264,25 @@
 
 > TotalFinder is a plugin, not a replacement
 
-![](./imgs/5316853f_images_showcase_full-clabels.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/5316853f_images_showcase_full-clabels.png)
 
 [About TotalFinder](https://web.archive.org/web/20220531023426/https://totalfinder.binaryage.com/about)
 - [Tabs in TotalFinder](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/tabs)
-![](./imgs/96a07616_images_showcase_full-tabs.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/96a07616_images_showcase_full-tabs.png)
 - [Dual Mode in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/dual-mode)
-![](./imgs/ea54495a_images_showcase_full-dual.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/ea54495a_images_showcase_full-dual.png)
 - [Visor in TotalFinder](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/visor)
-![](./imgs/622eee9d_images_showcase_full-visor.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/622eee9d_images_showcase_full-visor.png)
 - [Show System Files in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/show-system-files)
-![](./imgs/fa800004_images_show-system-files.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/fa800004_images_show-system-files.png)
 - [Colored Labels in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/colored-labels)
-![](./imgs/c1243899_images_colored-labels-icon-view.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/c1243899_images_colored-labels-icon-view.png)
 - [Folders on Top in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/folders-on-top)
 ![](https://web.archive.org/web/20220503143108im_/https://static.binaryage.com/815c386d_images_showcase_full-fot.png)
 - [TotalFinder Context Menus](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/menus)
-![](./imgs/dfe3f13e_images_context-menu-path.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/dfe3f13e_images_context-menu-path.png)
 - [TotalFinder Tweaks](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/tweaks)
-![](./imgs/e5214dd1_images_sidebar.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/e5214dd1_images_sidebar.png)
 ## 五、输出相关
 
 ### Drafts: 随手记终极解决工具
@@ -317,7 +317,7 @@
 
 [Monodraw for macOS — Helftone](https://monodraw.helftone.com/)
 
-![](./imgs/shot-drawing-tools.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/shot-drawing-tools.png)
 
 > Monodraw 是一款专业强大的 ASCII 文本编辑器。可以基于纯文本轻松创建漂亮的代码说明注释、终端欢迎界面等。
 > 支持画笔及形状，可以任意绘制。你甚至可以用它绘制纯文本图表、流程图，直观地来表示算法，数据结构，二进制格式等等。
@@ -331,8 +331,8 @@
 
 > 与Scrivener是一家
 > [高效学习法-利用Scapple打造10倍效率的笔记 - 知乎](https://web.archive.org/web/20220513063421/https://zhuanlan.zhihu.com/p/65473026)
-![](./imgs/v2-10936f202d420386da963354b92a2cb1_b.jpg)
-![](./imgs/beginning-middle-loose-ends.jpg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/v2-10936f202d420386da963354b92a2cb1_b.jpg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/beginning-middle-loose-ends.jpg)
 ![](https://www.literatureandlatte.com/assets/./imgs/scapple/scapple-main.jpg)
 > 纸和软件结合 第一，先在A4纸上或者自己的笔记本上做即时性笔记——记录一些学习时的零散的关键信息点。 第二，回到家，使用Scapple，将这些零散的关键信息点誊抄在上面 第三，对照这些零散的关键信息点，进入专注模式，进行索引式回顾，并在Scapple写下这些关键信息点的详细内容 第四，构建这些关键信息点之间的联系。
 > 纯软件, 不做任何即时性笔记。 第一，直接使用Scapple，进入发散模式，不断的思考能够记住的一些关键信息点。 第二，构建这些关键信息点之间的联系。 Scapple之所以非常适合做笔记，是因为它是就人体大脑的思维模式所设计的。 当你不断创建内容（Notes)时，你通常处在发散模式； 当你对照内容去思考深挖详细信息时，你通常处在专注模式； 当你在构建Notes间的连接时，你更可能处于发散模式。
@@ -341,14 +341,14 @@
 
 [Scrivener | Literature & Latte](https://www.literatureandlatte.com/scrivener/overview)
 
-![](./imgs/forest-or-trees.jpg)
-![](./imgs/rewrite-reorder-rejoice.jpg)
-![](./imgs/research-within-reach.jpg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/forest-or-trees.jpg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/rewrite-reorder-rejoice.jpg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/research-within-reach.jpg)
 
 - [用 Scrivener 写小说 - 少数派](https://web.archive.org/web/20220515154849/https://sspai.com/post/67363)
 
 > 区分提要与便签
-![](./imgs/74c6016fb891b842bfb32c7b6cb1f645.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/74c6016fb891b842bfb32c7b6cb1f645.gif)
 
 ### Graph-easy: ASCII DSL语言工具
 
@@ -388,17 +388,17 @@ sudo cpan Graph:Easy
 
 #### [GitHub Isometric Contributions - Chrome 网上应用店](https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien)
 
-![](./imgs/Ew7xMlpcHhsOKfJB25HfKYgmpkfPTGvOPL-9JERL-x0j3H98crueLTtkmLOr4mIyAcMbhaib8wCbte1VVEGx7xV4eSs=w640-h400-e365-rj-sc0x00ffffff.jpeg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/Ew7xMlpcHhsOKfJB25HfKYgmpkfPTGvOPL-9JERL-x0j3H98crueLTtkmLOr4mIyAcMbhaib8wCbte1VVEGx7xV4eSs%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg)
 
 #### [gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file](https://github.com/gildas-lormeau/SingleFile)
 
 #### [Rust Search Extension - The ultimate search extension for Rust](https://rust.extension.sh/)
 
-![](./imgs/demonstration.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/demonstration.gif)
 
 #### [macro_railroad - Chrome 网上应用店](https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp)
 
-![](./imgs/CVNeetRxO-OrVyShZ_E-G12DAt4ByHC2CzMVfJI7fA6R92ntDv3o_RCqhGjjJp2w0ZRh6Sx0m6xlqty1eJBUooVec10=w640-h400-e365-rj-sc0x00ffffff.jpeg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/CVNeetRxO-OrVyShZ_E-G12DAt4ByHC2CzMVfJI7fA6R92ntDv3o_RCqhGjjJp2w0ZRh6Sx0m6xlqty1eJBUooVec10%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg)
 
 #### [Smart TOC - Chrome 网上应用店](https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba)
 
@@ -410,23 +410,23 @@ sudo cpan Graph:Easy
 
 > [alyssaxuu/omni: The all-in-one tool to supercharge your productivity ⌨️](https://github.com/alyssaxuu/omni)
 ![](https://lh3.googleusercontent.com/P4tnISAD7L4I1ePDn5_CGr5mQTsVWWOKa35hZSwTW4z5fOOkWMBPR8z7xltoHkwfNqKT8E3CRYpzCThio30Pq2-E=w640-h400-e365-rj-sc0x00ffffff)
-![](./imgs/preview.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/preview.gif)
 
 #### [alyssaxuu/flowy: The minimal javascript library to create flowcharts ✨](https://github.com/alyssaxuu/flowy)
 
-![](./imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6476314335364f7977725037436e32306e722f67697068792e676966.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6476314335364f7977725037436e32306e722f67697068792e676966.gif)
 
 #### [alyssaxuu/screenity: The most powerful screen recorder & annotation tool for Chrome 🎥](https://github.com/alyssaxuu/screenity)
 
-![](./imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3668633730396e4645596e45747a4949794e2f67697068792e676966.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3668633730396e4645596e45747a4949794e2f67697068792e676966.gif)
 
 #### [alyssaxuu/animockup: Create animated mockups in the browser 🔥](https://github.com/alyssaxuu/animockup)
 
-![](./imgs/preview-20220605171609089.gif)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/preview-20220605171609089.gif)
 
 #### [Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇](https://relingo.net/zh/guide)
 
-![](./imgs/yastKTfHxC93tRjYDRI0wWukcK77OyUV3fwpUtUtOcUxqjhXXxW5A4rWmK82qUTR3XsGw6oWZGAxxd8eoXz6U6zR=w640-h400-e365-rj-sc0x00ffffff.jpeg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/yastKTfHxC93tRjYDRI0wWukcK77OyUV3fwpUtUtOcUxqjhXXxW5A4rWmK82qUTR3XsGw6oWZGAxxd8eoXz6U6zR%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg)
 
 #### [RSS Reader Extension (by Inoreader) - Chrome 网上应用店](https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related)
 
@@ -438,19 +438,19 @@ sudo cpan Graph:Easy
 
 #### [Zotero Connector - Chrome 网上应用店](https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related)
 
-![](./imgs/gL0Ky3a-hyp7sGQLnbWpPcebnUj8ituzsdstiVfsSq-OxA9QNZiA9ABhNf42-1oa6He3tN2kSk1B3uo80yZ1Ge1WZQ=w640-h400-e365-rj-sc0x00ffffff.jpeg)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/gL0Ky3a-hyp7sGQLnbWpPcebnUj8ituzsdstiVfsSq-OxA9QNZiA9ABhNf42-1oa6He3tN2kSk1B3uo80yZ1Ge1WZQ%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg)
 
 ### 2. DEVONThink
 
 #### [Trickster - Your recently used files, at your fingertips!](https://www.apparentsoft.com/trickster)
 
-![](./imgs/trickster_devonthink.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/trickster_devonthink.png)
 
 > Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
 
 #### [Hook – Links beat searching](https://hookproductivity.com/)
 
-![](./imgs/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png)
+![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png)
 
 > Hook is an easy way to copy links to files, emails, web pages and more. Paste and use them anywhere. Even bidirectionally link ("hook") items together
 > Replace the frustration of searching your Mac with the pleasure of using contextually relevant links. Use Hook to copy robust links to anything on your Mac or elsewhere (files, emails, tasks, PDFs, web pages, etc).
@@ -459,7 +459,7 @@ sudo cpan Graph:Easy
 
 - hook作者还是链接宣言的发起者：
   [让链接无处不在——《泛在链接宣言》的理论与理想 - 少数派](https://web.archive.org/web/20220516030303/https://sspai.com/post/70648)
-  ![](./imgs/1.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/1.png)
 
 - [Hook：如何高效双向链接不同类型的信息资源？ - 少数派](https://web.archive.org/web/20220518031631/https://sspai.com/post/68344)
 
@@ -475,7 +475,7 @@ sudo cpan Graph:Easy
 ### 3. Alfred
 
 - [alfredapp/shortcuts-workflow: Run installled macOS shortcuts](https://github.com/alfredapp/shortcuts-workflow#readme)
-  ![](./imgs/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/68747470733a2f2f692e696d6775722e636f6d2f534a38307042792e706e67.png)
 - [Alfred workflows for Trickster - User Manual - Docs - Apparent Software Forum](https://discourse.apparentsoft.com/docs?topic=56)
 - [Get Latest Files from Trickster | Packal](http://www.packal.org/workflow/get-latest-files-trickster)
-  ![](./imgs/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif)

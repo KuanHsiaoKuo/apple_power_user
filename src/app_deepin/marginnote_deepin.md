@@ -32,21 +32,21 @@ Marginnote支持将勾画的重点进行朗读，并且可以后台运行并朗�
 
 - macOS：
 
-![image-20220608000253594](imgs/image-20220608000253594.png)
+![image-20220608000253594](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220608000253594.png)
 
-![image-20220608000328467](imgs/image-20220608000328467.png)
+![image-20220608000328467](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220608000328467.png)
 
 - iOS：
 
-![image-20220608000350355](imgs/image-20220608000350355.png)
+![image-20220608000350355](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220608000350355.png)
 
-![image-20220608000408181](imgs/image-20220608000408181.png)
+![image-20220608000408181](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220608000408181.png)
 
 ### 多屏模式
 
 #### 打开定位功能
 
-![CleanShot 2022-06-08 at 11.53.24@2x](imgs/CleanShot 2022-06-08 at 11.53.24@2x.png)
+![CleanShot 2022-06-08 at 11.53.24@2x](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/CleanShot%202022-06-08%20at%2011.53.24%402x.png)
 
 #### cmd + n 打开新窗口
 
