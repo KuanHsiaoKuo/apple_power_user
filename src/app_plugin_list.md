@@ -34,6 +34,7 @@
       * [Movist: 视频播放工具](#movist-视频播放工具)
       * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
       * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
+      * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
    * [四、数据管理](#四数据管理)
       * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
       * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
@@ -84,7 +85,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Jun  9 09:18:52 UTC 2022 -->
+<!-- Added by: runner, at: Fri Jun 10 06:46:04 UTC 2022 -->
 
 <!--te-->
 
