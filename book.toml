@@ -16,6 +16,7 @@ command = "mdbook-mermaid"
 theme = "mytheme"
 default-theme = "rust"
 git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
+git-repository-icon = "fa-apple-core"
 additional-js = ["mermaid.min.js", "mermaid-init.js", "smart-anchor.js"]
 mathjax-support = true
 
