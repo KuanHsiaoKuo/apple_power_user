@@ -1,88 +1,89 @@
 <!--ts-->
-   * [一、开发相关](#一开发相关)
-      * [Another Redis Desktop Manager](#another-redis-desktop-manager)
-      * [ClashX: 梯子](#clashx-梯子)
-      * [Dash: 文档查阅工具](#dash-文档查阅工具)
-      * [OSX Docker](#osx-docker)
-      * [Github Desktop](#github-desktop)
-      * [iTerm2: 终端神器](#iterm2-终端神器)
-      * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
-      * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
-      * [Navicat: 数据库工具](#navicat-数据库工具)
-      * [OpenVPN: vpn工具](#openvpn-vpn工具)
-      * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
-      * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
-      * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
-      * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
-      * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
-   * [二、效率相关](#二效率相关)
-      * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
-      * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
-      * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
-      * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
-      * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
-      * [Focus: 专注效率工具](#focus-专注效率工具)
-      * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
-      * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
-      * [Moom: 窗口管理工具](#moom-窗口管理工具)
-      * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
-      * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
-      * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
-   * [三、学习工具](#三学习工具)
-      * [Anki：抽卡识记工具](#anki抽卡识记工具)
-      * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
-      * [Movist: 视频播放工具](#movist-视频播放工具)
-      * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
-      * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
-      * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
-   * [四、数据管理](#四数据管理)
-      * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
-      * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
-      * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
-      * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
-      * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
-   * [五、输出相关](#五输出相关)
-      * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
-      * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
-      * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
-      * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
-      * [drawio: UML图解决方案](#drawio-uml图解决方案)
-      * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
-      * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
-      * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
-      * [两类思维导图：](#两类思维导图)
-         * [<a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a>](#xmind思维导图--xmind中文官方网站)
-         * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
-      * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
-      * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
-   * [六、沟通协作](#六沟通协作)
-      * [Slack](#slack)
-      * [ToDesk](#todesk)
-      * [Trello](#trello)
-   * [七、OmniGroup Series](#七omnigroup-series)
-      * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
-   * [八、插件相关(Chrome、DEVONThink、Alfred)](#八插件相关chromedevonthinkalfred)
-      * [1. Chrome](#1-chrome)
-         * [<a href="https://www.octotree.io/" rel="nofollow">octotree</a>: github侧边栏插件](#octotree-github侧边栏插件)
-         * [<a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien" rel="nofollow">GitHub Isometric Contributions - Chrome 网上应用店</a>](#github-isometric-contributions---chrome-网上应用店)
-         * [<a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a>](#gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file)
-         * [<a href="https://rust.extension.sh/" rel="nofollow">Rust Search Extension - The ultimate search extension for Rust</a>](#rust-search-extension---the-ultimate-search-extension-for-rust)
-         * [<a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp" rel="nofollow">macro_railroad - Chrome 网上应用店</a>](#macro_railroad---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba" rel="nofollow">Smart TOC - Chrome 网上应用店</a>](#smart-toc---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb" rel="nofollow">Vimium - Chrome 网上应用店</a>](#vimium---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi" rel="nofollow">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a>](#omni---bookmark-history--tab-manager---chrome-网上应用店)
-         * [<a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts <g-emoji class="g-emoji" alias="sparkles" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></a>](#alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-)
-         * [<a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome <g-emoji class="g-emoji" alias="movie_camera" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png">🎥</g-emoji></a>](#alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-)
-         * [<a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser <g-emoji class="g-emoji" alias="fire" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png">🔥</g-emoji></a>](#alyssaxuuanimockup-create-animated-mockups-in-the-browser-)
-         * [<a href="https://relingo.net/zh/guide" rel="nofollow">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a>](#relingo--阅读感兴趣的英语文章观看感兴趣的视频渐进式掌握词汇)
-         * [<a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related" rel="nofollow">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a>](#rss-reader-extension-by-inoreader---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek" rel="nofollow">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a>](#hypothesis---web--pdf-annotation---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related" rel="nofollow">Zotero Connector - Chrome 网上应用店</a>](#zotero-connector---chrome-网上应用店)
-      * [2. DEVONThink](#2-devonthink)
-         * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
-         * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
-         * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
-      * [3. Alfred](#3-alfred)
+
+* [一、开发相关](#一开发相关)
+    * [Another Redis Desktop Manager](#another-redis-desktop-manager)
+    * [ClashX: 梯子](#clashx-梯子)
+    * [Dash: 文档查阅工具](#dash-文档查阅工具)
+    * [OSX Docker](#osx-docker)
+    * [Github Desktop](#github-desktop)
+    * [iTerm2: 终端神器](#iterm2-终端神器)
+    * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
+    * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
+    * [Navicat: 数据库工具](#navicat-数据库工具)
+    * [OpenVPN: vpn工具](#openvpn-vpn工具)
+    * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
+    * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
+    * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
+    * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
+    * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
+* [二、效率相关](#二效率相关)
+    * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
+    * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
+    * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
+    * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
+    * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
+    * [Focus: 专注效率工具](#focus-专注效率工具)
+    * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
+    * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
+    * [Moom: 窗口管理工具](#moom-窗口管理工具)
+    * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
+    * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
+    * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
+* [三、学习工具](#三学习工具)
+    * [Anki：抽卡识记工具](#anki抽卡识记工具)
+    * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
+    * [Movist: 视频播放工具](#movist-视频播放工具)
+    * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
+    * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
+    * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
+* [四、数据管理](#四数据管理)
+    * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
+    * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
+    * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
+    * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
+    * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
+* [五、输出相关](#五输出相关)
+    * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
+    * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
+    * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
+    * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
+    * [drawio: UML图解决方案](#drawio-uml图解决方案)
+    * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
+    * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
+    * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
+    * [两类思维导图：](#两类思维导图)
+        * [<a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a>](#xmind思维导图--xmind中文官方网站)
+        * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
+    * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
+    * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
+* [六、沟通协作](#六沟通协作)
+    * [Slack](#slack)
+    * [ToDesk](#todesk)
+    * [Trello](#trello)
+* [七、OmniGroup Series](#七omnigroup-series)
+    * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
+* [八、插件相关(Chrome、DEVONThink、Alfred)](#八插件相关chromedevonthinkalfred)
+    * [1. Chrome](#1-chrome)
+        * [<a href="https://www.octotree.io/" rel="nofollow">octotree</a>: github侧边栏插件](#octotree-github侧边栏插件)
+        * [<a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien" rel="nofollow">GitHub Isometric Contributions - Chrome 网上应用店</a>](#github-isometric-contributions---chrome-网上应用店)
+        * [<a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a>](#gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file)
+        * [<a href="https://rust.extension.sh/" rel="nofollow">Rust Search Extension - The ultimate search extension for Rust</a>](#rust-search-extension---the-ultimate-search-extension-for-rust)
+        * [<a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp" rel="nofollow">macro_railroad - Chrome 网上应用店</a>](#macro_railroad---chrome-网上应用店)
+        * [<a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba" rel="nofollow">Smart TOC - Chrome 网上应用店</a>](#smart-toc---chrome-网上应用店)
+        * [<a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb" rel="nofollow">Vimium - Chrome 网上应用店</a>](#vimium---chrome-网上应用店)
+        * [<a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi" rel="nofollow">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a>](#omni---bookmark-history--tab-manager---chrome-网上应用店)
+        * [<a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts <g-emoji class="g-emoji" alias="sparkles" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></a>](#alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-)
+        * [<a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome <g-emoji class="g-emoji" alias="movie_camera" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png">🎥</g-emoji></a>](#alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-)
+        * [<a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser <g-emoji class="g-emoji" alias="fire" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png">🔥</g-emoji></a>](#alyssaxuuanimockup-create-animated-mockups-in-the-browser-)
+        * [<a href="https://relingo.net/zh/guide" rel="nofollow">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a>](#relingo--阅读感兴趣的英语文章观看感兴趣的视频渐进式掌握词汇)
+        * [<a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related" rel="nofollow">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a>](#rss-reader-extension-by-inoreader---chrome-网上应用店)
+        * [<a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek" rel="nofollow">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a>](#hypothesis---web--pdf-annotation---chrome-网上应用店)
+        * [<a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related" rel="nofollow">Zotero Connector - Chrome 网上应用店</a>](#zotero-connector---chrome-网上应用店)
+    * [2. DEVONThink](#2-devonthink)
+        * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
+        * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
+        * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
+    * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Fri Jun 10 06:46:04 UTC 2022 -->
@@ -199,6 +200,26 @@
 
 [Moom on the App Store](https://apps.apple.com/us/app/moom/id419330170?mt=12)
 
+### Menubar X: 在菜单栏快速查看指定网站
+
+[MenubarX - Productivity App for macOS](https://menubarx.app/)
+
+[MenubarX on the Mac App Store](https://apps.apple.com/app/id1575588022)
+
+> MenubarX is a powerful menu bar browser. You can add any web pages to the menu bar just like Native Apps. It will open up a new world for Web Apps.
+
+* Awarded on ProductHunt Daily and Weekly
+
+* Reviewed as the most worthy menu bar App (@monograph)
+
+![menubarx-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/menubarx-2.png)
+
+![coinbase](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/coinbase.png)
+
+![2048](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/2048.png)
+
+![settings2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/settings2.png)
+
 ### PopClip: 剪贴板效率工具
 
 [PopClip for Mac](https://pilotmoon.com/popclip/)
@@ -238,28 +259,6 @@
 1. 主打iOS平台，iPad/iPhone的体验惊人
 2. 桌面端使用浏览器代替。
 
-### Menubar X: 在菜单栏快速查看指定网站
-
-[MenubarX - Productivity App for macOS](https://menubarx.app/)
-
-[MenubarX on the Mac App Store](https://apps.apple.com/app/id1575588022)
-
-> MenubarX is a powerful menu bar browser. You can add any web pages to the menu bar just like Native Apps. It will open up a new world for Web Apps.
-
-* Awarded on ProductHunt Daily and Weekly
-
-* Reviewed as the most worthy menu bar App (@monograph)
-
-![menubarx-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/menubarx-2.png)
-
-![coinbase](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/coinbase.png)
-
-![2048](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/2048.png)
-
-![settings2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/settings2.png)
-
-
-
 ## 四、数据管理
 
 ### DEVONThink: 各自数据格式一站式管理工具
@@ -285,22 +284,24 @@
 ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/5316853f_images_showcase_full-clabels.png)
 
 [About TotalFinder](https://web.archive.org/web/20220531023426/https://totalfinder.binaryage.com/about)
+
 - [Tabs in TotalFinder](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/tabs)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/96a07616_images_showcase_full-tabs.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/96a07616_images_showcase_full-tabs.png)
 - [Dual Mode in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/dual-mode)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/ea54495a_images_showcase_full-dual.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/ea54495a_images_showcase_full-dual.png)
 - [Visor in TotalFinder](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/visor)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/622eee9d_images_showcase_full-visor.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/622eee9d_images_showcase_full-visor.png)
 - [Show System Files in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/show-system-files)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/fa800004_images_show-system-files.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/fa800004_images_show-system-files.png)
 - [Colored Labels in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/colored-labels)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/c1243899_images_colored-labels-icon-view.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/c1243899_images_colored-labels-icon-view.png)
 - [Folders on Top in TotalFinder](https://web.archive.org/web/20220503143108/https://totalfinder.binaryage.com/folders-on-top)
-![](https://web.archive.org/web/20220503143108im_/https://static.binaryage.com/815c386d_images_showcase_full-fot.png)
+  ![](https://web.archive.org/web/20220503143108im_/https://static.binaryage.com/815c386d_images_showcase_full-fot.png)
 - [TotalFinder Context Menus](https://web.archive.org/web/20220503143107/https://totalfinder.binaryage.com/menus)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/dfe3f13e_images_context-menu-path.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/dfe3f13e_images_context-menu-path.png)
 - [TotalFinder Tweaks](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/tweaks)
-![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/e5214dd1_images_sidebar.png)
+  ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/e5214dd1_images_sidebar.png)
+
 ## 五、输出相关
 
 ### Drafts: 随手记终极解决工具
