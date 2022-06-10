@@ -237,6 +237,28 @@
 1. 主打iOS平台，iPad/iPhone的体验惊人
 2. 桌面端使用浏览器代替。
 
+### Menubar X: 在菜单栏快速查看指定网站
+
+[MenubarX - Productivity App for macOS](https://menubarx.app/)
+
+[MenubarX on the Mac App Store](https://apps.apple.com/app/id1575588022)
+
+> MenubarX is a powerful menu bar browser. You can add any web pages to the menu bar just like Native Apps. It will open up a new world for Web Apps.
+
+* Awarded on ProductHunt Daily and Weekly
+
+* Reviewed as the most worthy menu bar App (@monograph)
+
+![menubarx-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/menubarx-2.png)
+
+![coinbase](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/coinbase.png)
+
+![2048](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/2048.png)
+
+![settings2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/settings2.png)
+
+
+
 ## 四、数据管理
 
 ### DEVONThink: 各自数据格式一站式管理工具
