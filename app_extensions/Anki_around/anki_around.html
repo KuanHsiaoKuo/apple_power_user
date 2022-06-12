@@ -1,209 +1,241 @@
 <!DOCTYPE HTML>
 <html lang="cn" class="sidebar-visible no-js rust">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Anki扩展使用 - Apple Power User</title>
-        <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Anki扩展使用 - Apple Power User</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"/>
 
         <link rel="icon" href="../../favicon.svg">
         <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
         <link rel="stylesheet" href="../../css/print.css" media="print">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../fonts/fonts.css">
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../../highlight.css">
-        <link rel="stylesheet" href="../../tomorrow-night.css">
-        <link rel="stylesheet" href="../../ayu-highlight.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
 
-        <!-- Custom theme stylesheets -->
+    <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../../style.css">
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "../../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
-        </script>
+        <script async type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<!-- Provide site root to javascript -->
+<script type="text/javascript">
+    var path_to_root = "../../";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+</script>
 
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
-            try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script type="text/javascript">
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
 
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+        }
 
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
 
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('rust')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script type="text/javascript">
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    var html = document.querySelector('html');
+    html.classList.remove('no-js')
+    html.classList.remove('rust')
+    html.classList.add(theme);
+    html.classList.add('js');
+</script>
 
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
-        </script>
+<!-- Hide / unhide sidebar before it is displayed -->
+<script type="text/javascript">
+    var html = document.querySelector('html');
+    var sidebar = 'hidden';
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    }
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="../../macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item "><a href="../../macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item "><a href="../../app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item "><a href="../../shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item expanded "><a href="../../overview.html"><strong aria-hidden="true">5.</strong> Power User Need Know</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_deepin/app_deepin.html"><strong aria-hidden="true">5.1.</strong> 主力App深度使用</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_deepin/marginnote_deepin.html"><strong aria-hidden="true">5.1.1.</strong> Marginnote</a></li><li class="chapter-item "><a href="../../app_deepin/mdbook_deepin.html"><strong aria-hidden="true">5.1.2.</strong> Mdbook</a></li><li class="chapter-item "><a href="../../app_deepin/picGo_deepin.html"><strong aria-hidden="true">5.1.3.</strong> PicGo</a></li><li class="chapter-item "><a href="../../app_deepin/typora_deepin.html"><strong aria-hidden="true">5.1.4.</strong> Typora</a></li></ol></li><li class="chapter-item "><a href="../../app_extensions/workflows/workflows.html"><strong aria-hidden="true">5.2.</strong> 工作流</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_extensions/workflows/marginnote_anki.html"><strong aria-hidden="true">5.2.1.</strong> Anki与marginnote协同</a></li></ol></li><li class="chapter-item expanded "><a href="../../app_extensions/Anki_around/anki_around.html" class="active"><strong aria-hidden="true">5.3.</strong> Anki扩展使用</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_extensions/Anki_around/custom_md_template.html"><strong aria-hidden="true">5.3.1.</strong> 自定义Anki卡片md模版</a></li></ol></li></ol></li></ol>
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <div class="sidebar-scrollbox">
+        <ol class="chapter"><li class="chapter-item "><a href="../../macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item "><a href="../../macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item "><a href="../../app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item "><a href="../../shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item expanded "><a href="../../overview.html"><strong aria-hidden="true">5.</strong> Power User Need Know</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_deepin/app_deepin.html"><strong aria-hidden="true">5.1.</strong> 主力App深度使用</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_deepin/marginnote_deepin.html"><strong aria-hidden="true">5.1.1.</strong> Marginnote</a></li><li class="chapter-item "><a href="../../app_deepin/mdbook_deepin.html"><strong aria-hidden="true">5.1.2.</strong> Mdbook</a></li><li class="chapter-item "><a href="../../app_deepin/picGo_deepin.html"><strong aria-hidden="true">5.1.3.</strong> PicGo</a></li><li class="chapter-item "><a href="../../app_deepin/typora_deepin.html"><strong aria-hidden="true">5.1.4.</strong> Typora</a></li></ol></li><li class="chapter-item "><a href="../../app_extensions/workflows/workflows.html"><strong aria-hidden="true">5.2.</strong> 工作流</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_extensions/workflows/marginnote_anki.html"><strong aria-hidden="true">5.2.1.</strong> Anki与marginnote协同</a></li></ol></li><li class="chapter-item expanded "><a href="../../app_extensions/Anki_around/anki_around.html" class="active"><strong aria-hidden="true">5.3.</strong> Anki扩展使用</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../app_extensions/Anki_around/custom_md_template.html"><strong aria-hidden="true">5.3.1.</strong> 自定义Anki卡片md模版</a></li></ol></li></ol></li></ol>
+    </div>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+</nav>
+
+<div id="page-wrapper" class="page-wrapper">
+
+    <div class="page">
+        <div id="menu-bar-hover-placeholder"></div>
+        <div id="menu-bar" class="menu-bar sticky bordered">
+            <div class="left-buttons">
+                <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                    <i class="fa fa-paint-brush"></i>
+                </button>
+                <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="light">Light</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="rust">Rust (default)</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="coal">Coal</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="navy">Navy</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="ayu">Ayu</button>
+                    </li>
+                </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
+            <h1 class="menu-title">Apple Power User</h1>
 
-            <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+            <div class="right-buttons">
+                    <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-apple-core"></i>
+                    </a>
+            </div>
+        </div>
 
-                    <h1 class="menu-title">Apple Power User</h1>
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar"
+                           placeholder="Search this book ..." aria-controls="searchresults-outer"
+                           aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
 
-                    <div class="right-buttons">
-                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-apple-core"></i>
-                        </a>
-                    </div>
+        <div id="content" class="content">
+            <main>
+                <!-- Page table of contents -->
+                <div class="sidetoc">
+                    <nav class="pagetoc"></nav>
                 </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <!-- Page table of contents -->
-                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
-
-                        <h1 id="anki周边使用及扩展"><a class="header" href="#anki周边使用及扩展">Anki周边使用及扩展</a></h1>
+                <h1 id="anki周边使用及扩展"><a class="header" href="#anki周边使用及扩展">Anki周边使用及扩展</a></h1>
 <!--ts-->
 <ul>
 <li><a href="#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Jun 12 07:13:43 UTC 2022 -->
+<!-- Added by: runner, at: Sun Jun 12 07:15:01 UTC 2022 -->
 <!--te-->
 
-                    </main>
+            </main>
 
-                    <script src="https://utteranc.es/client.js"
+            <script src="https://utteranc.es/client.js"
                     repo="RustMagazine/rust_magazine_2022"
                     issue-term="title"
                     theme="github-light"
                     crossorigin="anonymous"
                     async></script>
 
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../app_extensions/workflows/marginnote_anki.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="../../app_extensions/Anki_around/custom_md_template.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../app_extensions/workflows/marginnote_anki.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../app_extensions/workflows/marginnote_anki.html" class="mobile-nav-chapters previous"
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../../app_extensions/Anki_around/custom_md_template.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../app_extensions/Anki_around/custom_md_template.html" class="mobile-nav-chapters next"
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
+                <div style="clear: both"></div>
             </nav>
-
         </div>
+    </div>
 
-        <script type="text/javascript">
-            window.playground_copyable = true;
-        </script>
-        <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../../app_extensions/workflows/marginnote_anki.html" class="nav-chapters previous" title="Previous chapter"
+               aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../../app_extensions/Anki_around/custom_md_template.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+    </nav>
 
-        <!-- Custom JS scripts -->
-        <script type="text/javascript" src="../../mermaid.min.js"></script>
-        <script type="text/javascript" src="../../mermaid-init.js"></script>
-        <script type="text/javascript" src="../../smart-anchor.js"></script>
-        <script type="text/javascript" src="../../sidebar.js"></script>
-    </body>
+</div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../../ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JS scripts -->
+    <script type="text/javascript" src="../../mermaid.min.js"></script>
+    <script type="text/javascript" src="../../mermaid-init.js"></script>
+    <script type="text/javascript" src="../../smart-anchor.js"></script>
+    <script type="text/javascript" src="../../sidebar.js"></script>
+</body>
 </html>
