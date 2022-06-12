@@ -17,7 +17,8 @@ theme = "mytheme"
 default-theme = "rust"
 git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
 git-repository-icon = "fa-apple-core"
-additional-js = ["mermaid.min.js", "mermaid-init.js", "smart-anchor.js"]
+additional-js = ["mermaid.min.js", "mermaid-init.js", "smart-anchor.js", "sidebar.js"]
+additional-css = ["style.css"]
 mathjax-support = true
 
 
