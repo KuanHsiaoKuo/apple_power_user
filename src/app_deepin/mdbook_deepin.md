@@ -283,7 +283,7 @@ println!("Hello {}!", name);
 
 #### mdbook-open-on-gh
 
-[badboy/mdbook-open-on-gh: mdbook preprocessor to add a open-on-github link on every page](
+[badboy/mdbook-open-on-gh: mdbook preprocessor to add a open-on-github link on every page](https://github.com/badboy/mdbook-open-on-gh)
 
 #### book-summary
 
