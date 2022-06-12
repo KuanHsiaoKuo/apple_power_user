@@ -279,6 +279,7 @@ println!("Hello {}!", name);
 
 [JorelAli/mdBook-pagetoc: A page table of contents for mdBook](https://github.com/JorelAli/mdBook-pagetoc)
 ![mdbook-toc-sample](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/mdbook-toc-sample.png)
+[Chapter 1 - Sample](https://jorel.dev/mdBook-pagetoc/)
 
 #### mdbook-open-on-gh
 
