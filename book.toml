@@ -23,7 +23,7 @@ mathjax-support = true
 
 
 [output.html.playground]
-editable = true
+editable = false
 copy-js = true
 
 [output.html.fold]
