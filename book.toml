@@ -27,5 +27,5 @@ editable = false
 copy-js = true
 
 [output.html.fold]
-enable = true
+enable = false
 level = 0
