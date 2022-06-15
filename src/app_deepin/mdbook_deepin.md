@@ -1,61 +1,62 @@
 # Mdbook电子书发布工具使用说明
 
 <!--ts-->
+
 * [Mdbook电子书发布工具使用说明](#mdbook电子书发布工具使用说明)
-   * [使用要点](#使用要点)
-      * [基本结构](#基本结构)
-      * [Summary](#summary)
-      * [图片资源与git lfs](#图片资源与git-lfs)
-         * [git lfs使用场景](#git-lfs使用场景)
-         * [对mdbook的影响](#对mdbook的影响)
-   * [Rust特供功能](#rust特供功能)
-      * [隐藏代码行](#隐藏代码行)
-      * [Rust Playground页面执行](#rust-playground页面执行)
-      * [包含文件自动渲染为md](#包含文件自动渲染为md)
-         * [全文件包含](#全文件包含)
-         * [指定行数](#指定行数)
-         * [指定锚点部分](#指定锚点部分)
-      * [插入代码](#插入代码)
-         * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
-         * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
-   * [mdbook插件推荐](#mdbook插件推荐)
-      * [自动检查](#自动检查)
-         * [MDBook Link-Check](#mdbook-link-check)
-      * [自动生成](#自动生成)
-         * [global-search](#global-search)
-         * [mdbook-toc](#mdbook-toc)
-         * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
-         * [mdbook-open-on-gh](#mdbook-open-on-gh)
-         * [book-summary](#book-summary)
-         * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
-         * [mdbook-transcheck](#mdbook-transcheck)
-         * [mdbook-man](#mdbook-man)
-         * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
-         * [mdbook-bookimport](#mdbook-bookimport)
-         * [md2tex](#md2tex)
-         * [mdbook-checklist](#mdbook-checklist)
-         * [mdBook Tag](#mdbook-tag)
-         * [mdBook-template](#mdbook-template)
-         * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
-         * [mdbook-cms](#mdbook-cms)
-      * [自动渲染](#自动渲染)
-         * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
-         * [mdBook Graphviz](#mdbook-graphviz)
-         * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
-         * [mdbook-admonish](#mdbook-admonish)
-         * [mdbook-curly-quotes](#mdbook-curly-quotes)
-         * [mdbook-tera](#mdbook-tera)
-         * [mdbook-template](#mdbook-template-1)
-         * [mdbook-mark](#mdbook-mark)
-         * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
-         * [mdbook-fluent](#mdbook-fluent)
-         * [mdbook-kroki-preprocessor](#mdbook-kroki-preprocessor)
-         * [mdBook Bibfile Referencing](#mdbook-bibfile-referencing)
-         * [mdbook-wikilink](#mdbook-wikilink)
-         * [mdbook-page-styles](#mdbook-page-styles)
-         * [mdbook-note](#mdbook-note)
-         * [mdbook-section-validator](#mdbook-section-validator)
-   * [资源链接](#资源链接)
+    * [使用要点](#使用要点)
+        * [基本结构](#基本结构)
+        * [Summary](#summary)
+        * [图片资源与git lfs](#图片资源与git-lfs)
+            * [git lfs使用场景](#git-lfs使用场景)
+            * [对mdbook的影响](#对mdbook的影响)
+    * [Rust特供功能](#rust特供功能)
+        * [隐藏代码行](#隐藏代码行)
+        * [Rust Playground页面执行](#rust-playground页面执行)
+        * [包含文件自动渲染为md](#包含文件自动渲染为md)
+            * [全文件包含](#全文件包含)
+            * [指定行数](#指定行数)
+            * [指定锚点部分](#指定锚点部分)
+        * [插入代码](#插入代码)
+            * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
+            * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
+    * [mdbook插件推荐](#mdbook插件推荐)
+        * [自动检查](#自动检查)
+            * [MDBook Link-Check](#mdbook-link-check)
+        * [自动生成](#自动生成)
+            * [global-search](#global-search)
+            * [mdbook-toc](#mdbook-toc)
+            * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
+            * [mdbook-open-on-gh](#mdbook-open-on-gh)
+            * [book-summary](#book-summary)
+            * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
+            * [mdbook-transcheck](#mdbook-transcheck)
+            * [mdbook-man](#mdbook-man)
+            * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
+            * [mdbook-bookimport](#mdbook-bookimport)
+            * [md2tex](#md2tex)
+            * [mdbook-checklist](#mdbook-checklist)
+            * [mdBook Tag](#mdbook-tag)
+            * [mdBook-template](#mdbook-template)
+            * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
+            * [mdbook-cms](#mdbook-cms)
+        * [自动渲染](#自动渲染)
+            * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
+            * [mdBook Graphviz](#mdbook-graphviz)
+            * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
+            * [mdbook-admonish](#mdbook-admonish)
+            * [mdbook-curly-quotes](#mdbook-curly-quotes)
+            * [mdbook-tera](#mdbook-tera)
+            * [mdbook-template](#mdbook-template-1)
+            * [mdbook-mark](#mdbook-mark)
+            * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
+            * [mdbook-fluent](#mdbook-fluent)
+            * [mdbook-kroki-preprocessor](#mdbook-kroki-preprocessor)
+            * [mdBook Bibfile Referencing](#mdbook-bibfile-referencing)
+            * [mdbook-wikilink](#mdbook-wikilink)
+            * [mdbook-page-styles](#mdbook-page-styles)
+            * [mdbook-note](#mdbook-note)
+            * [mdbook-section-validator](#mdbook-section-validator)
+    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Wed Jun 15 03:11:41 UTC 2022 -->
@@ -257,6 +258,50 @@ println!("Hello {}!", name);
 
 #### 页面直接编辑代码: *, editable
 
+## mdbook主题修改
+
+[Theme - mdBook Documentation](https://rust-lang.github.io/mdBook/format/theme/index.html)
+
+### 基本页面介绍
+
+```shell
+ tree mytheme -L 1                                                                                                                                ─╯
+mytheme
+├── FontAwesome
+├── ayu-highlight.css
+├── book.js
+├── clipboard.min.js
+├── css
+├── favicon.png
+├── favicon.svg
+├── fonts
+├── head.hbs
+├── header.hbs
+├── highlight.css
+├── highlight.js
+├── index.hbs
+├── mod.rs
+├── playground_editor
+├── redirect.hbs
+├── searcher
+└── tomorrow-night.css
+
+5 directories, 13 files
+```
+
+- index.hbs is the handlebars template.
+- head.hbs is appended to the HTML <head> section.
+- header.hbs content is appended on top of every book page.
+- css/ contains the CSS files for styling the book.
+- css/chrome.css is for UI elements.
+- css/general.css is the base styles.
+- css/print.css is the style for printer output.
+- css/variables.css contains variables used in other CSS files.
+- book.js is mostly used to add client side functionality, like hiding / un-hiding the sidebar, changing the theme, ...
+- highlight.js is the JavaScript that is used to highlight code snippets, you should not need to modify this.
+- highlight.css is the theme used for the code highlighting.
+- favicon.svg and favicon.png the favicon that will be used. The SVG version is used by newer browsers.
+
 ## mdbook插件推荐
 
 ### 自动检查
@@ -331,7 +376,7 @@ println!("Hello {}!", name);
 
 [dylanowen/mdbook-tag](https://github.com/dylanowen/mdbook-tag)
 
-#### mdBook-template
+#### ~~mdBook-template~~: 不需要，直接修改主题
 
 [sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments](https://github.com/sgoudham/mdbook-template)
 
@@ -347,7 +392,7 @@ println!("Hello {}!", name);
 
 ### 自动渲染
 
-#### unevil-rs: 与mdbook无关，只是单独用来写ppt 
+#### unevil-rs: 与mdbook无关，只是单独用来写ppt
 
 [oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.](https://github.com/oknozor/unveil-rs)
 
