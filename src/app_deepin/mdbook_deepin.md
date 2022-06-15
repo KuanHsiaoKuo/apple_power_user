@@ -39,7 +39,7 @@
          * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
          * [mdbook-cms](#mdbook-cms)
       * [自动渲染](#自动渲染)
-         * [unevil rs](#unevil-rs)
+         * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
          * [mdBook Graphviz](#mdbook-graphviz)
          * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
          * [mdbook-admonish](#mdbook-admonish)
@@ -58,7 +58,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jun 14 03:33:03 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jun 15 03:11:41 UTC 2022 -->
 
 <!--te-->
 
