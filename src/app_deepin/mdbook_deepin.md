@@ -347,7 +347,7 @@ println!("Hello {}!", name);
 
 ### 自动渲染
 
-#### unevil rs
+#### unevil-rs: 与mdbook无关，只是单独用来写ppt 
 
 [oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.](https://github.com/oknozor/unveil-rs)
 
