@@ -10,6 +10,8 @@
     - [Mdbook](app_deepin/mdbook_deepin.md)
     - [PicGo](app_deepin/picGo_deepin.md)
     - [Typora](app_deepin/typora_deepin.md)
+    - [iTerm](app_extensions/iterm2_around/intro.md)
+        [zsh](app_extensions/iterm2_around/zsh_config/README.md)
   - [工作流](app_extensions/workflows/workflows.md)
     - [Anki与marginnote协同](app_extensions/workflows/marginnote_anki.md)
   - [Anki扩展使用](app_extensions/Anki_around/anki_around.md)

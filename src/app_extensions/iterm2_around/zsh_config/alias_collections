@@ -5,6 +5,7 @@ alias venv_freeze="rm requirements.txt && pip freeze > requirements.txt"
 alias github_sync="git pull github master && git push github master"
 alias origin_sync="git pull origin master && git push origin master"
 alias ls="lsd"
-alias toc="/Users/kuanhsiaokuo/Developer/spare_projects/osx_basic_configuration/scripts/toc_generator.sh"
+# 配合在线电子书更新toc，脚本放在项目根目录scripts下
+alias update_toc="./scripts/update_toc_raw"
 # brew执行指令时不自动更新
 export HOMEBREW_NO_AUTO_UPDATE=true
