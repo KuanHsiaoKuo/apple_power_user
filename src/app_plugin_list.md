@@ -26,6 +26,7 @@
       * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
       * [Moom: 窗口管理工具](#moom-窗口管理工具)
       * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
+      * [MultiDock: 浮动常用工具栏](#multidock-浮动常用工具栏)
       * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
       * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
       * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
@@ -85,7 +86,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jun 15 08:24:00 UTC 2022 -->
+<!-- Added by: runner, at: Sat Jun 18 03:10:20 UTC 2022 -->
 
 <!--te-->
 
