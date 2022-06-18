@@ -22,7 +22,7 @@
       * [Some non-standard but useful specialities](#some-non-standard-but-useful-specialities)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Sat Jun 18 12:46:28 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jun 18 14:09:03 CST 2022 -->
 
 <!--te-->
 As any *Markdown* user knows or should know, beside the [*CommonMark*](https://commonmark.org/) initiative and [specification](spec.commonmark.org), there’s nothing really “standard” with *Markdown* syntax, only “vastly agreed upon” practices. As long as you don’t stray too far away from this “common practice”, you shouldn’t run into issues. This document, unless explicitly mentioned, strives to stay within these limits.
