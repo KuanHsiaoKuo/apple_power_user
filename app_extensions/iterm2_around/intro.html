@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<html lang="cn" class="sidebar-visible no-js rust">
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>iTerm - Apple Power User</title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"/>
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="../../highlight.css">
+    <link rel="stylesheet" href="../../tomorrow-night.css">
+    <link rel="stylesheet" href="../../ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../style.css">
+        <!-- MathJax -->
+        <script async type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<!-- Provide site root to javascript -->
+<script type="text/javascript">
+    var path_to_root = "../../";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+</script>
+
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script type="text/javascript">
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
+
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+        }
+
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
+
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script type="text/javascript">
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    var html = document.querySelector('html');
+    html.classList.remove('no-js')
+    html.classList.remove('rust')
+    html.classList.add(theme);
+    html.classList.add('js');
+</script>
+
+<!-- Hide / unhide sidebar before it is displayed -->
+<script type="text/javascript">
+    var html = document.querySelector('html');
+    var sidebar = 'hidden';
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    }
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
+
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <div class="sidebar-scrollbox">
+        <ol class="chapter"><li class="chapter-item expanded "><a href="../../macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item expanded "><a href="../../macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item expanded "><a href="../../app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item expanded "><a href="../../shortcuts_keymaps_config.html"><strong aria-hidden="true">4.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item expanded "><a href="../../overview.html"><strong aria-hidden="true">5.</strong> Power User Need Know</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../app_deepin/app_deepin.html"><strong aria-hidden="true">5.1.</strong> 主力App深度使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../app_deepin/marginnote_deepin.html"><strong aria-hidden="true">5.1.1.</strong> Marginnote</a></li><li class="chapter-item expanded "><a href="../../app_deepin/mdbook_deepin.html"><strong aria-hidden="true">5.1.2.</strong> Mdbook</a></li><li class="chapter-item expanded "><a href="../../app_deepin/picGo_deepin.html"><strong aria-hidden="true">5.1.3.</strong> PicGo</a></li><li class="chapter-item expanded "><a href="../../app_deepin/typora_deepin.html"><strong aria-hidden="true">5.1.4.</strong> Typora</a></li><li class="chapter-item expanded "><a href="../../app_extensions/iterm2_around/intro.html" class="active"><strong aria-hidden="true">5.1.5.</strong> iTerm</a></li></ol></li><li class="chapter-item expanded "><a href="../../app_extensions/workflows/workflows.html"><strong aria-hidden="true">5.2.</strong> 工作流</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../app_extensions/workflows/marginnote_anki.html"><strong aria-hidden="true">5.2.1.</strong> Anki与marginnote协同</a></li></ol></li><li class="chapter-item expanded "><a href="../../app_extensions/Anki_around/anki_around.html"><strong aria-hidden="true">5.3.</strong> Anki扩展使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../app_extensions/Anki_around/custom_md_template.html"><strong aria-hidden="true">5.3.1.</strong> 自定义Anki卡片md模版</a></li></ol></li></ol></li></ol>
+    </div>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+</nav>
+
+<div id="page-wrapper" class="page-wrapper">
+
+    <div class="page">
+        <div id="menu-bar-hover-placeholder"></div>
+        <div id="menu-bar" class="menu-bar sticky bordered">
+            <div class="left-buttons">
+                <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                    <i class="fa fa-paint-brush"></i>
+                </button>
+                <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="light">Light</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="rust">Rust (default)</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="coal">Coal</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="navy">Navy</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="ayu">Ayu</button>
+                    </li>
+                </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+            </div>
+
+            <h1 class="menu-title">Apple Power User</h1>
+
+            <div class="right-buttons">
+                    <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-apple-core"></i>
+                    </a>
+            </div>
+        </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar"
+                           placeholder="Search this book ..." aria-controls="searchresults-outer"
+                           aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
+
+        <div id="content" class="content">
+            <main>
+                <!-- Page table of contents -->
+                <div class="sidetoc">
+                    <nav class="pagetoc"></nav>
+                </div>
+
+                <h1 id="iterm2配置"><a class="header" href="#iterm2配置">iTerm2配置</a></h1>
+<h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
+<h2 id="同步配置方式"><a class="header" href="#同步配置方式">同步配置方式</a></h2>
+<ol>
+<li>下载此文件夹</li>
+<li>设置同步方式
+iTerm2 &gt;&gt; Preferences &gt;&gt; General &gt;&gt; Preferences &gt;&gt; Load prefernces from a custom folder or URL</li>
+</ol>
+<blockquote>
+<p>注意选择手动保存。
+3. 指向下载的文件夹</p>
+</blockquote>
+<h2 id="同步范围"><a class="header" href="#同步范围">同步范围</a></h2>
+<ol>
+<li>基础颜色配置</li>
+<li>profiles自动登陆服务器配置</li>
+</ol>
+<blockquote>
+<p>但是自动输入密码的文件在~/.ssh/logins，需要另外同步</p>
+</blockquote>
+<h1 id="环境套件资料"><a class="header" href="#环境套件资料">环境套件资料</a></h1>
+<pre><code class="language-text">iTerm2 + config + plugins
++----------------------------------------------------+
+|                                                    |
+|                HomeBrew + Plugins                  |
+|      +-----------------------------------+         |
+|      |                                   |         |
+|      |      Tmux + config + plugins      |         |
+|      |       +---------------------+     |         |
+|      |       |                     |     |         |
+|      |       |    zsh/Oh my zsh    |     |         |
+|      |       |    +----------+     |     |         |
+|      |       |    |    vim   |     |     |         |
+|      |       |    +----------+     |     |         |
+|      |       |                     |     |         |
+|      |       +---------------------+     |         |
+|      |                                   |         |
+|      |                                   |         |
+|      +-----------------------------------+         |
+|                                                    |
++----------------------------------------------------+
+</code></pre>
+<h2 id="a-homebrew-around"><a class="header" href="#a-homebrew-around">A. Homebrew Around</a></h2>
+<ol>
+<li><a href="https://brew.sh/">The Missing Package Manager for macOS (or Linux) — Homebrew</a></li>
+</ol>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<ol start="2">
+<li>Around: brew install xxx</li>
+</ol>
+<ul>
+<li><a href="https://github.com/pyenv/pyenv">pyenv/pyenv: Simple Python version management</a></li>
+</ul>
+<blockquote>
+<p>osx系统更新了clang++, 一些老版本的python无法安装，比如3.7.5。 pyenv install 3.10.3就没问题</p>
+</blockquote>
+<h2 id="b-tmux配置tmux_configmd"><a class="header" href="#b-tmux配置tmux_configmd">B. tmux配置：tmux_config.md</a></h2>
+<h2 id="c-zshoh-my-zsh--plugins"><a class="header" href="#c-zshoh-my-zsh--plugins">C. zsh/Oh my zsh + plugins</a></h2>
+<ul>
+<li><a href="https://github.com/tldr-pages/tldr">tldr-pages/tldr: 📚 Collaborative cheatsheets for console commands</a></li>
+<li><a href="https://github.com/Peltoche/lsd">Peltoche/lsd: The next gen ls command(需配合nerd-fonts)</a></li>
+<li><a href="https://github.com/ryanoasis/nerd-fonts">ryanoasis/nerd-fonts: Iconic font aggregator, collection, &amp; patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, &amp; more</a></li>
+<li><a href="https://ohmyz.sh/">Oh My Zsh - a delightful &amp; open source framework for Zsh</a></li>
+<li><a href="https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md">zsh-syntax-highlighting/INSTALL.md at master · zsh-users/zsh-syntax-highlighting</a></li>
+<li><a href="https://github.com/zsh-users/zsh-completions">zsh-users/zsh-completions: Additional completion definitions for Zsh.</a></li>
+<li><a href="https://github.com/zsh-users/zsh-history-substring-search">zsh-users/zsh-history-substring-search: 🐠 ZSH port of Fish history search (up arrow)</a></li>
+<li><a href="https://github.com/romkatv/powerlevel10k#oh-my-zsh">romkatv/powerlevel10k: A Zsh theme(需配合nerd-fonts)</a></li>
+<li>zsh config</li>
+</ul>
+<ol start="3">
+<li>iterm_around.sh未完善，请一条条执行</li>
+</ol>
+<pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+brew tap homebrew/cask-fonts
+# 安装之后如果没有生效，就修改Iterm2的fonts为Meslo
+# Profiles &gt;&gt; Open Profiles &gt;&gt; Edit Profiles... &gt;&gt; Text &gt;&gt; Fonts
+brew install --cask font-hack-nerd-font
+brew install lsd
+pip3 install tldr
+brew install graphviz
+cpan
+sudo cpan Graph:Easy
+sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo &quot;source ${PWD}/zsh_config/custom_config&quot; &gt;&gt; ~/.zshrc
+source ~/.zshrc
+p10k configure
+
+</code></pre>
+<h2 id="d-vim配置"><a class="header" href="#d-vim配置">D. vim配置</a></h2>
+<h3 id="创建vimrc"><a class="header" href="#创建vimrc">创建vimrc</a></h3>
+<pre><code>touch ~/.vimrc
+vim ~/.vimrc
+# 在里面添加source
+source ~/.vim/start
+</code></pre>
+<h3 id="重命名vim_config"><a class="header" href="#重命名vim_config">重命名vim_config</a></h3>
+<pre><code>mv vim_config ~/.vim
+</code></pre>
+<h3 id="注意在vim里面source"><a class="header" href="#注意在vim里面source">注意在vim里面source</a></h3>
+<blockquote>
+<p>source filename 与 sh filename 及./filename执行脚本的区别在那里呢？</p>
+</blockquote>
+<p>1.当shell脚本具有可执行权限时，用sh filename与./filename执行脚本是没有区别得。./filename是因为当前目录没有在PATH中，所有&quot;.&quot;是用来表示当前目录的。</p>
+<p>2.sh filename 重新建立一个子shell，在子shell中执行脚本里面的语句，该子shell继承父shell的环境变量，但子shell新建的、改变的变量不会被带回父shell，除非使用export。</p>
+<p>3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）</p>
+<h3 id="关于colorscheme设置为solarized分支已经包含可以不用下载"><a class="header" href="#关于colorscheme设置为solarized分支已经包含可以不用下载">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></h3>
+<ul>
+<li>下载vim主题</li>
+</ul>
+<pre><code>git clone git://github.com/altercation/vim-colors-solarized.git  
+cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/ 
+</code></pre>
+<ul>
+<li>配置</li>
+</ul>
+<pre><code>colorscheme solarized 
+</code></pre>
+<h3 id="主要分为这几个部分"><a class="header" href="#主要分为这几个部分">主要分为这几个部分：</a></h3>
+<ul>
+<li>start</li>
+<li>basic</li>
+<li>fold_break</li>
+<li>leader_key</li>
+<li>tab_key</li>
+<li>cscope_conf</li>
+</ul>
+
+            </main>
+
+            <script src="https://utteranc.es/client.js"
+                    repo="RustMagazine/rust_magazine_2022"
+                    issue-term="title"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async></script>
+
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="../../app_deepin/typora_deepin.html" class="mobile-nav-chapters previous"
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../app_extensions/workflows/workflows.html" class="mobile-nav-chapters next"
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                <div style="clear: both"></div>
+            </nav>
+        </div>
+    </div>
+
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="../../app_deepin/typora_deepin.html" class="nav-chapters previous" title="Previous chapter"
+               aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="../../app_extensions/workflows/workflows.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+    </nav>
+
+</div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JS scripts -->
+    <script type="text/javascript" src="../../mermaid.min.js"></script>
+    <script type="text/javascript" src="../../mermaid-init.js"></script>
+    <script type="text/javascript" src="../../smart-anchor.js"></script>
+    <script type="text/javascript" src="../../sidebar.js"></script>
+</body>
+</html>
