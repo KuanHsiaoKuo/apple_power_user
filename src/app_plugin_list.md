@@ -219,6 +219,20 @@
 
 ![settings2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/settings2.png)
 
+### MultiDock: 浮动常用工具栏
+
+> 可以自定义工作流相关工具，并漂浮在屏幕顶层，方便随时点击
+
+[MultiDock: Organize your favorite folders, files and applications with Dock's (Dragthing alternative) • MacPlus Software](https://noteifyapp.com/multidock/)
+
+MultiDock is a simple application that allows you to organize frequently used applications, documents and folders using small panels (Dock's). MultiDock evolved as a new version of ActiveDock was being created. Some these new features might be available in the next version of ActiveDock.
+
+![img](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/MultiDock-Mac-Medium-1024x592.jpg)
+
+![img](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/MultiDock-Panel-Settings.png)
+
+![image-20220618110740510](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220618110740510.png)
+
 ### PopClip: 剪贴板效率工具
 
 [PopClip for Mac](https://pilotmoon.com/popclip/)
