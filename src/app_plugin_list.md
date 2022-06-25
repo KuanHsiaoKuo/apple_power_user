@@ -1,5 +1,7 @@
 <!--ts-->
-   * [一、开发相关](#一开发相关)
+   * [github开源](#github开源)
+      * [tproxy: TCP 连接分析工具](#tproxy-tcp-连接分析工具)
+   * [开发相关](#开发相关)
       * [Another Redis Desktop Manager](#another-redis-desktop-manager)
       * [ClashX: 梯子](#clashx-梯子)
       * [Dash: 文档查阅工具](#dash-文档查阅工具)
@@ -15,7 +17,7 @@
       * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
       * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
       * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
-   * [二、效率相关](#二效率相关)
+   * [效率相关](#效率相关)
       * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
       * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
       * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
@@ -30,7 +32,7 @@
       * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
       * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
       * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
-   * [三、学习工具](#三学习工具)
+   * [学习工具](#学习工具)
       * [Anki：抽卡识记工具](#anki抽卡识记工具)
       * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
       * [Movist: 视频播放工具](#movist-视频播放工具)
@@ -42,7 +44,7 @@
       * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
       * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
       * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
-   * [五、输出相关](#五输出相关)
+   * [输出相关](#输出相关)
       * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
       * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
       * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
@@ -56,13 +58,13 @@
          * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
       * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
       * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
-   * [六、沟通协作](#六沟通协作)
+   * [沟通协作](#沟通协作)
       * [Slack](#slack)
       * [ToDesk](#todesk)
       * [Trello](#trello)
-   * [七、OmniGroup Series](#七omnigroup-series)
+   * [OmniGroup Series](#omnigroup-series)
       * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
-   * [八、插件相关(Chrome、DEVONThink、Alfred)](#八插件相关chromedevonthinkalfred)
+   * [插件相关(Chrome、DEVONThink、Alfred)](#插件相关chromedevonthinkalfred)
       * [1. Chrome](#1-chrome)
          * [<a href="https://www.octotree.io/" rel="nofollow">octotree</a>: github侧边栏插件](#octotree-github侧边栏插件)
          * [<a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien" rel="nofollow">GitHub Isometric Contributions - Chrome 网上应用店</a>](#github-isometric-contributions---chrome-网上应用店)
@@ -86,7 +88,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Mon Jun 20 16:21:45 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jun 25 13:04:55 CST 2022 -->
 
 <!--te-->
 

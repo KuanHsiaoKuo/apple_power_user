@@ -1,7 +1,14 @@
 # karabiner配置说明
 
 <!--ts-->
+* [karabiner配置说明](#karabiner配置说明)
+   * [路径](#路径)
+   * [分层](#分层)
+   * [karabiner.json](#karabinerjson)
+   * [参考资源](#参考资源)
 
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jun 25 13:04:26 CST 2022 -->
 
 <!--te-->
 
