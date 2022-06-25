@@ -121,3 +121,4 @@ tree -L 1 | pbcopy
 
 - [Eight Terminal Utilities Every OS X Command Line User Should Know · mitchchn.me](http://www.mitchchn.me/2014/os-x-terminal/)
 - [The Mac Terminal Commands Cheat Sheet](https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/)
+- [An A-Z Index of the Apple macOS command line - SS64 Command line reference](https://web.archive.org/web/20220620084651/https://ss64.com/osx/)

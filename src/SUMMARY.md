@@ -6,6 +6,7 @@
 - [macOS 全局应用快捷键配置](shortcuts_keymaps_config.md)
 - [Power User Need Know](overview.md)
     - [主力App深度使用](app_deepin/app_deepin.md)
+        - [Karabiner Maestro](app_deepin/karabiner/karabiner.md)
         - [Marginnote](app_deepin/marginnote_deepin.md)
         - [Mdbook](app_deepin/mdbook_deepin.md)
         - [PicGo](app_deepin/picGo_deepin.md)

@@ -90,7 +90,25 @@
 
 <!--te-->
 
-## 一、开发相关
+## github开源
+
+### tproxy: TCP 连接分析工具
+
+[kevwan/tproxy: A cli tool to proxy and analyze TCP connections.](https://github.com/kevwan/tproxy)
+
+![image](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/174335713-259de707-c9f5-40f1-a96f-780232d23f43.png)
+
+> 这是[go-zero](https://go-zero.dev/)框架的一个配套网络链接分析工具。
+
+作者在开发后端服务时，经常需要监控项目的网络流量，因此他做了这么一款工具，主要辅助他完成如下工作：
+
+- 监控 gRPC 连接，何时连接、何时重连；
+
+- 监控 MySQL 连接池，找出生命周期策略；
+
+- 实时监控任何 TCP 连接。
+
+## 开发相关
 
 ### Another Redis Desktop Manager
 
@@ -160,7 +178,7 @@
 
 [Warp: The terminal for the 21st century](https://www.warp.dev/)
 
-## 二、效率相关
+## 效率相关
 
 ### Karabiner-Elements: 改键神器
 
@@ -248,7 +266,7 @@ MultiDock is a simple application that allows you to organize frequently used ap
 
 [The Unarchiver | Top Free Unarchiving Software for macOS](https://theunarchiver.com/)
 
-## 三、学习工具
+## 学习工具
 
 ### Anki：抽卡识记工具
 
@@ -316,7 +334,7 @@ MultiDock is a simple application that allows you to organize frequently used ap
 - [TotalFinder Tweaks](https://web.archive.org/web/20220503143109/https://totalfinder.binaryage.com/tweaks)
   ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/e5214dd1_images_sidebar.png)
 
-## 五、输出相关
+## 输出相关
 
 ### Drafts: 随手记终极解决工具
 
@@ -393,7 +411,7 @@ cpan
 sudo cpan Graph:Easy
 ```
 
-## 六、沟通协作
+## 沟通协作
 
 ### Slack
 
@@ -407,11 +425,11 @@ sudo cpan Graph:Easy
 
 [Trello](https://trello.com/)
 
-## 七、OmniGroup Series
+## OmniGroup Series
 
 ### [The Omni Group](https://www.omnigroup.com/)
 
-## 八、插件相关(Chrome、DEVONThink、Alfred)
+## 插件相关(Chrome、DEVONThink、Alfred)
 
 ### 1. Chrome
 
