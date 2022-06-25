@@ -1,3 +1,5 @@
+@import '../../mytheme/css/variables.css';
+
 @media only screen and (max-width:1439px) {
     .sidetoc {
         display: none;
@@ -11,14 +13,16 @@
     .sidetoc {
         margin-left: auto;
         margin-right: auto;
-        left: calc(100% + (var(--content-max-width))/4 - 160px);
+        left: calc(100% + (var(--content-max-width))/4 - 220px);
         position: absolute;
+
     }
     .pagetoc {
         position: fixed;
         width: 400px;
         height: calc(100vh - var(--menu-bar-height) - 0.67em * 4);
         overflow: auto;
+        font-size: var(--toc-font-size);
     }
     .pagetoc a {
         border-left: 1px solid var(--sidebar-bg);

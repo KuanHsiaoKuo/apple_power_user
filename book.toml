@@ -17,15 +17,28 @@ theme = "mytheme"
 default-theme = "rust"
 git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
 git-repository-icon = "fa-apple-core"
-additional-js = ["mermaid.min.js", "mermaid-init.js", "smart-anchor.js", "sidebar.js"]
-additional-css = ["style.css"]
+additional-js = ["assets/mermaid/mermaid.min.js", "assets/mermaid/mermaid-init.js", "assets/smart-anchor.js", "assets/pagetoc/sidebar.js"]
+additional-css = ["assets/pagetoc/pagetoc_style.css", "assets/css/mdbook-admonish.css"]
 mathjax-support = true
 
 
 [output.html.playground]
-editable = false
+editable = true
 copy-js = true
 
 [output.html.fold]
 enable = false
 level = 0
+
+# Enables the `mdbook-mermaid` preprocessor
+#[preprocessor.mermaid]
+#command = "mdbook-mermaid"
+
+# Enables the `mdbook-checklist` preprocessor
+[preprocessor.checklist]
+title = "待完善: "
+
+# Enables the `mdbook-admonish` preprocessor
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
