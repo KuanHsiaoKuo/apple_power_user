@@ -5,7 +5,7 @@
    * [Linux(Simplified)](#linuxsimplified)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Sun Jun 26 14:42:48 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun 26 16:02:27 CST 2022 -->
 
 <!--te-->
 ## OSX
@@ -31,7 +31,7 @@ set -g base-index 1
 # 将pane的起始下标设为1
 set -g pane-base-index 1
 # 设置pane编号显示时间
-set display-panes-time 2000 #2s
+set -g display-panes-time 2000 #2s
 # UI 样式调整
 setw -g window-status-current-fg white
 setw -g window-status-current-bg red

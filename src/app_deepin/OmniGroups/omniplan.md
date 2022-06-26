@@ -1,17 +1,31 @@
 # OmniPlan介绍
 
+![img](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/plan-card.png)
+
 <!--ts-->
+
 * [OmniPlan介绍](#omniplan介绍)
-   * [基础流程](#基础流程)
-   * [完善/维护流程](#完善维护流程)
-      * [复查](#复查)
-      * [增加注释](#增加注释)
-   * [参考资源](#参考资源)
+    * [基础流程](#基础流程)
+    * [完善/维护流程](#完善维护流程)
+        * [复查](#复查)
+        * [增加注释](#增加注释)
+    * [常用快捷键](#常用快捷键)
+    * [小技巧](#小技巧)
+        * [导出选择](#导出选择)
+            * [任务安排](#任务安排)
+            * [资源使用](#资源使用)
+            * [大纲视图](#大纲视图)
+            * [网络视图](#网络视图)
+        * [容忍期](#容忍期)
+    * [报告选择](#报告选择)
+    * [参考资源](#参考资源)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Sun Jun 26 14:42:37 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sun Jun 26 16:02:16 CST 2022 -->
 
 <!--te-->
+
+<video src="https://www.omnigroup.com/assets/img/2020/plan-video-18.mp4" controls="controls"></video>
 
 ## 基础流程
 
@@ -34,6 +48,36 @@
 
 1. 补充说明任务是什么
 2. 多方合作时，标明需要其他方的何种资源的支持
+
+## 常用快捷键
+
+- 切换检查视图：cmd+shift+i(info)
+
+## 小技巧
+
+### 导出选择
+
+> 主要还是按照任务、资源、项目大纲、网络图这四块分别导出后再合并
+
+#### 任务安排
+
+![image-20220626155900015](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220626155900015.png)
+
+#### 资源使用
+
+![image-20220626155615091](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220626155615091.png)
+
+#### 大纲视图
+
+#### 网络视图
+
+### 容忍期
+
+```admonish tip title='容忍期'
+有时候可能某些任务需要间接交替完成，这时候就需要设置容忍期
+```
+
+## 报告选择
 
 ## 参考资源
 
@@ -85,7 +129,7 @@
         - 任务间的关联关系
         - 安排：尽早安排/尽晚安排
         - 优先级：数值越高越优先
-    - 容忍期：在某个时间段内完成
+        - 时限(容忍期)：在某个时间段内完成，按住shift键拖动任务两端即可
 - [【OmniPlan系列】9 OmniPlan最后一课_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1P5411p7EE)
     - 回顾前面8集内容
     - 如何输出当前项目进度：可以自定义输出模版
