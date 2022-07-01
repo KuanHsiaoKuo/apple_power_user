@@ -10,6 +10,7 @@
       * [iTerm2: 终端神器](#iterm2-终端神器)
       * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
       * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
+      * [JsonHero: 一款json全功能工具](#jsonhero-一款json全功能工具)
       * [Navicat: 数据库工具](#navicat-数据库工具)
       * [OpenVPN: vpn工具](#openvpn-vpn工具)
       * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
@@ -88,7 +89,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Thu Jun 30 11:07:01 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:20 CST 2022 -->
 
 <!--te-->
 

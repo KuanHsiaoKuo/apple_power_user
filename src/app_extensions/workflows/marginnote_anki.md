@@ -6,7 +6,7 @@
    * [二、自动在anki中修改模版](#二自动在anki中修改模版)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Thu Jun 30 11:06:58 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:18 CST 2022 -->
 
 <!--te-->
 ## 一、自定义模版导出：不可行
