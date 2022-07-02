@@ -1,11 +1,12 @@
 # Jetbrains系列IDE共性与特性介绍
 
 <!--ts-->
+
 * [Jetbrains系列IDE共性与特性介绍](#jetbrains系列ide共性与特性介绍)
-   * [共性](#共性)
-      * [快捷键整理](#快捷键整理)
-         * [python配置虚拟环境](#python配置虚拟环境)
-      * [Tab方式打开项目](#tab方式打开项目)
+    * [共性](#共性)
+        * [快捷键整理](#快捷键整理)
+            * [python配置虚拟环境](#python配置虚拟环境)
+        * [Tab方式打开项目](#tab方式打开项目)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:06 CST 2022 -->
@@ -36,3 +37,7 @@
 2. Jetbrains设置是否新窗口打开
 
 - [Open, close, and move projects | IntelliJ IDEA](https://www.jetbrains.com/help/idea/open-close-and-move-projects.html#open-projects-new-same-window)
+
+### 配置代理
+
+![image-20220702163846633](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220702163846633.png)
