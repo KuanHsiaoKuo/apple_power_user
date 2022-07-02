@@ -12,7 +12,7 @@
       * [一些终端小工具的安装，非zsh/oh-my-zsh](#一些终端小工具的安装非zshoh-my-zsh)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:17 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jul  2 16:39:57 CST 2022 -->
 
 <!--te-->
 

@@ -3,7 +3,7 @@
 * [osx系统设置](#osx系统设置)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:21 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jul  2 16:40:01 CST 2022 -->
 
 <!--te-->
 1. 指定后缀名打开方式

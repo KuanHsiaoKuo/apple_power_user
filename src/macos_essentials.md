@@ -29,7 +29,7 @@
    * [9. Jetbrains Sync](#9-jetbrains-sync)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Fri Jul  1 15:14:21 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Sat Jul  2 16:40:00 CST 2022 -->
 
 <!--te-->
 
