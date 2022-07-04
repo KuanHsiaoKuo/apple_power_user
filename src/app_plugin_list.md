@@ -65,23 +65,7 @@
       * [Trello](#trello)
    * [OmniGroup Series](#omnigroup-series)
       * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
-   * [插件相关(Chrome、DEVONThink、Alfred)](#插件相关chromedevonthinkalfred)
-      * [1. Chrome](#1-chrome)
-         * [<a href="https://www.octotree.io/" rel="nofollow">octotree</a>: github侧边栏插件](#octotree-github侧边栏插件)
-         * [<a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien" rel="nofollow">GitHub Isometric Contributions - Chrome 网上应用店</a>](#github-isometric-contributions---chrome-网上应用店)
-         * [<a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a>](#gildas-lormeausinglefile--web-extension-for-firefoxchromems-edge-and-cli-tool-to-save-a-faithful-copy-of-an-entire-web-page-in-a-single-html-file)
-         * [<a href="https://rust.extension.sh/" rel="nofollow">Rust Search Extension - The ultimate search extension for Rust</a>](#rust-search-extension---the-ultimate-search-extension-for-rust)
-         * [<a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp" rel="nofollow">macro_railroad - Chrome 网上应用店</a>](#macro_railroad---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba" rel="nofollow">Smart TOC - Chrome 网上应用店</a>](#smart-toc---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb" rel="nofollow">Vimium - Chrome 网上应用店</a>](#vimium---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi" rel="nofollow">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a>](#omni---bookmark-history--tab-manager---chrome-网上应用店)
-         * [<a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts <g-emoji class="g-emoji" alias="sparkles" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png">✨</g-emoji></a>](#alyssaxuuflowy-the-minimal-javascript-library-to-create-flowcharts-)
-         * [<a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome <g-emoji class="g-emoji" alias="movie_camera" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3a5.png">🎥</g-emoji></a>](#alyssaxuuscreenity-the-most-powerful-screen-recorder--annotation-tool-for-chrome-)
-         * [<a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser <g-emoji class="g-emoji" alias="fire" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png">🔥</g-emoji></a>](#alyssaxuuanimockup-create-animated-mockups-in-the-browser-)
-         * [<a href="https://relingo.net/zh/guide" rel="nofollow">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a>](#relingo--阅读感兴趣的英语文章观看感兴趣的视频渐进式掌握词汇)
-         * [<a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related" rel="nofollow">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a>](#rss-reader-extension-by-inoreader---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek" rel="nofollow">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a>](#hypothesis---web--pdf-annotation---chrome-网上应用店)
-         * [<a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related" rel="nofollow">Zotero Connector - Chrome 网上应用店</a>](#zotero-connector---chrome-网上应用店)
+   * [插件相关(DEVONThink、Alfred)](#插件相关devonthinkalfred)
       * [2. DEVONThink](#2-devonthink)
          * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
          * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
@@ -89,7 +73,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: kuanhsiaokuo, at: Sat Jul  2 23:17:38 CST 2022 -->
+<!-- Added by: kuanhsiaokuo, at: Mon Jul  4 10:33:00 CST 2022 -->
 
 <!--te-->
 
