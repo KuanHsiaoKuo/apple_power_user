@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="cn" class="sidebar-visible no-js rust">
+<head>
+    <!-- Book generated using mdBook -->
+    <meta charset="UTF-8">
+    <title>Chrome插件推荐 - Apple Power User  </title>
+    <!-- Custom HTML head -->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="description" content="主要介绍基于macOS/iOS平台的工作/学习/效率工具及相关工作流，包含但不限于开发/设计/管理/研究型工作">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"/>
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- Highlight.js Stylesheets -->
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" href="tomorrow-night.css">
+    <link rel="stylesheet" href="ayu-highlight.css">
+
+    <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="assets/pagetoc/pagetoc_style.css">
+        <link rel="stylesheet" href="assets/css/mdbook-admonish.css">
+        <!-- MathJax -->
+        <script async type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<!-- Provide site root to javascript -->
+<script type="text/javascript">
+    var path_to_root = "";
+    var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+</script>
+
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script type="text/javascript">
+    try {
+        var theme = localStorage.getItem('mdbook-theme');
+        var sidebar = localStorage.getItem('mdbook-sidebar');
+
+        if (theme.startsWith('"') && theme.endsWith('"')) {
+            localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+        }
+
+        if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+            localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+        }
+    } catch (e) {
+    }
+</script>
+
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script type="text/javascript">
+    var theme;
+    try {
+        theme = localStorage.getItem('mdbook-theme');
+    } catch (e) {
+    }
+    if (theme === null || theme === undefined) {
+        theme = default_theme;
+    }
+    var html = document.querySelector('html');
+    html.classList.remove('no-js')
+    html.classList.remove('rust')
+    html.classList.add(theme);
+    html.classList.add('js');
+</script>
+
+<!-- Hide / unhide sidebar before it is displayed -->
+<script type="text/javascript">
+    var html = document.querySelector('html');
+    var sidebar = 'hidden';
+    if (document.body.clientWidth >= 1080) {
+        try {
+            sidebar = localStorage.getItem('mdbook-sidebar');
+        } catch (e) {
+        }
+        sidebar = sidebar || 'visible';
+    }
+    html.classList.remove('sidebar-visible');
+    html.classList.add("sidebar-" + sidebar);
+</script>
+
+<nav id="sidebar" class="sidebar" aria-label="Table of contents">
+    <div class="sidebar-scrollbox">
+        <ol class="chapter"><li class="chapter-item expanded "><a href="macos_essentials.html"><strong aria-hidden="true">1.</strong> macOS 重装基础内容</a></li><li class="chapter-item expanded "><a href="macos_ios_tips.html"><strong aria-hidden="true">2.</strong> macOS/iOS 使用小技巧</a></li><li class="chapter-item expanded "><a href="app_plugin_list.html"><strong aria-hidden="true">3.</strong> macOS/iOS 应用及插件推荐</a></li><li class="chapter-item expanded "><a href="chrome_plugins.html" class="active"><strong aria-hidden="true">4.</strong> Chrome插件推荐</a></li><li class="chapter-item expanded "><a href="shortcuts_keymaps_config.html"><strong aria-hidden="true">5.</strong> macOS 全局应用快捷键配置</a></li><li class="chapter-item expanded "><a href="overview.html"><strong aria-hidden="true">6.</strong> Power User Need Know</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_deepin/app_deepin.html"><strong aria-hidden="true">6.1.</strong> 主力App深度使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_deepin/alfred.html"><strong aria-hidden="true">6.1.1.</strong> Alfred</a></li><li class="chapter-item expanded "><a href="app_deepin/karabiner/karabiner.html"><strong aria-hidden="true">6.1.2.</strong> Karabiner Maestro</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_deepin/karabiner/layers_config.html"><strong aria-hidden="true">6.1.2.1.</strong> 分层设置</a></li></ol></li><li class="chapter-item expanded "><a href="app_deepin/marginnote_deepin.html"><strong aria-hidden="true">6.1.3.</strong> Marginnote</a></li><li class="chapter-item expanded "><a href="app_deepin/mdbook_deepin.html"><strong aria-hidden="true">6.1.4.</strong> Mdbook</a></li><li class="chapter-item expanded "><a href="app_deepin/picGo_deepin.html"><strong aria-hidden="true">6.1.5.</strong> PicGo</a></li><li class="chapter-item expanded "><a href="app_deepin/typora_deepin.html"><strong aria-hidden="true">6.1.6.</strong> Typora</a></li><li class="chapter-item expanded "><a href="app_extensions/iterm2_around/intro.html"><strong aria-hidden="true">6.1.7.</strong> iTerm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_extensions/iterm2_around/zsh_config/index.html"><strong aria-hidden="true">6.1.7.1.</strong> zsh</a></li><li class="chapter-item expanded "><a href="app_extensions/iterm2_around/osx_commands.html"><strong aria-hidden="true">6.1.7.2.</strong> osx特色指令使用</a></li></ol></li><li class="chapter-item expanded "><a href="app_deepin/jetbrains_ide.html"><strong aria-hidden="true">6.1.8.</strong> Jetbrains系列IDE使用</a></li><li class="chapter-item expanded "><a href="app_deepin/OmniGroups/omni_groups.html"><strong aria-hidden="true">6.1.9.</strong> Omni系列产品</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_deepin/OmniGroups/omniplan.html"><strong aria-hidden="true">6.1.9.1.</strong> OmniPlan</a></li><li class="chapter-item expanded "><a href="app_deepin/OmniGroups/omnifocus.html"><strong aria-hidden="true">6.1.9.2.</strong> OmniFocus</a></li><li class="chapter-item expanded "><a href="app_deepin/OmniGroups/omnigraffle.html"><strong aria-hidden="true">6.1.9.3.</strong> OmniGraffle</a></li><li class="chapter-item expanded "><a href="app_deepin/OmniGroups/omnioutliner.html"><strong aria-hidden="true">6.1.9.4.</strong> OmniOutliner</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="app_extensions/workflows/workflows.html"><strong aria-hidden="true">6.2.</strong> 工作流</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_extensions/workflows/marginnote_anki.html"><strong aria-hidden="true">6.2.1.</strong> Anki与marginnote协同</a></li></ol></li><li class="chapter-item expanded "><a href="app_extensions/Anki_around/anki_around.html"><strong aria-hidden="true">6.3.</strong> Anki扩展使用</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="app_extensions/Anki_around/custom_md_template.html"><strong aria-hidden="true">6.3.1.</strong> 自定义Anki卡片md模版</a></li></ol></li></ol></li></ol>
+    </div>
+    <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+</nav>
+
+<div id="page-wrapper" class="page-wrapper">
+
+    <div class="page">
+        <div id="menu-bar-hover-placeholder"></div>
+        <div id="menu-bar" class="menu-bar sticky bordered">
+            <div class="left-buttons">
+                <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents"
+                        aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button id="theme-toggle" class="icon-button" type="button" title="Change theme"
+                        aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                    <i class="fa fa-paint-brush"></i>
+                </button>
+                <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="light">Light</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="rust">Rust (default)</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="coal">Coal</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="navy">Navy</button>
+                    </li>
+                    <li role="none">
+                        <button role="menuitem" class="theme" id="ayu">Ayu</button>
+                    </li>
+                </ul>
+                    <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)"
+                            aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S"
+                            aria-controls="searchbar">
+                        <i class="fa fa-search"></i>
+                    </button>
+            </div>
+
+            <h1 class="menu-title">Apple Power User  </h1>
+            <h4 class="menu-bar"> -- 练武不练功 到头一场空 -- 《赛博英雄传》 </h4>
+            <div class="right-buttons">
+                    <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <i id="print-button" class="fa fa-print"></i>
+                    </a>
+                    <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git" title="Git repository" aria-label="Git repository">
+                        <i id="git-repository-button" class="fa fa-apple-core"></i>
+                    </a>
+            </div>
+        </div>
+
+            <div id="search-wrapper" class="hidden">
+                <form id="searchbar-outer" class="searchbar-outer">
+                    <input type="search" name="search" id="searchbar" name="searchbar"
+                           placeholder="Search this book ..." aria-controls="searchresults-outer"
+                           aria-describedby="searchresults-header">
+                </form>
+                <div id="searchresults-outer" class="searchresults-outer hidden">
+                    <div id="searchresults-header" class="searchresults-header"></div>
+                    <ul id="searchresults">
+                    </ul>
+                </div>
+            </div>
+        <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+        <script type="text/javascript">
+            document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+            document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+            Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) {
+                link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+            });
+        </script>
+
+        <div id="content" class="content">
+            <main>
+
+                <!-- Page table of contents -->
+                <div class="sidetoc">
+                    <nav class="pagetoc"></nav>
+                </div>
+                <h1 id="chrome插件整理"><a class="header" href="#chrome插件整理">Chrome插件整理</a></h1>
+<blockquote>
+<p>由于Chrome的插件极其丰富，这里就单独列一篇文章</p>
+</blockquote>
+<!--ts-->
+<ul>
+<li><a href="#chrome%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86">Chrome插件整理</a>
+<ul>
+<li><a href="#%E5%B7%A5%E5%85%B7%E7%AF%87">工具篇</a>
+<ul>
+<li><a href="#smart-toc-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%8F%B3%E4%BE%A7toc">Smart TOC: 自动生成右侧TOC</a></li>
+<li><a href="#vimium">Vimium</a></li>
+<li><a href="#omni">Omni</a></li>
+<li><a href="#flowy-%E4%B8%80%E6%AC%BE%E7%94%A8js%E5%86%99%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7">flowy: 一款用js写的自动化工具</a></li>
+<li><a href="#screenity-%E7%BD%91%E9%A1%B5%E5%BD%95%E5%83%8F%E6%88%AA%E5%9B%BE%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7">screenity: 网页录像/截图/标注工具</a></li>
+<li><a href="#animockup-%E5%88%B6%E4%BD%9C%E7%BD%91%E9%A1%B5%E5%8A%A8%E5%9B%BE">animockup: 制作网页动图</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%A6%E4%B9%A0%E7%AF%87">学习篇</a>
+<ul>
+<li><a href="#relingo%E5%9C%A8%E9%98%85%E8%AF%BB%E4%B8%AD%E6%8E%8C%E6%8F%A1%E5%8D%95%E8%AF%8D">Relingo：在阅读中掌握单词</a></li>
+<li><a href="#hypothesis-%E7%BD%91%E9%A1%B5pdf%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7">Hypothesis: 网页&amp;PDF标注工具</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B5%84%E6%96%99%E7%AF%87">资料篇</a>
+<ul>
+<li><a href="#singlefile-%E5%85%A8%E6%96%87%E4%BF%9D%E5%AD%98%E5%B7%A5%E5%85%B7">SingleFile: 全文保存工具</a></li>
+<li><a href="#inoreader-rss-reader-extension">Inoreader RSS Reader Extension</a></li>
+<li><a href="#zoetero-connector">Zoetero Connector</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%80%E5%8F%91%E7%AF%87">开发篇</a>
+<ul>
+<li><a href="#rust-%E6%90%9C%E7%B4%A2%E6%8F%92%E4%BB%B6">Rust 搜索插件</a></li>
+<li><a href="#rust%E5%AE%8F%E5%8F%AF%E8%A7%86%E5%8C%96%E6%8F%92%E4%BB%B6">Rust宏可视化插件</a></li>
+<li><a href="#octotree-github%E4%BE%A7%E8%BE%B9%E6%A0%8F">Octotree: github侧边栏</a></li>
+<li><a href="#github-%E4%B8%89%E7%BB%B4%E5%B1%95%E7%A4%BA">github 三维展示</a>
+<ul>
+<li><a href="#jiffy-reader-bionic-reader">Jiffy Reader: Bionic Reader</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: kuanhsiaokuo, at: Mon Jul  4 10:33:01 CST 2022 -->
+<!--te-->
+<blockquote>
+<p>如果对某个chrome插件感兴趣，可以在插件链接后面加'/related'</p>
+</blockquote>
+<h2 id="工具篇"><a class="header" href="#工具篇">工具篇</a></h2>
+<h3 id="smart-toc-自动生成右侧toc"><a class="header" href="#smart-toc-自动生成右侧toc">Smart TOC: 自动生成右侧TOC</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/smart-toc/lifgeihcfpkmmlfjbailfpfhbahhibba">Smart TOC - Chrome 网上应用店</a></li>
+</ul>
+<blockquote>
+<p>Displays a table of contents for every web page, making it easier to read/navigate long articles, documentations and online books</p>
+</blockquote>
+<h3 id="vimium"><a class="header" href="#vimium">Vimium</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium - Chrome 网上应用店</a></li>
+</ul>
+<h3 id="omni"><a class="header" href="#omni">Omni</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/omni-bookmark-history-tab/mapjgeachilmcbbokkgcbgpbakaaeehi">Omni - Bookmark, History, &amp; Tab Manager - Chrome 网上应用店</a></li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/alyssaxuu/omni">alyssaxuu/omni: The all-in-one tool to supercharge your productivity ⌨️</a>
+<img src="https://lh3.googleusercontent.com/P4tnISAD7L4I1ePDn5_CGr5mQTsVWWOKa35hZSwTW4z5fOOkWMBPR8z7xltoHkwfNqKT8E3CRYpzCThio30Pq2-E=w640-h400-e365-rj-sc0x00ffffff" alt="" />
+<img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/preview.gif" alt="" /></p>
+</blockquote>
+<h3 id="flowy-一款用js写的自动化工具"><a class="header" href="#flowy-一款用js写的自动化工具">flowy: 一款用js写的自动化工具</a></h3>
+<ul>
+<li><a href="https://github.com/alyssaxuu/flowy">alyssaxuu/flowy: The minimal javascript library to create flowcharts ✨</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6476314335364f7977725037436e32306e722f67697068792e676966.gif" alt="" /></p>
+<h3 id="screenity-网页录像截图标注工具"><a class="header" href="#screenity-网页录像截图标注工具">screenity: 网页录像/截图/标注工具</a></h3>
+<ul>
+<li><a href="https://github.com/alyssaxuu/screenity">alyssaxuu/screenity: The most powerful screen recorder &amp; annotation tool for Chrome 🎥</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f3668633730396e4645596e45747a4949794e2f67697068792e676966.gif" alt="" /></p>
+<h3 id="animockup-制作网页动图"><a class="header" href="#animockup-制作网页动图">animockup: 制作网页动图</a></h3>
+<ul>
+<li><a href="https://github.com/alyssaxuu/animockup">alyssaxuu/animockup: Create animated mockups in the browser 🔥</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/preview-20220605171609089.gif" alt="" /></p>
+<h2 id="学习篇"><a class="header" href="#学习篇">学习篇</a></h2>
+<h3 id="relingo在阅读中掌握单词"><a class="header" href="#relingo在阅读中掌握单词">Relingo：在阅读中掌握单词</a></h3>
+<ul>
+<li><a href="https://relingo.net/zh/guide">Relingo | 阅读感兴趣的英语文章，观看感兴趣的视频，渐进式掌握词汇</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/yastKTfHxC93tRjYDRI0wWukcK77OyUV3fwpUtUtOcUxqjhXXxW5A4rWmK82qUTR3XsGw6oWZGAxxd8eoXz6U6zR%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg" alt="" /></p>
+<h3 id="hypothesis-网页pdf标注工具"><a class="header" href="#hypothesis-网页pdf标注工具">Hypothesis: 网页&amp;PDF标注工具</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek">Hypothesis - Web &amp; PDF Annotation - Chrome 网上应用店</a></li>
+</ul>
+<blockquote>
+<p>一个高度可定制化的网页&amp;PDF标注工具。具体使用可见：<a href="https://web.archive.org/web/20220426111110/https://sspai.com/post/63033">开源、可定制的网页批注工具——Hypothesis - 少数派</a></p>
+</blockquote>
+<blockquote>
+<p>可以配合插件备份之后使用：<a href="https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak">Wayback Machine - Chrome 网上应用店</a></p>
+</blockquote>
+<h2 id="资料篇"><a class="header" href="#资料篇">资料篇</a></h2>
+<h3 id="singlefile-全文保存工具"><a class="header" href="#singlefile-全文保存工具">SingleFile: 全文保存工具</a></h3>
+<ul>
+<li><a href="https://github.com/gildas-lormeau/SingleFile">gildas-lormeau/SingleFile: 🖭 Web Extension for Firefox/Chrome/MS Edge and CLI tool to save a faithful copy of an entire web page in a single HTML file</a></li>
+</ul>
+<h3 id="inoreader-rss-reader-extension"><a class="header" href="#inoreader-rss-reader-extension">Inoreader RSS Reader Extension</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/rss-reader-extension-by-i/kfimphpokifbjgmjflanmfeppcjimgah/related">RSS Reader Extension (by Inoreader) - Chrome 网上应用店</a></li>
+</ul>
+<h3 id="zoetero-connector"><a class="header" href="#zoetero-connector">Zoetero Connector</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/zotero-connector/ekhagklcjbdpajgpjgmbionohlpdbjgc/related">Zotero Connector - Chrome 网上应用店</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/gL0Ky3a-hyp7sGQLnbWpPcebnUj8ituzsdstiVfsSq-OxA9QNZiA9ABhNf42-1oa6He3tN2kSk1B3uo80yZ1Ge1WZQ%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg" alt="" /></p>
+<h2 id="开发篇"><a class="header" href="#开发篇">开发篇</a></h2>
+<h3 id="rust-搜索插件"><a class="header" href="#rust-搜索插件">Rust 搜索插件</a></h3>
+<ul>
+<li><a href="https://rust.extension.sh/">Rust Search Extension - The ultimate search extension for Rust</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/demonstration.gif" alt="" /></p>
+<h3 id="rust宏可视化插件"><a class="header" href="#rust宏可视化插件">Rust宏可视化插件</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/macrorailroad/jeinhnlccpembeoccdhdpnolnmkfcblp">macro_railroad - Chrome 网上应用店</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/CVNeetRxO-OrVyShZ_E-G12DAt4ByHC2CzMVfJI7fA6R92ntDv3o_RCqhGjjJp2w0ZRh6Sx0m6xlqty1eJBUooVec10%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg" alt="" /></p>
+<h3 id="octotree-github侧边栏"><a class="header" href="#octotree-github侧边栏">Octotree: github侧边栏</a></h3>
+<ul>
+<li><a href="https://www.octotree.io/">octotree</a>: github侧边栏插件</li>
+</ul>
+<h3 id="github-三维展示"><a class="header" href="#github-三维展示">github 三维展示</a></h3>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien">GitHub Isometric Contributions - Chrome 网上应用店</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/Ew7xMlpcHhsOKfJB25HfKYgmpkfPTGvOPL-9JERL-x0j3H98crueLTtkmLOr4mIyAcMbhaib8wCbte1VVEGx7xV4eSs%253Dw640-h400-e365-rj-sc0x00ffffff.jpeg" alt="" /></p>
+<h4 id="jiffy-reader-bionic-reader"><a class="header" href="#jiffy-reader-bionic-reader">Jiffy Reader: Bionic Reader</a></h4>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/jiffy-reader/lljedihjnnjjefafchaljkhbpfhfkdic">Jiffy Reader - Chrome 网上应用店</a></li>
+<li><a href="https://github.com/ansh/jiffyreader.com#FAQ">ansh/jiffyreader.com: A Browser Extension for Bionic Reading on ANY website!</a></li>
+</ul>
+
+            </main>
+
+<!--            <script src="https://utteranc.es/client.js"-->
+<!--                    repo="RustMagazine/rust_magazine_2022"-->
+<!--                    issue-term="title"-->
+<!--                    theme="github-light"-->
+<!--                    crossorigin="anonymous"-->
+<!--                    async></script>-->
+
+            <nav class="nav-wrapper" aria-label="Page navigation">
+                <!-- Mobile navigation buttons -->
+                    <a rel="prev" href="app_plugin_list.html" class="mobile-nav-chapters previous"
+                       title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="shortcuts_keymaps_config.html" class="mobile-nav-chapters next"
+                       title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                <div style="clear: both"></div>
+            </nav>
+        </div>
+    </div>
+
+    <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            <a rel="prev" href="app_plugin_list.html" class="nav-chapters previous" title="Previous chapter"
+               aria-label="Previous chapter" aria-keyshortcuts="Left">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a rel="next" href="shortcuts_keymaps_config.html" class="nav-chapters next" title="Next chapter"
+               aria-label="Next chapter" aria-keyshortcuts="Right">
+                <i class="fa fa-angle-right"></i>
+            </a>
+    </nav>
+
+</div>
+
+    <script type="text/javascript">
+        window.playground_copyable = true;
+    </script>
+    <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+    <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+    <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+    <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+<script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Custom JS scripts -->
+    <script type="text/javascript" src="assets/mermaid/mermaid.min.js"></script>
+    <script type="text/javascript" src="assets/mermaid/mermaid-init.js"></script>
+    <script type="text/javascript" src="assets/smart-anchor.js"></script>
+    <script type="text/javascript" src="assets/pagetoc/sidebar.js"></script>
+</body>
+</html>
