@@ -31,8 +31,11 @@ enable = false
 level = 0
 
 # Enables the `mdbook-mermaid` preprocessor
-#[preprocessor.mermaid]
-#command = "mdbook-mermaid"
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.puml]
+command = "mdbook-puml"
 
 # Enables the `mdbook-checklist` preprocessor
 [preprocessor.checklist]
