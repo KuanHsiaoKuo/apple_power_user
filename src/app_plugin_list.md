@@ -1,76 +1,77 @@
 <!--ts-->
-   * [github开源](#github开源)
-      * [tproxy: TCP 连接分析工具](#tproxy-tcp-连接分析工具)
-   * [开发相关](#开发相关)
-      * [Another Redis Desktop Manager](#another-redis-desktop-manager)
-      * [ClashX: 梯子](#clashx-梯子)
-      * [Dash: 文档查阅工具](#dash-文档查阅工具)
-      * [OSX Docker](#osx-docker)
-      * [Github Desktop](#github-desktop)
-      * [iTerm2: 终端神器](#iterm2-终端神器)
-      * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
-      * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
-      * [JsonHero: 一款json全功能工具](#jsonhero-一款json全功能工具)
-      * [Navicat: 数据库工具](#navicat-数据库工具)
-      * [OpenVPN: vpn工具](#openvpn-vpn工具)
-      * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
-      * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
-      * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
-      * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
-      * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
-   * [效率相关](#效率相关)
-      * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
-      * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
-      * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
-      * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
-      * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
-      * [Focus: 专注效率工具](#focus-专注效率工具)
-      * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
-      * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
-      * [Moom: 窗口管理工具](#moom-窗口管理工具)
-      * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
-      * [MultiDock: 浮动常用工具栏](#multidock-浮动常用工具栏)
-      * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
-      * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
-      * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
-   * [学习工具](#学习工具)
-      * [Anki：抽卡识记工具](#anki抽卡识记工具)
-      * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
-      * [Movist: 视频播放工具](#movist-视频播放工具)
-      * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
-      * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
-   * [四、数据管理](#四数据管理)
-      * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
-      * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
-      * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
-      * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
-      * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
-   * [输出相关](#输出相关)
-      * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
-      * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
-      * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
-      * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
-      * [drawio: UML图解决方案](#drawio-uml图解决方案)
-      * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
-      * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
-      * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
-      * [两类思维导图：](#两类思维导图)
-         * [<a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a>](#xmind思维导图--xmind中文官方网站)
-         * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
-      * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
-      * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
-   * [沟通协作](#沟通协作)
-      * [Slack](#slack)
-      * [ToDesk](#todesk)
-      * [Trello](#trello)
-   * [OmniGroup Series](#omnigroup-series)
-      * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
-   * [插件相关(DEVONThink、Alfred)](#插件相关devonthinkalfred)
-      * [2. DEVONThink](#2-devonthink)
-         * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
-         * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
-         * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
-      * [3. Alfred](#3-alfred)
+
+* [github开源](#github开源)
+    * [tproxy: TCP 连接分析工具](#tproxy-tcp-连接分析工具)
+* [开发相关](#开发相关)
+    * [Another Redis Desktop Manager](#another-redis-desktop-manager)
+    * [ClashX: 梯子](#clashx-梯子)
+    * [Dash: 文档查阅工具](#dash-文档查阅工具)
+    * [OSX Docker](#osx-docker)
+    * [Github Desktop](#github-desktop)
+    * [iTerm2: 终端神器](#iterm2-终端神器)
+    * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
+    * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
+    * [JsonHero: 一款json全功能工具](#jsonhero-一款json全功能工具)
+    * [Navicat: 数据库工具](#navicat-数据库工具)
+    * [OpenVPN: vpn工具](#openvpn-vpn工具)
+    * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
+    * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
+    * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
+    * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
+    * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
+* [效率相关](#效率相关)
+    * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
+    * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
+    * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
+    * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
+    * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
+    * [Focus: 专注效率工具](#focus-专注效率工具)
+    * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
+    * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
+    * [Moom: 窗口管理工具](#moom-窗口管理工具)
+    * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
+    * [MultiDock: 浮动常用工具栏](#multidock-浮动常用工具栏)
+    * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
+    * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
+    * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
+* [学习工具](#学习工具)
+    * [Anki：抽卡识记工具](#anki抽卡识记工具)
+    * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
+    * [Movist: 视频播放工具](#movist-视频播放工具)
+    * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
+    * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
+* [四、数据管理](#四数据管理)
+    * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
+    * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
+    * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
+    * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
+    * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
+* [输出相关](#输出相关)
+    * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
+    * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
+    * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
+    * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
+    * [drawio: UML图解决方案](#drawio-uml图解决方案)
+    * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
+    * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
+    * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
+    * [两类思维导图：](#两类思维导图)
+        * [<a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a>](#xmind思维导图--xmind中文官方网站)
+        * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
+    * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
+    * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
+* [沟通协作](#沟通协作)
+    * [Slack](#slack)
+    * [ToDesk](#todesk)
+    * [Trello](#trello)
+* [OmniGroup Series](#omnigroup-series)
+    * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
+* [插件相关(DEVONThink、Alfred)](#插件相关devonthinkalfred)
+    * [2. DEVONThink](#2-devonthink)
+        * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
+        * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
+        * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
+    * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: kuanhsiaokuo, at: Mon Jul  4 10:33:00 CST 2022 -->
@@ -144,7 +145,6 @@
 - [jsonhero-io/jsonhero-web: JSON Hero is an open-source, beautiful JSON explorer for the web that lets you browse, search and navigate your JSON files at speed. 🚀](https://github.com/jsonhero-io/jsonhero-web)
 - [JSON Viewer - JSON Hero](https://jsonhero.io/)
 
-
 ### Navicat: 数据库工具
 
 [Navicat Premium | Connects to multiple databases on a single GUI](https://www.navicat.com/en/products/navicat-premium)
@@ -172,6 +172,18 @@
 [Script Debugger](https://latenightsw.com/):
 
 > Script Debugger是Macintosh计算机的源代码编辑器和调试环境，适用于AppleScript编程语言以及其他基于Apple Inc.的开放脚本体系结构的语言。它是Late Night Software的产品。
+
+### Termius: ssh连接app
+
+![](https://assets-global.website-files.com/5c7036349b5477bf13f828cf/6126f64cecfe794c371ddf30_6112100c32644a0172698ab3_hero_new_semaphore_2x-min.png)
+[Termius - SSH platform for Mobile and Desktop](https://www.termius.com/)
+
+![image-20220709174248270](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220709174248270.png)
+
+```admonish tip title='why choose'
+这个app是ios/osx都有的，配置信息、Snippets还可以随着账号同步。虽然付费，不过也能在有些时候解决问题.
+当然，还有一点很重要，我因为订阅得早，所以一年订阅费很低。
+```
 
 ### Warp: 观望中的终端工具，少了很多自定义
 
@@ -243,7 +255,9 @@
 
 [MultiDock: Organize your favorite folders, files and applications with Dock's (Dragthing alternative) • MacPlus Software](https://noteifyapp.com/multidock/)
 
-MultiDock is a simple application that allows you to organize frequently used applications, documents and folders using small panels (Dock's). MultiDock evolved as a new version of ActiveDock was being created. Some these new features might be available in the next version of ActiveDock.
+MultiDock is a simple application that allows you to organize frequently used applications, documents and folders using
+small panels (Dock's). MultiDock evolved as a new version of ActiveDock was being created. Some these new features might
+be available in the next version of ActiveDock.
 
 ![img](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/MultiDock-Mac-Medium-1024x592.jpg)
 
@@ -429,7 +443,6 @@ sudo cpan Graph:Easy
 ### [The Omni Group](https://www.omnigroup.com/)
 
 ## 插件相关(DEVONThink、Alfred)
-
 
 ### 2. DEVONThink
 
