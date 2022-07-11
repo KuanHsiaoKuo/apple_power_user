@@ -23,6 +23,7 @@
             - [OmniFocus](app_deepin/OmniGroups/omnifocus.md)
             - [OmniGraffle](app_deepin/OmniGroups/omnigraffle.md)
             - [OmniOutliner](app_deepin/OmniGroups/omnioutliner.md)
+        - [Tamper Monkey🐒](app_deepin/tampermonkey.md)
     - [工作流](app_extensions/workflows/workflows.md)
         - [Anki与marginnote协同](app_extensions/workflows/marginnote_anki.md)
     - [Anki扩展使用](app_extensions/Anki_around/anki_around.md)
