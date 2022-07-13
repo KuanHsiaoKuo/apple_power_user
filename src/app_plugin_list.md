@@ -56,8 +56,8 @@
       * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
       * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
       * [两类思维导图：](#两类思维导图)
-         * [<a href="https://www.xmind.cn/" rel="nofollow">XMind思维导图 | XMind中文官方网站</a>](#xmind思维导图--xmind中文官方网站)
-         * [<a href="https://www.literatureandlatte.com/scapple/overview" rel="nofollow">Scapple | Literature &amp; Latte</a>](#scapple--literature--latte)
+         * [Xmind:](#xmind)
+         * [Scapple:](#scapple)
       * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
       * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
    * [沟通协作](#沟通协作)
@@ -74,7 +74,7 @@
       * [3. Alfred](#3-alfred)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jul 13 02:26:56 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 13 13:03:13 UTC 2022 -->
 
 <!--te-->
 
