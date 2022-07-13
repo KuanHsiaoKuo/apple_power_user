@@ -389,9 +389,13 @@ be available in the next version of ActiveDock.
 
 ### 两类思维导图：
 
-#### [XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
+#### Xmind:
 
-#### [Scapple | Literature & Latte](https://www.literatureandlatte.com/scapple/overview)
+[XMind思维导图 | XMind中文官方网站](https://www.xmind.cn/)
+
+#### Scapple:
+
+[Scapple | Literature & Latte](https://www.literatureandlatte.com/scapple/overview)
 
 > 与Scrivener是一家
 > [高效学习法-利用Scapple打造10倍效率的笔记 - 知乎](https://web.archive.org/web/20220513063421/https://zhuanlan.zhihu.com/p/65473026)
