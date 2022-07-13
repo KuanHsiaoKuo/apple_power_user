@@ -6,12 +6,6 @@ multilingual = false
 src = "src"
 title = "Apple Power User  "
 
-
-
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-
-
 [output.html]
 theme = "mytheme"
 default-theme = "rust"
