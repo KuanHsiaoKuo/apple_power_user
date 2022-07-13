@@ -33,22 +33,22 @@
          * [mdbook-transcheck](#mdbook-transcheck)
          * [mdbook-man](#mdbook-man)
          * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
-         * [mdbook-bookimport](#mdbook-bookimport)
+         * [mdbook-bookimport: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
          * [md2tex](#md2tex)
          * [mdbook-checklist](#mdbook-checklist)
          * [mdBook Tag](#mdbook-tag)
          * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
          * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
-         * [mdbook-cms](#mdbook-cms)
+         * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
       * [自动渲染](#自动渲染)
          * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
-         * [mdBook Graphviz](#mdbook-graphviz)
+         * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
          * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
          * [mdbook-admonish](#mdbook-admonish)
          * [mdbook-curly-quotes](#mdbook-curly-quotes)
          * [mdbook-tera](#mdbook-tera)
          * [mdbook-template](#mdbook-template)
-         * [mdbook-mark](#mdbook-mark)
+         * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
          * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
          * [mdbook-fluent](#mdbook-fluent)
          * [mdbook-kroki-preprocessor](#mdbook-kroki-preprocessor)
@@ -60,7 +60,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 12 06:54:59 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 13 02:26:51 UTC 2022 -->
 
 <!--te-->
 
