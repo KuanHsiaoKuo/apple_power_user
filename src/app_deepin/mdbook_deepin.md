@@ -357,7 +357,9 @@ mytheme
 
 ![obsidian_example-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/obsidian_example-2.png)
 
-#### mdbook-bookimport
+#### mdbook-bookimport: 使用标记块引入其他文件内容
+
+> mdbook自带的include语法只能根据行数来引入文件内容，这个插件可以使用标记来引入。
 
 [tailwind/mdbook-bookimport: Import code/text from other files into your mdbook - without the link rot.](https://github.com/tailwind/mdbook-bookimport)
 
@@ -387,7 +389,9 @@ mytheme
 
 [me1ting/trpl-zh-cn-pdf: trpl-zh-cn的mdBook风格的pdf，带全书签](https://github.com/me1ting/trpl-zh-cn-pdf)
 
-#### mdbook-cms
+#### mdbook-cms: 自动生成Summary
+
+> this will also walk your mdbook src dir and generate the book summary in /path/to/your/mdbook/src/SUMMARY.md
 
 [AlongWY/mdbook-cms: A preprocessor bring cms to mdbook.](https://github.com/AlongWY/mdbook-cms)
 
@@ -399,7 +403,7 @@ mytheme
 
 [在线示例](https://oknozor.github.io/unveil-rs/)
 
-#### mdBook Graphviz
+#### mdBook Graphviz: 支持graphviz的dot语言
 
 [dylanowen/mdbook-graphviz](https://github.com/dylanowen/mdbook-graphviz)
 
@@ -431,7 +435,7 @@ https://github.com/badboy/mdbook-open-on-gh)
 
 [sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments](https://github.com/sgoudham/mdbook-template)
 
-#### mdbook-mark
+#### mdbook-mark: 渲染高亮标签<mark></mark>
 
 [blazood/mdbook-mark: this is a mdbook preprocessor which can render ==== to <mark></mark>](https://github.com/blazood/mdbook-mark#readme)
 
