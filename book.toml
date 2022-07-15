@@ -12,8 +12,11 @@ default-theme = "rust"
 git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
 git-repository-icon = "fa-apple-core"
 additional-js = ["assets/mermaid/mermaid.min.js", "assets/mermaid/mermaid-init.js", "assets/smart-anchor.js", "assets/pagetoc/sidebar.js"]
-additional-css = ["assets/pagetoc/pagetoc_style.css", "assets/css/mdbook-admonish.css"]
+additional-css = ["assets/pagetoc/pagetoc_style.css", "assets/css/mdbook-admonish.css", "assets/css/open_on_gh.css"]
 mathjax-support = true
+# mdbook-open-on-gh preprocessor
+git-branch = "main"
+open-on-text = "Found a bug? [Edit this page on GitHub.]"
 
 
 [output.html.playground]
@@ -34,6 +37,27 @@ command = "mdbook-puml"
 # Enables the `mdbook-checklist` preprocessor
 [preprocessor.checklist]
 title = "待完善: "
+
+#[preprocessor.toc]
+#command = "mdbook-toc"
+#renderer = ["html"]
+#max-level = 4
+
+[preprocessor.open-on-gh]
+command = "mdbook-open-on-gh"
+renderer = ["html"]
+
+# cargo install mdbook-backlinks
+#[preprocessor.backlinks]
+
+# cargo install mdbook-variables
+[preprocessor.variables.variables]
+custom_name = "在book.toml配置的mdbook-variables"
+
+[preprocessor.quiz]
+
+# cargo install mdbook-cmdrun
+[preprocessor.cmdrun]
 
 # Enables the `mdbook-admonish` preprocessor
 [preprocessor.admonish]

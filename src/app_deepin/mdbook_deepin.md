@@ -1,63 +1,64 @@
 # Mdbook电子书发布工具使用说明
 
 <!--ts-->
+
 * [Mdbook电子书发布工具使用说明](#mdbook电子书发布工具使用说明)
-   * [使用要点](#使用要点)
-      * [基本结构](#基本结构)
-      * [Summary](#summary)
-      * [图片资源与git lfs](#图片资源与git-lfs)
-         * [git lfs使用场景](#git-lfs使用场景)
-         * [对mdbook的影响](#对mdbook的影响)
-   * [Rust特供功能](#rust特供功能)
-      * [隐藏代码行](#隐藏代码行)
-      * [Rust Playground页面执行](#rust-playground页面执行)
-      * [包含文件自动渲染为md](#包含文件自动渲染为md)
-         * [全文件包含](#全文件包含)
-         * [指定行数](#指定行数)
-         * [指定锚点部分](#指定锚点部分)
-      * [插入代码](#插入代码)
-         * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
-         * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
-   * [mdbook主题修改](#mdbook主题修改)
-      * [基本页面介绍](#基本页面介绍)
-   * [mdbook插件推荐](#mdbook插件推荐)
-      * [自动检查](#自动检查)
-         * [MDBook Link-Check](#mdbook-link-check)
-      * [自动生成](#自动生成)
-         * [global-search](#global-search)
-         * [mdbook-toc](#mdbook-toc)
-         * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
-         * [mdbook-open-on-gh](#mdbook-open-on-gh)
-         * [book-summary](#book-summary)
-         * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
-         * [mdbook-transcheck](#mdbook-transcheck)
-         * [mdbook-man](#mdbook-man)
-         * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
-         * [mdbook-bookimport: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
-         * [md2tex](#md2tex)
-         * [mdbook-checklist](#mdbook-checklist)
-         * [mdBook Tag](#mdbook-tag)
-         * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
-         * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
-         * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
-      * [自动渲染](#自动渲染)
-         * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
-         * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
-         * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
-         * [mdbook-admonish](#mdbook-admonish)
-         * [mdbook-curly-quotes](#mdbook-curly-quotes)
-         * [mdbook-tera](#mdbook-tera)
-         * [mdbook-template](#mdbook-template)
-         * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
-         * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
-         * [mdbook-fluent](#mdbook-fluent)
-         * [mdbook-kroki-preprocessor](#mdbook-kroki-preprocessor)
-         * [mdBook Bibfile Referencing](#mdbook-bibfile-referencing)
-         * [mdbook-wikilink](#mdbook-wikilink)
-         * [mdbook-page-styles](#mdbook-page-styles)
-         * [mdbook-note](#mdbook-note)
-         * [mdbook-section-validator](#mdbook-section-validator)
-   * [资源链接](#资源链接)
+    * [使用要点](#使用要点)
+        * [基本结构](#基本结构)
+        * [Summary](#summary)
+        * [图片资源与git lfs](#图片资源与git-lfs)
+            * [git lfs使用场景](#git-lfs使用场景)
+            * [对mdbook的影响](#对mdbook的影响)
+    * [Rust特供功能](#rust特供功能)
+        * [隐藏代码行](#隐藏代码行)
+        * [Rust Playground页面执行](#rust-playground页面执行)
+        * [包含文件自动渲染为md](#包含文件自动渲染为md)
+            * [全文件包含](#全文件包含)
+            * [指定行数](#指定行数)
+            * [指定锚点部分](#指定锚点部分)
+        * [插入代码](#插入代码)
+            * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
+            * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
+    * [mdbook主题修改](#mdbook主题修改)
+        * [基本页面介绍](#基本页面介绍)
+    * [mdbook插件推荐](#mdbook插件推荐)
+        * [自动检查](#自动检查)
+            * [MDBook Link-Check](#mdbook-link-check)
+        * [自动生成](#自动生成)
+            * [global-search](#global-search)
+            * [mdbook-toc](#mdbook-toc)
+            * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
+            * [mdbook-open-on-gh](#mdbook-open-on-gh)
+            * [book-summary](#book-summary)
+            * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
+            * [mdbook-transcheck](#mdbook-transcheck)
+            * [mdbook-man](#mdbook-man)
+            * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
+            * [mdbook-bookimport: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
+            * [md2tex](#md2tex)
+            * [mdbook-checklist](#mdbook-checklist)
+            * [mdBook Tag](#mdbook-tag)
+            * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
+            * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
+            * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
+        * [自动渲染](#自动渲染)
+            * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
+            * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
+            * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
+            * [mdbook-admonish](#mdbook-admonish)
+            * [mdbook-curly-quotes](#mdbook-curly-quotes)
+            * [mdbook-tera](#mdbook-tera)
+            * [mdbook-template](#mdbook-template)
+            * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
+            * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
+            * [mdbook-fluent](#mdbook-fluent)
+            * [mdbook-kroki-preprocessor](#mdbook-kroki-preprocessor)
+            * [mdBook Bibfile Referencing](#mdbook-bibfile-referencing)
+            * [mdbook-wikilink](#mdbook-wikilink)
+            * [mdbook-page-styles](#mdbook-page-styles)
+            * [mdbook-note](#mdbook-note)
+            * [mdbook-section-validator](#mdbook-section-validator)
+    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Wed Jul 13 02:26:51 UTC 2022 -->
@@ -365,7 +366,8 @@ mytheme
 
 #### md2tex
 
-> A small utility to convert markdown files to tex. Forked from md2pdf, with an added focus on mdbook conversions. Also with the goal of eventually contributing back upstream.
+> A small utility to convert markdown files to tex. Forked from md2pdf, with an added focus on mdbook conversions. Also
+> with the goal of eventually contributing back upstream.
 
 - Used by mdbook-latex to generate PDF's.
 
@@ -375,9 +377,30 @@ mytheme
 
 [ANSSI-FR/mdbook-checklist: mdbook preprocessor for generating checklists and indexes](https://github.com/ANSSI-FR/mdbook-checklist)
 
+#### mdbook-chapter-path: 可以用来生成面包屑导航
+
+- [mdbook-chapter-path - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-chapter-path)
+
 #### mdBook Tag
 
 [dylanowen/mdbook-tag](https://github.com/dylanowen/mdbook-tag)
+
+#### mdbook toc: 自动生成toc
+
+- [mdbook-toc - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-toc)
+- [badboy/mdbook-toc: A preprocessor for mdbook to add inline Table of Contents support.](https://github.com/badboy/mdbook-toc)
+
+```shell
+cargo install mdbook-toc
+```
+
+```admonish quote title='说两句'
+不过我主要用github action自动解析后插入生成，这样用起来感觉更方便本地修改
+```
+
+#### mdbook-footnote: 可以用于生成引用内容
+
+- [mdbook-footnote - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-footnote)
 
 #### ~~mdBook-template~~: 不需要，直接修改主题
 
@@ -394,6 +417,56 @@ mytheme
 > this will also walk your mdbook src dir and generate the book summary in /path/to/your/mdbook/src/SUMMARY.md
 
 [AlongWY/mdbook-cms: A preprocessor bring cms to mdbook.](https://github.com/AlongWY/mdbook-cms)
+
+#### mdbook-open-on-gh: 添加打开github分支的功能
+
+> 可以在页面底部添加对应源文件的超链接
+
+- [mdbook-open-on-gh - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-open-on-gh)
+
+#### mdbook-variables: 配置全局变量
+
+- [mdbook-variables - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-variables)
+- [tglman / mdbook-variables · GitLab](https://gitlab.com/tglman/mdbook-variables)
+
+> {{custom_name}}
+
+#### mdbook-regex: 对内容进行正则替换
+
+> 可以看作是mdbook-variables的升级版
+
+- [mdbook-regex - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-regex)
+
+#### mdbook-readme: 解决readme与index不一致的问题
+
+```admonish tip title='为什么需要转化'
+mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网址根目录又指向README.md。这里需要统一
+```
+
+[mdbook-readme - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-readme)
+
+#### mdbook-cmdrun: 提供强悍的终端执行功能
+
+- [mdbook-cmdrun - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-cmdrun)
+
+> 该插件内置了下列编译器，可以直接执行代码
+
+1. Shell
+
+```console
+<!-- cmdrun ls -alh . -->
+```
+
+```rust
+<!-- cmdrun cat ../../ lib.rs -->
+```
+
+2. Bash Script
+3. Python3
+
+<!-- cmdrun python3 ../../materials/cmdrun/script.py -->
+
+4. Rust
 
 ### 自动渲染
 
@@ -420,7 +493,8 @@ https://github.com/badboy/mdbook-open-on-gh)
 #### mdbook-curly-quotes
 
 > mdBook preprocessor that replaces straight quotes with curly quotes, except within code blocks or code spans.
-> It does the same as the curly-quotes option of the mdBook HTML renderer. The only advantage is that it can be applied to any renderer.
+> It does the same as the curly-quotes option of the mdBook HTML renderer. The only advantage is that it can be applied
+> to any renderer.
 [arminha/mdbook-curly-quotes: mdBook preprocessor that replaces straight quotes with curly quotes](https://github.com/arminha/mdbook-curly-quotes)
 
 #### mdbook-tera
@@ -429,11 +503,18 @@ https://github.com/badboy/mdbook-open-on-gh)
 [avitex/mdbook-tera: Tera preprocessor for mdBook](https://github.com/avitex/mdbook-tera)
 [Keats/tera: A template engine for Rust based on Jinja2/Django](https://github.com/Keats/tera)
 
-#### mdbook-template
+#### sgoudham/mdbook-template
 
 > 可以自定义页脚的图像
 
 [sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments](https://github.com/sgoudham/mdbook-template)
+
+#### zjp-CN/mdbook-theme
+
+> 提供更多主题自定义选项
+
+- [zjp-CN/mdbook-template: Yield a mdbook demo with mdbook-theme and a yml file for github action automation and page publication.](https://github.com/zjp-CN/mdbook-template)
+- [mdbook-theme - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-theme)
 
 #### mdbook-mark: 渲染高亮标签<mark></mark>
 
@@ -474,6 +555,55 @@ https://github.com/badboy/mdbook-open-on-gh)
 #### mdbook-section-validator
 
 [younata/mdbook-section-validator: mdBook preprocessor for defining conditionally valid sections](https://github.com/younata/mdbook-section-validator)
+
+#### mdbook-skill-tree: 添加技能树渲染
+
+- [skill-tree/skill_tree.md at master · nikomatsakis/skill-tree](https://github.com/nikomatsakis/skill-tree/blob/master/book/src/skill_tree.md)
+- 在线示例: [Skill Tree - Skill-tree Book](https://nikomatsakis.github.io/skill-tree/)
+
+#### mdbook-chart: 添加c3.js图表渲染功能
+
+- what is c3js: [C3.js | D3-based reusable chart library](https://c3js.org/)
+- [knightflower1989/mdbook-chart: mdbook chart](https://github.com/knightflower1989/mdbook-chart)
+
+#### mdbook-quiz: 添加在线测验功能
+
+- [mdbook-quiz - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-quiz)
+
+```admonish warn title='自动生成'
+该插件会在src自动创建生成mdbook-quiz目录，里面包含embed.css和embed.js
+```
+
+```shell
+cargo install mdbook-quiz
+```
+
+```shell
+git clone https://github.com/willcrichton/mdbook-quiz
+cd mdbook-quiz
+cargo install --path .
+```
+
+- [live demo](https://willcrichton.net/mdbook-quiz/)
+- [willcrichton/mdbook-quiz: Interactive quizzes for Markdown](https://github.com/willcrichton/mdbook-quiz)
+
+> And now, a _quiz_:
+
+{{#quiz ../../materials/quizzes/rust-variables.toml}}
+
+#### mdbook-puml: plantuml渲染
+
+> 比mdbook-plantuml更好用
+[mdbook-puml - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-puml)
+
+#### mdbook-kroki-preprocessor: 支持kroki渲染
+
+> kroki可以看作多种图表语言的统一接口
+
+- [mdbook-kroki-preprocessor - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-kroki-preprocessor)
+- [Kroki!](https://kroki.io/#examples)
+
+![image-20220715114804075](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220715114804075.png)
 
 ## 资源链接
 
