@@ -318,53 +318,53 @@ mytheme
 - highlight.css is the theme used for the code highlighting.
 - favicon.svg and favicon.png the favicon that will be used. The SVG version is used by newer browsers.
 
-## mdbook插件推荐
+# mdbook插件推荐
 
-### 自动检查
+## 自动检查
 
-#### MDBook Link-Check
+### MDBook Link-Check
 
 [Michael-F-Bryan/mdbook-linkcheck: A backend for `mdbook` which will check your links for you.](https://github.com/Michael-F-Bryan/mdbook-linkcheck)
 
-### 自动生成
+## 自动生成
 
-#### global-search
+### global-search
 
 [mattico/global-search: Global search for a collection of MDBooks](https://github.com/mattico/global-search)
 
-#### mdbook-toc
+### mdbook-toc
 
 [badboy/mdbook-toc: A preprocessor for mdbook to add inline Table of Contents support.](https://github.com/badboy/mdbook-toc)
 
-#### mdbook-pagetoc: 添加页内侧边栏toc
+### mdbook-pagetoc: 添加页内侧边栏toc
 
 [JorelAli/mdBook-pagetoc: A page table of contents for mdBook](https://github.com/JorelAli/mdBook-pagetoc)
 ![mdbook-toc-sample](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/mdbook-toc-sample.png)
 [Chapter 1 - Sample](https://jorel.dev/mdBook-pagetoc/)
 
-#### mdbook-open-on-gh
+### mdbook-open-on-gh
 
 [badboy/mdbook-open-on-gh: mdbook preprocessor to add a open-on-github link on every page](https://github.com/badboy/mdbook-open-on-gh)
 
-#### book-summary
+### book-summary
 
 > Automatically creates a SUMMARY.md file for your book (`mdbook/gitbook`)
 
 [dvogt23/book-summary: 📔Book auto-summary 🦀🖤 (gitbook/mdBook)](https://github.com/dvogt23/book-summary)
 
-#### mdbook-suto-gen-summary
+### mdbook-suto-gen-summary
 
 [knightflower1989/mdbook-auto-gen-summary: mdbook auto-gen-summary](https://github.com/knightflower1989/mdbook-auto-gen-summary)
 
-#### mdbook-transcheck
+### mdbook-transcheck
 
 [dalance/mdbook-transcheck: Checker for translated mdbook](https://github.com/dalance/mdbook-transcheck)
 
-#### mdbook-man
+### mdbook-man
 
 [vv9k/mdbook-man: Generate manual pages from mdBooks!](https://github.com/vv9k/mdbook-man)
 
-#### Gooseberry - a Knowledge Base for the Lazy
+### Gooseberry - a Knowledge Base for the Lazy
 
 > 一个很棒的工具，可以直接将mdbook转为知识库
 
@@ -372,13 +372,13 @@ mytheme
 
 ![obsidian_example-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/obsidian_example-2.png)
 
-#### mdbook-bookimport: 使用标记块引入其他文件内容
+### mdbook-bookimport: 使用标记块引入其他文件内容
 
 > mdbook自带的include语法只能根据行数来引入文件内容，这个插件可以使用标记来引入。
 
 [tailwind/mdbook-bookimport: Import code/text from other files into your mdbook - without the link rot.](https://github.com/tailwind/mdbook-bookimport)
 
-#### md2tex
+### md2tex
 
 > A small utility to convert markdown files to tex. Forked from md2pdf, with an added focus on mdbook conversions. Also
 > with the goal of eventually contributing back upstream.
@@ -387,19 +387,19 @@ mytheme
 
 [lbeckman314/md2tex: A fork of tforgione's awesome md2pdf library, catered for mdbook.](https://github.com/lbeckman314/md2tex)
 
-#### mdbook-checklist
+### mdbook-checklist
 
 [ANSSI-FR/mdbook-checklist: mdbook preprocessor for generating checklists and indexes](https://github.com/ANSSI-FR/mdbook-checklist)
 
-#### mdbook-chapter-path: 可以用来生成面包屑导航
+### mdbook-chapter-path: 可以用来生成面包屑导航
 
 - [mdbook-chapter-path - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-chapter-path)
 
-#### mdBook Tag
+### mdBook Tag
 
 [dylanowen/mdbook-tag](https://github.com/dylanowen/mdbook-tag)
 
-#### mdbook toc: 自动生成toc
+### mdbook toc: 自动生成toc
 
 - [mdbook-toc - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-toc)
 - [badboy/mdbook-toc: A preprocessor for mdbook to add inline Table of Contents support.](https://github.com/badboy/mdbook-toc)
@@ -412,33 +412,33 @@ cargo install mdbook-toc
 不过我主要用github action自动解析后插入生成，这样用起来感觉更方便本地修改
 ```
 
-#### mdbook-footnote: 可以用于生成引用内容
+### mdbook-footnote: 可以用于生成引用内容
 
 - [mdbook-footnote - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-footnote)
 
-#### ~~mdBook-template~~: 不需要，直接修改主题
+### ~~mdBook-template~~: 不需要，直接修改主题
 
 [sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments](https://github.com/sgoudham/mdbook-template)
 
-#### trpl-zh-cn-pdf
+### trpl-zh-cn-pdf
 
 > [KaiserY/trpl-zh-cn: Rust 程序设计语言（2021 edition 施工中）](https://github.com/KaiserY/trpl-zh-cn/)
 
 [me1ting/trpl-zh-cn-pdf: trpl-zh-cn的mdBook风格的pdf，带全书签](https://github.com/me1ting/trpl-zh-cn-pdf)
 
-#### mdbook-cms: 自动生成Summary
+### mdbook-cms: 自动生成Summary
 
 > this will also walk your mdbook src dir and generate the book summary in /path/to/your/mdbook/src/SUMMARY.md
 
 [AlongWY/mdbook-cms: A preprocessor bring cms to mdbook.](https://github.com/AlongWY/mdbook-cms)
 
-#### mdbook-open-on-gh: 添加打开github分支的功能
+### mdbook-open-on-gh: 添加打开github分支的功能
 
 > 可以在页面底部添加对应源文件的超链接
 
 - [mdbook-open-on-gh - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-open-on-gh)
 
-#### mdbook-readme: 解决readme与index不一致的问题
+### mdbook-readme: 解决readme与index不一致的问题
 
 ```admonish tip title='为什么需要转化'
 mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网址根目录又指向README.md。这里需要统一
@@ -446,7 +446,7 @@ mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网�
 
 [mdbook-readme - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-readme)
 
-#### mdbook-cmdrun: 提供强悍的终端执行功能
+### mdbook-cmdrun: 提供强悍的终端执行功能
 
 - [mdbook-cmdrun - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-cmdrun)
 
@@ -459,7 +459,7 @@ mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网�
 ```
 
 ```rust
-< ! - - cmdrun cat .. /../ lib.rs - ->
+<! -- cmdrun cat ../../lib.rs -->
 ```
 
 2. Bash Script
@@ -469,128 +469,129 @@ mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网�
 
 4. Rust
 
-### 配置与替换
+## 配置与替换
 
-#### mdbook-fluent: 可以用配置文件进行整理
+### mdbook-fluent: 可以用配置文件进行整理
 
 [JakubKoralewski/mdbook-fluent: mdBook preprocessor for variable interpolation using the Fluent language](https://github.com/JakubKoralewski/mdbook-fluent)
 
-#### mdbook-variables: 在book.toml配置全局变量
+### mdbook-variables: 在book.toml配置全局变量
 
 - [mdbook-variables - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-variables)
 - [tglman / mdbook-variables · GitLab](https://gitlab.com/tglman/mdbook-variables)
 
 > {{custom_name}}
 
-#### mdbook-regex: 对内容进行正则替换
+### mdbook-regex: 对内容进行正则替换
 
 > 可以看作是mdbook-variables的升级版
 
 - [mdbook-regex - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-regex)
 
-### 绘图
+## 绘图
 
-#### mdBook Graphviz: 支持graphviz的dot语言
+### mdBook Graphviz: 支持graphviz的dot语言
 
 [dylanowen/mdbook-graphviz](https://github.com/dylanowen/mdbook-graphviz)
 
 https://github.com/badboy/mdbook-open-on-gh)
 
-#### svgbob plugin for mdbook
+### svgbob plugin for mdbook
 
 [boozook/mdbook-svgbob: SvgBob mdbook preprocessor which swaps code-blocks with neat SVG.](https://github.com/boozook/mdbook-svgbob)
 
-#### mdbook-skill-tree: 添加技能树渲染
+### mdbook-skill-tree: 添加技能树渲染
 
 - [skill-tree/skill_tree.md at master · nikomatsakis/skill-tree](https://github.com/nikomatsakis/skill-tree/blob/master/book/src/skill_tree.md)
 - 在线示例: [Skill Tree - Skill-tree Book](https://nikomatsakis.github.io/skill-tree/)
 
-#### mdbook-chart: 添加c3.js图表渲染功能
+### mdbook-chart: 添加c3.js图表渲染功能
 
 > 主要是通过添加额外js、css文件
 
 - what is c3js: [C3.js | D3-based reusable chart library](https://c3js.org/)
 - [knightflower1989/mdbook-chart: mdbook chart](https://github.com/knightflower1989/mdbook-chart)
 
-#### mdbook-puml: plantuml渲染
+### mdbook-puml: plantuml渲染
 
 > 比mdbook-plantuml更好用
 [mdbook-puml - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-puml)
 
-#### mdbook-kroki-preprocessor: 支持kroki渲染
+### mdbook-kroki-preprocessor: 支持kroki渲染
 
 > kroki可以看作多种图表语言的统一接口
 
 - [mdbook-kroki-preprocessor - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-kroki-preprocessor)
 - [Kroki!](https://kroki.io/#examples)
+- [Kroki! Examples](https://kroki.io/examples.html)
 
 ![image-20220715114804075](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220715114804075.png)
 
-### 自动渲染
+## 自动渲染
 
-#### unevil-rs: 与mdbook无关，只是单独用来写ppt
+### unevil-rs: 与mdbook无关，只是单独用来写ppt
 
 [oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.](https://github.com/oknozor/unveil-rs)
 
 [在线示例](https://oknozor.github.io/unveil-rs/)
 
-#### mdbook-admonish
+### mdbook-admonish
 
 [tommilligan/mdbook-admonish: A preprocessor for mdbook to add Material Design admonishments.](https://github.com/tommilligan/mdbook-admonish)
 
-#### mdbook-curly-quotes
+### mdbook-curly-quotes
 
 > mdBook preprocessor that replaces straight quotes with curly quotes, except within code blocks or code spans.
 > It does the same as the curly-quotes option of the mdBook HTML renderer. The only advantage is that it can be applied
 > to any renderer.
 [arminha/mdbook-curly-quotes: mdBook preprocessor that replaces straight quotes with curly quotes](https://github.com/arminha/mdbook-curly-quotes)
 
-#### mdbook-tera
+### mdbook-tera
 
 > 基于tera模版引擎渲染
 [avitex/mdbook-tera: Tera preprocessor for mdBook](https://github.com/avitex/mdbook-tera)
 [Keats/tera: A template engine for Rust based on Jinja2/Django](https://github.com/Keats/tera)
 
-#### sgoudham/mdbook-template
+### sgoudham/mdbook-template
 
 > 可以自定义页脚的图像
 
 [sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments](https://github.com/sgoudham/mdbook-template)
 
-#### zjp-CN/mdbook-theme
+### zjp-CN/mdbook-theme
 
 > 提供更多主题自定义选项
 
 - [zjp-CN/mdbook-template: Yield a mdbook demo with mdbook-theme and a yml file for github action automation and page publication.](https://github.com/zjp-CN/mdbook-template)
 - [mdbook-theme - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-theme)
 
-#### mdbook-mark: 渲染高亮标签<mark></mark>
+### mdbook-mark: 渲染高亮标签<mark></mark>
 
 [blazood/mdbook-mark: this is a mdbook preprocessor which can render ==== to <mark></mark>](https://github.com/blazood/mdbook-mark#readme)
 
-#### mdbook-all-the-markdowns
+### mdbook-all-the-markdowns
 
 ![all-the-things](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/all-the-things.png)
 
 [bombsimon/mdbook-all-the-markdowns: 🗃️ Preprocessor for mdbook to render all the markdowns!](https://github.com/bombsimon/mdbook-all-the-markdowns)
 
-#### mdbook-wikilink
+### mdbook-wikilink
 
 [NOBLES5E/mdbook-wikilink: Support for wikilinks on mdBook.](https://github.com/NOBLES5E/mdbook-wikilink)
 
-#### mdbook-page-styles
+### mdbook-page-styles
 
 [ABCsOf/mdbook-page-styles: An mdbook preprocessor to apply styles to specific pages and elements.](https://github.com/ABCsOf/mdbook-page-styles)
 
-#### mdbook-note
+### mdbook-note
 
 [Aedius/mdbook-note: preprocessor for mdbook to add organized chapter containing fragment from the rest of the book](https://github.com/Aedius/mdbook-note)
 
-#### mdbook-section-validator
+### mdbook-section-validator
 
 [younata/mdbook-section-validator: mdBook preprocessor for defining conditionally valid sections](https://github.com/younata/mdbook-section-validator)
 
-#### mdbook-quiz: 添加在线测验功能
+### mdbook-quiz: 添加在线测验功能
 
 - [mdbook-quiz - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-quiz)
 
