@@ -32,6 +32,7 @@
     <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../assets/pagetoc/pagetoc_style.css">
         <link rel="stylesheet" href="../assets/css/mdbook-admonish.css">
+        <link rel="stylesheet" href="../assets/css/open_on_gh.css">
 
         <!-- MathJax -->
         <script async type="text/javascript"
@@ -242,10 +243,18 @@
 <li><a href="#mdbook-bookimport-%E4%BD%BF%E7%94%A8%E6%A0%87%E8%AE%B0%E5%9D%97%E5%BC%95%E5%85%A5%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9">mdbook-bookimport: 使用标记块引入其他文件内容</a></li>
 <li><a href="#md2tex">md2tex</a></li>
 <li><a href="#mdbook-checklist">mdbook-checklist</a></li>
+<li><a href="#mdbook-chapter-path-%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E7%94%9F%E6%88%90%E9%9D%A2%E5%8C%85%E5%B1%91%E5%AF%BC%E8%88%AA">mdbook-chapter-path: 可以用来生成面包屑导航</a></li>
 <li><a href="#mdbook-tag">mdBook Tag</a></li>
+<li><a href="#mdbook-toc-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90toc">mdbook toc: 自动生成toc</a></li>
+<li><a href="#mdbook-footnote-%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8E%E7%94%9F%E6%88%90%E5%BC%95%E7%94%A8%E5%86%85%E5%AE%B9">mdbook-footnote: 可以用于生成引用内容</a></li>
 <li><a href="#mdbook-template-%E4%B8%8D%E9%9C%80%E8%A6%81%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><del>mdBook-template</del>: 不需要，直接修改主题</a></li>
 <li><a href="#trpl-zh-cn-pdf">trpl-zh-cn-pdf</a></li>
 <li><a href="#mdbook-cms-%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90summary">mdbook-cms: 自动生成Summary</a></li>
+<li><a href="#mdbook-open-on-gh-%E6%B7%BB%E5%8A%A0%E6%89%93%E5%BC%80github%E5%88%86%E6%94%AF%E7%9A%84%E5%8A%9F%E8%83%BD">mdbook-open-on-gh: 添加打开github分支的功能</a></li>
+<li><a href="#mdbook-variables-%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F">mdbook-variables: 配置全局变量</a></li>
+<li><a href="#mdbook-regex-%E5%AF%B9%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E6%AD%A3%E5%88%99%E6%9B%BF%E6%8D%A2">mdbook-regex: 对内容进行正则替换</a></li>
+<li><a href="#mdbook-readme-%E8%A7%A3%E5%86%B3readme%E4%B8%8Eindex%E4%B8%8D%E4%B8%80%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98">mdbook-readme: 解决readme与index不一致的问题</a></li>
+<li><a href="#mdbook-cmdrun-%E6%8F%90%E4%BE%9B%E5%BC%BA%E6%82%8D%E7%9A%84%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8C%E5%8A%9F%E8%83%BD">mdbook-cmdrun: 提供强悍的终端执行功能</a></li>
 </ul>
 </li>
 <li><a href="#%E8%87%AA%E5%8A%A8%E6%B8%B2%E6%9F%93">自动渲染</a>
@@ -256,7 +265,8 @@
 <li><a href="#mdbook-admonish">mdbook-admonish</a></li>
 <li><a href="#mdbook-curly-quotes">mdbook-curly-quotes</a></li>
 <li><a href="#mdbook-tera">mdbook-tera</a></li>
-<li><a href="#mdbook-template">mdbook-template</a></li>
+<li><a href="#sgoudhammdbook-template">sgoudham/mdbook-template</a></li>
+<li><a href="#zjp-cnmdbook-theme">zjp-CN/mdbook-theme</a></li>
 <li><a href="#mdbook-mark-%E6%B8%B2%E6%9F%93%E9%AB%98%E4%BA%AE%E6%A0%87%E7%AD%BE">mdbook-mark: 渲染高亮标签</a></li>
 <li><a href="#mdbook-all-the-markdowns">mdbook-all-the-markdowns</a></li>
 <li><a href="#mdbook-fluent">mdbook-fluent</a></li>
@@ -266,6 +276,11 @@
 <li><a href="#mdbook-page-styles">mdbook-page-styles</a></li>
 <li><a href="#mdbook-note">mdbook-note</a></li>
 <li><a href="#mdbook-section-validator">mdbook-section-validator</a></li>
+<li><a href="#mdbook-skill-tree-%E6%B7%BB%E5%8A%A0%E6%8A%80%E8%83%BD%E6%A0%91%E6%B8%B2%E6%9F%93">mdbook-skill-tree: 添加技能树渲染</a></li>
+<li><a href="#mdbook-chart-%E6%B7%BB%E5%8A%A0c3js%E5%9B%BE%E8%A1%A8%E6%B8%B2%E6%9F%93%E5%8A%9F%E8%83%BD">mdbook-chart: 添加c3.js图表渲染功能</a></li>
+<li><a href="#mdbook-quiz-%E6%B7%BB%E5%8A%A0%E5%9C%A8%E7%BA%BF%E6%B5%8B%E9%AA%8C%E5%8A%9F%E8%83%BD">mdbook-quiz: 添加在线测验功能</a></li>
+<li><a href="#mdbook-puml-plantuml%E6%B8%B2%E6%9F%93">mdbook-puml: plantuml渲染</a></li>
+<li><a href="#mdbook-kroki-preprocessor-%E6%94%AF%E6%8C%81kroki%E6%B8%B2%E6%9F%93">mdbook-kroki-preprocessor: 支持kroki渲染</a></li>
 </ul>
 </li>
 </ul>
@@ -275,7 +290,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Wed Jul 13 13:03:10 UTC 2022 -->
+<!-- Added by: runner, at: Fri Jul 15 06:22:57 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -548,7 +563,8 @@ mytheme
 <p><a href="https://github.com/tailwind/mdbook-bookimport">tailwind/mdbook-bookimport: Import code/text from other files into your mdbook - without the link rot.</a></p>
 <h4 id="md2tex"><a class="header" href="#md2tex">md2tex</a></h4>
 <blockquote>
-<p>A small utility to convert markdown files to tex. Forked from md2pdf, with an added focus on mdbook conversions. Also with the goal of eventually contributing back upstream.</p>
+<p>A small utility to convert markdown files to tex. Forked from md2pdf, with an added focus on mdbook conversions. Also
+with the goal of eventually contributing back upstream.</p>
 </blockquote>
 <ul>
 <li>Used by mdbook-latex to generate PDF's.</li>
@@ -556,8 +572,32 @@ mytheme
 <p><a href="https://github.com/lbeckman314/md2tex">lbeckman314/md2tex: A fork of tforgione's awesome md2pdf library, catered for mdbook.</a></p>
 <h4 id="mdbook-checklist"><a class="header" href="#mdbook-checklist">mdbook-checklist</a></h4>
 <p><a href="https://github.com/ANSSI-FR/mdbook-checklist">ANSSI-FR/mdbook-checklist: mdbook preprocessor for generating checklists and indexes</a></p>
+<h4 id="mdbook-chapter-path-可以用来生成面包屑导航"><a class="header" href="#mdbook-chapter-path-可以用来生成面包屑导航">mdbook-chapter-path: 可以用来生成面包屑导航</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-chapter-path">mdbook-chapter-path - crates.io: Rust Package Registry</a></li>
+</ul>
 <h4 id="mdbook-tag"><a class="header" href="#mdbook-tag">mdBook Tag</a></h4>
 <p><a href="https://github.com/dylanowen/mdbook-tag">dylanowen/mdbook-tag</a></p>
+<h4 id="mdbook-toc-自动生成toc"><a class="header" href="#mdbook-toc-自动生成toc">mdbook toc: 自动生成toc</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-toc">mdbook-toc - crates.io: Rust Package Registry</a></li>
+<li><a href="https://github.com/badboy/mdbook-toc">badboy/mdbook-toc: A preprocessor for mdbook to add inline Table of Contents support.</a></li>
+</ul>
+<pre><code class="language-shell">cargo install mdbook-toc
+</code></pre>
+<div id="admonition-说两句" class="admonition quote">
+<div class="admonition-title">
+<p>说两句</p>
+<p><a class="admonition-anchor-link" href="#admonition-说两句"></a></p>
+</div>
+<div>
+<p>不过我主要用github action自动解析后插入生成，这样用起来感觉更方便本地修改</p>
+</div>
+</div>
+<h4 id="mdbook-footnote-可以用于生成引用内容"><a class="header" href="#mdbook-footnote-可以用于生成引用内容">mdbook-footnote: 可以用于生成引用内容</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-footnote">mdbook-footnote - crates.io: Rust Package Registry</a></li>
+</ul>
 <h4 id="mdbook-template-不需要直接修改主题"><a class="header" href="#mdbook-template-不需要直接修改主题"><del>mdBook-template</del>: 不需要，直接修改主题</a></h4>
 <p><a href="https://github.com/sgoudham/mdbook-template">sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments</a></p>
 <h4 id="trpl-zh-cn-pdf"><a class="header" href="#trpl-zh-cn-pdf">trpl-zh-cn-pdf</a></h4>
@@ -570,6 +610,64 @@ mytheme
 <p>this will also walk your mdbook src dir and generate the book summary in /path/to/your/mdbook/src/SUMMARY.md</p>
 </blockquote>
 <p><a href="https://github.com/AlongWY/mdbook-cms">AlongWY/mdbook-cms: A preprocessor bring cms to mdbook.</a></p>
+<h4 id="mdbook-open-on-gh-添加打开github分支的功能"><a class="header" href="#mdbook-open-on-gh-添加打开github分支的功能">mdbook-open-on-gh: 添加打开github分支的功能</a></h4>
+<blockquote>
+<p>可以在页面底部添加对应源文件的超链接</p>
+</blockquote>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-open-on-gh">mdbook-open-on-gh - crates.io: Rust Package Registry</a></li>
+</ul>
+<h4 id="mdbook-variables-配置全局变量"><a class="header" href="#mdbook-variables-配置全局变量">mdbook-variables: 配置全局变量</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-variables">mdbook-variables - crates.io: Rust Package Registry</a></li>
+<li><a href="https://gitlab.com/tglman/mdbook-variables">tglman / mdbook-variables · GitLab</a></li>
+</ul>
+<blockquote>
+<p>{{custom_name}}</p>
+</blockquote>
+<h4 id="mdbook-regex-对内容进行正则替换"><a class="header" href="#mdbook-regex-对内容进行正则替换">mdbook-regex: 对内容进行正则替换</a></h4>
+<blockquote>
+<p>可以看作是mdbook-variables的升级版</p>
+</blockquote>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-regex">mdbook-regex - crates.io: Rust Package Registry</a></li>
+</ul>
+<h4 id="mdbook-readme-解决readme与index不一致的问题"><a class="header" href="#mdbook-readme-解决readme与index不一致的问题">mdbook-readme: 解决readme与index不一致的问题</a></h4>
+<div id="admonition-为什么需要转化" class="admonition tip">
+<div class="admonition-title">
+<p>为什么需要转化</p>
+<p><a class="admonition-anchor-link" href="#admonition-为什么需要转化"></a></p>
+</div>
+<div>
+<p>mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网址根目录又指向README.md。这里需要统一</p>
+</div>
+</div>
+<p><a href="https://crates.io/crates/mdbook-readme">mdbook-readme - crates.io: Rust Package Registry</a></p>
+<h4 id="mdbook-cmdrun-提供强悍的终端执行功能"><a class="header" href="#mdbook-cmdrun-提供强悍的终端执行功能">mdbook-cmdrun: 提供强悍的终端执行功能</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-cmdrun">mdbook-cmdrun - crates.io: Rust Package Registry</a></li>
+</ul>
+<blockquote>
+<p>该插件内置了下列编译器，可以直接执行代码</p>
+</blockquote>
+<ol>
+<li>Shell</li>
+</ol>
+<pre><code class="language-console">&lt;!-- cmdrun ls -alh . --&gt;
+</code></pre>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>&lt;!-- cmdrun cat ../../ lib.rs --&gt;
+<span class="boring">}
+</span></code></pre></pre>
+<ol start="2">
+<li>Bash Script</li>
+<li>Python3</li>
+</ol>
+<!-- cmdrun python3 ../../materials/cmdrun/script.py -->
+<ol start="4">
+<li>Rust</li>
+</ol>
 <h3 id="自动渲染"><a class="header" href="#自动渲染">自动渲染</a></h3>
 <h4 id="unevil-rs-与mdbook无关只是单独用来写ppt"><a class="header" href="#unevil-rs-与mdbook无关只是单独用来写ppt">unevil-rs: 与mdbook无关，只是单独用来写ppt</a></h4>
 <p><a href="https://github.com/oknozor/unveil-rs">oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.</a></p>
@@ -584,7 +682,8 @@ mytheme
 <h4 id="mdbook-curly-quotes"><a class="header" href="#mdbook-curly-quotes">mdbook-curly-quotes</a></h4>
 <blockquote>
 <p>mdBook preprocessor that replaces straight quotes with curly quotes, except within code blocks or code spans.
-It does the same as the curly-quotes option of the mdBook HTML renderer. The only advantage is that it can be applied to any renderer.
+It does the same as the curly-quotes option of the mdBook HTML renderer. The only advantage is that it can be applied
+to any renderer.
 <a href="https://github.com/arminha/mdbook-curly-quotes">arminha/mdbook-curly-quotes: mdBook preprocessor that replaces straight quotes with curly quotes</a></p>
 </blockquote>
 <h4 id="mdbook-tera"><a class="header" href="#mdbook-tera">mdbook-tera</a></h4>
@@ -593,11 +692,19 @@ It does the same as the curly-quotes option of the mdBook HTML renderer. The onl
 <a href="https://github.com/avitex/mdbook-tera">avitex/mdbook-tera: Tera preprocessor for mdBook</a>
 <a href="https://github.com/Keats/tera">Keats/tera: A template engine for Rust based on Jinja2/Django</a></p>
 </blockquote>
-<h4 id="mdbook-template"><a class="header" href="#mdbook-template">mdbook-template</a></h4>
+<h4 id="sgoudhammdbook-template"><a class="header" href="#sgoudhammdbook-template">sgoudham/mdbook-template</a></h4>
 <blockquote>
 <p>可以自定义页脚的图像</p>
 </blockquote>
 <p><a href="https://github.com/sgoudham/mdbook-template">sgoudham/mdbook-template: A mdbook preprocessor that allows the re-usability of template files with dynamic arguments</a></p>
+<h4 id="zjp-cnmdbook-theme"><a class="header" href="#zjp-cnmdbook-theme">zjp-CN/mdbook-theme</a></h4>
+<blockquote>
+<p>提供更多主题自定义选项</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/zjp-CN/mdbook-template">zjp-CN/mdbook-template: Yield a mdbook demo with mdbook-theme and a yml file for github action automation and page publication.</a></li>
+<li><a href="https://crates.io/crates/mdbook-theme">mdbook-theme - crates.io: Rust Package Registry</a></li>
+</ul>
 <h4 id="mdbook-mark-渲染高亮标签"><a class="header" href="#mdbook-mark-渲染高亮标签">mdbook-mark: 渲染高亮标签<mark></mark></a></h4>
 <p><a href="https://github.com/blazood/mdbook-mark#readme">blazood/mdbook-mark: this is a mdbook preprocessor which can render ==== to <mark></mark>
 </a></p>
@@ -619,6 +726,57 @@ It does the same as the curly-quotes option of the mdBook HTML renderer. The onl
 <p><a href="https://github.com/Aedius/mdbook-note">Aedius/mdbook-note: preprocessor for mdbook to add organized chapter containing fragment from the rest of the book</a></p>
 <h4 id="mdbook-section-validator"><a class="header" href="#mdbook-section-validator">mdbook-section-validator</a></h4>
 <p><a href="https://github.com/younata/mdbook-section-validator">younata/mdbook-section-validator: mdBook preprocessor for defining conditionally valid sections</a></p>
+<h4 id="mdbook-skill-tree-添加技能树渲染"><a class="header" href="#mdbook-skill-tree-添加技能树渲染">mdbook-skill-tree: 添加技能树渲染</a></h4>
+<ul>
+<li><a href="https://github.com/nikomatsakis/skill-tree/blob/master/book/src/skill_tree.md">skill-tree/skill_tree.md at master · nikomatsakis/skill-tree</a></li>
+<li>在线示例: <a href="https://nikomatsakis.github.io/skill-tree/">Skill Tree - Skill-tree Book</a></li>
+</ul>
+<h4 id="mdbook-chart-添加c3js图表渲染功能"><a class="header" href="#mdbook-chart-添加c3js图表渲染功能">mdbook-chart: 添加c3.js图表渲染功能</a></h4>
+<ul>
+<li>what is c3js: <a href="https://c3js.org/">C3.js | D3-based reusable chart library</a></li>
+<li><a href="https://github.com/knightflower1989/mdbook-chart">knightflower1989/mdbook-chart: mdbook chart</a></li>
+</ul>
+<h4 id="mdbook-quiz-添加在线测验功能"><a class="header" href="#mdbook-quiz-添加在线测验功能">mdbook-quiz: 添加在线测验功能</a></h4>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-quiz">mdbook-quiz - crates.io: Rust Package Registry</a></li>
+</ul>
+<div id="admonition-自动生成" class="admonition note">
+<div class="admonition-title">
+<p>自动生成</p>
+<p><a class="admonition-anchor-link" href="#admonition-自动生成"></a></p>
+</div>
+<div>
+<p>该插件会在src自动创建生成mdbook-quiz目录，里面包含embed.css和embed.js</p>
+</div>
+</div>
+<pre><code class="language-shell">cargo install mdbook-quiz
+</code></pre>
+<pre><code class="language-shell">git clone https://github.com/willcrichton/mdbook-quiz
+cd mdbook-quiz
+cargo install --path .
+</code></pre>
+<ul>
+<li><a href="https://willcrichton.net/mdbook-quiz/">live demo</a></li>
+<li><a href="https://github.com/willcrichton/mdbook-quiz">willcrichton/mdbook-quiz: Interactive quizzes for Markdown</a></li>
+</ul>
+<blockquote>
+<p>And now, a <em>quiz</em>:</p>
+</blockquote>
+<p>{{#quiz ../../materials/quizzes/rust-variables.toml}}</p>
+<h4 id="mdbook-puml-plantuml渲染"><a class="header" href="#mdbook-puml-plantuml渲染">mdbook-puml: plantuml渲染</a></h4>
+<blockquote>
+<p>比mdbook-plantuml更好用
+<a href="https://crates.io/crates/mdbook-puml">mdbook-puml - crates.io: Rust Package Registry</a></p>
+</blockquote>
+<h4 id="mdbook-kroki-preprocessor-支持kroki渲染"><a class="header" href="#mdbook-kroki-preprocessor-支持kroki渲染">mdbook-kroki-preprocessor: 支持kroki渲染</a></h4>
+<blockquote>
+<p>kroki可以看作多种图表语言的统一接口</p>
+</blockquote>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-kroki-preprocessor">mdbook-kroki-preprocessor - crates.io: Rust Package Registry</a></li>
+<li><a href="https://kroki.io/#examples">Kroki!</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220715114804075.png" alt="image-20220715114804075" /></p>
 <h2 id="资源链接"><a class="header" href="#资源链接">资源链接</a></h2>
 <ul>
 <li>
