@@ -1,79 +1,80 @@
 # Mdbook电子书发布工具使用说明
 
 <!--ts-->
+
 * [Mdbook电子书发布工具使用说明](#mdbook电子书发布工具使用说明)
-   * [使用要点](#使用要点)
-      * [基本结构](#基本结构)
-      * [Summary](#summary)
-      * [图片资源与git lfs](#图片资源与git-lfs)
-         * [git lfs使用场景](#git-lfs使用场景)
-         * [对mdbook的影响](#对mdbook的影响)
-   * [Rust特供功能](#rust特供功能)
-      * [隐藏代码行](#隐藏代码行)
-      * [Rust Playground页面执行](#rust-playground页面执行)
-      * [包含文件自动渲染为md](#包含文件自动渲染为md)
-         * [全文件包含](#全文件包含)
-         * [指定行数](#指定行数)
-         * [指定锚点部分](#指定锚点部分)
-      * [插入代码](#插入代码)
-         * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
-         * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
-   * [mdbook主题修改](#mdbook主题修改)
-      * [基本页面介绍](#基本页面介绍)
+    * [使用要点](#使用要点)
+        * [基本结构](#基本结构)
+        * [Summary](#summary)
+        * [图片资源与git lfs](#图片资源与git-lfs)
+            * [git lfs使用场景](#git-lfs使用场景)
+            * [对mdbook的影响](#对mdbook的影响)
+    * [Rust特供功能](#rust特供功能)
+        * [隐藏代码行](#隐藏代码行)
+        * [Rust Playground页面执行](#rust-playground页面执行)
+        * [包含文件自动渲染为md](#包含文件自动渲染为md)
+            * [全文件包含](#全文件包含)
+            * [指定行数](#指定行数)
+            * [指定锚点部分](#指定锚点部分)
+        * [插入代码](#插入代码)
+            * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
+            * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
+    * [mdbook主题修改](#mdbook主题修改)
+        * [基本页面介绍](#基本页面介绍)
 * [mdbook插件推荐](#mdbook插件推荐)
-   * [自动检查](#自动检查)
-      * [MDBook Link-Check](#mdbook-link-check)
-   * [自动生成](#自动生成)
-      * [global-search](#global-search)
-      * [mdbook-toc](#mdbook-toc)
-      * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
-      * [mdbook-open-on-gh](#mdbook-open-on-gh)
-      * [book-summary](#book-summary)
-      * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
-      * [mdbook-transcheck](#mdbook-transcheck)
-      * [mdbook-man](#mdbook-man)
-      * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
-      * [mdbook-bookimport: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
-      * [md2tex](#md2tex)
-      * [mdbook-checklist](#mdbook-checklist)
-      * [mdbook-chapter-path: 可以用来生成面包屑导航](#mdbook-chapter-path-可以用来生成面包屑导航)
-      * [mdBook Tag](#mdbook-tag)
-      * [mdbook toc: 自动生成toc](#mdbook-toc-自动生成toc)
-      * [mdbook-footnote: 可以用于生成引用内容](#mdbook-footnote-可以用于生成引用内容)
-      * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
-      * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
-      * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
-      * [mdbook-open-on-gh: 添加打开github分支的功能](#mdbook-open-on-gh-添加打开github分支的功能)
-      * [mdbook-readme: 解决readme与index不一致的问题](#mdbook-readme-解决readme与index不一致的问题)
-      * [mdbook-cmdrun: 提供强悍的终端执行功能](#mdbook-cmdrun-提供强悍的终端执行功能)
-   * [配置与替换](#配置与替换)
-      * [mdbook-fluent: 可以用配置文件进行整理](#mdbook-fluent-可以用配置文件进行整理)
-      * [mdbook-variables: 在book.toml配置全局变量](#mdbook-variables-在booktoml配置全局变量)
-      * [mdbook-regex: 对内容进行正则替换](#mdbook-regex-对内容进行正则替换)
-   * [绘图](#绘图)
-      * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
-      * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
-      * [mdbook-skill-tree: 添加技能树渲染](#mdbook-skill-tree-添加技能树渲染)
-      * [mdbook-chart: 添加c3.js图表渲染功能](#mdbook-chart-添加c3js图表渲染功能)
-      * [mdbook-puml: plantuml渲染](#mdbook-puml-plantuml渲染)
-   * [绘图合集：kroki](#绘图合集kroki)
-      * [IntelliPikchr: IDEA内置插件](#intellipikchr-idea内置插件)
-      * [mdbook-kroki-preprocessor: 支持kroki渲染](#mdbook-kroki-preprocessor-支持kroki渲染)
-   * [自动渲染](#自动渲染)
-      * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
-      * [mdbook-admonish](#mdbook-admonish)
-      * [mdbook-curly-quotes](#mdbook-curly-quotes)
-      * [mdbook-tera](#mdbook-tera)
-      * [sgoudham/mdbook-template](#sgoudhammdbook-template)
-      * [zjp-CN/mdbook-theme](#zjp-cnmdbook-theme)
-      * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
-      * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
-      * [mdbook-wikilink](#mdbook-wikilink)
-      * [mdbook-page-styles](#mdbook-page-styles)
-      * [mdbook-note](#mdbook-note)
-      * [mdbook-section-validator](#mdbook-section-validator)
-      * [mdbook-quiz: 添加在线测验功能](#mdbook-quiz-添加在线测验功能)
-   * [资源链接](#资源链接)
+    * [自动检查](#自动检查)
+        * [MDBook Link-Check](#mdbook-link-check)
+    * [自动生成](#自动生成)
+        * [global-search](#global-search)
+        * [mdbook-toc](#mdbook-toc)
+        * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
+        * [mdbook-open-on-gh](#mdbook-open-on-gh)
+        * [book-summary](#book-summary)
+        * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
+        * [mdbook-transcheck](#mdbook-transcheck)
+        * [mdbook-man](#mdbook-man)
+        * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
+        * [mdbook-bookimport: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
+        * [md2tex](#md2tex)
+        * [mdbook-checklist](#mdbook-checklist)
+        * [mdbook-chapter-path: 可以用来生成面包屑导航](#mdbook-chapter-path-可以用来生成面包屑导航)
+        * [mdBook Tag](#mdbook-tag)
+        * [mdbook toc: 自动生成toc](#mdbook-toc-自动生成toc)
+        * [mdbook-footnote: 可以用于生成引用内容](#mdbook-footnote-可以用于生成引用内容)
+        * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
+        * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
+        * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
+        * [mdbook-open-on-gh: 添加打开github分支的功能](#mdbook-open-on-gh-添加打开github分支的功能)
+        * [mdbook-readme: 解决readme与index不一致的问题](#mdbook-readme-解决readme与index不一致的问题)
+        * [mdbook-cmdrun: 提供强悍的终端执行功能](#mdbook-cmdrun-提供强悍的终端执行功能)
+    * [配置与替换](#配置与替换)
+        * [mdbook-fluent: 可以用配置文件进行整理](#mdbook-fluent-可以用配置文件进行整理)
+        * [mdbook-variables: 在book.toml配置全局变量](#mdbook-variables-在booktoml配置全局变量)
+        * [mdbook-regex: 对内容进行正则替换](#mdbook-regex-对内容进行正则替换)
+    * [绘图](#绘图)
+        * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
+        * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
+        * [mdbook-skill-tree: 添加技能树渲染](#mdbook-skill-tree-添加技能树渲染)
+        * [mdbook-chart: 添加c3.js图表渲染功能](#mdbook-chart-添加c3js图表渲染功能)
+        * [mdbook-puml: plantuml渲染](#mdbook-puml-plantuml渲染)
+    * [绘图合集：kroki](#绘图合集kroki)
+        * [IntelliPikchr: IDEA内置插件](#intellipikchr-idea内置插件)
+        * [mdbook-kroki-preprocessor: 支持kroki渲染](#mdbook-kroki-preprocessor-支持kroki渲染)
+    * [自动渲染](#自动渲染)
+        * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
+        * [mdbook-admonish](#mdbook-admonish)
+        * [mdbook-curly-quotes](#mdbook-curly-quotes)
+        * [mdbook-tera](#mdbook-tera)
+        * [sgoudham/mdbook-template](#sgoudhammdbook-template)
+        * [zjp-CN/mdbook-theme](#zjp-cnmdbook-theme)
+        * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
+        * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
+        * [mdbook-wikilink](#mdbook-wikilink)
+        * [mdbook-page-styles](#mdbook-page-styles)
+        * [mdbook-note](#mdbook-note)
+        * [mdbook-section-validator](#mdbook-section-validator)
+        * [mdbook-quiz: 添加在线测验功能](#mdbook-quiz-添加在线测验功能)
+    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Sat Jul 16 09:36:03 UTC 2022 -->
@@ -365,17 +366,9 @@ mytheme
 
 [vv9k/mdbook-man: Generate manual pages from mdBooks!](https://github.com/vv9k/mdbook-man)
 
-### Gooseberry - a Knowledge Base for the Lazy
+### ~~mdbook-bookimport~~: 使用标记块引入其他文件内容
 
-> 一个很棒的工具，可以直接将mdbook转为知识库
-
-[out-of-cheese-error/gooseberry: A command line utility to generate a knowledge base from Hypothesis annotations](https://github.com/out-of-cheese-error/gooseberry)
-
-![obsidian_example-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/obsidian_example-2.png)
-
-### mdbook-bookimport: 使用标记块引入其他文件内容
-
-> mdbook自带的include语法只能根据行数来引入文件内容，这个插件可以使用标记来引入。
+> mdbook自带的include语法同时支持行数和标记来引入文件内容
 
 [tailwind/mdbook-bookimport: Import code/text from other files into your mdbook - without the link rot.](https://github.com/tailwind/mdbook-bookimport)
 
@@ -549,12 +542,6 @@ cargo install mdbook-kroki-preprocessor
 
 ## 自动渲染
 
-### unevil-rs: 与mdbook无关，只是单独用来写ppt
-
-[oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.](https://github.com/oknozor/unveil-rs)
-
-[在线示例](https://oknozor.github.io/unveil-rs/)
-
 ### mdbook-admonish
 
 [tommilligan/mdbook-admonish: A preprocessor for mdbook to add Material Design admonishments.](https://github.com/tommilligan/mdbook-admonish)
@@ -635,6 +622,96 @@ cargo install --path .
 > And now, a _quiz_:
 
 {{#quiz ../../materials/quizzes/rust-variables.toml}}
+
+## 其他格式
+
+### playscript: 戏剧脚本格式
+
+- [ShotaroTsuji/mdplayscript](https://github.com/ShotaroTsuji/mdplayscript)
+
+### unevil-rs: 与mdbook无关，只是单独用来写ppt
+
+[oknozor/unveil-rs: Unveil Rs is a tool to create presentations from markdown inspired by reveal.js, mdbook and zola.](https://github.com/oknozor/unveil-rs)
+
+[在线示例](https://oknozor.github.io/unveil-rs/)
+
+### Gooseberry - a Knowledge Base for the Lazy
+
+> 一个很棒的工具，可以直接将mdbook转为知识库
+
+[out-of-cheese-error/gooseberry: A command line utility to generate a knowledge base from Hypothesis annotations](https://github.com/out-of-cheese-error/gooseberry)
+
+![obsidian_example-2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/obsidian_example-2.png)
+
+### ppt: 可以切换ppt还是markdown
+
+> 这个插件将html算是玩的比较深入
+
+- [mdbook-presentation-preprocessor - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-presentation-preprocessor)
+
+- [FreeMasen/mdbook-presentation-preprocessor: A preprocessor for utilizing an MDBook as slides for a presentation.](https://github.com/FreeMasen/mdbook-presentation-preprocessor)
+
+#### 举例(windows-alt+p|osx-option+p切换)
+
+~~~admonish info title='举例'
+# An Interesting Thing
+> Press `alt+p` to toggle which version is displayed.
+> Open the console to see the notes printed there
+
+$web-only$
+Here is a much longer explanation about what this
+interesting thing is and how interesting you might find it.
+
+To elaborate, it is extremely interesting.
+$web-only-end$
+
+$slides-only$
+## A list of things
+- Fact one is intriguing
+- Fact two is piquing my interest
+- Fact three has me down right flabbergasted
+- Fact four is almost obscene
+$slides-only-end$
+
+$notes$
+- Don't for get to mention this
+- And This
+- And This
+$notes-end$
+~~~
+
+- web-only
+
+![image-20220716181352654](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220716181352654.png)
+
+- Slides-only
+
+  ![image-20220716181430206](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220716181430206.png)
+
+- notes
+
+  ![image-20220716181503831](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220716181503831.png)
+
+#### 本地示例
+
+$web-only$
+这里是默认内容，web-only
+$web-only-end$
+
+$slides-only$
+
+## 这里是slides-only: 待完成内容
+
+- Fact one is intriguing
+- Fact two is piquing my interest
+- Fact three has me down right flabbergasted
+- Fact four is almost obscene
+  $slides-only-end$
+
+$notes$
+
+- 未完待续！
+  $notes-end$
 
 ## 资源链接
 

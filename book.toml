@@ -61,6 +61,8 @@ custom_name = "在book.toml配置的mdbook-variables"
 
 [preprocessor.kroki-preprocessor]
 
+[preprocessor.presentation-preprocessor]
+
 # Enables the `mdbook-admonish` preprocessor
 [preprocessor.admonish]
 command = "mdbook-admonish"
