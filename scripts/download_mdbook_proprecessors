@@ -1,0 +1,11 @@
+#!/bin/bash
+
+MDBOOK_PREPROCESSORS_VERSION='0.4.20'
+MDBOOK_REPOSITORY_PREFIX='https://github.com/KuanHsiaoKuo/mdbook_preprocessors/archive/refs/tags/v'
+url=${MDBOOK_REPOSITORY_PREFIX}${MDBOOK_PREPROCESSORS_VERSION}".tar.gz"
+target="temp/mdbook_preprocessors-${MDBOOK_PREPROCESSORS_VERSION}/bin"
+echo ${url}
+echo ${target}
+mkdir temp
+curl -sSL ${url} | tar -xz --directory=temp
+echo ${target} >>$GITHUB_PATH

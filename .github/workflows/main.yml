@@ -24,51 +24,14 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Auto update markdown TOC
-      #      - name: Install mdbook
-      #        run: |
-      #          #mkdir bin
-      #          #curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.14/mdbook-v0.4.14-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-      #          #mkdir .cargo
-      #          #cp .cargo/*  /home/runner/.cargo/bin/
-      #          echo "$(pwd)/bin" >> $GITHUB_PATH
-      # - run: mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
-      #- name: cargo-install-mdbook-checklist
-      #  uses: actions-rs/install@v0.1.2
-      #  with:
-      #    crate: mdbook-checklist
-      #    version: 0.1.1
-      #    use-tool-cache: true # 打开这个，就只会在第一次进行构建
-      #- name: cargo-install-mdbook-admonish
-      #  uses: actions-rs/install@v0.1.2
-      #  with:
-      #    crate: mdbook-admonish
-      #    version: 1.7.0
-      #    use-tool-cache: true # 打开这个，就只会在第一次进行构建
-      #- name: cargo-install-mdbook-mermaid
-      #  uses: actions-rs/install@v0.1.2
-      #  with:
-      #    crate: mdbook-mermaid
-      #    version: 0.11.0
-      #    use-tool-cache: true # 打开这个，就只会在第一次进行构建
-      #- name: cargo-install-mdbook-puml
-      #  uses: actions-rs/install@v0.1.2
-      #  with:
-      #    crate: mdbook-puml
-      #    version: 0.1.1
-      #    use-tool-cache: true # 打开这个，就只会在第一次进行构建
-      #- name: add mdbook-checklist
-      #  run: |
-      #    cargo install mdbook-checklist
-      #    # 由于构建太费时间，只构建一次之后就保存到bin文件夹
-      #    mkdir .cargo
-      #    cp /home/runner/.cargo/bin/* .cargo
-      #    git add .cargo
-      #    git commit -am'add cargo crate'
+      - name: Install Mdbook Preprocessors
+        run: |
+          sh scripts/download_mdbook_proprecessors
+          echo "bin/mdbook_preprocessors-$MDBOOK_PREPROCESSORS_VERSION/bin" >> $GITHUB_PATH
       - run: sudo apt-get update
       - run: sudo apt-get install ttf-wqy-zenhei
       - run: sudo apt-get -y install graphviz
       - run: sudo sh scripts/install_plantuml.sh
-      - run: echo "$(pwd)/bin" >> $GITHUB_PATH
       - run: mdbook build
 
       - uses: JamesIves/github-pages-deploy-action@4.1.7
