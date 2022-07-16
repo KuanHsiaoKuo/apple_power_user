@@ -71,6 +71,9 @@
       * [mdbook-note](#mdbook-note)
       * [mdbook-section-validator](#mdbook-section-validator)
       * [mdbook-quiz: 添加在线测验功能](#mdbook-quiz-添加在线测验功能)
+         * [配置方式](#配置方式)
+         * [注意<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji>](#注意️)
+         * [题型说明](#题型说明)
    * [其他格式](#其他格式)
       * [playscript: 戏剧脚本格式](#playscript-戏剧脚本格式)
       * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
@@ -82,7 +85,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Jul 16 11:25:03 UTC 2022 -->
+<!-- Added by: runner, at: Sat Jul 16 16:26:43 UTC 2022 -->
 
 <!--te-->
 
