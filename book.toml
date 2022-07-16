@@ -11,8 +11,8 @@ theme = "mytheme"
 default-theme = "rust"
 git-repository-url = "https://github.com/KuanHsiaoKuo/osx_basic_configuration.git"
 git-repository-icon = "fa-apple-core"
-additional-js = ["assets/mermaid/mermaid.min.js", "assets/mermaid/mermaid-init.js", "assets/smart-anchor.js", "assets/pagetoc/sidebar.js"]
-additional-css = ["assets/pagetoc/pagetoc_style.css", "assets/css/mdbook-admonish.css", "assets/css/open_on_gh.css"]
+additional-js = ["assets/mermaid/mermaid.min.js", "assets/mermaid/mermaid-init.js", "assets/smart-anchor.js", "assets/pagetoc/sidebar.js", "assets/mdbook-quiz/embed.js"]
+additional-css = ["assets/pagetoc/pagetoc_style.css", "assets/css/mdbook-admonish.css", "assets/css/open_on_gh.css", "assets/mdbook-quiz/embed.css"]
 mathjax-support = true
 # mdbook-open-on-gh preprocessor
 git-branch = "main"

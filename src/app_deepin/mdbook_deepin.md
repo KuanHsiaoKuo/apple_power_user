@@ -619,9 +619,84 @@ cargo install --path .
 - [live demo](https://willcrichton.net/mdbook-quiz/)
 - [willcrichton/mdbook-quiz: Interactive quizzes for Markdown](https://github.com/willcrichton/mdbook-quiz)
 
-> And now, a _quiz_:
+#### 配置方式
+
+> You can configure mdbook-quiz by adding options to the [preprocessor.quiz] section of book.toml. The options are:
+
+1. validate (boolean):
+   If true, then mdbook-quiz will validate your quiz TOML files using the validator.js script installed with
+   mdbook-quiz. You must have NodeJS installed on your machine and PATH for this to work.
+2. fullscreen (boolean):
+   If true, then a quiz will take up the web page's full screen during use.
+3. cache-answers (boolean):
+   If true, then the user's answers will be saved in their browser's localStorage. Then the quiz will show the user's
+   answers even after they reload the page.
+
+#### 注意⚠️
+
+~~~admonish warn title='使用说明'
+
+1. 该插件默认只是在src里面自动生成mdbook-quiz, 里面包含必须但js和css文件
+2. 默认情况下只能在src目录下生效，与mdbook-quiz同级。
+3. 目前改成直接从book.toml引入，就可以全局使用
+4. 注意引入测试文件的代码行上下需要为空行
+
+```none
+
+\{\{\#\quiz ../../materials/quizzes/rust-variables.toml}}
+
+\{\{\#\quiz ../../materials/quizzes/quiz.toml}}
+
+```
+~~~
+
+#### 题型说明
+
+~~~admonish info title='测试题类型'
+```toml
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What does it mean if a variable `x` is immutable?"
+prompt.choices = [
+  "`x` is stored in the immutable region of memory.",
+  "After being defined, `x` can be changed at most once.",
+  "`x` cannot be changed after being assigned to a value.",
+  "You cannot create a reference to `x`."
+]
+answer.answer = 2
+context = """
+Immutable means "not mutable", or not changeable.
+"""
+
+[[questions]]
+type = "ShortAnswer"
+prompt.prompt = "What is the keyword used after `let` to indicate that a variable can be mutated?"
+answer.answer = "mut"
+context = """
+For example, you can make a mutable variable `x` by writing: `let mut x = 1`.
+"""
+
+[[questions]]
+type = "Tracing"
+prompt.program = """
+fn main() {
+  let x = 1;
+  println!("{x}");
+  x += 1;
+  println!("{x}");
+}
+"""
+answer.doesCompile = false
+answer.lineNumber = 4
+context = """
+This is a compiler error because line 4 tries to mutate `x` when `x` is not marked as `mut`.
+"""
+```
+~~~
 
 {{#quiz ../../materials/quizzes/rust-variables.toml}}
+
+{{#quiz ../../materials/quizzes/quiz.toml}}
 
 ## 其他格式
 
