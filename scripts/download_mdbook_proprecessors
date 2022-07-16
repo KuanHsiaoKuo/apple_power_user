@@ -8,4 +8,5 @@ echo ${url}
 echo ${target}
 mkdir temp
 curl -sSL ${url} | tar -xz --directory=temp
+ls ${target}
 echo ${target} >>$GITHUB_PATH
