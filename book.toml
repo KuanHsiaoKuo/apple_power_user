@@ -54,7 +54,7 @@ renderer = ["html"]
 [preprocessor.variables.variables]
 custom_name = "在book.toml配置的mdbook-variables"
 
-[preprocessor.quiz]
+#[preprocessor.quiz]
 
 # cargo install mdbook-cmdrun
 [preprocessor.cmdrun]
