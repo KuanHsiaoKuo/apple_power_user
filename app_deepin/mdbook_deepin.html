@@ -333,7 +333,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Jul 16 16:39:10 UTC 2022 -->
+<!-- Added by: runner, at: Sun Jul 17 03:50:43 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -676,26 +676,25 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 72K
-drwxr-xr-x 4 runner docker 4.0K Jul 16 16:39 .
-drwxr-xr-x 4 runner docker 4.0K Jul 16 16:39 ..
-drwxr-xr-x 2 runner docker 4.0K Jul 16 16:39 OmniGroups
--rw-r--r-- 1 runner docker 1.4K Jul 16 16:39 alfred.md
--rw-r--r-- 1 runner docker   23 Jul 16 16:39 app_deepin.md
--rw-r--r-- 1 runner docker 1.5K Jul 16 16:39 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Jul 16 16:39 karabiner
--rw-r--r-- 1 runner docker 2.7K Jul 16 16:39 marginnote_deepin.md
--rw-r--r-- 1 runner docker  28K Jul 16 16:39 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Jul 16 16:39 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Jul 16 16:39 tampermonkey.md
--rw-r--r-- 1 runner docker  610 Jul 16 16:39 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Jul 17 03:50 .
+drwxr-xr-x 4 runner docker 4.0K Jul 17 03:50 ..
+drwxr-xr-x 2 runner docker 4.0K Jul 17 03:50 OmniGroups
+-rw-r--r-- 1 runner docker 1.4K Jul 17 03:50 alfred.md
+-rw-r--r-- 1 runner docker   23 Jul 17 03:50 app_deepin.md
+-rw-r--r-- 1 runner docker 1.5K Jul 17 03:50 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Jul 17 03:50 karabiner
+-rw-r--r-- 1 runner docker 2.7K Jul 17 03:50 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  28K Jul 17 03:50 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Jul 17 03:50 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Jul 17 03:50 tampermonkey.md
+-rw-r--r-- 1 runner docker  610 Jul 17 03:50 typora_deepin.md
 </code></pre>
-<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>&lt; ! - - cmdrun cat .. /../ lib.rs - -&gt;
-<span class="boring">}
-</span></code></pre></pre>
 <ol start="2">
 <li>Bash Script</li>
+</ol>
+<pre><code class="language-console">&lt;!-- cmdrun ../../materials/cmdrun/script.sh&gt;
+</code></pre>
+<ol start="3">
 <li>Python3</li>
 </ol>
 <h2 id="generated-subtitle"><a class="header" href="#generated-subtitle">Generated subtitle</a></h2>
@@ -705,16 +704,50 @@ drwxr-xr-x 2 runner docker 4.0K Jul 16 16:39 karabiner
 <ol start="4">
 <li>Rust</li>
 </ol>
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>/&lt;/!/-/-/ cmdrun cmdrun/script.rs --&gt;
+<span class="boring">}
+</span></code></pre></pre>
 <h2 id="配置与替换"><a class="header" href="#配置与替换">配置与替换</a></h2>
 <h3 id="mdbook-fluent-可以用配置文件进行整理"><a class="header" href="#mdbook-fluent-可以用配置文件进行整理">mdbook-fluent: 可以用配置文件进行整理</a></h3>
 <p><a href="https://github.com/JakubKoralewski/mdbook-fluent">JakubKoralewski/mdbook-fluent: mdBook preprocessor for variable interpolation using the Fluent language</a></p>
+<div id="admonition-关于fluent" class="admonition tip">
+<div class="admonition-title">
+<p>关于fluent</p>
+<p><a class="admonition-anchor-link" href="#admonition-关于fluent"></a></p>
+</div>
+<div>
+<p>fluent主要是用来本地化配置</p>
+<ul>
+<li><a href="https://projectfluent.org/">Project Fluent</a></li>
+<li><a href="https://github.com/projectfluent/fluent/wiki/">Home · projectfluent/fluent Wiki</a></li>
+<li>语法说明：<a href="https://projectfluent.org/fluent/guide/">Introduction · GitBook</a></li>
+</ul>
+<ol>
+<li>book.toml可以用dir参数配置查找fluent文件的目录路径</li>
+<li><strong>目前暂未试验成功</strong></li>
+</ol>
+</div>
+</div>
+<pre><code class="language-none">\{\{\#\fluent ../../../materials/global.motto}}
+</code></pre>
+<pre><code>\{\{\#\fluent global.hello}}
+</code></pre>
 <h3 id="mdbook-variables-在booktoml配置全局变量"><a class="header" href="#mdbook-variables-在booktoml配置全局变量">mdbook-variables: 在book.toml配置全局变量</a></h3>
 <ul>
 <li><a href="https://crates.io/crates/mdbook-variables">mdbook-variables - crates.io: Rust Package Registry</a></li>
 <li><a href="https://gitlab.com/tglman/mdbook-variables">tglman / mdbook-variables · GitLab</a></li>
 </ul>
+<pre><code class="language-shell"># book.toml
+[preprocessor.variables.variables]
+motto = &quot;保持批判，有所取舍，知行合一，方见真我&quot;
+</code></pre>
+<pre><code class="language-shell"># here
+\{\{motto}}
+</code></pre>
 <blockquote>
-<p>{{custom_name}}</p>
+<p>{{motto}}</p>
 </blockquote>
 <h3 id="mdbook-regex-对内容进行正则替换"><a class="header" href="#mdbook-regex-对内容进行正则替换">mdbook-regex: 对内容进行正则替换</a></h3>
 <blockquote>
