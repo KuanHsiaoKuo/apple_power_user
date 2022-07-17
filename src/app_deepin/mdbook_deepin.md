@@ -1,88 +1,89 @@
 # Mdbook电子书发布工具使用说明
 
 <!--ts-->
+
 * [Mdbook电子书发布工具使用说明](#mdbook电子书发布工具使用说明)
-   * [使用要点](#使用要点)
-      * [基本结构](#基本结构)
-      * [Summary](#summary)
-      * [图片资源与git lfs](#图片资源与git-lfs)
-         * [git lfs使用场景](#git-lfs使用场景)
-         * [对mdbook的影响](#对mdbook的影响)
-   * [Rust特供功能](#rust特供功能)
-      * [隐藏代码行](#隐藏代码行)
-      * [Rust Playground页面执行](#rust-playground页面执行)
-      * [包含文件自动渲染为md](#包含文件自动渲染为md)
-         * [全文件包含](#全文件包含)
-         * [指定行数](#指定行数)
-         * [指定锚点部分](#指定锚点部分)
-      * [插入代码](#插入代码)
-         * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
-         * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
-   * [mdbook主题修改](#mdbook主题修改)
-      * [基本页面介绍](#基本页面介绍)
+    * [使用要点](#使用要点)
+        * [基本结构](#基本结构)
+        * [Summary](#summary)
+        * [图片资源与git lfs](#图片资源与git-lfs)
+            * [git lfs使用场景](#git-lfs使用场景)
+            * [对mdbook的影响](#对mdbook的影响)
+    * [Rust特供功能](#rust特供功能)
+        * [隐藏代码行](#隐藏代码行)
+        * [Rust Playground页面执行](#rust-playground页面执行)
+        * [包含文件自动渲染为md](#包含文件自动渲染为md)
+            * [全文件包含](#全文件包含)
+            * [指定行数](#指定行数)
+            * [指定锚点部分](#指定锚点部分)
+        * [插入代码](#插入代码)
+            * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
+            * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
+    * [mdbook主题修改](#mdbook主题修改)
+        * [基本页面介绍](#基本页面介绍)
 * [mdbook插件推荐](#mdbook插件推荐)
-   * [自动检查](#自动检查)
-      * [MDBook Link-Check](#mdbook-link-check)
-   * [自动生成](#自动生成)
-      * [global-search](#global-search)
-      * [mdbook-toc](#mdbook-toc)
-      * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
-      * [mdbook-open-on-gh](#mdbook-open-on-gh)
-      * [book-summary](#book-summary)
-      * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
-      * [mdbook-transcheck](#mdbook-transcheck)
-      * [mdbook-man](#mdbook-man)
-      * [<del>mdbook-bookimport</del>: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
-      * [md2tex](#md2tex)
-      * [mdbook-checklist](#mdbook-checklist)
-      * [mdbook-chapter-path: 可以用来生成面包屑导航](#mdbook-chapter-path-可以用来生成面包屑导航)
-      * [mdBook Tag](#mdbook-tag)
-      * [mdbook toc: 自动生成toc](#mdbook-toc-自动生成toc)
-      * [mdbook-footnote: 可以用于生成引用内容](#mdbook-footnote-可以用于生成引用内容)
-      * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
-      * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
-      * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
-      * [mdbook-open-on-gh: 添加打开github分支的功能](#mdbook-open-on-gh-添加打开github分支的功能)
-      * [mdbook-readme: 解决readme与index不一致的问题](#mdbook-readme-解决readme与index不一致的问题)
-      * [mdbook-cmdrun: 提供强悍的终端执行功能](#mdbook-cmdrun-提供强悍的终端执行功能)
-   * [配置与替换](#配置与替换)
-      * [mdbook-fluent: 可以用配置文件进行整理](#mdbook-fluent-可以用配置文件进行整理)
-      * [mdbook-variables: 在book.toml配置全局变量](#mdbook-variables-在booktoml配置全局变量)
-      * [mdbook-regex: 对内容进行正则替换](#mdbook-regex-对内容进行正则替换)
-   * [绘图](#绘图)
-      * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
-      * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
-      * [mdbook-skill-tree: 添加技能树渲染](#mdbook-skill-tree-添加技能树渲染)
-      * [mdbook-chart: 添加c3.js图表渲染功能](#mdbook-chart-添加c3js图表渲染功能)
-      * [mdbook-puml: plantuml渲染](#mdbook-puml-plantuml渲染)
-   * [绘图合集：kroki](#绘图合集kroki)
-      * [IntelliPikchr: IDEA内置插件](#intellipikchr-idea内置插件)
-      * [mdbook-kroki-preprocessor: 支持kroki渲染](#mdbook-kroki-preprocessor-支持kroki渲染)
-   * [自动渲染](#自动渲染)
-      * [mdbook-admonish](#mdbook-admonish)
-      * [mdbook-curly-quotes](#mdbook-curly-quotes)
-      * [mdbook-tera](#mdbook-tera)
-      * [sgoudham/mdbook-template](#sgoudhammdbook-template)
-      * [zjp-CN/mdbook-theme](#zjp-cnmdbook-theme)
-      * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
-      * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
-      * [mdbook-wikilink](#mdbook-wikilink)
-      * [mdbook-page-styles](#mdbook-page-styles)
-      * [mdbook-note](#mdbook-note)
-      * [mdbook-section-validator](#mdbook-section-validator)
-      * [mdbook-quiz: 添加在线测验功能](#mdbook-quiz-添加在线测验功能)
-         * [配置方式](#配置方式)
-         * [注意<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji>](#注意️)
-         * [题型说明](#题型说明)
-   * [其他格式](#其他格式)
-      * [playscript: 戏剧脚本格式](#playscript-戏剧脚本格式)
-      * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
-      * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
-      * [ppt: 可以切换ppt还是markdown](#ppt-可以切换ppt还是markdown)
-         * [举例(windows-alt+p|osx-option+p切换)](#举例windows-altposx-optionp切换)
-         * [本地示例](#本地示例)
-   * [这里是slides-only: 待完成内容](#这里是slides-only-待完成内容)
-   * [资源链接](#资源链接)
+    * [自动检查](#自动检查)
+        * [MDBook Link-Check](#mdbook-link-check)
+    * [自动生成](#自动生成)
+        * [global-search](#global-search)
+        * [mdbook-toc](#mdbook-toc)
+        * [mdbook-pagetoc: 添加页内侧边栏toc](#mdbook-pagetoc-添加页内侧边栏toc)
+        * [mdbook-open-on-gh](#mdbook-open-on-gh)
+        * [book-summary](#book-summary)
+        * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
+        * [mdbook-transcheck](#mdbook-transcheck)
+        * [mdbook-man](#mdbook-man)
+        * [<del>mdbook-bookimport</del>: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
+        * [md2tex](#md2tex)
+        * [mdbook-checklist](#mdbook-checklist)
+        * [mdbook-chapter-path: 可以用来生成面包屑导航](#mdbook-chapter-path-可以用来生成面包屑导航)
+        * [mdBook Tag](#mdbook-tag)
+        * [mdbook toc: 自动生成toc](#mdbook-toc-自动生成toc)
+        * [mdbook-footnote: 可以用于生成引用内容](#mdbook-footnote-可以用于生成引用内容)
+        * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
+        * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
+        * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
+        * [mdbook-open-on-gh: 添加打开github分支的功能](#mdbook-open-on-gh-添加打开github分支的功能)
+        * [mdbook-readme: 解决readme与index不一致的问题](#mdbook-readme-解决readme与index不一致的问题)
+        * [mdbook-cmdrun: 提供强悍的终端执行功能](#mdbook-cmdrun-提供强悍的终端执行功能)
+    * [配置与替换](#配置与替换)
+        * [mdbook-fluent: 可以用配置文件进行整理](#mdbook-fluent-可以用配置文件进行整理)
+        * [mdbook-variables: 在book.toml配置全局变量](#mdbook-variables-在booktoml配置全局变量)
+        * [mdbook-regex: 对内容进行正则替换](#mdbook-regex-对内容进行正则替换)
+    * [绘图](#绘图)
+        * [mdBook Graphviz: 支持graphviz的dot语言](#mdbook-graphviz-支持graphviz的dot语言)
+        * [svgbob plugin for mdbook](#svgbob-plugin-for-mdbook)
+        * [mdbook-skill-tree: 添加技能树渲染](#mdbook-skill-tree-添加技能树渲染)
+        * [mdbook-chart: 添加c3.js图表渲染功能](#mdbook-chart-添加c3js图表渲染功能)
+        * [mdbook-puml: plantuml渲染](#mdbook-puml-plantuml渲染)
+    * [绘图合集：kroki](#绘图合集kroki)
+        * [IntelliPikchr: IDEA内置插件](#intellipikchr-idea内置插件)
+        * [mdbook-kroki-preprocessor: 支持kroki渲染](#mdbook-kroki-preprocessor-支持kroki渲染)
+    * [自动渲染](#自动渲染)
+        * [mdbook-admonish](#mdbook-admonish)
+        * [mdbook-curly-quotes](#mdbook-curly-quotes)
+        * [mdbook-tera](#mdbook-tera)
+        * [sgoudham/mdbook-template](#sgoudhammdbook-template)
+        * [zjp-CN/mdbook-theme](#zjp-cnmdbook-theme)
+        * [mdbook-mark: 渲染高亮标签](#mdbook-mark-渲染高亮标签)
+        * [mdbook-all-the-markdowns](#mdbook-all-the-markdowns)
+        * [mdbook-wikilink](#mdbook-wikilink)
+        * [mdbook-page-styles](#mdbook-page-styles)
+        * [mdbook-note](#mdbook-note)
+        * [mdbook-section-validator](#mdbook-section-validator)
+        * [mdbook-quiz: 添加在线测验功能](#mdbook-quiz-添加在线测验功能)
+            * [配置方式](#配置方式)
+            * [注意<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji>](#注意️)
+            * [题型说明](#题型说明)
+    * [其他格式](#其他格式)
+        * [playscript: 戏剧脚本格式](#playscript-戏剧脚本格式)
+        * [unevil-rs: 与mdbook无关，只是单独用来写ppt](#unevil-rs-与mdbook无关只是单独用来写ppt)
+        * [Gooseberry - a Knowledge Base for the Lazy](#gooseberry---a-knowledge-base-for-the-lazy)
+        * [ppt: 可以切换ppt还是markdown](#ppt-可以切换ppt还是markdown)
+            * [举例(windows-alt+p|osx-option+p切换)](#举例windows-altposx-optionp切换)
+            * [本地示例](#本地示例)
+    * [这里是slides-only: 待完成内容](#这里是slides-only-待完成内容)
+    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Sat Jul 16 16:34:48 UTC 2022 -->
@@ -460,16 +461,21 @@ mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网�
 <!-- cmdrun ls -alh . -->
 ```
 
-```rust
-< ! - - cmdrun cat .. /../ lib.rs - ->
+2. Bash Script
+
+```console
+<!-- cmdrun ../../materials/cmdrun/script.sh>
 ```
 
-2. Bash Script
 3. Python3
 
 <!-- cmdrun python3 ../../materials/cmdrun/script.py -->
 
 4. Rust
+
+```rust
+/</!/-/-/ cmdrun cmdrun/script.rs -->
+```
 
 ## 配置与替换
 
@@ -477,12 +483,40 @@ mdbook生成的目录菜单，最上方的链接是指向index.html. 但是网�
 
 [JakubKoralewski/mdbook-fluent: mdBook preprocessor for variable interpolation using the Fluent language](https://github.com/JakubKoralewski/mdbook-fluent)
 
+```admonish tip title='关于fluent'
+fluent主要是用来本地化配置
+- [Project Fluent](https://projectfluent.org/)
+- [Home · projectfluent/fluent Wiki](https://github.com/projectfluent/fluent/wiki/)
+- 语法说明：[Introduction · GitBook](https://projectfluent.org/fluent/guide/)
+1. book.toml可以用dir参数配置查找fluent文件的目录路径
+2. **目前暂未试验成功**
+```
+
+```none
+\{\{\#\fluent ../../../materials/global.motto}}
+```
+
+```
+\{\{\#\fluent global.hello}}
+```
+
 ### mdbook-variables: 在book.toml配置全局变量
 
 - [mdbook-variables - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-variables)
 - [tglman / mdbook-variables · GitLab](https://gitlab.com/tglman/mdbook-variables)
 
-> {{custom_name}}
+```shell
+# book.toml
+[preprocessor.variables.variables]
+motto = "保持批判，有所取舍，知行合一，方见真我"
+```
+
+```shell
+# here
+\{\{motto}}
+```
+
+> {{motto}}
 
 ### mdbook-regex: 对内容进行正则替换
 
