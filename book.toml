@@ -54,7 +54,7 @@ renderer = ["html"]
 [preprocessor.variables.variables]
 motto = "保持批判，有所取舍，知行合一，方见真我"
 
-[preprocessor.quiz]
+#[preprocessor.quiz]
 
 # cargo install mdbook-cmdrun
 [preprocessor.cmdrun]
