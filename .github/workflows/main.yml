@@ -15,8 +15,8 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - name: Install JS dependencies
-        run: npm install --location=global pnpm
+#      - name: Install JS dependencies
+#        run: npm install --location=global pnpm
       - name: Update Toc First
         env:
           GH_TOC_TOKEN: ${{ secrets.GH_MD_TOC }}
@@ -34,8 +34,8 @@ jobs:
       - run: sudo apt-get install ttf-wqy-zenhei
       - run: sudo apt-get -y install graphviz
       - run: sudo sh scripts/install_plantuml.sh
-      - name: Install mdbook-quiz from source
-        run: cargo install --path mdbook-quiz-source --debug --locked
+#      - name: Install mdbook-quiz from source
+#        run: cargo install --path mdbook-quiz-source --debug --locked
       - run: RUST_BACKTRACE=full mdbook build
 
       - uses: JamesIves/github-pages-deploy-action@4.1.7
