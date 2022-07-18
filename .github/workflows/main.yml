@@ -32,7 +32,8 @@ jobs:
       - run: sudo apt-get install ttf-wqy-zenhei
       - run: sudo apt-get -y install graphviz
       - run: sudo sh scripts/install_plantuml.sh
-      - run: RUST_BACKTRACE=1 mdbook build
+#      - run: RUST_BACKTRACE=1 mdbook build
+      - run: sudo mdbook build
 
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
