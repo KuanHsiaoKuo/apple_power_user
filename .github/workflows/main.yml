@@ -36,7 +36,7 @@ jobs:
       - run: sudo sh scripts/install_plantuml.sh
       - name: Install mdbook-quiz from source
         run: cargo install --path mdbook-quiz-source --debug --locked
-      - run: RUST_BACKTRACE=1 mdbook build
+      - run: RUST_BACKTRACE=full mdbook build
 
       - uses: JamesIves/github-pages-deploy-action@4.1.7
         with:
