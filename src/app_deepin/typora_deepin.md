@@ -10,4 +10,9 @@
 
 > 下列操作将会将当前文章里面的图片全部上传，但是不影响其他文章的图片
 
+
 ![image-20220609111713871](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220609111713871.png)
+
+## 使用mermaid绘图
+
+typora内置了mermaid绘图的支持。

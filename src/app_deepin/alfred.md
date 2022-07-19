@@ -13,6 +13,9 @@
 <!-- Added by: runner, at: Mon Jul 18 03:32:44 UTC 2022 -->
 
 <!--te-->
+## workflows collection
+
+> 直接打开本分支路径下，materials/alfred_workflows里面的内容分别双击即可安装
 
 ## change log
 
