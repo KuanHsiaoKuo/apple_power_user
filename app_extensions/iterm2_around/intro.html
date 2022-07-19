@@ -222,7 +222,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 14:45:52 UTC 2022 -->
+<!-- Added by: runner, at: Tue Jul 19 14:47:21 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
 <h2 id="同步配置方式"><a class="header" href="#同步配置方式">同步配置方式</a></h2>
@@ -332,12 +332,17 @@ source ~/.vim/start
 <pre><code>mv vim_config ~/.vim
 </code></pre>
 <h3 id="注意在vim里面source"><a class="header" href="#注意在vim里面source">注意在vim里面source</a></h3>
-<blockquote>
+<div id="admonition-source-filename-与-sh-filename-及filename执行脚本的区别在那里呢" class="admonition tip">
+<div class="admonition-title">
 <p>source filename 与 sh filename 及./filename执行脚本的区别在那里呢？</p>
-</blockquote>
+<p><a class="admonition-anchor-link" href="#admonition-source-filename-与-sh-filename-及filename执行脚本的区别在那里呢"></a></p>
+</div>
+<div>
 <p>1.当shell脚本具有可执行权限时，用sh filename与./filename执行脚本是没有区别得。./filename是因为当前目录没有在PATH中，所有“.“是用来表示当前目录的。</p>
 <p>2.sh filename 重新建立一个子shell，在子shell中执行脚本里面的语句，该子shell继承父shell的环境变量，但子shell新建的、改变的变量不会被带回父shell，除非使用export。</p>
 <p>3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）</p>
+</div>
+</div>
 <h3 id="关于colorscheme设置为solarized分支已经包含可以不用下载"><a class="header" href="#关于colorscheme设置为solarized分支已经包含可以不用下载">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></h3>
 <ul>
 <li>下载vim主题</li>
