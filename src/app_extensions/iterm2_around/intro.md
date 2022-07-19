@@ -1,20 +1,21 @@
 # iTerm2配置
 
 <!--ts-->
+
 * [iTerm2配置](#iterm2配置)
-   * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
-   * [同步配置方式](#同步配置方式)
-   * [同步范围](#同步范围)
+    * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
+    * [同步配置方式](#同步配置方式)
+    * [同步范围](#同步范围)
 * [环境套件资料](#环境套件资料)
-   * [A. Homebrew Around](#a-homebrew-around)
-   * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
-   * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
-   * [D. vim配置](#d-vim配置)
-      * [创建vimrc](#创建vimrc)
-      * [重命名vim_config](#重命名vim_config)
-      * [注意在vim里面source](#注意在vim里面source)
-      * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
-      * [主要分为这几个部分：](#主要分为这几个部分)
+    * [A. Homebrew Around](#a-homebrew-around)
+    * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
+    * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
+    * [D. vim配置](#d-vim配置)
+        * [创建vimrc](#创建vimrc)
+        * [重命名vim_config](#重命名vim_config)
+        * [注意在vim里面source](#注意在vim里面source)
+        * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
+        * [主要分为这几个部分：](#主要分为这几个部分)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Mon Jul 18 03:32:52 UTC 2022 -->
@@ -96,10 +97,13 @@ iTerm2 + config + plugins
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kuanhsiaokuo/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 brew tap homebrew/cask-fonts
-# 安装之后如果没有生效，就修改Iterm2的fonts为Meslo
+# 下方安装之后如果没有生效，就修改Iterm2的fonts为Meslo
 # Profiles >> Open Profiles >> Edit Profiles... >> Text >> Fonts
 brew install --cask font-hack-nerd-font
+brew install tmux
 brew install lsd
 pip3 install tldr
 brew install graphviz
