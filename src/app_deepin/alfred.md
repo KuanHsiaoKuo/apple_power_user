@@ -2,6 +2,7 @@
 
 <!--ts-->
 * [Alfred使用](#alfred使用)
+   * [workflows collection](#workflows-collection)
    * [change log](#change-log)
       * [更新到v5版本的新功能](#更新到v5版本的新功能)
          * [模块化](#模块化)
@@ -10,7 +11,7 @@
    * [参考资源](#参考资源)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Jul 18 03:32:44 UTC 2022 -->
+<!-- Added by: runner, at: Tue Jul 19 14:36:17 UTC 2022 -->
 
 <!--te-->
 ## workflows collection
