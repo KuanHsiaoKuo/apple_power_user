@@ -95,11 +95,12 @@ iTerm2 + config + plugins
 3. iterm_around.sh未完善，请一条条执行
 
 ```
+python3 -m pip install --upgrade pip
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kuanhsiaokuo/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew tap homebrew/cask-fonts
-# 下方安装之后如果没有生效，就修改Iterm2的fonts为Meslo
+# 下方指令比较耗时，安装之后如果没有生效，就修改Iterm2的fonts为Meslo
 # Profiles >> Open Profiles >> Edit Profiles... >> Text >> Fonts
 brew install --cask font-hack-nerd-font
 brew install tmux
