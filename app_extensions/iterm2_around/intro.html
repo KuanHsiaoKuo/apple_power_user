@@ -222,7 +222,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 14:36:23 UTC 2022 -->
+<!-- Added by: runner, at: Tue Jul 19 14:45:52 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
 <h2 id="同步配置方式"><a class="header" href="#同步配置方式">同步配置方式</a></h2>
@@ -298,10 +298,13 @@
 <li>iterm_around.sh未完善，请一条条执行</li>
 </ol>
 <pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/kuanhsiaokuo/.zprofile
+eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
 brew tap homebrew/cask-fonts
-# 安装之后如果没有生效，就修改Iterm2的fonts为Meslo
+# 下方安装之后如果没有生效，就修改Iterm2的fonts为Meslo
 # Profiles &gt;&gt; Open Profiles &gt;&gt; Edit Profiles... &gt;&gt; Text &gt;&gt; Fonts
 brew install --cask font-hack-nerd-font
+brew install tmux
 brew install lsd
 pip3 install tldr
 brew install graphviz
