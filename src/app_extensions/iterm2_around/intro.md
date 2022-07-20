@@ -1,24 +1,23 @@
 # iTerm2配置
 
 <!--ts-->
-
 * [iTerm2配置](#iterm2配置)
-    * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
-    * [同步配置方式](#同步配置方式)
-    * [同步范围](#同步范围)
+   * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
+   * [下载并设置环境变量](#下载并设置环境变量)
+   * [iterm2同步配置方式](#iterm2同步配置方式)
+   * [同步范围](#同步范围)
 * [环境套件资料](#环境套件资料)
-    * [A. Homebrew Around](#a-homebrew-around)
-    * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
-    * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
-    * [D. vim配置](#d-vim配置)
-        * [创建vimrc](#创建vimrc)
-        * [重命名vim_config](#重命名vim_config)
-        * [注意在vim里面source](#注意在vim里面source)
-        * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
-        * [主要分为这几个部分：](#主要分为这几个部分)
+   * [A. Homebrew Around](#a-homebrew-around)
+   * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
+   * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
+   * [D. vim配置](#d-vim配置)
+      * [修改vimrc](#修改vimrc)
+      * [进入vim，会自动激活~/.vimrc](#进入vim会自动激活vimrc)
+      * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
+      * [主要分为这几个部分：](#主要分为这几个部分)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:43 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 
 <!--te-->
 

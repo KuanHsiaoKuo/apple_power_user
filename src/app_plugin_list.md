@@ -72,9 +72,11 @@
          * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
          * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
       * [3. Alfred](#3-alfred)
+* [More](#more)
+   * [Awesome Mac](#awesome-mac)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:45 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
 
 <!--te-->
 
