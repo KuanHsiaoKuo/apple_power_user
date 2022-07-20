@@ -1,20 +1,21 @@
 # iTerm2配置
 
 <!--ts-->
+
 * [iTerm2配置](#iterm2配置)
-   * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
-   * [同步配置方式](#同步配置方式)
-   * [同步范围](#同步范围)
+    * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
+    * [同步配置方式](#同步配置方式)
+    * [同步范围](#同步范围)
 * [环境套件资料](#环境套件资料)
-   * [A. Homebrew Around](#a-homebrew-around)
-   * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
-   * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
-   * [D. vim配置](#d-vim配置)
-      * [创建vimrc](#创建vimrc)
-      * [重命名vim_config](#重命名vim_config)
-      * [注意在vim里面source](#注意在vim里面source)
-      * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
-      * [主要分为这几个部分：](#主要分为这几个部分)
+    * [A. Homebrew Around](#a-homebrew-around)
+    * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
+    * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
+    * [D. vim配置](#d-vim配置)
+        * [创建vimrc](#创建vimrc)
+        * [重命名vim_config](#重命名vim_config)
+        * [注意在vim里面source](#注意在vim里面source)
+        * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
+        * [主要分为这几个部分：](#主要分为这几个部分)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Tue Jul 19 14:47:21 UTC 2022 -->
@@ -23,14 +24,41 @@
 
 ## [Status Bar](https://iterm2.com/documentation-status-bar.html): 很多内容，值得管理
 
-## 同步配置方式
+## 下载并设置环境变量
 
-1. 下载此文件夹
-2. 设置同步方式 iTerm2 >> Preferences >> General >> Preferences >> Load prefernces from a custom folder or URL
+```shell
+git clone git@github.com:KuanHsiaoKuo/apple_power_user.git
+cd apple_power_user
+pwd # 输出的值用于配置环境变量
+```
+
+```shell
+# ~/.bashrc 或者 ～/.zshrc
+export APU=<pwd value>
+export VC=$APU/src/app_extensions/iterm2_around/vim_config
+export ZC=$APU/src/app_extensions/iterm2_around/zsh_config
+```
+
+> 由于我用的是zsh，所以这里就修改~/.zshrc
+
+```admonish tip title='三种设置环境变量的区别'
+
+1. 单纯export：仅对当前登陆的终端有效
+2. 在.bashrc文件中export: 对当前登陆用户有效
+3. 在/etc/profile文件中export: 对所有用户都有效
+
+```
+
+## iterm2同步配置方式
+
+> 设置同步方式
+```none
+iTerm2 >> Preferences >> General >> Preferences >> Load prefernces from a custom folder or URL
+```
 
 > 注意选择手动保存。
 
-3. 指向下载的文件夹
+指向下载的文件夹
 
 ## 同步范围
 
@@ -41,7 +69,7 @@
 
 # 环境套件资料
 
-```text
+```kroki-svgbob
 iTerm2 + config + plugins
 +----------------------------------------------------+
 |                                                    |
@@ -94,7 +122,7 @@ iTerm2 + config + plugins
 
 3. iterm_around.sh未完善，请一条条执行
 
-```
+```shell
 python3 -m pip install --upgrade pip
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/kuanhsiaokuo/.zprofile
@@ -115,7 +143,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "source ${PWD}/zsh_config/custom_config" >> ~/.zshrc
+echo "source $ZC/custom_config" >> ~/.zshrc
 source ~/.zshrc
 p10k configure
 
@@ -123,22 +151,20 @@ p10k configure
 
 ## D. vim配置
 
-### 创建vimrc
+### 修改vimrc
 
-```
-touch ~/.vimrc
-vim ~/.vimrc
-# 在里面添加source
-source ~/.vim/start
+```shell
+sh $VC/source_vimrc.sh
 ```
 
-### 重命名vim_config
-
+```shell
+# $VC/source_vimrc.sh
+# 在vimrc里面添加source
+echo 'source $VC/basic' >> ~/.vimrc
+echo 'source $VC/fold_break' >> ~/.vimrc
+echo 'source $VC/leader_key' >> ~/.vimrc
+echo 'source $VC/tab_key' >> ~/.vimrc
 ```
-mv vim_config ~/.vim
-```
-
-### 注意在vim里面source
 
 ```admonish tip title='source filename 与 sh filename 及./filename执行脚本的区别在那里呢？'
 
@@ -148,6 +174,8 @@ mv vim_config ~/.vim
 
 3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）
 ```
+
+### 进入vim，会自动激活~/.vimrc
 
 ### 关于colorscheme设置为solarized(分支已经包含，可以不用下载)
 
@@ -166,7 +194,6 @@ colorscheme solarized
 
 ### 主要分为这几个部分：
 
-- start
 - basic
 - fold_break
 - leader_key

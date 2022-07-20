@@ -487,3 +487,13 @@ sudo cpan Graph:Easy
 - [Alfred workflows for Trickster - User Manual - Docs - Apparent Software Forum](https://discourse.apparentsoft.com/docs?topic=56)
 - [Get Latest Files from Trickster | Packal](http://www.packal.org/workflow/get-latest-files-trickster)
   ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif)
+
+# More
+## Awesome Mac
+- [KuanHsiaoKuo/awesome-mac:  Now we have become very big, Different from the original idea. Collect premium software in various categories.](https://github.com/KuanHsiaoKuo/awesome-mac)
+- [Releases · jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac/releases)
+         |
+         |
+        \ /
+         v
+- [Awesome Mac application sharing recommendation - Awesome Mac](https://raw.githack.com/jaywcjlove/awesome-mac/6dbf0d9/index.html)
