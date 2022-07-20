@@ -238,7 +238,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:45 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
 <!--te-->
 <h1 id="一资料打包迁移"><a class="header" href="#一资料打包迁移">一、资料打包迁移:</a></h1>
 <blockquote>
@@ -407,7 +407,7 @@ Appstore: option+a
 <li><a href="macos_ios_tips.html#osx%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">osx系统设置</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:46 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
 <!--te-->
 <ol>
 <li>指定后缀名打开方式
@@ -538,9 +538,14 @@ Appstore: option+a
 <li><a href="app_plugin_list.html#3-alfred">3. Alfred</a></li>
 </ul>
 </li>
+<li><a href="app_plugin_list.html#more">More</a>
+<ul>
+<li><a href="app_plugin_list.html#awesome-mac">Awesome Mac</a></li>
+</ul>
+</li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:45 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
 <!--te-->
 <h2 id="github开源"><a class="header" href="#github开源">github开源</a></h2>
 <h3 id="tproxy-tcp-连接分析工具"><a class="header" href="#tproxy-tcp-连接分析工具">tproxy: TCP 连接分析工具</a></h3>
@@ -844,6 +849,17 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 <li><a href="http://www.packal.org/workflow/get-latest-files-trickster">Get Latest Files from Trickster | Packal</a>
 <img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif" alt="" /></li>
 </ul>
+<h1 id="more"><a class="header" href="#more">More</a></h1>
+<h2 id="awesome-mac"><a class="header" href="#awesome-mac">Awesome Mac</a></h2>
+<ul>
+<li><a href="https://github.com/KuanHsiaoKuo/awesome-mac">KuanHsiaoKuo/awesome-mac:  Now we have become very big, Different from the original idea. Collect premium software in various categories.</a></li>
+<li><a href="https://github.com/jaywcjlove/awesome-mac/releases">Releases · jaywcjlove/awesome-mac</a>
+|
+|
+\ /
+v</li>
+<li><a href="https://raw.githack.com/jaywcjlove/awesome-mac/6dbf0d9/index.html">Awesome Mac application sharing recommendation - Awesome Mac</a></li>
+</ul>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_plugin_list.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
   display: none;
@@ -904,7 +920,7 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:45 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
 <!--te-->
 <blockquote>
 <p>如果对某个chrome插件感兴趣，可以在插件链接后面加’/related’</p>
@@ -1121,7 +1137,7 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:38 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:38 UTC 2022 -->
 <!--te-->
 <h2 id="workflows-collection"><a class="header" href="#workflows-collection">workflows collection</a></h2>
 <blockquote>
@@ -1167,7 +1183,7 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:39 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:39 UTC 2022 -->
 <!--te-->
 <h2 id="路径"><a class="header" href="#路径">路径</a></h2>
 <pre><code>~/.config/karabiner
@@ -1862,7 +1878,7 @@ Paste them anywhere. Hook automatically stores your links as bookmarks and optio
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:39 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:39 UTC 2022 -->
 <!--te-->
 <h2 id="缘起"><a class="header" href="#缘起">缘起</a></h2>
 <p>对于一些核心主力深度使用的app，比如Omni系列，Jetbrains系列，我觉得完全值得专门设置一层按键</p>
@@ -1935,7 +1951,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:40 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:39 UTC 2022 -->
 <!--te-->
 <h2 id="小技巧"><a class="header" href="#小技巧">小技巧</a></h2>
 <h3 id="朗读模式"><a class="header" href="#朗读模式">朗读模式</a></h3>
@@ -2132,7 +2148,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:40 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:40 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -2475,18 +2491,18 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 72K
-drwxr-xr-x 4 runner docker 4.0K Jul 19 15:09 .
-drwxr-xr-x 4 runner docker 4.0K Jul 19 15:09 ..
-drwxr-xr-x 2 runner docker 4.0K Jul 19 15:09 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Jul 19 15:09 alfred.md
--rw-r--r-- 1 runner docker   23 Jul 19 15:09 app_deepin.md
--rw-r--r-- 1 runner docker 1.5K Jul 19 15:09 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Jul 19 15:09 karabiner
--rw-r--r-- 1 runner docker 2.7K Jul 19 15:09 marginnote_deepin.md
--rw-r--r-- 1 runner docker  28K Jul 19 15:09 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Jul 19 15:09 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Jul 19 15:09 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Jul 19 15:09 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Jul 20 04:52 .
+drwxr-xr-x 4 runner docker 4.0K Jul 20 04:52 ..
+drwxr-xr-x 2 runner docker 4.0K Jul 20 04:52 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Jul 20 04:52 alfred.md
+-rw-r--r-- 1 runner docker   23 Jul 20 04:52 app_deepin.md
+-rw-r--r-- 1 runner docker 1.5K Jul 20 04:52 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Jul 20 04:52 karabiner
+-rw-r--r-- 1 runner docker 2.7K Jul 20 04:52 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  28K Jul 20 04:52 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Jul 20 04:52 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Jul 20 04:52 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Jul 20 04:52 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
@@ -2945,7 +2961,8 @@ interesting thing is and how interesting you might find it.</p>
 <li><a href="app_extensions/iterm2_around/intro.html#iterm2%E9%85%8D%E7%BD%AE">iTerm2配置</a>
 <ul>
 <li><a href="app_extensions/iterm2_around/intro.html#status-bar-%E5%BE%88%E5%A4%9A%E5%86%85%E5%AE%B9%E5%80%BC%E5%BE%97%E7%AE%A1%E7%90%86"><a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理</a></li>
-<li><a href="app_extensions/iterm2_around/intro.html#%E5%90%8C%E6%AD%A5%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F">同步配置方式</a></li>
+<li><a href="app_extensions/iterm2_around/intro.html#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">下载并设置环境变量</a></li>
+<li><a href="app_extensions/iterm2_around/intro.html#iterm2%E5%90%8C%E6%AD%A5%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F">iterm2同步配置方式</a></li>
 <li><a href="app_extensions/iterm2_around/intro.html#%E5%90%8C%E6%AD%A5%E8%8C%83%E5%9B%B4">同步范围</a></li>
 </ul>
 </li>
@@ -2956,9 +2973,8 @@ interesting thing is and how interesting you might find it.</p>
 <li><a href="app_extensions/iterm2_around/intro.html#c-zshoh-my-zsh--plugins">C. zsh/Oh my zsh + plugins</a></li>
 <li><a href="app_extensions/iterm2_around/intro.html#d-vim%E9%85%8D%E7%BD%AE">D. vim配置</a>
 <ul>
-<li><a href="app_extensions/iterm2_around/intro.html#%E5%88%9B%E5%BB%BAvimrc">创建vimrc</a></li>
-<li><a href="app_extensions/iterm2_around/intro.html#%E9%87%8D%E5%91%BD%E5%90%8Dvim_config">重命名vim_config</a></li>
-<li><a href="app_extensions/iterm2_around/intro.html#%E6%B3%A8%E6%84%8F%E5%9C%A8vim%E9%87%8C%E9%9D%A2source">注意在vim里面source</a></li>
+<li><a href="app_extensions/iterm2_around/intro.html#%E4%BF%AE%E6%94%B9vimrc">修改vimrc</a></li>
+<li><a href="app_extensions/iterm2_around/intro.html#%E8%BF%9B%E5%85%A5vim%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%BF%80%E6%B4%BBvimrc">进入vim，会自动激活~/.vimrc</a></li>
 <li><a href="app_extensions/iterm2_around/intro.html#%E5%85%B3%E4%BA%8Ecolorscheme%E8%AE%BE%E7%BD%AE%E4%B8%BAsolarized%E5%88%86%E6%94%AF%E5%B7%B2%E7%BB%8F%E5%8C%85%E5%90%AB%E5%8F%AF%E4%BB%A5%E4%B8%8D%E7%94%A8%E4%B8%8B%E8%BD%BD">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></li>
 <li><a href="app_extensions/iterm2_around/intro.html#%E4%B8%BB%E8%A6%81%E5%88%86%E4%B8%BA%E8%BF%99%E5%87%A0%E4%B8%AA%E9%83%A8%E5%88%86">主要分为这几个部分：</a></li>
 </ul>
@@ -2967,20 +2983,45 @@ interesting thing is and how interesting you might find it.</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:43 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
-<h2 id="同步配置方式"><a class="header" href="#同步配置方式">同步配置方式</a></h2>
+<h2 id="下载并设置环境变量"><a class="header" href="#下载并设置环境变量">下载并设置环境变量</a></h2>
+<pre><code class="language-shell">git clone git@github.com:KuanHsiaoKuo/apple_power_user.git
+cd apple_power_user
+pwd # 输出的值用于配置环境变量
+</code></pre>
+<pre><code class="language-shell"># ~/.bashrc 或者 ～/.zshrc
+export APU=&lt;pwd value&gt;
+export VC=$APU/src/app_extensions/iterm2_around/vim_config
+export ZC=$APU/src/app_extensions/iterm2_around/zsh_config
+</code></pre>
+<blockquote>
+<p>由于我用的是zsh，所以这里就修改~/.zshrc</p>
+</blockquote>
+<div id="admonition-三种设置环境变量的区别" class="admonition tip">
+<div class="admonition-title">
+<p>三种设置环境变量的区别</p>
+<p><a class="admonition-anchor-link" href="app_extensions/iterm2_around/intro.html#admonition-三种设置环境变量的区别"></a></p>
+</div>
+<div>
 <ol>
-<li>下载此文件夹</li>
-<li>设置同步方式 iTerm2 &gt;&gt; Preferences &gt;&gt; General &gt;&gt; Preferences &gt;&gt; Load prefernces from a custom folder or URL</li>
+<li>单纯export：仅对当前登陆的终端有效</li>
+<li>在.bashrc文件中export: 对当前登陆用户有效</li>
+<li>在/etc/profile文件中export: 对所有用户都有效</li>
 </ol>
+</div>
+</div>
+<h2 id="iterm2同步配置方式"><a class="header" href="#iterm2同步配置方式">iterm2同步配置方式</a></h2>
+<blockquote>
+<p>设置同步方式</p>
+</blockquote>
+<pre><code class="language-none">iTerm2 &gt;&gt; Preferences &gt;&gt; General &gt;&gt; Preferences &gt;&gt; Load prefernces from a custom folder or URL
+</code></pre>
 <blockquote>
 <p>注意选择手动保存。</p>
 </blockquote>
-<ol start="3">
-<li>指向下载的文件夹</li>
-</ol>
+<p>指向下载的文件夹</p>
 <h2 id="同步范围"><a class="header" href="#同步范围">同步范围</a></h2>
 <ol>
 <li>基础颜色配置</li>
@@ -2990,27 +3031,54 @@ interesting thing is and how interesting you might find it.</p>
 <p>但是自动输入密码的文件在~/.ssh/logins，需要另外同步</p>
 </blockquote>
 <h1 id="环境套件资料"><a class="header" href="#环境套件资料">环境套件资料</a></h1>
-<pre><code class="language-text">iTerm2 + config + plugins
-+----------------------------------------------------+
-|                                                    |
-|                HomeBrew + Plugins                  |
-|      +-----------------------------------+         |
-|      |                                   |         |
-|      |      Tmux + config + plugins      |         |
-|      |       +---------------------+     |         |
-|      |       |                     |     |         |
-|      |       |    zsh/Oh my zsh    |     |         |
-|      |       |    +----------+     |     |         |
-|      |       |    |    vim   |     |     |         |
-|      |       |    +----------+     |     |         |
-|      |       |                     |     |         |
-|      |       +---------------------+     |         |
-|      |                                   |         |
-|      |                                   |         |
-|      +-----------------------------------+         |
-|                                                    |
-+----------------------------------------------------+
-</code></pre>
+<pre><svg xmlns="http://www.w3.org/2000/svg" width="440" height="336">
+    <style>
+        line, path, circle,rect,polygon{stroke:black;stroke-width:2;stroke-opacity:1;fill-opacity:1;stroke-linecap:round;stroke-linejoin:miter;}text{font-family:monospace;font-size:14px;}rect.backdrop{stroke:none;fill:white;}.broken{stroke-dasharray:8;}.filled{fill:black;}.bg_filled{fill:white;}.nofill{fill:white;}.end_marked_arrow{marker-end:url(#arrow);}.start_marked_arrow{marker-start:url(#arrow);}.end_marked_diamond{marker-end:url(#diamond);}.start_marked_diamond{marker-start:url(#diamond);}.end_marked_circle{marker-end:url(#circle);}.start_marked_circle{marker-start:url(#circle);}.end_marked_open_circle{marker-end:url(#open_circle);}.start_marked_open_circle{marker-start:url(#open_circle);}.end_marked_big_open_circle{marker-end:url(#big_open_circle);}.start_marked_big_open_circle{marker-start:url(#big_open_circle);}
+        
+    </style>
+    <defs>
+        <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,0 0,4 4,2 0,0"></polygon>
+        </marker>
+        <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+        </marker>
+        <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="filled"></circle>
+        </marker>
+        <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+        </marker>
+        <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+        </marker>
+    </defs>
+    <rect class="backdrop" x="0" y="0" width="440" height="336"></rect>
+    <rect x="4" y="24" width="424" height="288" class="solid nofill" rx="0"></rect>
+    <rect x="60" y="72" width="288" height="208" class="solid nofill" rx="0"></rect>
+    <rect x="124" y="120" width="176" height="112" class="solid nofill" rx="0"></rect>
+    <rect x="164" y="168" width="88" height="32" class="solid nofill" rx="0"></rect>
+    <text x="202" y="188" >vim</text>
+    <text x="162" y="156" >zsh</text>
+    <line x1="192" y1="144" x2="184" y2="160" class="solid"></line>
+    <text x="194" y="156" >Oh</text>
+    <text x="218" y="156" >my</text>
+    <text x="242" y="156" >zsh</text>
+    <text x="114" y="108" >Tmux</text>
+    <text x="154" y="108" >+</text>
+    <text x="170" y="108" >config</text>
+    <text x="226" y="108" >+</text>
+    <text x="242" y="108" >plugins</text>
+    <text x="138" y="60" >HomeBrew</text>
+    <text x="210" y="60" >+</text>
+    <text x="226" y="60" >Plugins</text>
+    <text x="2" y="12" >iTerm2</text>
+    <text x="58" y="12" >+</text>
+    <text x="74" y="12" >config</text>
+    <text x="130" y="12" >+</text>
+    <text x="146" y="12" >plugins</text>
+</svg>
+</pre>
 <h2 id="a-homebrew-around"><a class="header" href="#a-homebrew-around">A. Homebrew Around</a></h2>
 <ol>
 <li><a href="https://brew.sh/">The Missing Package Manager for macOS (or Linux) — Homebrew</a></li>
@@ -3042,7 +3110,7 @@ interesting thing is and how interesting you might find it.</p>
 <ol start="3">
 <li>iterm_around.sh未完善，请一条条执行</li>
 </ol>
-<pre><code>python3 -m pip install --upgrade pip
+<pre><code class="language-shell">python3 -m pip install --upgrade pip
 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/kuanhsiaokuo/.zprofile
 eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
@@ -3062,22 +3130,22 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo &quot;source ${PWD}/zsh_config/custom_config&quot; &gt;&gt; ~/.zshrc
+echo &quot;source $ZC/custom_config&quot; &gt;&gt; ~/.zshrc
 source ~/.zshrc
 p10k configure
 
 </code></pre>
 <h2 id="d-vim配置"><a class="header" href="#d-vim配置">D. vim配置</a></h2>
-<h3 id="创建vimrc"><a class="header" href="#创建vimrc">创建vimrc</a></h3>
-<pre><code>touch ~/.vimrc
-vim ~/.vimrc
-# 在里面添加source
-source ~/.vim/start
+<h3 id="修改vimrc"><a class="header" href="#修改vimrc">修改vimrc</a></h3>
+<pre><code class="language-shell">sh $VC/source_vimrc.sh
 </code></pre>
-<h3 id="重命名vim_config"><a class="header" href="#重命名vim_config">重命名vim_config</a></h3>
-<pre><code>mv vim_config ~/.vim
+<pre><code class="language-shell"># $VC/source_vimrc.sh
+# 在vimrc里面添加source
+echo 'source $VC/basic' &gt;&gt; ~/.vimrc
+echo 'source $VC/fold_break' &gt;&gt; ~/.vimrc
+echo 'source $VC/leader_key' &gt;&gt; ~/.vimrc
+echo 'source $VC/tab_key' &gt;&gt; ~/.vimrc
 </code></pre>
-<h3 id="注意在vim里面source"><a class="header" href="#注意在vim里面source">注意在vim里面source</a></h3>
 <div id="admonition-source-filename-与-sh-filename-及filename执行脚本的区别在那里呢" class="admonition tip">
 <div class="admonition-title">
 <p>source filename 与 sh filename 及./filename执行脚本的区别在那里呢？</p>
@@ -3089,6 +3157,7 @@ source ~/.vim/start
 <p>3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）</p>
 </div>
 </div>
+<h3 id="进入vim会自动激活vimrc"><a class="header" href="#进入vim会自动激活vimrc">进入vim，会自动激活~/.vimrc</a></h3>
 <h3 id="关于colorscheme设置为solarized分支已经包含可以不用下载"><a class="header" href="#关于colorscheme设置为solarized分支已经包含可以不用下载">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></h3>
 <ul>
 <li>下载vim主题</li>
@@ -3103,7 +3172,6 @@ cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 </code></pre>
 <h3 id="主要分为这几个部分"><a class="header" href="#主要分为这几个部分">主要分为这几个部分：</a></h3>
 <ul>
-<li>start</li>
 <li>basic</li>
 <li>fold_break</li>
 <li>leader_key</li>
@@ -3143,7 +3211,7 @@ cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:44 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <h2 id="首先安装zsh"><a class="header" href="#首先安装zsh">首先安装zsh</a></h2>
 <pre><code>sudo apt-get install zsh
@@ -3273,7 +3341,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:43 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <h2 id="open"><a class="header" href="#open">open</a></h2>
 <h2 id="pbcopy-and-pbpaste"><a class="header" href="#pbcopy-and-pbpaste">pbcopy and pbpaste</a></h2>
@@ -3390,7 +3458,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:38 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:38 UTC 2022 -->
 <!--te-->
 <h2 id="共性"><a class="header" href="#共性">共性</a></h2>
 <h3 id="快捷键整理"><a class="header" href="#快捷键整理">快捷键整理</a></h3>
@@ -3445,7 +3513,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:37 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:37 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-4"><a class="header" href="#参考资源-4">参考资源</a></h2>
 <ul>
@@ -3497,7 +3565,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:38 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:38 UTC 2022 -->
 <!--te-->
 <p><video src="https://www.omnigroup.com/assets/img/2020/plan-video-18.mp4" controls="controls"></video></p>
 <h2 id="基础流程"><a class="header" href="#基础流程">基础流程</a></h2>
@@ -3668,7 +3736,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:37 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:37 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-6"><a class="header" href="#参考资源-6">参考资源</a></h2>
 <ul>
@@ -3697,7 +3765,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:37 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:38 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-7"><a class="header" href="#参考资源-7">参考资源</a></h2>
 <ul>
@@ -3726,7 +3794,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:37 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:38 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-8"><a class="header" href="#参考资源-8">参考资源</a></h2>
 <ul>
@@ -3761,7 +3829,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:41 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:40 UTC 2022 -->
 <!--te-->
 <h2 id="精选脚本"><a class="header" href="#精选脚本">精选脚本</a></h2>
 <h3 id="userscript-plus-显示当前网站可用油猴脚本"><a class="header" href="#userscript-plus-显示当前网站可用油猴脚本">Userscript-plus: 显示当前网站可用油猴脚本</a></h3>
@@ -3821,7 +3889,7 @@ seconds</li>
 <li><a href="app_extensions/workflows/workflows.html#%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%95%B4%E7%90%86">工作流整理</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:44 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/workflows/workflows.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -3850,7 +3918,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:44 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <h2 id="一自定义模版导出不可行"><a class="header" href="#一自定义模版导出不可行">一、自定义模版导出：不可行</a></h2>
 <ul>
@@ -3887,7 +3955,7 @@ seconds</li>
 <li><a href="app_extensions/Anki_around/anki_around.html#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:41 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:40 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/Anki_around/anki_around.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -3917,7 +3985,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:42 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:41 UTC 2022 -->
 <!--te-->
 <h2 id="正面模版"><a class="header" href="#正面模版">正面模版</a></h2>
 <p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220606234758347.png" alt="image-20220606234758347" /></p>

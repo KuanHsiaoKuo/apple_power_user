@@ -1,5 +1,0 @@
-source ~/.vim/basic
-source ~/.vim/fold_break
-source ~/.vim/leader_key
-source ~/.vim/tab_key
-"source ~/.vim/cscope_conf

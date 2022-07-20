@@ -200,7 +200,8 @@
 <li><a href="#iterm2%E9%85%8D%E7%BD%AE">iTerm2配置</a>
 <ul>
 <li><a href="#status-bar-%E5%BE%88%E5%A4%9A%E5%86%85%E5%AE%B9%E5%80%BC%E5%BE%97%E7%AE%A1%E7%90%86"><a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理</a></li>
-<li><a href="#%E5%90%8C%E6%AD%A5%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F">同步配置方式</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">下载并设置环境变量</a></li>
+<li><a href="#iterm2%E5%90%8C%E6%AD%A5%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F">iterm2同步配置方式</a></li>
 <li><a href="#%E5%90%8C%E6%AD%A5%E8%8C%83%E5%9B%B4">同步范围</a></li>
 </ul>
 </li>
@@ -211,9 +212,8 @@
 <li><a href="#c-zshoh-my-zsh--plugins">C. zsh/Oh my zsh + plugins</a></li>
 <li><a href="#d-vim%E9%85%8D%E7%BD%AE">D. vim配置</a>
 <ul>
-<li><a href="#%E5%88%9B%E5%BB%BAvimrc">创建vimrc</a></li>
-<li><a href="#%E9%87%8D%E5%91%BD%E5%90%8Dvim_config">重命名vim_config</a></li>
-<li><a href="#%E6%B3%A8%E6%84%8F%E5%9C%A8vim%E9%87%8C%E9%9D%A2source">注意在vim里面source</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9vimrc">修改vimrc</a></li>
+<li><a href="#%E8%BF%9B%E5%85%A5vim%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%BF%80%E6%B4%BBvimrc">进入vim，会自动激活~/.vimrc</a></li>
 <li><a href="#%E5%85%B3%E4%BA%8Ecolorscheme%E8%AE%BE%E7%BD%AE%E4%B8%BAsolarized%E5%88%86%E6%94%AF%E5%B7%B2%E7%BB%8F%E5%8C%85%E5%90%AB%E5%8F%AF%E4%BB%A5%E4%B8%8D%E7%94%A8%E4%B8%8B%E8%BD%BD">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></li>
 <li><a href="#%E4%B8%BB%E8%A6%81%E5%88%86%E4%B8%BA%E8%BF%99%E5%87%A0%E4%B8%AA%E9%83%A8%E5%88%86">主要分为这几个部分：</a></li>
 </ul>
@@ -222,20 +222,45 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Jul 19 15:09:43 UTC 2022 -->
+<!-- Added by: runner, at: Wed Jul 20 04:52:42 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
-<h2 id="同步配置方式"><a class="header" href="#同步配置方式">同步配置方式</a></h2>
+<h2 id="下载并设置环境变量"><a class="header" href="#下载并设置环境变量">下载并设置环境变量</a></h2>
+<pre><code class="language-shell">git clone git@github.com:KuanHsiaoKuo/apple_power_user.git
+cd apple_power_user
+pwd # 输出的值用于配置环境变量
+</code></pre>
+<pre><code class="language-shell"># ~/.bashrc 或者 ～/.zshrc
+export APU=&lt;pwd value&gt;
+export VC=$APU/src/app_extensions/iterm2_around/vim_config
+export ZC=$APU/src/app_extensions/iterm2_around/zsh_config
+</code></pre>
+<blockquote>
+<p>由于我用的是zsh，所以这里就修改~/.zshrc</p>
+</blockquote>
+<div id="admonition-三种设置环境变量的区别" class="admonition tip">
+<div class="admonition-title">
+<p>三种设置环境变量的区别</p>
+<p><a class="admonition-anchor-link" href="#admonition-三种设置环境变量的区别"></a></p>
+</div>
+<div>
 <ol>
-<li>下载此文件夹</li>
-<li>设置同步方式 iTerm2 &gt;&gt; Preferences &gt;&gt; General &gt;&gt; Preferences &gt;&gt; Load prefernces from a custom folder or URL</li>
+<li>单纯export：仅对当前登陆的终端有效</li>
+<li>在.bashrc文件中export: 对当前登陆用户有效</li>
+<li>在/etc/profile文件中export: 对所有用户都有效</li>
 </ol>
+</div>
+</div>
+<h2 id="iterm2同步配置方式"><a class="header" href="#iterm2同步配置方式">iterm2同步配置方式</a></h2>
+<blockquote>
+<p>设置同步方式</p>
+</blockquote>
+<pre><code class="language-none">iTerm2 &gt;&gt; Preferences &gt;&gt; General &gt;&gt; Preferences &gt;&gt; Load prefernces from a custom folder or URL
+</code></pre>
 <blockquote>
 <p>注意选择手动保存。</p>
 </blockquote>
-<ol start="3">
-<li>指向下载的文件夹</li>
-</ol>
+<p>指向下载的文件夹</p>
 <h2 id="同步范围"><a class="header" href="#同步范围">同步范围</a></h2>
 <ol>
 <li>基础颜色配置</li>
@@ -245,27 +270,54 @@
 <p>但是自动输入密码的文件在~/.ssh/logins，需要另外同步</p>
 </blockquote>
 <h1 id="环境套件资料"><a class="header" href="#环境套件资料">环境套件资料</a></h1>
-<pre><code class="language-text">iTerm2 + config + plugins
-+----------------------------------------------------+
-|                                                    |
-|                HomeBrew + Plugins                  |
-|      +-----------------------------------+         |
-|      |                                   |         |
-|      |      Tmux + config + plugins      |         |
-|      |       +---------------------+     |         |
-|      |       |                     |     |         |
-|      |       |    zsh/Oh my zsh    |     |         |
-|      |       |    +----------+     |     |         |
-|      |       |    |    vim   |     |     |         |
-|      |       |    +----------+     |     |         |
-|      |       |                     |     |         |
-|      |       +---------------------+     |         |
-|      |                                   |         |
-|      |                                   |         |
-|      +-----------------------------------+         |
-|                                                    |
-+----------------------------------------------------+
-</code></pre>
+<pre><svg xmlns="http://www.w3.org/2000/svg" width="440" height="336">
+    <style>
+        line, path, circle,rect,polygon{stroke:black;stroke-width:2;stroke-opacity:1;fill-opacity:1;stroke-linecap:round;stroke-linejoin:miter;}text{font-family:monospace;font-size:14px;}rect.backdrop{stroke:none;fill:white;}.broken{stroke-dasharray:8;}.filled{fill:black;}.bg_filled{fill:white;}.nofill{fill:white;}.end_marked_arrow{marker-end:url(#arrow);}.start_marked_arrow{marker-start:url(#arrow);}.end_marked_diamond{marker-end:url(#diamond);}.start_marked_diamond{marker-start:url(#diamond);}.end_marked_circle{marker-end:url(#circle);}.start_marked_circle{marker-start:url(#circle);}.end_marked_open_circle{marker-end:url(#open_circle);}.start_marked_open_circle{marker-start:url(#open_circle);}.end_marked_big_open_circle{marker-end:url(#big_open_circle);}.start_marked_big_open_circle{marker-start:url(#big_open_circle);}
+        
+    </style>
+    <defs>
+        <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,0 0,4 4,2 0,0"></polygon>
+        </marker>
+        <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+        </marker>
+        <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="filled"></circle>
+        </marker>
+        <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
+        </marker>
+        <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
+        </marker>
+    </defs>
+    <rect class="backdrop" x="0" y="0" width="440" height="336"></rect>
+    <rect x="4" y="24" width="424" height="288" class="solid nofill" rx="0"></rect>
+    <rect x="60" y="72" width="288" height="208" class="solid nofill" rx="0"></rect>
+    <rect x="124" y="120" width="176" height="112" class="solid nofill" rx="0"></rect>
+    <rect x="164" y="168" width="88" height="32" class="solid nofill" rx="0"></rect>
+    <text x="202" y="188" >vim</text>
+    <text x="162" y="156" >zsh</text>
+    <line x1="192" y1="144" x2="184" y2="160" class="solid"></line>
+    <text x="194" y="156" >Oh</text>
+    <text x="218" y="156" >my</text>
+    <text x="242" y="156" >zsh</text>
+    <text x="114" y="108" >Tmux</text>
+    <text x="154" y="108" >+</text>
+    <text x="170" y="108" >config</text>
+    <text x="226" y="108" >+</text>
+    <text x="242" y="108" >plugins</text>
+    <text x="138" y="60" >HomeBrew</text>
+    <text x="210" y="60" >+</text>
+    <text x="226" y="60" >Plugins</text>
+    <text x="2" y="12" >iTerm2</text>
+    <text x="58" y="12" >+</text>
+    <text x="74" y="12" >config</text>
+    <text x="130" y="12" >+</text>
+    <text x="146" y="12" >plugins</text>
+</svg>
+</pre>
 <h2 id="a-homebrew-around"><a class="header" href="#a-homebrew-around">A. Homebrew Around</a></h2>
 <ol>
 <li><a href="https://brew.sh/">The Missing Package Manager for macOS (or Linux) — Homebrew</a></li>
@@ -297,7 +349,7 @@
 <ol start="3">
 <li>iterm_around.sh未完善，请一条条执行</li>
 </ol>
-<pre><code>python3 -m pip install --upgrade pip
+<pre><code class="language-shell">python3 -m pip install --upgrade pip
 /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; /Users/kuanhsiaokuo/.zprofile
 eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
@@ -317,22 +369,22 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo &quot;source ${PWD}/zsh_config/custom_config&quot; &gt;&gt; ~/.zshrc
+echo &quot;source $ZC/custom_config&quot; &gt;&gt; ~/.zshrc
 source ~/.zshrc
 p10k configure
 
 </code></pre>
 <h2 id="d-vim配置"><a class="header" href="#d-vim配置">D. vim配置</a></h2>
-<h3 id="创建vimrc"><a class="header" href="#创建vimrc">创建vimrc</a></h3>
-<pre><code>touch ~/.vimrc
-vim ~/.vimrc
-# 在里面添加source
-source ~/.vim/start
+<h3 id="修改vimrc"><a class="header" href="#修改vimrc">修改vimrc</a></h3>
+<pre><code class="language-shell">sh $VC/source_vimrc.sh
 </code></pre>
-<h3 id="重命名vim_config"><a class="header" href="#重命名vim_config">重命名vim_config</a></h3>
-<pre><code>mv vim_config ~/.vim
+<pre><code class="language-shell"># $VC/source_vimrc.sh
+# 在vimrc里面添加source
+echo 'source $VC/basic' &gt;&gt; ~/.vimrc
+echo 'source $VC/fold_break' &gt;&gt; ~/.vimrc
+echo 'source $VC/leader_key' &gt;&gt; ~/.vimrc
+echo 'source $VC/tab_key' &gt;&gt; ~/.vimrc
 </code></pre>
-<h3 id="注意在vim里面source"><a class="header" href="#注意在vim里面source">注意在vim里面source</a></h3>
 <div id="admonition-source-filename-与-sh-filename-及filename执行脚本的区别在那里呢" class="admonition tip">
 <div class="admonition-title">
 <p>source filename 与 sh filename 及./filename执行脚本的区别在那里呢？</p>
@@ -344,6 +396,7 @@ source ~/.vim/start
 <p>3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）</p>
 </div>
 </div>
+<h3 id="进入vim会自动激活vimrc"><a class="header" href="#进入vim会自动激活vimrc">进入vim，会自动激活~/.vimrc</a></h3>
 <h3 id="关于colorscheme设置为solarized分支已经包含可以不用下载"><a class="header" href="#关于colorscheme设置为solarized分支已经包含可以不用下载">关于colorscheme设置为solarized(分支已经包含，可以不用下载)</a></h3>
 <ul>
 <li>下载vim主题</li>
@@ -358,7 +411,6 @@ cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 </code></pre>
 <h3 id="主要分为这几个部分"><a class="header" href="#主要分为这几个部分">主要分为这几个部分：</a></h3>
 <ul>
-<li>start</li>
 <li>basic</li>
 <li>fold_break</li>
 <li>leader_key</li>
