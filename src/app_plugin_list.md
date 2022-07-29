@@ -1,79 +1,80 @@
 <!--ts-->
-   * [github开源](#github开源)
-      * [tproxy: TCP 连接分析工具](#tproxy-tcp-连接分析工具)
-   * [开发相关](#开发相关)
-      * [Another Redis Desktop Manager](#another-redis-desktop-manager)
-      * [ClashX: 梯子](#clashx-梯子)
-      * [Dash: 文档查阅工具](#dash-文档查阅工具)
-      * [OSX Docker](#osx-docker)
-      * [Github Desktop](#github-desktop)
-      * [iTerm2: 终端神器](#iterm2-终端神器)
-      * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
-      * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
-      * [JsonHero: 一款json全功能工具](#jsonhero-一款json全功能工具)
-      * [Navicat: 数据库工具](#navicat-数据库工具)
-      * [OpenVPN: vpn工具](#openvpn-vpn工具)
-      * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
-      * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
-      * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
-      * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
-      * [Termius: ssh连接app](#termius-ssh连接app)
-      * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
-   * [效率相关](#效率相关)
-      * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
-      * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
-      * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
-      * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
-      * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
-      * [Focus: 专注效率工具](#focus-专注效率工具)
-      * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
-      * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
-      * [Moom: 窗口管理工具](#moom-窗口管理工具)
-      * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
-      * [MultiDock: 浮动常用工具栏](#multidock-浮动常用工具栏)
-      * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
-      * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
-      * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
-   * [学习工具](#学习工具)
-      * [Anki：抽卡识记工具](#anki抽卡识记工具)
-      * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
-      * [Movist: 视频播放工具](#movist-视频播放工具)
-      * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
-      * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
-   * [四、数据管理](#四数据管理)
-      * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
-      * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
-      * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
-      * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
-      * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
-   * [输出相关](#输出相关)
-      * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
-      * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
-      * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
-      * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
-      * [drawio: UML图解决方案](#drawio-uml图解决方案)
-      * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
-      * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
-      * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
-      * [两类思维导图：](#两类思维导图)
-         * [Xmind:](#xmind)
-         * [Scapple:](#scapple)
-      * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
-      * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
-   * [沟通协作](#沟通协作)
-      * [Slack](#slack)
-      * [ToDesk](#todesk)
-      * [Trello](#trello)
-   * [OmniGroup Series](#omnigroup-series)
-      * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
-   * [插件相关(DEVONThink、Alfred)](#插件相关devonthinkalfred)
-      * [2. DEVONThink](#2-devonthink)
-         * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
-         * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
-         * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
-      * [3. Alfred](#3-alfred)
+
+* [github开源](#github开源)
+    * [tproxy: TCP 连接分析工具](#tproxy-tcp-连接分析工具)
+* [开发相关](#开发相关)
+    * [Another Redis Desktop Manager](#another-redis-desktop-manager)
+    * [ClashX: 梯子](#clashx-梯子)
+    * [Dash: 文档查阅工具](#dash-文档查阅工具)
+    * [OSX Docker](#osx-docker)
+    * [Github Desktop](#github-desktop)
+    * [iTerm2: 终端神器](#iterm2-终端神器)
+    * [IDEA: Fleet出来之前的选择](#idea-fleet出来之前的选择)
+    * [Fleet: 期待的下一代Jetbrains综合编辑器](#fleet-期待的下一代jetbrains综合编辑器)
+    * [JsonHero: 一款json全功能工具](#jsonhero-一款json全功能工具)
+    * [Navicat: 数据库工具](#navicat-数据库工具)
+    * [OpenVPN: vpn工具](#openvpn-vpn工具)
+    * [Paw：Mac平台上接口测试神器，比postman更好](#pawmac平台上接口测试神器比postman更好)
+    * [PicGo: 本地上传图床工具](#picgo-本地上传图床工具)
+    * [SnippetsLab：脚本片段管理工具](#snippetslab脚本片段管理工具)
+    * [Script Debugger: AppleScript 编辑器](#script-debugger-applescript-编辑器)
+    * [Termius: ssh连接app](#termius-ssh连接app)
+    * [Warp: 观望中的终端工具，少了很多自定义](#warp-观望中的终端工具少了很多自定义)
+* [效率相关](#效率相关)
+    * [Karabiner-Elements: 改键神器](#karabiner-elements-改键神器)
+    * [Amphetamine: mac防休眠](#amphetamine-mac防休眠)
+    * [Alfred: 正如其名，Mac老管家](#alfred-正如其名mac老管家)
+    * [CleanShot X: 截图标注工具](#cleanshot-x-截图标注工具)
+    * [Downie: 视频下载神器，youtube等通吃](#downie-视频下载神器youtube等通吃)
+    * [Focus: 专注效率工具](#focus-专注效率工具)
+    * [GIF Brewery 3: gif制作工具](#gif-brewery-3-gif制作工具)
+    * [Manico: 应用快速切换快捷键配置工具，类似hook](#manico-应用快速切换快捷键配置工具类似hook)
+    * [Moom: 窗口管理工具](#moom-窗口管理工具)
+    * [Menubar X: 在菜单栏快速查看指定网站](#menubar-x-在菜单栏快速查看指定网站)
+    * [MultiDock: 浮动常用工具栏](#multidock-浮动常用工具栏)
+    * [PopClip: 剪贴板效率工具](#popclip-剪贴板效率工具)
+    * [Paste: 剪贴板管理工具](#paste-剪贴板管理工具)
+    * [The Unarchiver: 压缩解压缩工具](#the-unarchiver-压缩解压缩工具)
+* [学习工具](#学习工具)
+    * [Anki：抽卡识记工具](#anki抽卡识记工具)
+    * [Marginnote：基于思维导图的阅读学习工具](#marginnote基于思维导图的阅读学习工具)
+    * [Movist: 视频播放工具](#movist-视频播放工具)
+    * [Pdf Expert: pdf阅读工具](#pdf-expert-pdf阅读工具)
+    * [Drawboard PDF: 功能全面，尤其是笔记工具](#drawboard-pdf-功能全面尤其是笔记工具)
+* [四、数据管理](#四数据管理)
+    * [DEVONThink: 各自数据格式一站式管理工具](#devonthink-各自数据格式一站式管理工具)
+    * [Calibre: 书籍格式转换工具](#calibre-书籍格式转换工具)
+    * [CleanMyMac: 电脑清理工具，不过我更喜欢格盘重装](#cleanmymac-电脑清理工具不过我更喜欢格盘重装)
+    * [Eagle: 图片收集管理工具](#eagle-图片收集管理工具)
+    * [TotalFinder: Finder的完美强化插件](#totalfinder-finder的完美强化插件)
+* [输出相关](#输出相关)
+    * [Drafts: 随手记终极解决工具](#drafts-随手记终极解决工具)
+    * [Day One: 颜值与功能并举的日记工具](#day-one-颜值与功能并举的日记工具)
+    * [Ulysses: 颜值优先的长文书写工具](#ulysses-颜值优先的长文书写工具)
+    * [Typora: 将Markdown玩透的笔记工具](#typora-将markdown玩透的笔记工具)
+    * [drawio: UML图解决方案](#drawio-uml图解决方案)
+    * [GoodNotes: 找回书写的感觉](#goodnotes-找回书写的感觉)
+    * [MindNode: 颜值不错的简单思维导图工具](#mindnode-颜值不错的简单思维导图工具)
+    * [Monodraw：ASCII图的终极解决方案](#monodrawascii图的终极解决方案)
+    * [两类思维导图：](#两类思维导图)
+        * [Xmind:](#xmind)
+        * [Scapple:](#scapple)
+    * [Scrivener: 比Ulysses更长的文章书写工具](#scrivener-比ulysses更长的文章书写工具)
+    * [Graph-easy: ASCII DSL语言工具](#graph-easy-ascii-dsl语言工具)
+* [沟通协作](#沟通协作)
+    * [Slack](#slack)
+    * [ToDesk](#todesk)
+    * [Trello](#trello)
+* [OmniGroup Series](#omnigroup-series)
+    * [<a href="https://www.omnigroup.com/" rel="nofollow">The Omni Group</a>](#the-omni-group)
+* [插件相关(DEVONThink、Alfred)](#插件相关devonthinkalfred)
+    * [2. DEVONThink](#2-devonthink)
+        * [<a href="https://www.apparentsoft.com/trickster" rel="nofollow">Trickster - Your recently used files, at your fingertips!</a>](#trickster---your-recently-used-files-at-your-fingertips)
+        * [<a href="https://hookproductivity.com/" rel="nofollow">Hook – Links beat searching</a>](#hook--links-beat-searching)
+        * [<a href="https://www.zotero.org/" rel="nofollow">Zotero | Your personal research assistant</a>](#zotero--your-personal-research-assistant)
+    * [3. Alfred](#3-alfred)
 * [More](#more)
-   * [Awesome Mac](#awesome-mac)
+    * [Awesome Mac](#awesome-mac)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Wed Jul 20 04:52:43 UTC 2022 -->
@@ -237,7 +238,8 @@
 
 [MenubarX on the Mac App Store](https://apps.apple.com/app/id1575588022)
 
-> MenubarX is a powerful menu bar browser. You can add any web pages to the menu bar just like Native Apps. It will open up a new world for Web Apps.
+> MenubarX is a powerful menu bar browser. You can add any web pages to the menu bar just like Native Apps. It will open
+> up a new world for Web Apps.
 
 * Awarded on ProductHunt Daily and Weekly
 
@@ -250,6 +252,10 @@
 ![2048](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/2048.png)
 
 ![settings2](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/settings2.png)
+
+### WebCatalog: 类似Menubar
+
+[WebCatalog for Mac and PC | Turn Any Websites into Real Desktop Apps | WebCatalog](https://webcatalog.io/webcatalog/)
 
 ### MultiDock: 浮动常用工具栏
 
@@ -404,8 +410,10 @@ be available in the next version of ActiveDock.
 ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/v2-10936f202d420386da963354b92a2cb1_b.jpg)
 ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/beginning-middle-loose-ends.jpg)
 ![](https://www.literatureandlatte.com/assets/./imgs/scapple/scapple-main.jpg)
-> 纸和软件结合 第一，先在A4纸上或者自己的笔记本上做即时性笔记——记录一些学习时的零散的关键信息点。 第二，回到家，使用Scapple，将这些零散的关键信息点誊抄在上面 第三，对照这些零散的关键信息点，进入专注模式，进行索引式回顾，并在Scapple写下这些关键信息点的详细内容 第四，构建这些关键信息点之间的联系。
-> 纯软件, 不做任何即时性笔记。 第一，直接使用Scapple，进入发散模式，不断的思考能够记住的一些关键信息点。 第二，构建这些关键信息点之间的联系。 Scapple之所以非常适合做笔记，是因为它是就人体大脑的思维模式所设计的。 当你不断创建内容（Notes)时，你通常处在发散模式； 当你对照内容去思考深挖详细信息时，你通常处在专注模式； 当你在构建Notes间的连接时，你更可能处于发散模式。
+> 纸和软件结合 第一，先在A4纸上或者自己的笔记本上做即时性笔记——记录一些学习时的零散的关键信息点。 第二，回到家，使用Scapple，将这些零散的关键信息点誊抄在上面
+> 第三，对照这些零散的关键信息点，进入专注模式，进行索引式回顾，并在Scapple写下这些关键信息点的详细内容 第四，构建这些关键信息点之间的联系。
+> 纯软件, 不做任何即时性笔记。 第一，直接使用Scapple，进入发散模式，不断的思考能够记住的一些关键信息点。 第二，构建这些关键信息点之间的联系。 Scapple之所以非常适合做笔记，是因为它是就人体大脑的思维模式所设计的。
+> 当你不断创建内容（Notes)时，你通常处在发散模式； 当你对照内容去思考深挖详细信息时，你通常处在专注模式； 当你在构建Notes间的连接时，你更可能处于发散模式。
 
 ### Scrivener: 比Ulysses更长的文章书写工具
 
@@ -456,14 +464,17 @@ sudo cpan Graph:Easy
 
 ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/trickster_devonthink.png)
 
-> Trickster 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
+> Trickster
+> 会记录您在Mac上使用过的文件，您可以通过菜单栏快速的访问它们。finder有最近文件的功能，但是太简陋了，Trickster可以对你最近打的过的文件进行归类，哪怕你不小心关闭了文件，你照样可以通过Trickster快速找到它。
 
 #### [Hook – Links beat searching](https://hookproductivity.com/)
 
 ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/475ae43e7e65a10802b819be0874c0e8e7026eeb_2_690x97.png)
 
-> Hook is an easy way to copy links to files, emails, web pages and more. Paste and use them anywhere. Even bidirectionally link ("hook") items together
-> Replace the frustration of searching your Mac with the pleasure of using contextually relevant links. Use Hook to copy robust links to anything on your Mac or elsewhere (files, emails, tasks, PDFs, web pages, etc).
+> Hook is an easy way to copy links to files, emails, web pages and more. Paste and use them anywhere. Even
+> bidirectionally link ("hook") items together
+> Replace the frustration of searching your Mac with the pleasure of using contextually relevant links. Use Hook to copy
+> robust links to anything on your Mac or elsewhere (files, emails, tasks, PDFs, web pages, etc).
 > Paste them anywhere. Hook automatically stores your links as bookmarks and optionally syncs them in iCloud.
 > [Help – Hook](https://hookproductivity.com/help)
 
@@ -491,11 +502,13 @@ sudo cpan Graph:Easy
   ![](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/62f29b4ba5c262b5a37c40055d63810096dd7d5f.gif)
 
 # More
+
 ## Awesome Mac
+
 - [KuanHsiaoKuo/awesome-mac:  Now we have become very big, Different from the original idea. Collect premium software in various categories.](https://github.com/KuanHsiaoKuo/awesome-mac)
 - [Releases · jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac/releases)
-         |
-         |
-        \ /
-         v
+  |
+  |
+  \ /
+  v
 - [Awesome Mac application sharing recommendation - Awesome Mac](https://raw.githack.com/jaywcjlove/awesome-mac/6dbf0d9/index.html)
