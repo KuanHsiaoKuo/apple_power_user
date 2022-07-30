@@ -341,6 +341,10 @@ mytheme
     - 把静态文件放在src里面，将会自动复制进去
     - 只对于js和css文件，可以用book的additional-css/js参数配置进去
 
+## 关于mdbook serve panic失败
+
+> 这可能是由于本地电脑开了太多程序占用资源，mdbook serve资源不足，重启电脑可解决
+
 # mdbook插件推荐
 
 ## 自动检查
