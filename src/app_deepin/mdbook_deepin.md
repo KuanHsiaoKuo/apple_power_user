@@ -342,9 +342,15 @@ mytheme
     - 把静态文件放在src里面，将会自动复制进去
     - 只对于js和css文件，可以用book的additional-css/js参数配置进去
 
-## 关于mdbook serve panic失败
+## 关于mdbook serve panit-失败
 
 > 这可能是由于本地电脑开了太多程序占用资源，mdbook serve资源不足，重启电脑可解决
+
+## 关于主题修改(theme)
+1. 在book.toml指定主题路径
+2. 只有指定文件名才会被用来渲染网页
+
+[Theme - mdBook Documentation](https://rust-lang.github.io/mdBook/format/theme/index.html?highlight=theme#theme)
 
 # mdbook插件推荐
 
