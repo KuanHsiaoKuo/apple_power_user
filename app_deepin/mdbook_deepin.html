@@ -237,6 +237,11 @@
 </li>
 </ul>
 </li>
+<li><a href="#mdbook%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95">mdbook高级用法</a>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8Ebook">关于book</a></li>
+</ul>
+</li>
 <li><a href="#mdbook%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90">mdbook插件推荐</a>
 <ul>
 <li><a href="#%E8%87%AA%E5%8A%A8%E6%A3%80%E6%9F%A5">自动检查</a>
@@ -333,7 +338,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Fri Jul 29 08:59:02 UTC 2022 -->
+<!-- Added by: runner, at: Sat Jul 30 03:11:56 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -567,6 +572,20 @@ mytheme
 <li>highlight.css is the theme used for the code highlighting.</li>
 <li>favicon.svg and favicon.png the favicon that will be used. The SVG version is used by newer browsers.</li>
 </ul>
+<h1 id="mdbook高级用法"><a class="header" href="#mdbook高级用法">mdbook高级用法</a></h1>
+<h2 id="关于book"><a class="header" href="#关于book">关于book</a></h2>
+<ol>
+<li>首先，这是mdbook serve/build之后生成的静态网站目录</li>
+<li>src，和Summary同级的目录，就是网站根目录</li>
+<li>src之外的内容不会被自动加入到book，所以无法访问。</li>
+<li>这里有三个办法解决静态文件访问的问题：
+<ul>
+<li>生成book之后再复制进去，不过每次都需要重新复制</li>
+<li>把静态文件放在src里面，将会自动复制进去</li>
+<li>只对于js和css文件，可以用book的additional-css/js参数配置进去</li>
+</ul>
+</li>
+</ol>
 <h1 id="mdbook插件推荐"><a class="header" href="#mdbook插件推荐">mdbook插件推荐</a></h1>
 <h2 id="自动检查"><a class="header" href="#自动检查">自动检查</a></h2>
 <h3 id="mdbook-link-check"><a class="header" href="#mdbook-link-check">MDBook Link-Check</a></h3>
@@ -675,19 +694,19 @@ with the goal of eventually contributing back upstream.</p>
 <ol>
 <li>Shell</li>
 </ol>
-<pre><code class="language-console">total 72K
-drwxr-xr-x 4 runner docker 4.0K Jul 29 08:59 .
-drwxr-xr-x 4 runner docker 4.0K Jul 29 08:59 ..
-drwxr-xr-x 2 runner docker 4.0K Jul 29 08:59 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Jul 29 08:59 alfred.md
--rw-r--r-- 1 runner docker   23 Jul 29 08:58 app_deepin.md
--rw-r--r-- 1 runner docker 1.5K Jul 29 08:59 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Jul 29 08:59 karabiner
--rw-r--r-- 1 runner docker 2.7K Jul 29 08:59 marginnote_deepin.md
--rw-r--r-- 1 runner docker  28K Jul 29 08:59 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Jul 29 08:58 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Jul 29 08:59 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Jul 29 08:58 typora_deepin.md
+<pre><code class="language-console">total 76K
+drwxr-xr-x 4 runner docker 4.0K Jul 30 03:11 .
+drwxr-xr-x 4 runner docker 4.0K Jul 30 03:12 ..
+drwxr-xr-x 2 runner docker 4.0K Jul 30 03:11 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Jul 30 03:11 alfred.md
+-rw-r--r-- 1 runner docker   23 Jul 30 03:11 app_deepin.md
+-rw-r--r-- 1 runner docker 1.5K Jul 30 03:11 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Jul 30 03:11 karabiner
+-rw-r--r-- 1 runner docker 2.7K Jul 30 03:11 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  29K Jul 30 03:11 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Jul 30 03:11 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Jul 30 03:11 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Jul 30 03:11 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
@@ -706,7 +725,7 @@ drwxr-xr-x 2 runner docker 4.0K Jul 29 08:59 karabiner
 </ol>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>/&lt;/!/-/-/ cmdrun cmdrun/script.rs --&gt;
+</span>/ &lt; / ! / - / - / cmdrun cmdrun/script.rs - -&gt;
 <span class="boring">}
 </span></code></pre></pre>
 <h2 id="配置与替换"><a class="header" href="#配置与替换">配置与替换</a></h2>
