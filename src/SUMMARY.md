@@ -8,6 +8,7 @@
 - [Power User Need Know](overview.md)
     - [主力App深度使用](app_deepin/app_deepin.md)
         - [Alfred](app_deepin/alfred.md)
+            - [跟着Copy Url脚本学习写](app_extensions/alfred_workflows/copy_url.md)
         - [Karabiner Maestro](app_deepin/karabiner/karabiner.md)
             - [分层设置](app_deepin/karabiner/layers_config.md)
         - [Marginnote](app_deepin/marginnote_deepin.md)
