@@ -22,7 +22,8 @@
       * [基本页面介绍](#基本页面介绍)
 * [mdbook高级用法](#mdbook高级用法)
    * [关于book](#关于book)
-   * [关于mdbook serve panic失败](#关于mdbook-serve-panic失败)
+   * [关于mdbook serve panit-失败](#关于mdbook-serve-panit-失败)
+   * [关于主题修改(theme)](#关于主题修改theme)
 * [mdbook插件推荐](#mdbook插件推荐)
    * [自动检查](#自动检查)
       * [MDBook Link-Check](#mdbook-link-check)
@@ -88,7 +89,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Jul 30 03:24:56 UTC 2022 -->
+<!-- Added by: runner, at: Wed Aug  3 13:19:47 UTC 2022 -->
 
 <!--te-->
 
