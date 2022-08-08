@@ -109,6 +109,15 @@
 
 [clashX](https://github.com/yichengchen/clashX)
 
+### Code: 代码导出图片化工具
+
+![CleanShot 2022-08-08 at 11.39.09@2x](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/CleanShot%202022-08-08%20at%2011.39.09%402x.png)
+
+- [App store](https://apps.apple.com/cn/app/codye)
+- [Codye App | Dario Roa](https://darioroa.com/codye/)
+
+![img](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/text-convert.png)
+
 ### Dash: 文档查阅工具
 
 [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
