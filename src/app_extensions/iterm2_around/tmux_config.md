@@ -1,13 +1,12 @@
 # tmux配置
 
 <!--ts-->
-
 * [tmux配置](#tmux配置)
-    * [OSX](#osx)
-    * [Linux(Simplified)](#linuxsimplified)
+   * [OSX](#osx)
+   * [Linux(Simplified)](#linuxsimplified)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Aug  8 03:45:22 UTC 2022 -->
+<!-- Added by: runner, at: Tue Aug  9 02:49:48 UTC 2022 -->
 
 <!--te-->
 
