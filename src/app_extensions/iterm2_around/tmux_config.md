@@ -1,14 +1,18 @@
 # tmux配置
+
 <!--ts-->
+
 * [tmux配置](#tmux配置)
-   * [OSX](#osx)
-   * [Linux(Simplified)](#linuxsimplified)
+    * [OSX](#osx)
+    * [Linux(Simplified)](#linuxsimplified)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Mon Aug  8 03:45:22 UTC 2022 -->
 
 <!--te-->
+
 ## OSX
+
 ```
 # 解绑前缀，改为和screen一样的
 unbind C-b
