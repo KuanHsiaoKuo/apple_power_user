@@ -2,7 +2,6 @@
 
 <!--ts-->
 * [iTerm2配置](#iterm2配置)
-   * [<a href="https://iterm2.com/documentation-status-bar.html" rel="nofollow">Status Bar</a>: 很多内容，值得管理](#status-bar-很多内容值得管理)
    * [下载并设置环境变量](#下载并设置环境变量)
    * [iterm2同步配置方式](#iterm2同步配置方式)
    * [同步范围](#同步范围)
@@ -17,7 +16,7 @@
       * [主要分为这几个部分：](#主要分为这几个部分)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Aug  9 02:49:48 UTC 2022 -->
+<!-- Added by: runner, at: Mon Aug 15 02:19:35 UTC 2022 -->
 
 <!--te-->
 

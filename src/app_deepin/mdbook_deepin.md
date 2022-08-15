@@ -36,14 +36,12 @@
       * [mdbook-suto-gen-summary](#mdbook-suto-gen-summary)
       * [mdbook-transcheck](#mdbook-transcheck)
       * [mdbook-man](#mdbook-man)
-      * [<del>mdbook-bookimport</del>: 使用标记块引入其他文件内容](#mdbook-bookimport-使用标记块引入其他文件内容)
       * [md2tex](#md2tex)
       * [mdbook-checklist](#mdbook-checklist)
       * [mdbook-chapter-path: 可以用来生成面包屑导航](#mdbook-chapter-path-可以用来生成面包屑导航)
       * [mdBook Tag](#mdbook-tag)
       * [mdbook toc: 自动生成toc](#mdbook-toc-自动生成toc)
       * [mdbook-footnote: 可以用于生成引用内容](#mdbook-footnote-可以用于生成引用内容)
-      * [<del>mdBook-template</del>: 不需要，直接修改主题](#mdbook-template-不需要直接修改主题)
       * [trpl-zh-cn-pdf](#trpl-zh-cn-pdf)
       * [mdbook-cms: 自动生成Summary](#mdbook-cms-自动生成summary)
       * [mdbook-open-on-gh: 添加打开github分支的功能](#mdbook-open-on-gh-添加打开github分支的功能)
@@ -89,7 +87,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Aug  9 02:49:46 UTC 2022 -->
+<!-- Added by: runner, at: Mon Aug 15 02:19:33 UTC 2022 -->
 
 <!--te-->
 

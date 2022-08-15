@@ -1,6 +1,5 @@
 # *MultiMarkdown* test document
 <!--ts-->
-* [<em>MultiMarkdown</em> test document](#multimarkdown-test-document)
       * [Line length](#line-length)
 * [Header 1](#header-1)
    * [Header 2](#header-2)
@@ -22,7 +21,7 @@
       * [Some non-standard but useful specialities](#some-non-standard-but-useful-specialities)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Tue Aug  9 02:49:48 UTC 2022 -->
+<!-- Added by: runner, at: Mon Aug 15 02:19:34 UTC 2022 -->
 
 <!--te-->
 As any *Markdown* user knows or should know, beside the [*CommonMark*](https://commonmark.org/) initiative and [specification](spec.commonmark.org), there’s nothing really “standard” with *Markdown* syntax, only “vastly agreed upon” practices. As long as you don’t stray too far away from this “common practice”, you shouldn’t run into issues. This document, unless explicitly mentioned, strives to stay within these limits.
