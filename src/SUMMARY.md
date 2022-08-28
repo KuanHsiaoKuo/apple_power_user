@@ -13,6 +13,7 @@
             - [toc脚本](app_extensions/drafts/table_of_contont.js)
         - [Karabiner Maestro](app_deepin/karabiner/karabiner.md)
             - [分层设置](app_deepin/karabiner/layers_config.md)
+        - [Goodnotes](app_deepin/goodnotes.md)
         - [Marginnote](app_deepin/marginnote_deepin.md)
         - [Mdbook](app_deepin/mdbook_deepin.md)
         - [PicGo](app_deepin/picGo_deepin.md)
