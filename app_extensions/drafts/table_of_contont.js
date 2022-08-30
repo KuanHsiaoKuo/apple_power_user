@@ -44,20 +44,21 @@ const addToc = content => {
         return
     }
 
-    let startMatch = content.match(/<!-- toc start -->/)
-    let endMatch = content.match(/<!-- toc end -->/)
+    // 为了和github上传自动添加toc的脚本一致
+    let startMatch = content.match(/<!--ts-->/)
+    let endMatch = content.match(/<!--te-->/)
     if (startMatch == null && endMatch == null) {
         const firstHeaderMatch = content.match(/^(#+)\s+(.*)$/m)
-        content = `${content.substring(0, firstHeaderMatch.index)}<!-- toc start --><!-- toc end -->\n\n${content.substring(firstHeaderMatch.index)}`
-        startMatch = content.match(/<!-- toc start -->/)
-        endMatch = content.match(/<!-- toc end -->/)
+        content = `${content.substring(0, firstHeaderMatch.index)}<!--ts--><!--te-->\n\n${content.substring(firstHeaderMatch.index)}`
+        startMatch = content.match(/<!--ts-->/)
+        endMatch = content.match(/<!--te-->/)
     }
     if (startMatch == null || endMatch == null) {
-        alert("You need both <!-- toc start --> and <!-- toc end --> in your draft to place a table of contents")
+        alert("You need both <!--ts--> and <!--te--> in your draft to place a table of contents")
         return
     }
     if (endMatch.index < startMatch.index) {
-        alert("<!-- toc start --> must come before <!-- toc end -->")
+        alert("<!--ts--> must come before <!--te-->")
         return
     }
     const startPos = startMatch.index + startMatch[0].length

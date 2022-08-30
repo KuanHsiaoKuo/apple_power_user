@@ -239,20 +239,21 @@ if (tocLines[0][0] != “*”) {
 alert(“The first header must be a h2 (##)”)
 return
 }</p>
-<pre><code>let startMatch = content.match(/&lt;!-- toc start --&gt;/)
-let endMatch = content.match(/&lt;!-- toc end --&gt;/)
+<pre><code>// 为了和github上传自动添加toc的脚本一致
+let startMatch = content.match(/&lt;!--ts--&gt;/)
+let endMatch = content.match(/&lt;!--te--&gt;/)
 if (startMatch == null &amp;&amp; endMatch == null) {
     const firstHeaderMatch = content.match(/^(#+)\s+(.*)$/m)
-    content = `${content.substring(0, firstHeaderMatch.index)}&lt;!-- toc start --&gt;&lt;!-- toc end --&gt;\n\n${content.substring(firstHeaderMatch.index)}`
-    startMatch = content.match(/&lt;!-- toc start --&gt;/)
-    endMatch = content.match(/&lt;!-- toc end --&gt;/)
+    content = `${content.substring(0, firstHeaderMatch.index)}&lt;!--ts--&gt;&lt;!--te--&gt;\n\n${content.substring(firstHeaderMatch.index)}`
+    startMatch = content.match(/&lt;!--ts--&gt;/)
+    endMatch = content.match(/&lt;!--te--&gt;/)
 }
 if (startMatch == null || endMatch == null) {
-    alert(&quot;You need both &lt;!-- toc start --&gt; and &lt;!-- toc end --&gt; in your draft to place a table of contents&quot;)
+    alert(&quot;You need both &lt;!--ts--&gt; and &lt;!--te--&gt; in your draft to place a table of contents&quot;)
     return
 }
 if (endMatch.index &lt; startMatch.index) {
-    alert(&quot;&lt;!-- toc start --&gt; must come before &lt;!-- toc end --&gt;&quot;)
+    alert(&quot;&lt;!--ts--&gt; must come before &lt;!--te--&gt;&quot;)
     return
 }
 const startPos = startMatch.index + startMatch[0].length
