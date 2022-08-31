@@ -1,0 +1,2224 @@
+1
+00:00:05,200 --> 00:00:08,720
+all right
+
+2
+00:00:05,599 --> 00:00:09,598
+i'm joe and this is sean hi and uh yeah
+
+3
+00:00:08,720 --> 00:00:12,639
+we're gonna walk through
+
+4
+00:00:09,599 --> 00:00:14,320
+how a block gets executed so we're gonna
+
+5
+00:00:12,638 --> 00:00:16,239
+work in this module that's just called
+
+6
+00:00:14,320 --> 00:00:17,440
+executive as part of frame
+
+7
+00:00:16,239 --> 00:00:19,598
+and sean maybe you want to give us an
+
+8
+00:00:17,440 --> 00:00:22,239
+idea of like how this fits into frame
+
+9
+00:00:19,600 --> 00:00:23,439
+yeah absolutely so um obviously in this
+
+10
+00:00:22,239 --> 00:00:24,799
+frame folder we have a bunch of
+
+11
+00:00:23,439 --> 00:00:27,039
+different palettes and some of the
+
+12
+00:00:24,800 --> 00:00:28,079
+supporting like libraries and modules
+
+13
+00:00:27,039 --> 00:00:31,598
+needed to get
+
+14
+00:00:28,079 --> 00:00:33,279
+a frame working um executive is
+
+15
+00:00:31,599 --> 00:00:34,960
+not like the other palettes in this
+
+16
+00:00:33,280 --> 00:00:36,639
+folder because it's not a palette it
+
+17
+00:00:34,960 --> 00:00:37,440
+does not have declare module declare
+
+18
+00:00:36,640 --> 00:00:39,360
+storage
+
+19
+00:00:37,439 --> 00:00:40,798
+anything like that it instead has a
+
+20
+00:00:39,359 --> 00:00:43,359
+bunch of logic which is
+
+21
+00:00:40,799 --> 00:00:43,999
+um wrapped around what we assume in
+
+22
+00:00:43,359 --> 00:00:45,919
+frame
+
+23
+00:00:44,000 --> 00:00:47,359
+to basically allow you to execute and
+
+24
+00:00:45,920 --> 00:00:48,480
+run through the block process so when
+
+25
+00:00:47,359 --> 00:00:48,877
+you're actually writing some of your
+
+26
+00:00:48,479 --> 00:00:51,439
+code
+
+27
+00:00:48,878 --> 00:00:52,398
+in your different palettes um you have
+
+28
+00:00:51,439 --> 00:00:54,318
+things like you know
+
+29
+00:00:52,399 --> 00:00:55,600
+functions which may which may um start
+
+30
+00:00:54,320 --> 00:00:57,280
+at the beginning of a block
+
+31
+00:00:55,600 --> 00:00:58,640
+the actual execution of all the
+
+32
+00:00:57,280 --> 00:00:59,120
+different palettes like the ordering of
+
+33
+00:00:58,640 --> 00:01:00,319
+them
+
+34
+00:00:59,119 --> 00:01:01,518
+um and then finally things that might
+
+35
+00:01:00,320 --> 00:01:02,960
+happen at the end of the block and the
+
+36
+00:01:01,520 --> 00:01:05,600
+executive
+
+37
+00:01:02,960 --> 00:01:06,239
+module basically handles um all of that
+
+38
+00:01:05,599 --> 00:01:07,998
+logic
+
+39
+00:01:06,239 --> 00:01:09,678
+yeah so like as a runtime engineer
+
+40
+00:01:08,000 --> 00:01:11,600
+you're probably not going to be working
+
+41
+00:01:09,680 --> 00:01:12,880
+in executive yeah but it's good to
+
+42
+00:01:11,599 --> 00:01:14,559
+understand what it does
+
+43
+00:01:12,879 --> 00:01:15,999
+so that you know some of the functions
+
+44
+00:01:14,560 --> 00:01:16,560
+that are available to you and then also
+
+45
+00:01:16,000 --> 00:01:18,798
+like
+
+46
+00:01:16,560 --> 00:01:19,919
+the context that your um that your
+
+47
+00:01:18,799 --> 00:01:20,960
+dispatchable functions are being
+
+48
+00:01:19,920 --> 00:01:22,400
+executed within
+
+49
+00:01:20,959 --> 00:01:23,757
+yeah and i think one thing to point out
+
+50
+00:01:22,400 --> 00:01:24,960
+is that you know again you're not going
+
+51
+00:01:23,759 --> 00:01:26,080
+to be touching this very much but
+
+52
+00:01:24,959 --> 00:01:27,117
+understanding how it works is very
+
+53
+00:01:26,079 --> 00:01:29,599
+important because
+
+54
+00:01:27,118 --> 00:01:30,959
+um there may be things you assume about
+
+55
+00:01:29,599 --> 00:01:33,999
+your run time for example
+
+56
+00:01:30,959 --> 00:01:35,999
+that one function is or one palette will
+
+57
+00:01:34,000 --> 00:01:37,600
+always run before another palette
+
+58
+00:01:36,000 --> 00:01:38,798
+the executive module actually has the
+
+59
+00:01:37,599 --> 00:01:40,478
+logic in there which determines the
+
+60
+00:01:38,799 --> 00:01:42,799
+ordering of these things
+
+61
+00:01:40,478 --> 00:01:44,319
+so um you know we even i think at one
+
+62
+00:01:42,799 --> 00:01:46,399
+point had an issue where
+
+63
+00:01:44,319 --> 00:01:47,758
+we reorganized the order of our palettes
+
+64
+00:01:46,399 --> 00:01:49,200
+by alphabetical order
+
+65
+00:01:47,759 --> 00:01:51,118
+but this actually um killed some
+
+66
+00:01:49,200 --> 00:01:52,639
+assumptions in our consensus
+
+67
+00:01:51,118 --> 00:01:53,998
+layers which basically assumed that you
+
+68
+00:01:52,640 --> 00:01:54,640
+know one process would happen after the
+
+69
+00:01:54,000 --> 00:01:56,560
+other and so
+
+70
+00:01:54,640 --> 00:01:58,240
+it's important to understand maybe why
+
+71
+00:01:56,560 --> 00:01:59,040
+these issues might occur and how you can
+
+72
+00:01:58,239 --> 00:02:02,397
+avoid them
+
+73
+00:01:59,040 --> 00:02:04,078
+yeah um so yeah let's just start out
+
+74
+00:02:02,399 --> 00:02:05,520
+with like the uninitialized and on
+
+75
+00:02:04,078 --> 00:02:09,118
+finalized functions
+
+76
+00:02:05,519 --> 00:02:10,958
+yeah so um yeah i guess uh
+
+77
+00:02:09,118 --> 00:02:12,558
+missy the best place to probably look at
+
+78
+00:02:10,959 --> 00:02:17,119
+that um
+
+79
+00:02:12,560 --> 00:02:17,119
+is in another is in another palette um
+
+80
+00:02:17,520 --> 00:02:21,439
+anything i think what if instead we just
+
+81
+00:02:19,360 --> 00:02:21,1000
+walk through like kind of just read from
+
+82
+00:02:21,439 --> 00:02:23,519
+top to bottom
+
+83
+00:02:22,000 --> 00:02:25,359
+to executive and then we can take a look
+
+84
+00:02:23,520 --> 00:02:26,640
+at maybe how that applies to a specific
+
+85
+00:02:25,360 --> 00:02:27,279
+palette yeah sure with the honest shows
+
+86
+00:02:26,639 --> 00:02:28,399
+yeah because
+
+87
+00:02:27,280 --> 00:02:30,719
+i mean the first thing that will happen
+
+88
+00:02:28,400 --> 00:02:32,080
+in terms of um any block being executed
+
+89
+00:02:30,719 --> 00:02:32,957
+is this on initialize but there's
+
+90
+00:02:32,080 --> 00:02:34,640
+some kind of steps that happen
+
+91
+00:02:32,959 --> 00:02:36,238
+beforehand the executive handles yeah
+
+92
+00:02:34,639 --> 00:02:36,639
+okay so let's i'll back up and like ask
+
+93
+00:02:36,239 --> 00:02:39,040
+a new
+
+94
+00:02:36,639 --> 00:02:39,998
+question all right so yeah let's get
+
+95
+00:02:39,039 --> 00:02:41,838
+started on like
+
+96
+00:02:40,000 --> 00:02:43,519
+first of all what is a block and then
+
+97
+00:02:41,840 --> 00:02:46,319
+what happens when this block gets
+
+98
+00:02:43,519 --> 00:02:48,400
+executed yeah so um i think blockchains
+
+99
+00:02:46,318 --> 00:02:50,718
+are actually quite simple objects to be
+
+100
+00:02:48,400 --> 00:02:52,159
+to be honest um uh they are composed of
+
+101
+00:02:50,719 --> 00:02:54,158
+these different blocks and these blocks
+
+102
+00:02:52,159 --> 00:02:55,759
+have like a set of transactions in them
+
+103
+00:02:54,159 --> 00:02:57,759
+and these transactions tell your
+
+104
+00:02:55,759 --> 00:02:59,279
+blockchain how the state should change
+
+105
+00:02:57,759 --> 00:03:00,799
+so these transactions may execute
+
+106
+00:02:59,280 --> 00:03:02,800
+different functions in your runtime
+
+107
+00:03:00,800 --> 00:03:03,1000
+may execute different behaviors and
+
+108
+00:03:02,800 --> 00:03:05,840
+ultimately all of these things
+
+109
+00:03:04,000 --> 00:03:08,000
+may change an underlying state of your
+
+110
+00:03:05,840 --> 00:03:09,679
+blockchain and if everyone follows these
+
+111
+00:03:08,000 --> 00:03:11,040
+rules they all get to the same state and
+
+112
+00:03:09,680 --> 00:03:11,999
+we have achieved you know some form of
+
+113
+00:03:11,039 --> 00:03:13,199
+consensus so we can go
+
+114
+00:03:12,000 --> 00:03:14,640
+we can go through consistent process to
+
+115
+00:03:13,199 --> 00:03:15,118
+agree that we all have the same state
+
+116
+00:03:14,639 --> 00:03:16,957
+right
+
+117
+00:03:15,120 --> 00:03:18,399
+so like a block in substrate you know
+
+118
+00:03:16,959 --> 00:03:19,839
+has a header with some fields in it and
+
+119
+00:03:18,400 --> 00:03:22,400
+then the actual body of the block
+
+120
+00:03:19,840 --> 00:03:23,360
+is just a vector of extrinsic state
+
+121
+00:03:22,400 --> 00:03:26,400
+changes
+
+122
+00:03:23,360 --> 00:03:28,238
+and so the executive module is going is
+
+123
+00:03:26,400 --> 00:03:30,560
+the logic of how we execute
+
+124
+00:03:28,239 --> 00:03:32,080
+each of these extrinsics exactly um so
+
+125
+00:03:30,560 --> 00:03:33,040
+yeah let's start walking through it yeah
+
+126
+00:03:32,080 --> 00:03:34,399
+so i think um
+
+127
+00:03:33,039 --> 00:03:35,358
+one of the easiest ways to walk through
+
+128
+00:03:34,400 --> 00:03:36,158
+executive modules just by reading it
+
+129
+00:03:35,360 --> 00:03:38,319
+from top to bottom
+
+130
+00:03:36,158 --> 00:03:39,517
+actually follows a pretty common flow um
+
+131
+00:03:38,318 --> 00:03:40,479
+and i think it's pretty understandable
+
+132
+00:03:39,519 --> 00:03:43,360
+and readable
+
+133
+00:03:40,479 --> 00:03:44,878
+um so let's see let's start with yeah so
+
+134
+00:03:43,360 --> 00:03:45,598
+of course we have an execute block
+
+135
+00:03:44,878 --> 00:03:47,758
+function
+
+136
+00:03:45,598 --> 00:03:49,279
+and this is going to start the whole
+
+137
+00:03:47,759 --> 00:03:50,558
+process of you know like what's actually
+
+138
+00:03:49,280 --> 00:03:52,559
+going to happen you see actually calls
+
+139
+00:03:50,560 --> 00:03:54,238
+into another execute block
+
+140
+00:03:52,560 --> 00:03:55,839
+um we can go here we can see something
+
+141
+00:03:54,239 --> 00:03:57,199
+like you know um at the very beginning
+
+142
+00:03:55,840 --> 00:03:58,560
+of a block we're going to initialize the
+
+143
+00:03:57,199 --> 00:03:59,919
+block we're going to have to
+
+144
+00:03:58,560 --> 00:04:02,399
+manipulate things like with the header
+
+145
+00:03:59,919 --> 00:04:03,919
+right um
+
+146
+00:04:02,400 --> 00:04:05,679
+we're going to do things with digest um
+
+147
+00:04:03,919 --> 00:04:07,039
+digest uh i don't know maybe you have a
+
+148
+00:04:05,680 --> 00:04:08,559
+better explanation but it's mostly from
+
+149
+00:04:07,039 --> 00:04:10,478
+my understanding used in the consensus
+
+150
+00:04:08,560 --> 00:04:12,159
+it's like a um
+
+151
+00:04:10,479 --> 00:04:13,679
+i don't know some i guess i want to use
+
+152
+00:04:12,158 --> 00:04:14,638
+the word digest in my explanation of
+
+153
+00:04:13,680 --> 00:04:17,119
+digest but
+
+154
+00:04:14,639 --> 00:04:19,039
+um basically it's some some package
+
+155
+00:04:17,120 --> 00:04:20,239
+information allowing you to um
+
+156
+00:04:19,040 --> 00:04:22,079
+uh work with the different consensus
+
+157
+00:04:20,238 --> 00:04:22,879
+algorithms is that yeah i
+
+158
+00:04:22,079 --> 00:04:24,639
+actually don't have a great
+
+159
+00:04:22,879 --> 00:04:26,079
+understanding of it myself but i think
+
+160
+00:04:24,639 --> 00:04:27,119
+it's like it has like the slot number
+
+161
+00:04:26,079 --> 00:04:29,279
+the block author
+
+162
+00:04:27,120 --> 00:04:31,360
+yeah all the stuff that's like proves
+
+163
+00:04:29,279 --> 00:04:32,319
+that this block author had the right to
+
+164
+00:04:31,360 --> 00:04:34,159
+make this block
+
+165
+00:04:32,319 --> 00:04:35,359
+yeah again as a runtime engineer i
+
+166
+00:04:34,160 --> 00:04:36,160
+actually i've never actually touched
+
+167
+00:04:35,360 --> 00:04:38,159
+this myself
+
+168
+00:04:36,160 --> 00:04:39,599
+um maybe getting a consensus expert on
+
+169
+00:04:38,160 --> 00:04:40,240
+the show would be a great way to talk
+
+170
+00:04:39,600 --> 00:04:41,999
+about it but
+
+171
+00:04:40,240 --> 00:04:43,918
+um in my mind i think about it as these
+
+172
+00:04:42,000 --> 00:04:44,799
+are the things needed um in a block to
+
+173
+00:04:43,918 --> 00:04:46,719
+be able to
+
+174
+00:04:44,800 --> 00:04:48,960
+get to consensus about um what blocks
+
+175
+00:04:46,720 --> 00:04:50,559
+are valid um
+
+176
+00:04:48,959 --> 00:04:52,079
+okay we have the initialize block
+
+177
+00:04:50,560 --> 00:04:53,040
+implementation okay so this is the first
+
+178
+00:04:52,079 --> 00:04:54,398
+time we're gonna be seeing something to
+
+179
+00:04:53,040 --> 00:04:55,120
+be familiar if you're a runtime
+
+180
+00:04:54,399 --> 00:04:56,559
+developer
+
+181
+00:04:55,120 --> 00:04:58,240
+so if you're a runtime developer and
+
+182
+00:04:56,560 --> 00:04:59,520
+you're building a palette
+
+183
+00:04:58,240 --> 00:05:01,280
+one of the tools you have available to
+
+184
+00:04:59,519 --> 00:05:02,559
+you is this on initialize function
+
+185
+00:05:01,279 --> 00:05:04,638
+and the initialize function basically
+
+186
+00:05:02,560 --> 00:05:06,638
+allows you to run and execute some logic
+
+187
+00:05:04,639 --> 00:05:07,759
+at the beginning of every block so
+
+188
+00:05:06,639 --> 00:05:09,519
+this can be really useful for a number
+
+189
+00:05:07,759 --> 00:05:11,279
+of situations one i can think of top my
+
+190
+00:05:09,519 --> 00:05:12,079
+head is a storage migration so let's say
+
+191
+00:05:11,279 --> 00:05:13,678
+that you
+
+192
+00:05:12,079 --> 00:05:14,958
+introduce some new storage items or you
+
+193
+00:05:13,680 --> 00:05:15,840
+have some kind of change in your logic
+
+194
+00:05:14,959 --> 00:05:18,079
+which needs to
+
+195
+00:05:15,839 --> 00:05:19,118
+um assume this the storage is in a
+
+196
+00:05:18,079 --> 00:05:20,878
+different state you could actually
+
+197
+00:05:19,120 --> 00:05:22,959
+create an uninitialized function
+
+198
+00:05:20,879 --> 00:05:24,798
+so that the um right after your runtime
+
+199
+00:05:22,959 --> 00:05:26,079
+upgrade occurs we will actually go and
+
+200
+00:05:24,800 --> 00:05:26,880
+migrate some of the storage from
+
+201
+00:05:26,079 --> 00:05:29,438
+happening
+
+202
+00:05:26,879 --> 00:05:30,879
+or from one state to another state um
+
+203
+00:05:29,439 --> 00:05:32,318
+another situation you might be using on
+
+204
+00:05:30,879 --> 00:05:33,599
+initialize is just basically to do
+
+205
+00:05:32,319 --> 00:05:34,159
+anything at the beginning of a block
+
+206
+00:05:33,600 --> 00:05:35,120
+right like
+
+207
+00:05:34,160 --> 00:05:37,280
+there might be some kind of like
+
+208
+00:05:35,120 --> 00:05:38,879
+automatic timers like every five blocks
+
+209
+00:05:37,279 --> 00:05:40,477
+do this or you know in all of our
+
+210
+00:05:38,879 --> 00:05:41,599
+consensus stuff and staking we have like
+
+211
+00:05:40,478 --> 00:05:42,799
+in the session changes
+
+212
+00:05:41,600 --> 00:05:44,879
+and these other kind of things which
+
+213
+00:05:42,800 --> 00:05:46,639
+happen um on these cycles and so
+
+214
+00:05:44,879 --> 00:05:48,478
+um unlike the normal smart contract
+
+215
+00:05:46,639 --> 00:05:51,039
+world where basically all
+
+216
+00:05:48,478 --> 00:05:52,239
+um changes to your state must be
+
+217
+00:05:51,038 --> 00:05:53,758
+executed by a transaction
+
+218
+00:05:52,240 --> 00:05:55,519
+here we can have our blockchain
+
+219
+00:05:53,759 --> 00:05:57,440
+automatically execute some logic
+
+220
+00:05:55,519 --> 00:05:58,878
+on some kind of block based time cycle
+
+221
+00:05:57,439 --> 00:05:59,757
+yeah so you could put like a check that
+
+222
+00:05:58,879 --> 00:06:03,279
+says you know if
+
+223
+00:05:59,759 --> 00:06:04,880
+block number mod 1000 equals zero then
+
+224
+00:06:03,279 --> 00:06:06,399
+go do something else like every thousand
+
+225
+00:06:04,879 --> 00:06:06,959
+blocks you just want to go run some
+
+226
+00:06:06,399 --> 00:06:08,318
+process
+
+227
+00:06:06,959 --> 00:06:10,159
+exactly and so that's all controlled by
+
+228
+00:06:08,319 --> 00:06:12,719
+this on initialize and so
+
+229
+00:06:10,160 --> 00:06:14,160
+um you'll see that when you write um a
+
+230
+00:06:12,720 --> 00:06:16,319
+palette you'll can define an
+
+231
+00:06:14,160 --> 00:06:16,880
+uninitialized function and describe some
+
+232
+00:06:16,319 --> 00:06:18,079
+logic
+
+233
+00:06:16,879 --> 00:06:19,918
+and this line actually is doing some
+
+234
+00:06:18,079 --> 00:06:21,438
+clever stuff to be able to call all of
+
+235
+00:06:19,918 --> 00:06:22,317
+different uninitialized functions
+
+236
+00:06:21,439 --> 00:06:24,159
+and so if you actually take a look at
+
+237
+00:06:22,319 --> 00:06:26,319
+the syntax here it's a little bit funny
+
+238
+00:06:24,160 --> 00:06:28,240
+um but it says this is all modules as
+
+239
+00:06:26,319 --> 00:06:30,319
+uninitialized on initialize
+
+240
+00:06:28,240 --> 00:06:31,840
+and this all modules object here is
+
+241
+00:06:30,319 --> 00:06:32,719
+actually something that's generated for
+
+242
+00:06:31,839 --> 00:06:34,637
+you automatically
+
+243
+00:06:32,720 --> 00:06:36,400
+by the construct runtime macro so this
+
+244
+00:06:34,639 --> 00:06:37,519
+is where you list all the modules maybe
+
+245
+00:06:36,399 --> 00:06:39,599
+i can just jump to it real quick
+
+246
+00:06:37,519 --> 00:06:41,038
+just pull it up so people see it yeah um
+
+247
+00:06:39,600 --> 00:06:42,399
+but uh
+
+248
+00:06:41,038 --> 00:06:44,078
+what it does is basically it just has a
+
+249
+00:06:42,399 --> 00:06:45,678
+it's a it's a tuple of
+
+250
+00:06:44,079 --> 00:06:47,358
+all the different modules in your system
+
+251
+00:06:45,680 --> 00:06:51,840
+so if i go here and i do
+
+252
+00:06:47,360 --> 00:06:54,159
+search for a construct
+
+253
+00:06:51,839 --> 00:06:55,037
+run and i search go down yeah you'll see
+
+254
+00:06:54,160 --> 00:06:57,519
+here that
+
+255
+00:06:55,038 --> 00:06:59,278
+this macro has a list of all of the
+
+256
+00:06:57,519 --> 00:07:02,477
+different palettes that are included
+
+257
+00:06:59,279 --> 00:07:03,998
+in your runtime and basically um
+
+258
+00:07:02,478 --> 00:07:05,757
+it will also generate a bunch of other
+
+259
+00:07:04,000 --> 00:07:06,318
+objects to make things nice and easy to
+
+260
+00:07:05,759 --> 00:07:09,999
+work with
+
+261
+00:07:06,319 --> 00:07:11,918
+one of them is this all modules tuple
+
+262
+00:07:10,000 --> 00:07:13,919
+which basically lists all of the modules
+
+263
+00:07:11,918 --> 00:07:17,278
+and it will create that tuple
+
+264
+00:07:13,918 --> 00:07:18,879
+in order of these um of the list here so
+
+265
+00:07:17,279 --> 00:07:21,118
+if i have a different order of these
+
+266
+00:07:18,879 --> 00:07:22,318
+um these uh palettes it will actually
+
+267
+00:07:21,120 --> 00:07:23,840
+change the order of the tuple
+
+268
+00:07:22,319 --> 00:07:25,039
+and then when you go to the executive
+
+269
+00:07:23,839 --> 00:07:26,158
+and it's and it's calling this on
+
+270
+00:07:25,038 --> 00:07:29,119
+initialize it's actually
+
+271
+00:07:26,160 --> 00:07:30,318
+calling this function for each of the
+
+272
+00:07:29,120 --> 00:07:32,240
+different palettes
+
+273
+00:07:30,319 --> 00:07:33,1000
+in this tuple in order yeah so it's
+
+274
+00:07:32,240 --> 00:07:35,199
+going to grab this all modules tuple and
+
+275
+00:07:34,000 --> 00:07:36,960
+go through and then check
+
+276
+00:07:35,199 --> 00:07:37,1000
+does this have an uninitialized function
+
+277
+00:07:36,959 --> 00:07:38,638
+and if it does then it's going to
+
+278
+00:07:38,000 --> 00:07:40,560
+execute it
+
+279
+00:07:38,639 --> 00:07:41,759
+exactly and so when i was mentioning
+
+280
+00:07:40,560 --> 00:07:43,439
+earlier before about you know like
+
+281
+00:07:41,759 --> 00:07:45,038
+the ordering matters you know here if
+
+282
+00:07:43,439 --> 00:07:46,878
+you assume okay well this function must
+
+283
+00:07:45,038 --> 00:07:49,597
+be initialized before this function runs
+
+284
+00:07:46,879 --> 00:07:50,080
+you need to make sure that in your um uh
+
+285
+00:07:49,598 --> 00:07:51,598
+in your
+
+286
+00:07:50,079 --> 00:07:53,838
+uh construct run time that you have the
+
+287
+00:07:51,598 --> 00:07:55,359
+correct ordering right yeah so
+
+288
+00:07:53,839 --> 00:07:56,799
+initialize so this is the magic where
+
+289
+00:07:55,360 --> 00:07:58,319
+you know at the beginning of block on
+
+290
+00:07:56,800 --> 00:08:01,679
+initialize happens
+
+291
+00:07:58,319 --> 00:08:03,918
+um register extra weight unchecked
+
+292
+00:08:01,680 --> 00:08:06,080
+i actually don't know what this does um
+
+293
+00:08:03,918 --> 00:08:08,398
+but it seems oh it seems to
+
+294
+00:08:06,079 --> 00:08:10,079
+weigh oh maybe this is okay this is
+
+295
+00:08:08,399 --> 00:08:11,278
+probably this is actually new code
+
+296
+00:08:10,079 --> 00:08:12,638
+relatively speaking that i've seen but
+
+297
+00:08:11,279 --> 00:08:14,477
+it seems to me from what i'm reading
+
+298
+00:08:12,639 --> 00:08:14,879
+here that it may be telling us the
+
+299
+00:08:14,478 --> 00:08:17,198
+weight
+
+300
+00:08:14,879 --> 00:08:18,879
+of the uninitialized function so here um
+
+301
+00:08:17,199 --> 00:08:20,478
+you know whenever we do a transaction we
+
+302
+00:08:18,879 --> 00:08:22,318
+want to um make sure that the right fees
+
+303
+00:08:20,478 --> 00:08:24,317
+are being paid and also that our
+
+304
+00:08:22,319 --> 00:08:25,520
+our block can handle all of the weight
+
+305
+00:08:24,319 --> 00:08:27,198
+of the different transactions
+
+306
+00:08:25,519 --> 00:08:28,559
+yeah so this is like it's weighing all
+
+307
+00:08:27,199 --> 00:08:29,598
+the uninitialized and then you can see
+
+308
+00:08:28,560 --> 00:08:31,680
+right after it's
+
+309
+00:08:29,598 --> 00:08:32,638
+weighing on finalized so that it knows
+
+310
+00:08:31,680 --> 00:08:34,079
+how many more
+
+311
+00:08:32,639 --> 00:08:35,277
+functions it can put into this block
+
+312
+00:08:34,080 --> 00:08:36,479
+exactly so this is yeah this is actually
+
+313
+00:08:35,278 --> 00:08:37,597
+relatively new code to me but um this
+
+314
+00:08:36,479 --> 00:08:39,039
+makes a lot of sense right basically we
+
+315
+00:08:37,599 --> 00:08:41,440
+want to make sure that whatever
+
+316
+00:08:39,038 --> 00:08:42,957
+um pallets we're including that for that
+
+317
+00:08:41,440 --> 00:08:44,560
+block that it can handle
+
+318
+00:08:42,958 --> 00:08:46,478
+um all the uninitialized and all files
+
+319
+00:08:44,559 --> 00:08:47,679
+all the automatic logic before we
+
+320
+00:08:46,480 --> 00:08:48,240
+actually start doing transaction stuff
+
+321
+00:08:47,679 --> 00:08:49,759
+yeah sure
+
+322
+00:08:48,240 --> 00:08:51,599
+that's so this is perfect it makes sense
+
+323
+00:08:49,759 --> 00:08:53,999
+and um to have it here
+
+324
+00:08:51,600 --> 00:08:55,200
+okay so then we have some initial checks
+
+325
+00:08:54,000 --> 00:08:56,319
+um initial checks are checking things
+
+326
+00:08:55,200 --> 00:08:57,760
+like the extrinsic route so like you
+
+327
+00:08:56,320 --> 00:09:00,560
+know is that um is the
+
+328
+00:08:57,759 --> 00:09:02,318
+the block where um the the parent block
+
+329
+00:09:00,559 --> 00:09:03,119
+match the extrinsic group that we have
+
+330
+00:09:02,320 --> 00:09:05,920
+in our um
+
+331
+00:09:03,120 --> 00:09:07,679
+system right we're checking these things
+
+332
+00:09:05,919 --> 00:09:09,278
+are equal the tree must be valid that
+
+333
+00:09:07,679 --> 00:09:09,998
+all makes sense right basic consensus
+
+334
+00:09:09,278 --> 00:09:11,439
+things
+
+335
+00:09:10,000 --> 00:09:14,240
+and then we actually go and execute the
+
+336
+00:09:11,440 --> 00:09:15,518
+block okay so when we execute the block
+
+337
+00:09:14,240 --> 00:09:16,480
+of course we do the initialize block
+
+338
+00:09:15,519 --> 00:09:17,680
+that's what we kind of showed up here
+
+339
+00:09:16,480 --> 00:09:20,560
+with this um
+
+340
+00:09:17,679 --> 00:09:21,038
+this code then we also do any initial
+
+341
+00:09:20,559 --> 00:09:23,039
+checks
+
+342
+00:09:21,039 --> 00:09:24,559
+um i think initial checks should i think
+
+343
+00:09:23,039 --> 00:09:26,478
+we already passed it oh yeah okay so
+
+344
+00:09:24,559 --> 00:09:28,559
+this is the initial checks here exactly
+
+345
+00:09:26,480 --> 00:09:29,519
+um and then finally we actually execute
+
+346
+00:09:28,559 --> 00:09:31,358
+the extrinsics
+
+347
+00:09:29,519 --> 00:09:32,720
+with bookkeeping so here we're actually
+
+348
+00:09:31,360 --> 00:09:34,320
+going through um the individual
+
+349
+00:09:32,720 --> 00:09:35,920
+extrinsics this vector
+
+350
+00:09:34,320 --> 00:09:37,518
+and we're actually going to execute each
+
+351
+00:09:35,919 --> 00:09:38,879
+one of them yeah and you can see like
+
+352
+00:09:37,519 --> 00:09:41,919
+the line just before that
+
+353
+00:09:38,879 --> 00:09:42,238
+um this block.deconstruct function you
+
+354
+00:09:41,919 --> 00:09:43,358
+have
+
+355
+00:09:42,240 --> 00:09:45,279
+just like we said before you have a
+
+356
+00:09:43,360 --> 00:09:48,320
+header and then extrinsics and this
+
+357
+00:09:45,278 --> 00:09:49,518
+extrinsics it's just a vector so um you
+
+358
+00:09:48,320 --> 00:09:50,880
+have a vac and then a bunch of
+
+359
+00:09:49,519 --> 00:09:52,240
+extrinsics in it and it's just going to
+
+360
+00:09:50,879 --> 00:09:54,479
+go through and execute these
+
+361
+00:09:52,240 --> 00:09:55,440
+one by one exactly and so yeah so we see
+
+362
+00:09:54,480 --> 00:09:57,759
+we iterate through them
+
+363
+00:09:55,440 --> 00:09:59,839
+for each of them we apply the extrinsic
+
+364
+00:09:57,759 --> 00:10:01,598
+um with no note
+
+365
+00:09:59,839 --> 00:10:02,600
+um yeah and you can see here this this
+
+366
+00:10:01,600 --> 00:10:03,919
+is the i'm going to jump down to the pi
+
+367
+00:10:02,600 --> 00:10:05,680
+extrinsic
+
+368
+00:10:03,919 --> 00:10:07,198
+and you can see here that it basically
+
+369
+00:10:05,679 --> 00:10:08,879
+um yeah i mean
+
+370
+00:10:07,200 --> 00:10:10,559
+in short terms it actually runs the
+
+371
+00:10:08,879 --> 00:10:11,439
+extrinsic and will return to us whether
+
+372
+00:10:10,559 --> 00:10:14,478
+or not it had some
+
+373
+00:10:11,440 --> 00:10:18,159
+we returned okay or had error
+
+374
+00:10:14,480 --> 00:10:18,880
+um and then of course uh let's see what
+
+375
+00:10:18,159 --> 00:10:21,438
+we got here
+
+376
+00:10:18,879 --> 00:10:24,159
+um we do any final checks and so final
+
+377
+00:10:21,440 --> 00:10:27,440
+checks is kind of where we expect to see
+
+378
+00:10:24,159 --> 00:10:28,159
+um our final thing i think this
+
+379
+00:10:27,440 --> 00:10:29,440
+execution
+
+380
+00:10:28,159 --> 00:10:31,199
+actually should be touching this
+
+381
+00:10:29,440 --> 00:10:33,120
+finalized block logic so let me actually
+
+382
+00:10:31,200 --> 00:10:35,119
+walk through it
+
+383
+00:10:33,120 --> 00:10:36,479
+where is this finalized block happening
+
+384
+00:10:35,120 --> 00:10:39,200
+maybe one second it might be called
+
+385
+00:10:36,480 --> 00:10:39,200
+outside of this
+
+386
+00:10:39,679 --> 00:10:42,719
+oh yeah it might be cold outside of this
+
+387
+00:10:40,879 --> 00:10:43,838
+that's interesting okay
+
+388
+00:10:42,720 --> 00:10:45,680
+this this might have changed a little
+
+389
+00:10:43,839 --> 00:10:45,1000
+bit since i last seen it but i i guess
+
+390
+00:10:45,679 --> 00:10:47,679
+at some
+
+391
+00:10:46,000 --> 00:10:49,040
+i would assume that after the execute
+
+392
+00:10:47,679 --> 00:10:51,679
+extrinsics with bookkeeping
+
+393
+00:10:49,039 --> 00:10:52,559
+um this is where the on finalized logic
+
+394
+00:10:51,679 --> 00:10:54,478
+will actually run
+
+395
+00:10:52,559 --> 00:10:56,239
+yeah so this is just like uninitialized
+
+396
+00:10:54,480 --> 00:10:57,600
+except kind of the other end
+
+397
+00:10:56,240 --> 00:10:59,119
+yeah at the end of the block and you can
+
+398
+00:10:57,600 --> 00:11:00,240
+see here yeah it's just exactly that
+
+399
+00:10:59,120 --> 00:11:03,120
+thing so one thing to
+
+400
+00:11:00,240 --> 00:11:04,799
+take note of here is that um we have
+
+401
+00:11:03,120 --> 00:11:06,640
+this all modules tuple
+
+402
+00:11:04,799 --> 00:11:07,838
+which is calling the on finalize and we
+
+403
+00:11:06,639 --> 00:11:09,599
+even had that up here
+
+404
+00:11:07,839 --> 00:11:11,600
+with the on initialize right but you can
+
+405
+00:11:09,600 --> 00:11:14,720
+see here the system module actually
+
+406
+00:11:11,600 --> 00:11:15,200
+has um custom code written into it right
+
+407
+00:11:14,720 --> 00:11:18,079
+so like
+
+408
+00:11:15,200 --> 00:11:19,518
+here um we have some custom code we
+
+409
+00:11:18,078 --> 00:11:21,038
+expect from the system module like the
+
+410
+00:11:19,519 --> 00:11:23,278
+note finished extrinsic
+
+411
+00:11:21,039 --> 00:11:24,719
+um which is being called directly in
+
+412
+00:11:23,278 --> 00:11:26,879
+system module so it's not part of this
+
+413
+00:11:24,720 --> 00:11:30,160
+normal like queue like all the other
+
+414
+00:11:26,879 --> 00:11:31,278
+palettes and so this is kind of why uh
+
+415
+00:11:30,159 --> 00:11:33,038
+system is different than the other
+
+416
+00:11:31,278 --> 00:11:34,718
+palettes it's a it's a frame it's a part
+
+417
+00:11:33,039 --> 00:11:35,599
+of the framework and it's assumed in our
+
+418
+00:11:34,720 --> 00:11:37,440
+executive that
+
+419
+00:11:35,600 --> 00:11:39,278
+um our system is implemented a certain
+
+420
+00:11:37,440 --> 00:11:40,959
+way versus all the other palettes gonna
+
+421
+00:11:39,278 --> 00:11:41,518
+have this more generic api which can
+
+422
+00:11:40,958 --> 00:11:43,277
+kind of get
+
+423
+00:11:41,519 --> 00:11:44,800
+pulled into this hook right that makes
+
+424
+00:11:43,278 --> 00:11:48,398
+sense yeah
+
+425
+00:11:44,799 --> 00:11:50,718
+um yeah and so uh
+
+426
+00:11:48,399 --> 00:11:51,1000
+after we do the on finalize stuff um we
+
+427
+00:11:50,720 --> 00:11:53,119
+do any final checks i think the final
+
+428
+00:11:52,000 --> 00:11:54,720
+checks are basically making sure like
+
+429
+00:11:53,120 --> 00:11:57,519
+okay does um the final
+
+430
+00:11:54,720 --> 00:11:59,040
+uh uh out the state of our blockchain
+
+431
+00:11:57,519 --> 00:11:59,999
+after executing extrinsic match
+
+432
+00:11:59,039 --> 00:12:01,759
+you know all the things that we would
+
+433
+00:12:00,000 --> 00:12:03,200
+expect would it come to consensus if we
+
+434
+00:12:01,759 --> 00:12:05,759
+were to share this thing around
+
+435
+00:12:03,200 --> 00:12:07,680
+um and yeah it's really it's really not
+
+436
+00:12:05,759 --> 00:12:09,038
+that uh that not complicated overall i
+
+437
+00:12:07,679 --> 00:12:10,239
+think um you'd have to jump around a
+
+438
+00:12:09,039 --> 00:12:11,438
+little bit in this code but if you walk
+
+439
+00:12:10,240 --> 00:12:12,958
+that path you know we're really just
+
+440
+00:12:11,440 --> 00:12:15,040
+initializing the block
+
+441
+00:12:12,958 --> 00:12:16,878
+executing the block finalizing the block
+
+442
+00:12:15,039 --> 00:12:18,318
+yeah and one thing like to be careful
+
+443
+00:12:16,879 --> 00:12:20,077
+with here is this um
+
+444
+00:12:18,320 --> 00:12:21,679
+this naming finalized we don't mean
+
+445
+00:12:20,078 --> 00:12:22,719
+consensus finalized like it's in the
+
+446
+00:12:21,679 --> 00:12:25,359
+final chain
+
+447
+00:12:22,720 --> 00:12:25,999
+um in this context final like on
+
+448
+00:12:25,360 --> 00:12:27,679
+finalize
+
+449
+00:12:26,000 --> 00:12:29,600
+this just means at the end of the block
+
+450
+00:12:27,679 --> 00:12:31,118
+yeah exactly this is finalizing the
+
+451
+00:12:29,600 --> 00:12:33,278
+block construction
+
+452
+00:12:31,120 --> 00:12:34,959
+um but not actually finality in the
+
+453
+00:12:33,278 --> 00:12:35,439
+sense of like it's in the canonical
+
+454
+00:12:34,958 --> 00:12:37,679
+chain
+
+455
+00:12:35,440 --> 00:12:38,638
+yeah um yeah that's all right maybe we
+
+456
+00:12:37,679 --> 00:12:40,957
+can think of a better name
+
+457
+00:12:38,639 --> 00:12:42,320
+um so i think another thing to note here
+
+458
+00:12:40,958 --> 00:12:42,799
+is you know let's say that you wanted to
+
+459
+00:12:42,320 --> 00:12:45,040
+go
+
+460
+00:12:42,799 --> 00:12:46,479
+really deep into substrate so um of
+
+461
+00:12:45,039 --> 00:12:47,837
+course we make frame the easiest
+
+462
+00:12:46,480 --> 00:12:49,440
+platform to build new
+
+463
+00:12:47,839 --> 00:12:51,200
+uh runtimes with you know in these
+
+464
+00:12:49,440 --> 00:12:51,1000
+different palettes but you know it is
+
+465
+00:12:51,200 --> 00:12:53,920
+possible to go
+
+466
+00:12:52,000 --> 00:12:55,759
+and touch and modify these this level of
+
+467
+00:12:53,919 --> 00:12:56,559
+code if you want to kind of diverge from
+
+468
+00:12:55,759 --> 00:12:58,319
+our framework
+
+469
+00:12:56,559 --> 00:12:59,679
+and i think you can see here how
+
+470
+00:12:58,320 --> 00:13:01,759
+powerful um
+
+471
+00:12:59,679 --> 00:13:03,118
+or how easy it would be to add
+
+472
+00:13:01,759 --> 00:13:05,598
+additional logic or
+
+473
+00:13:03,120 --> 00:13:06,800
+um you know code to the block
+
+474
+00:13:05,600 --> 00:13:07,680
+construction process so i'll tell you
+
+475
+00:13:06,799 --> 00:13:09,838
+for a while
+
+476
+00:13:07,679 --> 00:13:11,118
+we actually didn't have on initialize or
+
+477
+00:13:09,839 --> 00:13:13,600
+on finalize as part of
+
+478
+00:13:11,120 --> 00:13:15,519
+um frame and it's kind of through our
+
+479
+00:13:13,600 --> 00:13:17,200
+own necessity we added these things in
+
+480
+00:13:15,519 --> 00:13:19,600
+but you can see it's very simple to add
+
+481
+00:13:17,200 --> 00:13:20,079
+it in if you break down the block charge
+
+482
+00:13:19,600 --> 00:13:21,440
+process
+
+483
+00:13:20,078 --> 00:13:23,598
+to something simple like this something
+
+484
+00:13:21,440 --> 00:13:24,799
+that has very clear steps so
+
+485
+00:13:23,600 --> 00:13:26,320
+it's possible that you know if you think
+
+486
+00:13:24,799 --> 00:13:28,077
+of a good scenario maybe you want to
+
+487
+00:13:26,320 --> 00:13:29,599
+make a pr to substrate and introduce
+
+488
+00:13:28,078 --> 00:13:30,957
+other pieces of logic throughout the
+
+489
+00:13:29,600 --> 00:13:32,800
+different block construction processes
+
+490
+00:13:30,958 --> 00:13:34,078
+yeah and like one example that's not in
+
+491
+00:13:32,799 --> 00:13:35,919
+the executive module book
+
+492
+00:13:34,078 --> 00:13:37,679
+uh we have off chain workers right and
+
+493
+00:13:35,919 --> 00:13:38,077
+so like this is another thing that just
+
+494
+00:13:37,679 --> 00:13:39,998
+gets
+
+495
+00:13:38,078 --> 00:13:41,359
+called at the end of a block yeah so
+
+496
+00:13:40,000 --> 00:13:43,040
+maybe we can find that here off chain
+
+497
+00:13:41,360 --> 00:13:44,159
+worker yep so here's a
+
+498
+00:13:43,039 --> 00:13:45,599
+off-chain worker thing so this was
+
+499
+00:13:44,159 --> 00:13:47,119
+something that was again uses the same
+
+500
+00:13:45,600 --> 00:13:48,560
+kind of pattern that's all modules we
+
+501
+00:13:47,120 --> 00:13:49,999
+can assume that all of them
+
+502
+00:13:48,559 --> 00:13:51,918
+could have an off-chain workers logic
+
+503
+00:13:50,000 --> 00:13:53,439
+and we just run it right and then if we
+
+504
+00:13:51,919 --> 00:13:57,278
+actually go take a look
+
+505
+00:13:53,440 --> 00:13:57,279
+at maybe where this is actually run
+
+506
+00:13:57,440 --> 00:14:02,239
+i think i guess it also runs in a
+
+507
+00:13:58,799 --> 00:14:03,837
+different file here this is i think it's
+
+508
+00:14:02,240 --> 00:14:05,518
+run at the beginning of a block because
+
+509
+00:14:03,839 --> 00:14:08,638
+it gets called into this
+
+510
+00:14:05,519 --> 00:14:11,839
+yeah but it's not in this uh in this
+
+511
+00:14:08,639 --> 00:14:12,639
+in this file either way i guess the main
+
+512
+00:14:11,839 --> 00:14:13,839
+point is that you know
+
+513
+00:14:12,639 --> 00:14:16,078
+introduces like this was something that
+
+514
+00:14:13,839 --> 00:14:17,600
+happened very recently and
+
+515
+00:14:16,078 --> 00:14:19,517
+uh it's something that was possible
+
+516
+00:14:17,600 --> 00:14:22,159
+again because we have this really
+
+517
+00:14:19,519 --> 00:14:23,519
+clear and modular um platform for
+
+518
+00:14:22,159 --> 00:14:24,799
+basically just you know breaking down
+
+519
+00:14:23,519 --> 00:14:26,559
+all the steps of the blockchain and
+
+520
+00:14:24,799 --> 00:14:27,039
+these are the kinds of benefits you get
+
+521
+00:14:26,559 --> 00:14:28,638
+when
+
+522
+00:14:27,039 --> 00:14:30,318
+instead of building one specific
+
+523
+00:14:28,639 --> 00:14:31,839
+implementation of a blockchain you kind
+
+524
+00:14:30,320 --> 00:14:33,518
+of say okay with substrate we're trying
+
+525
+00:14:31,839 --> 00:14:34,638
+to build a generic framework for
+
+526
+00:14:33,519 --> 00:14:36,320
+building blockchains right
+
+527
+00:14:34,639 --> 00:14:38,240
+and we look at every layer and we try to
+
+528
+00:14:36,320 --> 00:14:39,440
+keep it as generic and as module and
+
+529
+00:14:38,240 --> 00:14:40,559
+extensible as possible
+
+530
+00:14:39,440 --> 00:14:42,638
+and these are the kind of benefits you
+
+531
+00:14:40,559 --> 00:14:44,078
+get when you do that so all of the crazy
+
+532
+00:14:42,639 --> 00:14:44,719
+engineering and substrate really comes
+
+533
+00:14:44,078 --> 00:14:47,517
+down to
+
+534
+00:14:44,720 --> 00:14:48,398
+making it simple and easy to extend and
+
+535
+00:14:47,519 --> 00:14:51,360
+modify
+
+536
+00:14:48,399 --> 00:14:52,559
+um the framework yeah um so to wrap up
+
+537
+00:14:51,360 --> 00:14:54,480
+what would you say are like the key
+
+538
+00:14:52,559 --> 00:14:56,318
+points for a runtime engineer here
+
+539
+00:14:54,480 --> 00:14:57,519
+yeah so one um you know you really
+
+540
+00:14:56,320 --> 00:14:58,239
+ideally shouldn't need to touch
+
+541
+00:14:57,519 --> 00:15:00,240
+executive
+
+542
+00:14:58,240 --> 00:15:01,839
+um you should understand how it works
+
+543
+00:15:00,240 --> 00:15:04,560
+you should know that um when you write
+
+544
+00:15:01,839 --> 00:15:05,999
+different um palettes that um what you
+
+545
+00:15:04,559 --> 00:15:07,599
+write in there hooks into executive
+
+546
+00:15:06,000 --> 00:15:09,040
+whether it's on initialize on finalize
+
+547
+00:15:07,600 --> 00:15:10,398
+or even the ordering of the palettes in
+
+548
+00:15:09,039 --> 00:15:12,398
+your construct runtime
+
+549
+00:15:10,399 --> 00:15:13,1000
+um and basically yeah i mean just take
+
+550
+00:15:12,399 --> 00:15:15,198
+advantage of the fact that um
+
+551
+00:15:14,000 --> 00:15:17,359
+you know we kind of do a bunch of
+
+552
+00:15:15,198 --> 00:15:19,759
+automatic stuff the cueing stuff for you
+
+553
+00:15:17,360 --> 00:15:21,680
+and use that to basically make um
+
+554
+00:15:19,759 --> 00:15:22,638
+whatever logic is right for you in your
+
+555
+00:15:21,679 --> 00:15:27,837
+different palettes
+
+556
+00:15:22,639 --> 00:15:27,839
+great thanks sean yeah thanks
+

@@ -6,6 +6,7 @@
 - [Chrome插件推荐](chrome_plugins.md)
 - [macOS 全局应用快捷键配置](shortcuts_keymaps_config.md)
 - [Power User Need Know](overview.md)
+    - [python脚本](app_extensions/python_scripts/python_scripts.md)
     - [主力App深度使用](app_deepin/app_deepin.md)
         - [Alfred](app_deepin/alfred.md)
             - [跟着Copy Url脚本学习写](app_extensions/alfred_workflows/copy_url.md)
