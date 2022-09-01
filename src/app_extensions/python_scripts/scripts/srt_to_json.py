@@ -127,7 +127,9 @@ def parse_sentence(srt_strings: list):
 
 
 if __name__ == "__main__":
-    srt_filename = 'Substrate Execute Block Code Walkthrough with Joe Petrowski and Shawn Tabrizi.srt'
+    # srt_filename = 'Substrate Execute Block Code Walkthrough with Joe Petrowski and Shawn Tabrizi.srt'
+    srt_filename = "Intro to Substrate codebase and FRAME pallet deep-dive with Joe Petrowski and Shawn Tabrizi.srt"
+    title = srt_filename.split('.')[0]
     json_out_filename = srt_filename.replace('.srt', '.json')
     md_out_filename = srt_filename.replace('.srt', '.md')
     srt = open(srt_filename, 'r', encoding="utf-8").read()
@@ -139,6 +141,5 @@ if __name__ == "__main__":
     # open(txt_out_filename, 'w', encoding='utf-8').write(
     #     '\n'.join([item['content'] for item in parsed_srt])
     # )
-    open(md_out_filename, 'w', encoding='utf-8').write(
-        '\n\n'.join(sentences)
-    )
+    content = f"# {title}\n" + '\n\n'.join(sentences)
+    open(md_out_filename, 'w', encoding='utf-8').write(content)
