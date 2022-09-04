@@ -16,7 +16,7 @@ def supported_merge(file_list, target_dir):
     merge_cmd = " ffmpeg -i 'concat:%s' -c copy %s/%s.mpg"
     files_arg = '|'.join([item.replace('mp4', 'mpg') for item in file_list])
     target_file = "output"
-    # status = os.system(merge_cmd % (files_arg, target_dir, target_file))
+    status = os.system(merge_cmd % (files_arg, target_dir, target_file))
     os.system(f"ffmpeg -i {target_dir}/{target_file}.mpg -y -qscale 0 -vcodec libx264 {target_dir}/{target_file}.mp4")
     # os.system(f"ffmpeg -i {target_file}.mpg {target_file}.MP4")
     print(status)
@@ -35,5 +35,5 @@ if __name__ == "__main__":
     file_list = [item for item in cmd_res.split('\n') if item]
     pattern = re.compile(r'([0-9]+)')
     file_list.sort(key=lambda x: int(pattern.findall(x)[0]))
-    # mp4_to_mpg(file_list)
+    mp4_to_mpg(file_list)
     supported_merge(file_list, target_dir)
