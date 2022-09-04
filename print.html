@@ -238,7 +238,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:05 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:09 UTC 2022 -->
 <!--te-->
 <h1 id="一资料打包迁移"><a class="header" href="#一资料打包迁移">一、资料打包迁移:</a></h1>
 <blockquote>
@@ -407,7 +407,7 @@ Appstore: option+a
 <li><a href="macos_ios_tips.html#osx%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">osx系统设置</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:05 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:09 UTC 2022 -->
 <!--te-->
 <ol>
 <li>指定后缀名打开方式
@@ -548,7 +548,7 @@ Appstore: option+a
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:09 UTC 2022 -->
 <!--te-->
 <h2 id="github开源"><a class="header" href="#github开源">github开源</a></h2>
 <h3 id="tproxy-tcp-连接分析工具"><a class="header" href="#tproxy-tcp-连接分析工具">tproxy: TCP 连接分析工具</a></h3>
@@ -941,7 +941,7 @@ v</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:09 UTC 2022 -->
 <!--te-->
 <blockquote>
 <p>如果对某个chrome插件感兴趣，可以在插件链接后面加’/related’</p>
@@ -1146,7 +1146,7 @@ v</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -1314,13 +1314,6 @@ import re
 # brew install ffmpeg
 
 
-def list_order(file_list):
-    pattern = re.compile(r'([0-9]+)')
-    for item in file_list:
-        print(pattern.findall(item)[0])
-    file_list.sort(key=lambda x: int(pattern.findall(x)[0]))
-
-
 def supported_merge(file_list, target_dir):
     &quot;&quot;&quot;
     ffmpeg只支持默认格式合并:
@@ -1334,6 +1327,7 @@ def supported_merge(file_list, target_dir):
     target_file = &quot;output&quot;
     status = os.system(merge_cmd % (files_arg, target_dir, target_file))
     os.system(f&quot;ffmpeg -i {target_dir}/{target_file}.mpg -y -qscale 0 -vcodec libx264 {target_dir}/{target_file}.mp4&quot;)
+    # os.system(f&quot;ffmpeg -i {target_file}.mpg {target_file}.MP4&quot;)
     print(status)
 
 
@@ -1341,16 +1335,16 @@ def mp4_to_mpg(file_list):
     for index, mp4 in enumerate(file_list):
         file_name = mp4.split('.')[0]
         status = os.system(f'ffmpeg -i {mp4} -qscale 4 {file_name}.mpg')
-        print(f&quot;{index+1}/{len(file_list)}: {status} {file_name}.mpg&quot;)
+        print(f&quot;{index + 1}/{len(file_list)}: {status} {file_name}.mpg&quot;)
 
 
 if __name__ == &quot;__main__&quot;:
-    target_dir = ''
-    cmd_res = os.popen(f'ls {target_dir}').read()
+    target_dir = '/Users/kuanhsiaokuo/Migrations/videos/张汉东的Rust实战课/Rust异步编程之tokio运行时'
+    cmd_res = os.popen(f'ls {target_dir}/*.mp4').read()
     file_list = [item for item in cmd_res.split('\n') if item]
-    list_order(file_list)
-    file_list = [f&quot;{target_dir}/{file}&quot; for file in file_list]
-    # mp4_to_mpg(file_list)
+    pattern = re.compile(r'([0-9]+)')
+    file_list.sort(key=lambda x: int(pattern.findall(x)[0]))
+    mp4_to_mpg(file_list)
     supported_merge(file_list, target_dir)
 </code></pre>
 <h2 id="iina与ffmpeg给视频添加章节"><a class="header" href="#iina与ffmpeg给视频添加章节">IINA与ffmpeg给视频添加章节</a></h2>
@@ -1378,7 +1372,7 @@ ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4
 </div>
 </div>
 <h3 id="思路"><a class="header" href="#思路">思路</a></h3>
-<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="859px" preserveAspectRatio="none" style="width:857px;height:859px;background:#FFFFFF;" version="1.1" viewBox="0 0 857 859" width="857px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="42.5938" id="_title" style="stroke:none;stroke-width:1.0;" width="346" x="255.25" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="70" x="393.25" y="27.9951">视频教材化</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="336" x="260.25" y="44.292">主要结合IINA、MPV和FFMPEG给视频文件添加章节</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="290" x2="290" y1="153.4375" y2="760.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="403" x2="403" y1="153.4375" y2="760.2891"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="544.5" x2="544.5" y1="153.4375" y2="760.2891"/><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="243" y="117.4844"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="81" x="250" y="141.1924">MPV内核</text><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="243" y="759.2891"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="81" x="250" y="782.9971">MPV内核</text><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111" x="348" y="117.4844"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="97" x="355" y="141.1924">IINA播放器</text><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111" x="348" y="759.2891"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="97" x="355" y="782.9971">IINA播放器</text><rect fill="#E2E2F0" height="93.8438" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="483.5" y="58.5938"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="108" x="490.5" y="82.3018">ffmpeg工具</text><line style="stroke:#181818;stroke-width:1.0;" x1="483.5" x2="605.5" y1="91.5469" y2="91.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="506.5" y="109.542">python脚本</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="502.5" y="125.8389">主要处理视频</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="502.5" y="142.1357">添加章节书签</text><rect fill="#E2E2F0" height="93.8438" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="483.5" y="759.2891"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="108" x="490.5" y="782.9971">ffmpeg工具</text><line style="stroke:#181818;stroke-width:1.0;" x1="483.5" x2="605.5" y1="792.2422" y2="792.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="506.5" y="810.2373">python脚本</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="502.5" y="826.5342">主要处理视频</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="502.5" y="842.8311">添加章节书签</text><polygon fill="#181818" points="391.5,180.5703,401.5,184.5703,391.5,188.5703,395.5,184.5703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="290.5" x2="397.5" y1="184.5703" y2="184.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="297.5" y="179.5044">mpv内核指令</text><line style="stroke:#181818;stroke-width:1.0;" x1="403.5" x2="445.5" y1="248.0352" y2="248.0352"/><line style="stroke:#181818;stroke-width:1.0;" x1="445.5" x2="445.5" y1="248.0352" y2="261.0352"/><line style="stroke:#181818;stroke-width:1.0;" x1="404.5" x2="445.5" y1="261.0352" y2="261.0352"/><polygon fill="#181818" points="414.5,257.0352,404.5,261.0352,414.5,265.0352,410.5,261.0352" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="410.5" y="242.9692">修改截图格式</text><path d="M85,197.5703 L85,297.5703 L398,297.5703 L398,207.5703 L388,197.5703 L85,197.5703 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M388,197.5703 L388,207.5703 L398,207.5703 L388,197.5703 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="91" y="214.6372">偏好设置</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="91" y="229.77">高级</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="91" y="244.9028">启用高级设置</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="91" y="260.0356">勾选记录日志、使用mpv的OSD</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="292" x="91" y="275.1685">额外mpv选项：screenshot-template %n%f-%p</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="91" y="290.3013">注意每次修改格式都要重启</text><line style="stroke:#181818;stroke-width:1.0;" x1="403.5" x2="445.5" y1="324.5" y2="324.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="445.5" x2="445.5" y1="324.5" y2="337.5"/><line style="stroke:#181818;stroke-width:1.0;" x1="404.5" x2="445.5" y1="337.5" y2="337.5"/><polygon fill="#181818" points="414.5,333.5,404.5,337.5,414.5,341.5,410.5,337.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="410.5" y="319.4341">使用快捷键截图</text><polygon fill="#181818" points="532.5,380.7656,542.5,384.7656,532.5,388.7656,536.5,384.7656" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="403.5" x2="538.5" y1="384.7656" y2="384.7656"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="410.5" y="379.6997">开始处理截图文件夹</text><path d="M549,350.5 L549,405.5 L846,405.5 L846,360.5 L836,350.5 L549,350.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M836,350.5 L836,360.5 L846,360.5 L836,350.5 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="555" y="367.5669">1. 遍历文件夹，获取文件列表</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="555" y="382.6997">2. 将文件名依次处理，提取出时间，生成时间表</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="555" y="397.8325">3. 手动给时间表添加标题</text><line style="stroke:#181818;stroke-width:1.0;" x1="544.5" x2="586.5" y1="466.3633" y2="466.3633"/><line style="stroke:#181818;stroke-width:1.0;" x1="586.5" x2="586.5" y1="466.3633" y2="479.3633"/><line style="stroke:#181818;stroke-width:1.0;" x1="545.5" x2="586.5" y1="479.3633" y2="479.3633"/><polygon fill="#181818" points="555.5,475.3633,545.5,479.3633,555.5,483.3633,551.5,479.3633" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="299" x="551.5" y="461.2974">处理文件夹的文件，生成对应视频文件的章节时间表</text><path d="M332,415.8984 L332,515.8984 L539,515.8984 L539,425.8984 L529,415.8984 L332,415.8984 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M529,415.8984 L529,425.8984 L539,425.8984 L529,415.8984 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="338" y="432.9653">0:23:20 Start</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="338" y="448.0981">0:40:30 First Performance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="338" y="463.231">0:40:56 Break</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186" x="338" y="478.3638">1:04:44 Second Performance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="338" y="493.4966">1:24:45 Crowd Shots</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="338" y="508.6294">1:27:45 Credit</text><line style="stroke:#181818;stroke-width:1.0;" x1="544.5" x2="586.5" y1="614.9922" y2="614.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="586.5" x2="586.5" y1="614.9922" y2="627.9922"/><line style="stroke:#181818;stroke-width:1.0;" x1="545.5" x2="586.5" y1="627.9922" y2="627.9922"/><polygon fill="#181818" points="555.5,623.9922,545.5,627.9922,555.5,631.9922,551.5,627.9922" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="551.5" y="609.9263">根据时间表生成视频章节文件</text><path d="M261,526.6953 L261,702.6953 L539,702.6953 L539,536.6953 L529,526.6953 L261,526.6953 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M529,526.6953 L529,536.6953 L539,536.6953 L529,526.6953 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="267" y="543.7622">;FFMETADATA1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="267" y="558.895">major_brand=isom</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="267" y="574.0278">minor_version=512</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="267" y="589.1606">compatible_brands=isomiso2avc1mp41</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="267" y="604.2935">encoder=Lavf59.16.100</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="267" y="619.4263"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="267" y="634.5591">[CHAPTER]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="267" y="649.6919">TIMEBASE=1/1000</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="267" y="664.8247">START=1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="267" y="679.9575">END=448000</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="267" y="695.0903">title=The Pledge</text><line style="stroke:#181818;stroke-width:1.0;" x1="544.5" x2="586.5" y1="729.2891" y2="729.2891"/><line style="stroke:#181818;stroke-width:1.0;" x1="586.5" x2="586.5" y1="729.2891" y2="742.2891"/><line style="stroke:#181818;stroke-width:1.0;" x1="545.5" x2="586.5" y1="742.2891" y2="742.2891"/><polygon fill="#181818" points="555.5,738.2891,545.5,742.2891,555.5,746.2891,551.5,742.2891" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="551.5" y="724.2231">将章节文件压入视频文件，生成新视频文件</text><path d="M5,716.6563 L5,741.6563 L540,741.6563 L540,726.6563 L530,716.6563 L5,716.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M530,716.6563 L530,726.6563 L540,726.6563 L530,716.6563 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="514" x="11" y="733.7231">ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4</text></g></svg></figure>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="975px" preserveAspectRatio="none" style="width:858px;height:975px;background:#FFFFFF;" version="1.1" viewBox="0 0 858 975" width="858px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="42.5938" id="_title" style="stroke:none;stroke-width:1.0;" width="346" x="255.5" y="10"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="70" x="393.5" y="27.9951">视频教材化</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="336" x="260.5" y="44.292">主要结合IINA、MPV和FFMPEG给视频文件添加章节</text><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="192" x2="192" y1="153.4375" y2="876.8203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="281" x2="281" y1="153.4375" y2="876.8203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="403.5" x2="403.5" y1="153.4375" y2="876.8203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="545" x2="545" y1="153.4375" y2="876.8203"/><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="145" y="117.4844"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="81" x="152" y="141.1924">MPV内核</text><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="145" y="875.8203"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="81" x="152" y="899.5283">MPV内核</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="250" y="150.1357">手工操作</text><ellipse cx="281" cy="85.6406" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M281,93.6406 L281,120.6406 M268,101.6406 L294,101.6406 M281,120.6406 L268,135.6406 M281,120.6406 L294,135.6406 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="250" y="888.8154">手工操作</text><ellipse cx="281" cy="900.6172" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M281,908.6172 L281,935.6172 M268,916.6172 L294,916.6172 M281,935.6172 L268,950.6172 M281,935.6172 L294,950.6172 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111" x="348.5" y="117.4844"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="97" x="355.5" y="141.1924">IINA播放器</text><rect fill="#E2E2F0" height="34.9531" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="111" x="348.5" y="875.8203"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="97" x="355.5" y="899.5283">IINA播放器</text><rect fill="#E2E2F0" height="93.8438" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="484" y="58.5938"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="108" x="491" y="82.3018">ffmpeg工具</text><line style="stroke:#181818;stroke-width:1.0;" x1="484" x2="606" y1="91.5469" y2="91.5469"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="507" y="109.542">python脚本</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="503" y="125.8389">主要处理视频</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="503" y="142.1357">添加章节书签</text><rect fill="#E2E2F0" height="93.8438" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="122" x="484" y="875.8203"/><text fill="#000000" font-family="sans-serif" font-size="18" font-weight="bold" lengthAdjust="spacing" textLength="108" x="491" y="899.5283">ffmpeg工具</text><line style="stroke:#181818;stroke-width:1.0;" x1="484" x2="606" y1="908.7734" y2="908.7734"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="507" y="926.7686">python脚本</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="503" y="943.0654">主要处理视频</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="503" y="959.3623">添加章节书签</text><polygon fill="#181818" points="392,180.5703,402,184.5703,392,188.5703,396,184.5703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="192.5" x2="398" y1="184.5703" y2="184.5703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80" x="199.5" y="179.5044">mpv内核指令</text><line style="stroke:#181818;stroke-width:1.0;" x1="404" x2="446" y1="248.0352" y2="248.0352"/><line style="stroke:#181818;stroke-width:1.0;" x1="446" x2="446" y1="248.0352" y2="261.0352"/><line style="stroke:#181818;stroke-width:1.0;" x1="405" x2="446" y1="261.0352" y2="261.0352"/><polygon fill="#181818" points="415,257.0352,405,261.0352,415,265.0352,411,261.0352" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="411" y="242.9692">修改截图格式</text><path d="M86,197.5703 L86,297.5703 L399,297.5703 L399,207.5703 L389,197.5703 L86,197.5703 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M389,197.5703 L389,207.5703 L399,207.5703 L389,197.5703 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="92" y="214.6372">偏好设置</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="92" y="229.77">高级</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="92" y="244.9028">启用高级设置</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="92" y="260.0356">勾选记录日志、使用mpv的OSD</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="292" x="92" y="275.1685">额外mpv选项：screenshot-template %n%f-%p</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="156" x="92" y="290.3013">注意每次修改格式都要重启</text><polygon fill="#181818" points="392,320.5,402,324.5,392,328.5,396,324.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="281" x2="398" y1="324.5" y2="324.5"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="288" y="319.4341">使用快捷键截图1</text><polygon fill="#181818" points="392,349.6328,402,353.6328,392,357.6328,396,353.6328" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="281" x2="398" y1="353.6328" y2="353.6328"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="288" y="348.5669">使用快捷键截图2</text><polygon fill="#181818" points="392,378.7656,402,382.7656,392,386.7656,396,382.7656" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="281" x2="398" y1="382.7656" y2="382.7656"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="12" x="288" y="377.6997">...</text><polygon fill="#181818" points="392,407.8984,402,411.8984,392,415.8984,396,411.8984" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="281" x2="398" y1="411.8984" y2="411.8984"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="99" x="288" y="406.8325">使用快捷键截图n</text><line style="stroke:#181818;stroke-width:1.0;" x1="281" x2="323" y1="441.0313" y2="441.0313"/><line style="stroke:#181818;stroke-width:1.0;" x1="323" x2="323" y1="441.0313" y2="454.0313"/><line style="stroke:#181818;stroke-width:1.0;" x1="282" x2="323" y1="454.0313" y2="454.0313"/><polygon fill="#181818" points="292,450.0313,282,454.0313,292,458.0313,288,454.0313" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="288" y="435.9653">手动添加章节名称</text><polygon fill="#181818" points="533,497.2969,543,501.2969,533,505.2969,537,501.2969" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="404" x2="539" y1="501.2969" y2="501.2969"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="411" y="496.231">开始处理截图文件夹</text><path d="M550,467.0313 L550,522.0313 L847,522.0313 L847,477.0313 L837,467.0313 L550,467.0313 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M837,467.0313 L837,477.0313 L847,477.0313 L837,467.0313 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="556" y="484.0981">1. 遍历文件夹，获取文件列表</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="556" y="499.231">2. 将文件名依次处理，提取出时间，生成时间表</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="556" y="514.3638">3. 手动给时间表添加标题</text><line style="stroke:#181818;stroke-width:1.0;" x1="545" x2="587" y1="582.8945" y2="582.8945"/><line style="stroke:#181818;stroke-width:1.0;" x1="587" x2="587" y1="582.8945" y2="595.8945"/><line style="stroke:#181818;stroke-width:1.0;" x1="546" x2="587" y1="595.8945" y2="595.8945"/><polygon fill="#181818" points="556,591.8945,546,595.8945,556,599.8945,552,595.8945" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="299" x="552" y="577.8286">处理文件夹的文件，生成对应视频文件的章节时间表</text><path d="M333,532.4297 L333,632.4297 L540,632.4297 L540,542.4297 L530,532.4297 L333,532.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M530,532.4297 L530,542.4297 L540,542.4297 L530,532.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="84" x="339" y="549.4966">0:23:20 Start</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="339" y="564.6294">0:40:30 First Performance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="339" y="579.7622">0:40:56 Break</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186" x="339" y="594.895">1:04:44 Second Performance</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="132" x="339" y="610.0278">1:24:45 Crowd Shots</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="339" y="625.1606">1:27:45 Credit</text><line style="stroke:#181818;stroke-width:1.0;" x1="545" x2="587" y1="731.5234" y2="731.5234"/><line style="stroke:#181818;stroke-width:1.0;" x1="587" x2="587" y1="731.5234" y2="744.5234"/><line style="stroke:#181818;stroke-width:1.0;" x1="546" x2="587" y1="744.5234" y2="744.5234"/><polygon fill="#181818" points="556,740.5234,546,744.5234,556,748.5234,552,744.5234" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="169" x="552" y="726.4575">根据时间表生成视频章节文件</text><path d="M262,643.2266 L262,819.2266 L540,819.2266 L540,653.2266 L530,643.2266 L262,643.2266 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M530,643.2266 L530,653.2266 L540,653.2266 L530,643.2266 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="268" y="660.2935">;FFMETADATA1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="268" y="675.4263">major_brand=isom</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="268" y="690.5591">minor_version=512</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="268" y="705.6919">compatible_brands=isomiso2avc1mp41</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="153" x="268" y="720.8247">encoder=Lavf59.16.100</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="268" y="735.9575"> </text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="268" y="751.0903">[CHAPTER]</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="268" y="766.2231">TIMEBASE=1/1000</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="268" y="781.356">START=1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87" x="268" y="796.4888">END=448000</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="268" y="811.6216">title=The Pledge</text><line style="stroke:#181818;stroke-width:1.0;" x1="545" x2="587" y1="845.8203" y2="845.8203"/><line style="stroke:#181818;stroke-width:1.0;" x1="587" x2="587" y1="845.8203" y2="858.8203"/><line style="stroke:#181818;stroke-width:1.0;" x1="546" x2="587" y1="858.8203" y2="858.8203"/><polygon fill="#181818" points="556,854.8203,546,858.8203,556,862.8203,552,858.8203" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="247" x="552" y="840.7544">将章节文件压入视频文件，生成新视频文件</text><path d="M5,833.1875 L5,858.1875 L540,858.1875 L540,843.1875 L530,833.1875 L5,833.1875 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M530,833.1875 L530,843.1875 L540,843.1875 L530,833.1875 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="514" x="11" y="850.2544">ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4</text></g></svg></figure>
 <h3 id="源码-1"><a class="header" href="#源码-1">源码</a></h3>
 <pre><code class="language-python">&quot;&quot;&quot;
 给视频文件添加书签
@@ -1489,7 +1483,7 @@ if __name__ == &quot;__main__&quot;:
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="workflows-collection"><a class="header" href="#workflows-collection">workflows collection</a></h2>
 <blockquote>
@@ -1722,7 +1716,7 @@ function run() {
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="md格式化"><a class="header" href="#md格式化">md格式化</a></h2>
 <blockquote>
@@ -1848,7 +1842,7 @@ draft.update()
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="路径"><a class="header" href="#路径">路径</a></h2>
 <pre><code>~/.config/karabiner
@@ -2543,7 +2537,7 @@ draft.update()
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:02 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="缘起"><a class="header" href="#缘起">缘起</a></h2>
 <p>对于一些核心主力深度使用的app，比如Omni系列，Jetbrains系列，我觉得完全值得专门设置一层按键</p>
@@ -2597,7 +2591,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="添加超链接"><a class="header" href="#添加超链接">添加超链接</a></h2>
 <p><a href="https://support.goodnotes.com/hc/en-us/articles/4408423590671-Adding-external-links">Adding external links – GoodNotes Support</a></p>
@@ -2654,7 +2648,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:02 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:07 UTC 2022 -->
 <!--te-->
 <h2 id="小技巧"><a class="header" href="#小技巧">小技巧</a></h2>
 <h3 id="朗读模式"><a class="header" href="#朗读模式">朗读模式</a></h3>
@@ -2856,7 +2850,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:02 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:07 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -3223,20 +3217,20 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 84K
-drwxr-xr-x 4 runner docker 4.0K Sep  4 14:29 .
-drwxr-xr-x 4 runner docker 4.0K Sep  4 14:29 ..
-drwxr-xr-x 2 runner docker 4.0K Sep  4 14:29 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Sep  4 14:29 alfred.md
--rw-r--r-- 1 runner docker   23 Sep  4 14:28 app_deepin.md
--rw-r--r-- 1 runner docker  698 Sep  4 14:29 drafts.md
--rw-r--r-- 1 runner docker  859 Sep  4 14:29 goodnotes.md
--rw-r--r-- 1 runner docker 1.5K Sep  4 14:29 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Sep  4 14:29 karabiner
--rw-r--r-- 1 runner docker 2.7K Sep  4 14:29 marginnote_deepin.md
--rw-r--r-- 1 runner docker  29K Sep  4 14:29 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Sep  4 14:28 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Sep  4 14:29 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Sep  4 14:28 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Sep  4 16:04 .
+drwxr-xr-x 4 runner docker 4.0K Sep  4 16:04 ..
+drwxr-xr-x 2 runner docker 4.0K Sep  4 16:04 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Sep  4 16:04 alfred.md
+-rw-r--r-- 1 runner docker   23 Sep  4 16:04 app_deepin.md
+-rw-r--r-- 1 runner docker  698 Sep  4 16:04 drafts.md
+-rw-r--r-- 1 runner docker  859 Sep  4 16:04 goodnotes.md
+-rw-r--r-- 1 runner docker 1.5K Sep  4 16:04 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Sep  4 16:04 karabiner
+-rw-r--r-- 1 runner docker 2.7K Sep  4 16:04 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  29K Sep  4 16:04 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Sep  4 16:04 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Sep  4 16:04 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Sep  4 16:04 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
@@ -3716,7 +3710,7 @@ interesting thing is and how interesting you might find it.</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:03 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
 <h2 id="下载并设置环境变量"><a class="header" href="#下载并设置环境变量">下载并设置环境变量</a></h2>
@@ -3944,7 +3938,7 @@ cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="首先安装zsh"><a class="header" href="#首先安装zsh">首先安装zsh</a></h2>
 <pre><code>sudo apt-get install zsh
@@ -4059,7 +4053,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="osx"><a class="header" href="#osx">OSX</a></h2>
 <pre><code># 解绑前缀，改为和screen一样的
@@ -4341,7 +4335,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:03 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="open"><a class="header" href="#open">open</a></h2>
 <h2 id="pbcopy-and-pbpaste"><a class="header" href="#pbcopy-and-pbpaste">pbcopy and pbpaste</a></h2>
@@ -4458,7 +4452,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <h2 id="共性"><a class="header" href="#共性">共性</a></h2>
 <h3 id="快捷键整理"><a class="header" href="#快捷键整理">快捷键整理</a></h3>
@@ -4513,7 +4507,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:00 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:05 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-4"><a class="header" href="#参考资源-4">参考资源</a></h2>
 <ul>
@@ -4565,7 +4559,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:06 UTC 2022 -->
 <!--te-->
 <p><video src="https://www.omnigroup.com/assets/img/2020/plan-video-18.mp4" controls="controls"></video></p>
 <h2 id="基础流程"><a class="header" href="#基础流程">基础流程</a></h2>
@@ -4736,7 +4730,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:00 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:05 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-6"><a class="header" href="#参考资源-6">参考资源</a></h2>
 <ul>
@@ -4765,7 +4759,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:00 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:05 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-7"><a class="header" href="#参考资源-7">参考资源</a></h2>
 <ul>
@@ -4794,7 +4788,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:01 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:05 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-8"><a class="header" href="#参考资源-8">参考资源</a></h2>
 <ul>
@@ -4829,7 +4823,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:02 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:07 UTC 2022 -->
 <!--te-->
 <h2 id="精选脚本"><a class="header" href="#精选脚本">精选脚本</a></h2>
 <h3 id="userscript-plus-显示当前网站可用油猴脚本"><a class="header" href="#userscript-plus-显示当前网站可用油猴脚本">Userscript-plus: 显示当前网站可用油猴脚本</a></h3>
@@ -4889,7 +4883,7 @@ seconds</li>
 <li><a href="app_extensions/workflows/workflows.html#%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%95%B4%E7%90%86">工作流整理</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:09 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/workflows/workflows.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -4918,7 +4912,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:04 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:08 UTC 2022 -->
 <!--te-->
 <h2 id="一自定义模版导出不可行"><a class="header" href="#一自定义模版导出不可行">一、自定义模版导出：不可行</a></h2>
 <ul>
@@ -4955,7 +4949,7 @@ seconds</li>
 <li><a href="app_extensions/Anki_around/anki_around.html#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:02 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:07 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/Anki_around/anki_around.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -4985,7 +4979,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Sep  4 14:29:03 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep  4 16:04:07 UTC 2022 -->
 <!--te-->
 <h2 id="正面模版"><a class="header" href="#正面模版">正面模版</a></h2>
 <p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220606234758347.png" alt="image-20220606234758347" /></p>
