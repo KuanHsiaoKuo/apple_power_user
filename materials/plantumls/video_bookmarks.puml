@@ -1,0 +1,64 @@
+@startuml
+title
+    视频教材化
+    主要结合IINA、MPV和FFMPEG给视频文件添加章节
+end title
+participant mpv[
+    =MPV内核
+]
+participant iina[
+    =IINA播放器
+]
+participant ffmpeg[
+    =ffmpeg工具
+    ----
+    python脚本
+    主要处理视频
+    添加章节书签
+]
+mpv -> iina: mpv内核指令
+iina -> iina: 修改截图格式
+note left
+    偏好设置
+    高级
+    启用高级设置
+    勾选记录日志、使用mpv的OSD
+    额外mpv选项：screenshot-template %n%f-%p
+    注意每次修改格式都要重启
+end note
+iina -> iina: 使用快捷键截图
+iina -> ffmpeg: 开始处理截图文件夹
+note right
+1. 遍历文件夹，获取文件列表
+2. 将文件名依次处理，提取出时间，生成时间表
+3. 手动给时间表添加标题
+end note
+ffmpeg -> ffmpeg: 处理文件夹的文件，生成对应视频文件的章节时间表
+note left
+0:23:20 Start
+0:40:30 First Performance
+0:40:56 Break
+1:04:44 Second Performance
+1:24:45 Crowd Shots
+1:27:45 Credit
+end note
+ffmpeg -> ffmpeg: 根据时间表生成视频章节文件
+note left
+;FFMETADATA1
+major_brand=isom
+minor_version=512
+compatible_brands=isomiso2avc1mp41
+encoder=Lavf59.16.100
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=1
+END=448000
+title=The Pledge
+end note
+ffmpeg -> ffmpeg: 将章节文件压入视频文件，生成新视频文件
+note left
+ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4
+end note
+
+@enduml
