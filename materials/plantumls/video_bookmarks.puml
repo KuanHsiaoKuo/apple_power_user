@@ -6,6 +6,7 @@ end title
 participant mpv[
     =MPV内核
 ]
+actor 手工操作 as mannual
 participant iina[
     =IINA播放器
 ]
@@ -26,7 +27,11 @@ note left
     额外mpv选项：screenshot-template %n%f-%p
     注意每次修改格式都要重启
 end note
-iina -> iina: 使用快捷键截图
+mannual-> iina: 使用快捷键截图1
+mannual-> iina: 使用快捷键截图2
+mannual-> iina: ...
+mannual-> iina: 使用快捷键截图n
+mannual-> mannual: 手动添加章节名称
 iina -> ffmpeg: 开始处理截图文件夹
 note right
 1. 遍历文件夹，获取文件列表
