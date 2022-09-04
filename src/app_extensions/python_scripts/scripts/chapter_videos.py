@@ -1,9 +1,5 @@
 """
 给视频文件添加书签
-[How to Add Chapters to MP4s with FFmpeg - Kyle Howells](https://ikyle.me/blog/2020/add-mp4-chapters-ffmpeg)
-[mpv.io#screenshot](https://mpv.io/manual/stable/#screenshot)
-ffmpeg -i part1.mp4 -f ffmetadata part1.txt
-ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4
 """
 
 import re
