@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 
 
 # brew install ffmpeg
@@ -24,13 +25,16 @@ def supported_merge(file_list, target_dir):
 
 def mp4_to_mpg(file_list):
     for index, mp4 in enumerate(file_list):
-        file_name = mp4.split('.')[0]
+        file_name = mp4.replace('.mp4', '')
         status = os.system(f'ffmpeg -i {mp4} -qscale 4 {file_name}.mpg')
         print(f"{index + 1}/{len(file_list)}: {status} {file_name}.mpg")
 
 
 if __name__ == "__main__":
-    target_dir = '/Users/kuanhsiaokuo/Migrations/videos/张汉东的Rust实战课/Rust异步编程之tokio运行时'
+    if len(sys.argv) == 1:
+        sys.exit("请传入待合并视频文件夹📁目录")
+    else:
+        target_dir = sys.argv[1]
     cmd_res = os.popen(f'ls {target_dir}/*.mp4').read()
     file_list = [item for item in cmd_res.split('\n') if item]
     pattern = re.compile(r'([0-9]+)')
