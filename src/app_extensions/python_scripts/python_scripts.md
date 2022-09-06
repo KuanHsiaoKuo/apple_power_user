@@ -56,10 +56,13 @@ ffmpeg -i part1.mp4 -i part1.txt -map_metadata 1 -codec copy part1_insert.mp4
 - [mpv.io#screenshot](https://mpv.io/manual/stable/#screenshot)
 
 ```admonish info
-screenshot-template: %p.%{filename}
-1. %p: 截屏的时间，可以排序。这样方便后续按时间插入新章节。
-
+screenshot-template: %{filename}-%p
+1. 按照视频文件名先分段，方便统一存放
+> 本来打算用screenshot-directory参数，但是要报错，就算了
+2. %p: 截屏的时间，可以排序。这样方便后续按时间插入新章节。
 ```
+
+![CleanShot 2022-09-06 at 21.52.28@2x](https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/CleanShot%202022-09-06%20at%2021.52.28%402x.png)
 
 
 ### 思路
