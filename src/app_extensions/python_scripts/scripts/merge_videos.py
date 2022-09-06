@@ -2,7 +2,6 @@ import os
 import re
 import sys
 
-
 # brew install ffmpeg
 
 
@@ -19,11 +18,19 @@ def supported_merge(file_list, target_dir):
     target_file = "output"
     status = os.system(merge_cmd % (files_arg, target_dir, target_file))
     os.system(f"ffmpeg -i {target_dir}/{target_file}.mpg -y -qscale 0 -vcodec libx264 {target_dir}/{target_file}.mp4")
+    os.system(f"rm -rf {target_dir}/*.mpg")
     # os.system(f"ffmpeg -i {target_file}.mpg {target_file}.MP4")
     print(status)
 
 
 def mp4_to_mpg(file_list):
+    """
+    文件名问题：
+    1. 空格
+    2. 括号: 英文括号需要加'\'
+    :param file_list:
+    :return:
+    """
     for index, mp4 in enumerate(file_list):
         file_name = mp4.replace('.mp4', '')
         status = os.system(f'ffmpeg -i {mp4} -qscale 4 {file_name}.mpg')
@@ -39,5 +46,8 @@ if __name__ == "__main__":
     file_list = [item for item in cmd_res.split('\n') if item]
     pattern = re.compile(r'([0-9]+)')
     file_list.sort(key=lambda x: int(pattern.findall(x)[0]))
-    mp4_to_mpg(file_list)
-    supported_merge(file_list, target_dir)
+    try:
+        mp4_to_mpg(file_list)
+        supported_merge(file_list, target_dir)
+    except Exception:
+        print("使用前记得调整一下文件名: 空格、括号等")
