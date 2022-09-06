@@ -218,7 +218,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Sep  5 13:47:56 UTC 2022 -->
+<!-- Added by: runner, at: Tue Sep  6 06:43:32 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -383,7 +383,6 @@ if __name__ == &quot;__main__&quot;:
 import re
 import sys
 
-
 # brew install ffmpeg
 
 
@@ -400,11 +399,19 @@ def supported_merge(file_list, target_dir):
     target_file = &quot;output&quot;
     status = os.system(merge_cmd % (files_arg, target_dir, target_file))
     os.system(f&quot;ffmpeg -i {target_dir}/{target_file}.mpg -y -qscale 0 -vcodec libx264 {target_dir}/{target_file}.mp4&quot;)
+    os.system(f&quot;rm -rf {target_dir}/*.mpg&quot;)
     # os.system(f&quot;ffmpeg -i {target_file}.mpg {target_file}.MP4&quot;)
     print(status)
 
 
 def mp4_to_mpg(file_list):
+    &quot;&quot;&quot;
+    文件名问题：
+    1. 空格
+    2. 括号: 英文括号需要加'\'
+    :param file_list:
+    :return:
+    &quot;&quot;&quot;
     for index, mp4 in enumerate(file_list):
         file_name = mp4.replace('.mp4', '')
         status = os.system(f'ffmpeg -i {mp4} -qscale 4 {file_name}.mpg')
@@ -420,8 +427,11 @@ if __name__ == &quot;__main__&quot;:
     file_list = [item for item in cmd_res.split('\n') if item]
     pattern = re.compile(r'([0-9]+)')
     file_list.sort(key=lambda x: int(pattern.findall(x)[0]))
-    mp4_to_mpg(file_list)
-    supported_merge(file_list, target_dir)
+    try:
+        mp4_to_mpg(file_list)
+        supported_merge(file_list, target_dir)
+    except Exception:
+        print(&quot;使用前记得调整一下文件名: 空格、括号等&quot;)
 </code></pre>
 <h2 id="iina与ffmpeg给视频添加章节"><a class="header" href="#iina与ffmpeg给视频添加章节">IINA与ffmpeg给视频添加章节</a></h2>
 <h3 id="ffmpeg"><a class="header" href="#ffmpeg">ffmpeg</a></h3>
