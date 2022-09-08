@@ -57,7 +57,7 @@ encoder=Lavf59.16.100
         chapter = ["[CHAPTER]", "TIMEBASE=1/1000", f"START={start}", f"END={end}", f"title={title}", "\n"]
         text += '\n'.join(chapter)
     file_name = re.findall('(\d.*?\.mp4)', time_path)[0]
-    chapter_path = f"{video_path}/{file_name}.toml"
+    chapter_path = f"{video_path}/{file_name}.txt"
     with open(chapter_path, "w") as myfile:
         myfile.write(text)
     return chapter_path
@@ -126,5 +126,8 @@ if __name__ == "__main__":
         -codec: 编解码
         """
         merge_command = f"ffmpeg -y -i {edit_video_path} -i {chapter_file} -map_metadata 1 -codec copy {inserted_video_path}"
-        print('*' * 20, merge_command, '*' * 20)
+        delete_command = f"rm {edit_video_path}"
+        mv_command = f"mv {inserted_video_path} {edit_video_path}"
         os.system(merge_command)
+        os.system(delete_command)
+        os.system(mv_command)
