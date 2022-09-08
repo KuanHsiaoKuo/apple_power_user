@@ -7,11 +7,11 @@ import os
 import sys
 
 
-def times_chapters(time_path: str, video_path: str):
+def times_chapters(time_path: str, save_path: str):
     """
-    1. video_path: 保存在视频文件目录中。
+    1. save_path: 保存在视频文件目录中。
     :param time_path:
-    :param video_path:
+    :param save_path:
     :return:
     """
     chapters = list()
@@ -46,28 +46,27 @@ encoder=Lavf59.16.100
             end = chapters[index + 1]['startTime'] - 1
         else:
             end = start + 10000
-        #         text += f"""
-        # [CHAPTER]
-        # TIMEBASE=1/1000
-        # START={start}
-        # END={end}
-        # title={title}
-        #
-        # """
+        """
+        [CHAPTER]
+        TIMEBASE=1/1000
+        START={start}
+        END={end}
+        title={title}
+        
+        """
         chapter = ["[CHAPTER]", "TIMEBASE=1/1000", f"START={start}", f"END={end}", f"title={title}", "\n"]
         text += '\n'.join(chapter)
-    file_name = re.findall('(\d.*?\.mp4)', time_path)[0]
-    chapter_path = f"{video_path}/{file_name}.txt"
-    with open(chapter_path, "w") as myfile:
-        myfile.write(text)
-    return chapter_path
+    file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
+    chapters_path = f"{save_path}/{file_name}.txt"
+    with open(chapters_path, "w") as f:
+        f.write(text)
+    return chapters_path
 
 
 def gen_timetable(screenshots_path: str):
     """
     配合IINA的截图格式：
     screenshot-template: %{filename}-%p-
-    (\d.*?\.mp4)-(\d+:\d+:\d+)-(.*?).png
     0:23:20 Start
     0:40:30 First Performance
     0:40:56 Break
@@ -111,13 +110,13 @@ if __name__ == "__main__":
         ss_path, video_path = sys.argv[1], sys.argv[2]
     # times_chapters(timefile, chapter_file)
     timetables = gen_timetable(ss_path)
-    chapters = []
+    chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
-        chapters.append(chapter_path)
+        chapter_files.append(chapter_path)
 
-    for chapter_file in chapters:
-        video_name = re.findall('(\d.*?)\.mp4', chapter_file)[0]
+    for chapter_file in chapter_files:
+        video_name = re.findall(r'(\d.*?)\.mp4', chapter_file)[0]
         edit_video_path = f"{video_path}/{video_name}.mp4"
         inserted_video_path = f"{video_path}/{video_name}-chapters.mp4"
         """
