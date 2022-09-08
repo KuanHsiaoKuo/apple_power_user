@@ -58,9 +58,17 @@ encoder=Lavf59.16.100
         text += '\n'.join(chapter)
     file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
     chapters_path = f"{save_path}/{file_name}.txt"
-    with open(chapters_path, "w") as f:
-        f.write(text)
-    return chapters_path
+    if os.path.exists(chapters_path):
+        with open(chapters_path, 'r') as f:
+            raw_text = f.read()
+    else:
+        raw_text = ''
+    if text != raw_text:
+        with open(chapters_path, "w") as f:
+            f.write(text)
+        return chapters_path
+    else:
+        return None
 
 
 def gen_timetable(screenshots_path: str):
@@ -113,7 +121,8 @@ if __name__ == "__main__":
     chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
-        chapter_files.append(chapter_path)
+        if chapter_path:
+            chapter_files.append(chapter_path)
 
     for chapter_file in chapter_files:
         video_name = re.findall(r'(\d.*?)\.mp4', chapter_file)[0]
@@ -123,8 +132,10 @@ if __name__ == "__main__":
         -y: 默认覆盖, 但是这里载入章节文件不可以in-place修改。
         -i: input
         -codec: 编解码
+        -map_metadata 1: 只匹配头部内容，只能在第一次添加时生效
+        -map_chapters 1: 匹配章节，在后续修改章节时需要加上
         """
-        merge_command = f"ffmpeg -y -i {edit_video_path} -i {chapter_file} -map_metadata 1 -codec copy {inserted_video_path}"
+        merge_command = f"ffmpeg -y -i {edit_video_path} -i {chapter_file} -map_metadata 1 -map_chapters 1 -codec copy {inserted_video_path}"
         delete_command = f"rm {edit_video_path}"
         mv_command = f"mv {inserted_video_path} {edit_video_path}"
         os.system(merge_command)
