@@ -73,6 +73,6 @@ if __name__ == "__main__":
     #     sys.exit("请传入待合并视频文件夹📁目录")
     # else:
     #     target_dir = sys.argv[1]
-    target_dirs = []
+    target_dirs = ["/Users/kuanhsiaokuo/Migrations/videos/张汉东的Rust实战课/00-04.rust-intro"]
     for item in target_dirs:
         main(item)
