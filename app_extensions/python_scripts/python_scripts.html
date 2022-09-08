@@ -218,7 +218,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -501,11 +501,11 @@ import os
 import sys
 
 
-def times_chapters(time_path: str, video_path: str):
+def times_chapters(time_path: str, save_path: str):
     &quot;&quot;&quot;
-    1. video_path: 保存在视频文件目录中。
+    1. save_path: 保存在视频文件目录中。
     :param time_path:
-    :param video_path:
+    :param save_path:
     :return:
     &quot;&quot;&quot;
     chapters = list()
@@ -540,28 +540,27 @@ encoder=Lavf59.16.100
             end = chapters[index + 1]['startTime'] - 1
         else:
             end = start + 10000
-        #         text += f&quot;&quot;&quot;
-        # [CHAPTER]
-        # TIMEBASE=1/1000
-        # START={start}
-        # END={end}
-        # title={title}
-        #
-        # &quot;&quot;&quot;
+        &quot;&quot;&quot;
+        [CHAPTER]
+        TIMEBASE=1/1000
+        START={start}
+        END={end}
+        title={title}
+        
+        &quot;&quot;&quot;
         chapter = [&quot;[CHAPTER]&quot;, &quot;TIMEBASE=1/1000&quot;, f&quot;START={start}&quot;, f&quot;END={end}&quot;, f&quot;title={title}&quot;, &quot;\n&quot;]
         text += '\n'.join(chapter)
-    file_name = re.findall('(\d.*?\.mp4)', time_path)[0]
-    chapter_path = f&quot;{video_path}/{file_name}.txt&quot;
-    with open(chapter_path, &quot;w&quot;) as myfile:
-        myfile.write(text)
-    return chapter_path
+    file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
+    chapters_path = f&quot;{save_path}/{file_name}.txt&quot;
+    with open(chapters_path, &quot;w&quot;) as f:
+        f.write(text)
+    return chapters_path
 
 
 def gen_timetable(screenshots_path: str):
     &quot;&quot;&quot;
     配合IINA的截图格式：
     screenshot-template: %{filename}-%p-
-    (\d.*?\.mp4)-(\d+:\d+:\d+)-(.*?).png
     0:23:20 Start
     0:40:30 First Performance
     0:40:56 Break
@@ -605,13 +604,13 @@ if __name__ == &quot;__main__&quot;:
         ss_path, video_path = sys.argv[1], sys.argv[2]
     # times_chapters(timefile, chapter_file)
     timetables = gen_timetable(ss_path)
-    chapters = []
+    chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
-        chapters.append(chapter_path)
+        chapter_files.append(chapter_path)
 
-    for chapter_file in chapters:
-        video_name = re.findall('(\d.*?)\.mp4', chapter_file)[0]
+    for chapter_file in chapter_files:
+        video_name = re.findall(r'(\d.*?)\.mp4', chapter_file)[0]
         edit_video_path = f&quot;{video_path}/{video_name}.mp4&quot;
         inserted_video_path = f&quot;{video_path}/{video_name}-chapters.mp4&quot;
         &quot;&quot;&quot;

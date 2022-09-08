@@ -238,7 +238,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:41 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:54 UTC 2022 -->
 <!--te-->
 <h1 id="一资料打包迁移"><a class="header" href="#一资料打包迁移">一、资料打包迁移:</a></h1>
 <blockquote>
@@ -407,7 +407,7 @@ Appstore: option+a
 <li><a href="macos_ios_tips.html#osx%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">osx系统设置</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:41 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:54 UTC 2022 -->
 <!--te-->
 <ol>
 <li>指定后缀名打开方式
@@ -548,7 +548,7 @@ Appstore: option+a
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:41 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:53 UTC 2022 -->
 <!--te-->
 <h2 id="github开源"><a class="header" href="#github开源">github开源</a></h2>
 <h3 id="tproxy-tcp-连接分析工具"><a class="header" href="#tproxy-tcp-连接分析工具">tproxy: TCP 连接分析工具</a></h3>
@@ -941,7 +941,7 @@ v</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:41 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:53 UTC 2022 -->
 <!--te-->
 <blockquote>
 <p>如果对某个chrome插件感兴趣，可以在插件链接后面加’/related’</p>
@@ -1146,7 +1146,7 @@ v</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -1429,11 +1429,11 @@ import os
 import sys
 
 
-def times_chapters(time_path: str, video_path: str):
+def times_chapters(time_path: str, save_path: str):
     &quot;&quot;&quot;
-    1. video_path: 保存在视频文件目录中。
+    1. save_path: 保存在视频文件目录中。
     :param time_path:
-    :param video_path:
+    :param save_path:
     :return:
     &quot;&quot;&quot;
     chapters = list()
@@ -1468,28 +1468,27 @@ encoder=Lavf59.16.100
             end = chapters[index + 1]['startTime'] - 1
         else:
             end = start + 10000
-        #         text += f&quot;&quot;&quot;
-        # [CHAPTER]
-        # TIMEBASE=1/1000
-        # START={start}
-        # END={end}
-        # title={title}
-        #
-        # &quot;&quot;&quot;
+        &quot;&quot;&quot;
+        [CHAPTER]
+        TIMEBASE=1/1000
+        START={start}
+        END={end}
+        title={title}
+        
+        &quot;&quot;&quot;
         chapter = [&quot;[CHAPTER]&quot;, &quot;TIMEBASE=1/1000&quot;, f&quot;START={start}&quot;, f&quot;END={end}&quot;, f&quot;title={title}&quot;, &quot;\n&quot;]
         text += '\n'.join(chapter)
-    file_name = re.findall('(\d.*?\.mp4)', time_path)[0]
-    chapter_path = f&quot;{video_path}/{file_name}.txt&quot;
-    with open(chapter_path, &quot;w&quot;) as myfile:
-        myfile.write(text)
-    return chapter_path
+    file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
+    chapters_path = f&quot;{save_path}/{file_name}.txt&quot;
+    with open(chapters_path, &quot;w&quot;) as f:
+        f.write(text)
+    return chapters_path
 
 
 def gen_timetable(screenshots_path: str):
     &quot;&quot;&quot;
     配合IINA的截图格式：
     screenshot-template: %{filename}-%p-
-    (\d.*?\.mp4)-(\d+:\d+:\d+)-(.*?).png
     0:23:20 Start
     0:40:30 First Performance
     0:40:56 Break
@@ -1533,13 +1532,13 @@ if __name__ == &quot;__main__&quot;:
         ss_path, video_path = sys.argv[1], sys.argv[2]
     # times_chapters(timefile, chapter_file)
     timetables = gen_timetable(ss_path)
-    chapters = []
+    chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
-        chapters.append(chapter_path)
+        chapter_files.append(chapter_path)
 
-    for chapter_file in chapters:
-        video_name = re.findall('(\d.*?)\.mp4', chapter_file)[0]
+    for chapter_file in chapter_files:
+        video_name = re.findall(r'(\d.*?)\.mp4', chapter_file)[0]
         edit_video_path = f&quot;{video_path}/{video_name}.mp4&quot;
         inserted_video_path = f&quot;{video_path}/{video_name}-chapters.mp4&quot;
         &quot;&quot;&quot;
@@ -1603,7 +1602,7 @@ if __name__ == &quot;__main__&quot;:
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:35 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:47 UTC 2022 -->
 <!--te-->
 <h2 id="workflows-collection"><a class="header" href="#workflows-collection">workflows collection</a></h2>
 <blockquote>
@@ -1836,7 +1835,7 @@ function run() {
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:35 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:47 UTC 2022 -->
 <!--te-->
 <h2 id="md格式化"><a class="header" href="#md格式化">md格式化</a></h2>
 <blockquote>
@@ -1962,7 +1961,7 @@ draft.update()
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:36 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:48 UTC 2022 -->
 <!--te-->
 <h2 id="路径"><a class="header" href="#路径">路径</a></h2>
 <pre><code>~/.config/karabiner
@@ -2657,7 +2656,7 @@ draft.update()
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:36 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:48 UTC 2022 -->
 <!--te-->
 <h2 id="缘起"><a class="header" href="#缘起">缘起</a></h2>
 <p>对于一些核心主力深度使用的app，比如Omni系列，Jetbrains系列，我觉得完全值得专门设置一层按键</p>
@@ -2711,7 +2710,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:36 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:47 UTC 2022 -->
 <!--te-->
 <h2 id="添加超链接"><a class="header" href="#添加超链接">添加超链接</a></h2>
 <p><a href="https://support.goodnotes.com/hc/en-us/articles/4408423590671-Adding-external-links">Adding external links – GoodNotes Support</a></p>
@@ -2768,7 +2767,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:37 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:48 UTC 2022 -->
 <!--te-->
 <h2 id="小技巧"><a class="header" href="#小技巧">小技巧</a></h2>
 <h3 id="朗读模式"><a class="header" href="#朗读模式">朗读模式</a></h3>
@@ -2970,7 +2969,7 @@ Tab</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:37 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:49 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -3337,21 +3336,21 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 88K
-drwxr-xr-x 4 runner docker 4.0K Sep  8 10:28 .
-drwxr-xr-x 4 runner docker 4.0K Sep  8 10:28 ..
--rw-r--r-- 1 runner docker 1.5K Sep  8 10:28 IINA_deepin.md
-drwxr-xr-x 2 runner docker 4.0K Sep  8 10:28 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Sep  8 10:28 alfred.md
--rw-r--r-- 1 runner docker   23 Sep  8 10:28 app_deepin.md
--rw-r--r-- 1 runner docker  698 Sep  8 10:28 drafts.md
--rw-r--r-- 1 runner docker  859 Sep  8 10:28 goodnotes.md
--rw-r--r-- 1 runner docker 1.5K Sep  8 10:28 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Sep  8 10:28 karabiner
--rw-r--r-- 1 runner docker 2.7K Sep  8 10:28 marginnote_deepin.md
--rw-r--r-- 1 runner docker  29K Sep  8 10:28 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Sep  8 10:28 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Sep  8 10:28 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Sep  8 10:28 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Sep  8 10:34 .
+drwxr-xr-x 4 runner docker 4.0K Sep  8 10:34 ..
+-rw-r--r-- 1 runner docker 1.5K Sep  8 10:34 IINA_deepin.md
+drwxr-xr-x 2 runner docker 4.0K Sep  8 10:34 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Sep  8 10:34 alfred.md
+-rw-r--r-- 1 runner docker   23 Sep  8 10:34 app_deepin.md
+-rw-r--r-- 1 runner docker  698 Sep  8 10:34 drafts.md
+-rw-r--r-- 1 runner docker  859 Sep  8 10:34 goodnotes.md
+-rw-r--r-- 1 runner docker 1.5K Sep  8 10:34 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Sep  8 10:34 karabiner
+-rw-r--r-- 1 runner docker 2.7K Sep  8 10:34 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  29K Sep  8 10:34 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Sep  8 10:34 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Sep  8 10:34 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Sep  8 10:34 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
@@ -3831,7 +3830,7 @@ interesting thing is and how interesting you might find it.</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:39 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:51 UTC 2022 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
 <h2 id="下载并设置环境变量"><a class="header" href="#下载并设置环境变量">下载并设置环境变量</a></h2>
@@ -4059,7 +4058,7 @@ cp vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
 <!--te-->
 <h2 id="首先安装zsh"><a class="header" href="#首先安装zsh">首先安装zsh</a></h2>
 <pre><code>sudo apt-get install zsh
@@ -4174,7 +4173,7 @@ sudo dpkg -i lsd_0.17.0_amd64.deb
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
 <!--te-->
 <h2 id="osx"><a class="header" href="#osx">OSX</a></h2>
 <pre><code># 解绑前缀，改为和screen一样的
@@ -4456,7 +4455,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:39 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:51 UTC 2022 -->
 <!--te-->
 <h2 id="open"><a class="header" href="#open">open</a></h2>
 <h2 id="pbcopy-and-pbpaste"><a class="header" href="#pbcopy-and-pbpaste">pbcopy and pbpaste</a></h2>
@@ -4570,7 +4569,7 @@ setw -g monitor-activity on
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:34 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:45 UTC 2022 -->
 <!--te-->
 <h2 id="简介"><a class="header" href="#简介">简介</a></h2>
 <p>Project IINA，是一个基于 mpv、契合 macOS 设计风格、力求做到最佳用户体验、轻便且功能强大的视频播放器项目。</p>
@@ -4650,7 +4649,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:36 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:47 UTC 2022 -->
 <!--te-->
 <h2 id="共性"><a class="header" href="#共性">共性</a></h2>
 <h3 id="快捷键整理"><a class="header" href="#快捷键整理">快捷键整理</a></h3>
@@ -4705,7 +4704,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:34 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:46 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-4"><a class="header" href="#参考资源-4">参考资源</a></h2>
 <ul>
@@ -4757,7 +4756,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:35 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:46 UTC 2022 -->
 <!--te-->
 <p><video src="https://www.omnigroup.com/assets/img/2020/plan-video-18.mp4" controls="controls"></video></p>
 <h2 id="基础流程"><a class="header" href="#基础流程">基础流程</a></h2>
@@ -4928,7 +4927,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:34 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:46 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-6"><a class="header" href="#参考资源-6">参考资源</a></h2>
 <ul>
@@ -4957,7 +4956,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:34 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:46 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-7"><a class="header" href="#参考资源-7">参考资源</a></h2>
 <ul>
@@ -4986,7 +4985,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:35 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:46 UTC 2022 -->
 <!--te-->
 <h2 id="参考资源-8"><a class="header" href="#参考资源-8">参考资源</a></h2>
 <ul>
@@ -5021,7 +5020,7 @@ Meta+\ set speed 1.0</p>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:37 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:49 UTC 2022 -->
 <!--te-->
 <h2 id="精选脚本"><a class="header" href="#精选脚本">精选脚本</a></h2>
 <h3 id="userscript-plus-显示当前网站可用油猴脚本"><a class="header" href="#userscript-plus-显示当前网站可用油猴脚本">Userscript-plus: 显示当前网站可用油猴脚本</a></h3>
@@ -5081,7 +5080,7 @@ seconds</li>
 <li><a href="app_extensions/workflows/workflows.html#%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%95%B4%E7%90%86">工作流整理</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:53 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/workflows/workflows.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -5110,7 +5109,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:40 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
 <!--te-->
 <h2 id="一自定义模版导出不可行"><a class="header" href="#一自定义模版导出不可行">一、自定义模版导出：不可行</a></h2>
 <ul>
@@ -5147,7 +5146,7 @@ seconds</li>
 <li><a href="app_extensions/Anki_around/anki_around.html#anki%E5%91%A8%E8%BE%B9%E4%BD%BF%E7%94%A8%E5%8F%8A%E6%89%A9%E5%B1%95">Anki周边使用及扩展</a></li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:38 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:50 UTC 2022 -->
 <!--te-->
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_extensions/Anki_around/anki_around.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script><div style="break-before: page; page-break-before: always;"></div><style>.presentation-only.not-presenting {
@@ -5177,7 +5176,7 @@ seconds</li>
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:28:38 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 10:34:50 UTC 2022 -->
 <!--te-->
 <h2 id="正面模版"><a class="header" href="#正面模版">正面模版</a></h2>
 <p><img src="https://raw.githubusercontent.com/KuanHsiaoKuo/writing_materials/main/imgs/image-20220606234758347.png" alt="image-20220606234758347" /></p>
