@@ -218,7 +218,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 10:34:52 UTC 2022 -->
+<!-- Added by: runner, at: Thu Sep  8 13:02:41 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -552,9 +552,17 @@ encoder=Lavf59.16.100
         text += '\n'.join(chapter)
     file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
     chapters_path = f&quot;{save_path}/{file_name}.txt&quot;
-    with open(chapters_path, &quot;w&quot;) as f:
-        f.write(text)
-    return chapters_path
+    if os.path.exists(chapters_path):
+        with open(chapters_path, 'r') as f:
+            raw_text = f.read()
+    else:
+        raw_text = ''
+    if text != raw_text:
+        with open(chapters_path, &quot;w&quot;) as f:
+            f.write(text)
+        return chapters_path
+    else:
+        return None
 
 
 def gen_timetable(screenshots_path: str):
@@ -607,7 +615,8 @@ if __name__ == &quot;__main__&quot;:
     chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
-        chapter_files.append(chapter_path)
+        if chapter_path:
+            chapter_files.append(chapter_path)
 
     for chapter_file in chapter_files:
         video_name = re.findall(r'(\d.*?)\.mp4', chapter_file)[0]
@@ -617,8 +626,10 @@ if __name__ == &quot;__main__&quot;:
         -y: 默认覆盖, 但是这里载入章节文件不可以in-place修改。
         -i: input
         -codec: 编解码
+        -map_metadata 1: 只匹配头部内容，只能在第一次添加时生效
+        -map_chapters 1: 匹配章节，在后续修改章节时需要加上
         &quot;&quot;&quot;
-        merge_command = f&quot;ffmpeg -y -i {edit_video_path} -i {chapter_file} -map_metadata 1 -codec copy {inserted_video_path}&quot;
+        merge_command = f&quot;ffmpeg -y -i {edit_video_path} -i {chapter_file} -map_metadata 1 -map_chapters 1 -codec copy {inserted_video_path}&quot;
         delete_command = f&quot;rm {edit_video_path}&quot;
         mv_command = f&quot;mv {inserted_video_path} {edit_video_path}&quot;
         os.system(merge_command)
