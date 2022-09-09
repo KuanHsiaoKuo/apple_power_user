@@ -218,7 +218,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep  8 13:02:41 UTC 2022 -->
+<!-- Added by: runner, at: Fri Sep  9 13:27:17 UTC 2022 -->
 <!--te-->
 <h2 id="将字幕文件转为json"><a class="header" href="#将字幕文件转为json">将字幕文件转为json</a></h2>
 <h3 id="spacy自然语言处理"><a class="header" href="#spacy自然语言处理">spaCy自然语言处理</a></h3>
@@ -450,11 +450,11 @@ def main(target_dir):
 
 
 if __name__ == &quot;__main__&quot;:
-    # if len(sys.argv) == 1:
-    #     sys.exit(&quot;请传入待合并视频文件夹📁目录&quot;)
-    # else:
-    #     target_dir = sys.argv[1]
-    target_dirs = [&quot;/Users/kuanhsiaokuo/Migrations/videos/张汉东的Rust实战课/00-04.rust-intro&quot;]
+    if len(sys.argv) == 1:
+        sys.exit(&quot;请传入待合并视频文件夹📁目录&quot;)
+    else:
+        target_dir = sys.argv[1]
+    target_dirs = [target_dir]
     for item in target_dirs:
         main(item)
 </code></pre>
