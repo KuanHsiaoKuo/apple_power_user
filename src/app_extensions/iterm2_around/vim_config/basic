@@ -65,3 +65,6 @@ let &titlestring = expand("%:p")
 "if &term == "screen" || &term == "xterm"
 "  set title
 "endif
+"设置语法高亮
+filetype plugin indent on
+syntax on
