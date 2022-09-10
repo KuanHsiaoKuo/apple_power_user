@@ -5,7 +5,8 @@
 import re
 import os
 import sys
-
+import subprocess
+from subprocess import CalledProcessError
 
 def times_chapters(time_path: str, save_path: str):
     """
@@ -57,6 +58,7 @@ encoder=Lavf59.16.100
         chapter = ["[CHAPTER]", "TIMEBASE=1/1000", f"START={start}", f"END={end}", f"title={title}", "\n"]
         text += '\n'.join(chapter)
     file_name = re.findall(r'(\d.*?\.mp4)', time_path)[0]
+    file_name = file_name.split('/')[-1]
     chapters_path = f"{save_path}/{file_name}.txt"
     if os.path.exists(chapters_path):
         with open(chapters_path, 'r') as f:
@@ -85,39 +87,70 @@ def gen_timetable(screenshots_path: str):
     :return:
     """
     info_pattern = re.compile(r'(\d.*?\.mp4)-(\d+:\d{2}:\d{2})-(.*?).png')
-    cmd_res = os.popen(f"ls {screenshots_path}/*.png")
-    png_list = cmd_res.read().split('\n')
-    png_infos = {}
-    for png in png_list:
-        png_info = info_pattern.findall(png)
-        if png_info:
-            video, timestamp, title = png_info[0]
-            if not title:
-                title = '未命名章节'
-            if not png_infos.get(video):
-                png_infos[video] = []
-            png_infos[video].append([timestamp, title])
-    # 按照第二个时间点元素排序
-    files = []
-    for video, chapters in png_infos.items():
-        file_path = f"{screenshots_path}/{video}.txt"
-        chapters.sort(key=lambda item: item[0].split(':'))
-        with open(file_path, 'w') as f:
-            for timestamp, chapter_name in chapters:
-                f.writelines(f"{timestamp} {chapter_name}\n ")
-        files.append(file_path)
-    return files
-
-
-if __name__ == "__main__":
-    timefile = ''
-    chapter_file = ''
-    if len(sys.argv) != 3:
-        sys.exit('请按顺序加入截图文件夹路径和视频文件路径')
+    ls_png_cmd = f"ls {screenshots_path}/*.png"
+    try:
+        png_cmd_res = subprocess.run(ls_png_cmd, shell=True, check=True, capture_output=True)
+    except CalledProcessError as e:
+        png_cmd_res = e
+    if png_cmd_res.returncode == 0:
+        png_list = png_cmd_res.stdout.decode().split('\n')
+        png_infos = {}
+        for png in png_list:
+            png_info = info_pattern.findall(png)
+            if png_info:
+                video, timestamp, title = png_info[0]
+                # 去掉截图归类目录
+                # 例如：130-139.tokio-runtime/130-139.tokio-runtime.mp4-00:00:13-第一节-概要介绍.png
+                video = video.split('/')[-1]
+                if not title:
+                    title = '未命名章节'
+                if not png_infos.get(video):
+                    png_infos[video] = []
+                png_infos[video].append([timestamp, title])
+        # 按照第二个时间点元素排序
+        files = []
+        for video, chapters in png_infos.items():
+            file_path = f"{screenshots_path}/{video}.txt"
+            chapters.sort(key=lambda item: item[0].split(':'))
+            with open(file_path, 'w') as f:
+                for timestamp, chapter_name in chapters:
+                    f.writelines(f"{timestamp} {chapter_name}\n ")
+            files.append(file_path)
+        return files
     else:
-        ss_path, video_path = sys.argv[1], sys.argv[2]
-    # times_chapters(timefile, chapter_file)
-    timetables = gen_timetable(ss_path)
+        sys.exit(f"执行指令{ls_png_cmd}出错：{png_cmd_res.stderr.decode()}")
+
+
+def categorized_screenshots(root_screen_directory):
+    info_pattern = re.compile(r'(\d.*?)\.mp4-(\d+:\d{2}:\d{2})-(.*?).png')
+    ls_png_cmd = f"ls {root_screen_directory}/*.png"
+    try:
+        png_cmd_res = subprocess.run(ls_png_cmd, shell=True, check=True, capture_output=True)
+    except CalledProcessError as e:
+        png_cmd_res = e
+    if png_cmd_res.returncode == 0:
+        png_list = png_cmd_res.stdout.decode().split('\n')
+        file_titles = []
+        for png in png_list:
+            png_info = info_pattern.findall(png)
+            if png_info:
+                video_title, timestamp, title = png_info[0]
+                if video_title and video_title not in file_titles:
+                    file_titles.append(video_title)
+        # 新建文件夹并整合截图
+        for title in file_titles:
+            dir_path = f"{root_screen_directory}/{title}"
+            if not os.path.exists(dir_path):
+                os.popen(f"mkdir {dir_path}")
+
+            os.popen(f"mv {root_screen_directory}/{title}.*.png {dir_path}/")
+    dir_res = os.popen(f"ls -d {root_screen_directory}/*/")
+    dirs = dir_res.read().split('\n')
+    return [item[:-1] for item in dirs]
+
+
+def main(s_dir):
+    timetables = gen_timetable(s_dir)
     chapter_files = []
     for timetable in timetables:
         chapter_path = times_chapters(timetable, video_path)
@@ -141,3 +174,17 @@ if __name__ == "__main__":
         os.system(merge_command)
         os.system(delete_command)
         os.system(mv_command)
+
+
+if __name__ == "__main__":
+    timefile = ''
+    chapter_file = ''
+    if len(sys.argv) != 3:
+        sys.exit('请按顺序加入截图文件夹路径和视频文件路径')
+    else:
+        ss_path, video_path = sys.argv[1], sys.argv[2]
+    # times_chapters(timefile, chapter_file)
+    screenshot_dirs = categorized_screenshots(ss_path)
+    for screenshot_dir in screenshot_dirs:
+        if screenshot_dir:
+            main(screenshot_dir)
