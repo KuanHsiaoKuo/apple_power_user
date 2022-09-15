@@ -1,0 +1,5 @@
+source $VC/basic
+source $VC/fold_break
+source $VC/leader_key
+source $VC/tab_key
+source $VC/scripts/replace_collections.vim
