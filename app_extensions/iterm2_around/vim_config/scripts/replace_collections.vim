@@ -1,18 +1,25 @@
 function! AddSpaceBeforeEqualInWholeBuffer()
-    let l = 1
     let include_replace = {
       \ '{{ #': '{{#',
       \ '# include': '#include',
-      \ 'include\.\.': 'include \.\.',
+      \ 'include\.\.': 'include\ \.\.',
       \ '\/ ': '\/',
-      \ ' \/': '\/'
+      \ ' \/': '\/',
+      \ ': ': ':',
     \ }
-    for [substitute_key, substituted] in items(include_replace)
-        echo substitute_key . substituted
-        for line in getline(1,"$")
-            call setline(l, substitute(line, substitute_key, substituted, "g"))
+    let l = 1
+    for line in getline(1,"$")
+        if stridx(line,  'include') > -1
+            let replaced_line = line
+            for [substitute_key, substituted] in items(include_replace)
+                echo l.replaced_line
+                echo l.substitute_key.substituted
+                "call setline(l, substitute(line, substitute_key, substituted, "g"))
+                let replaced_line = substitute(replaced_line, substitute_key, substituted, "g")
+            endfor
+            call setline(l, replaced_line)
+        endif
         let l = l + 1
-        endfor
     endfor
 endfunction
 "将会在source的时候直接执行
