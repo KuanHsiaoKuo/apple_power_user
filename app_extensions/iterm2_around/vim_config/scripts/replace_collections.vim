@@ -12,8 +12,8 @@ function! AddSpaceBeforeEqualInWholeBuffer()
         if stridx(line,  'include') > -1
             let replaced_line = line
             for [substitute_key, substituted] in items(include_replace)
-                echo l.replaced_line
-                echo l.substitute_key.substituted
+                "echo l.replaced_line
+                "echo l.substitute_key.substituted
                 "call setline(l, substitute(line, substitute_key, substituted, "g"))
                 let replaced_line = substitute(replaced_line, substitute_key, substituted, "g")
             endfor
