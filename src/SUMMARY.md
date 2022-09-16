@@ -22,6 +22,7 @@
         - [iTerm](app_extensions/iterm2_around/intro.md)
             - [zsh](app_extensions/iterm2_around/zsh_config/README.md)
             - [tmux](app_extensions/iterm2_around/tmux_config.md)
+            - [vim pro](app_extensions/iterm2_around/pro_vim.md)
             - [osx特色指令使用](app_extensions/iterm2_around/osx_commands.md)
         - [IINA](app_deepin/IINA_deepin.md)
         - [Jetbrains系列IDE使用](app_deepin/jetbrains_ide.md)
