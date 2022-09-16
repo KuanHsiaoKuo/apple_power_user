@@ -21,7 +21,10 @@ function! MdbookIncludeSyntaxFormatInWholeBuffer()
         endif
         let l = l + 1
     endfor
+    "保存文件
     write
+    "退出vim
+    exit
 endfunction
 "将会在source的时候直接执行
 "call AddSpaceBeforeEqualInWholeBuffer()
