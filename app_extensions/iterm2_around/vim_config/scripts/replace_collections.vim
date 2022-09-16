@@ -21,6 +21,7 @@ function! MdbookIncludeSyntaxFormatInWholeBuffer()
         endif
         let l = l + 1
     endfor
+    write
 endfunction
 "将会在source的时候直接执行
 "call AddSpaceBeforeEqualInWholeBuffer()
