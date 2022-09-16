@@ -1,4 +1,4 @@
-function! AddSpaceBeforeEqualInWholeBuffer()
+function! MdbookIncludeSyntaxFormatInWholeBuffer()
     let include_replace = {
       \ '{{ #': '{{#',
       \ '# include': '#include',
@@ -25,4 +25,4 @@ endfunction
 "将会在source的时候直接执行
 "call AddSpaceBeforeEqualInWholeBuffer()
 "source之后将会自定义一个指令
-command Rp call AddSpaceBeforeEqualInWholeBuffer()
+command Ir call MdbookIncludeSyntaxFormatInWholeBuffer()
