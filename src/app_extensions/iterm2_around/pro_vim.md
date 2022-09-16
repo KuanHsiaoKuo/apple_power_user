@@ -1,6 +1,15 @@
 # vim专业使用
 
 <!--ts-->
+* [vim专业使用](#vim专业使用)
+   * [VimScript](#vimscript)
+      * [场景一：繁琐内容处理](#场景一繁琐内容处理)
+         * [代码内容](#代码内容)
+         * [使用说明](#使用说明)
+
+<!-- Created by https://github.com/ekalinin/github-markdown-toc -->
+<!-- Added by: runner, at: Fri Sep 16 04:05:21 UTC 2022 -->
+
 <!--te-->
 
 ## Macros
