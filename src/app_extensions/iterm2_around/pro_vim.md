@@ -3,9 +3,35 @@
 <!--ts-->
 <!--te-->
 
+## Macros
+
+> 对于临时的复杂操作，可以使用宏。这里举例一下
+
+1. 浏览模式下按 q
+2. 选择一个 mark， 比如 e
+3. 开始记录批量操作
+4. 按 q 退出宏记录
+5. :echo @e 或者:reg @e 可以查看宏记录
+6. 编辑修改：打开新的 vim，"ep, 编辑修改，复制，"eyy
+7. 列出所有的宏：:reg
+8. 清除指定宏：:let @e=''
+
+### 相关资料
+
+- [recording macros](marginnote3app://note/91233E56-7CF4-48CD-9FD9-CA75C4DF930B)
+- [vim 编辑器宏的使用 – 初果编程](https://chuguo.pro/share/473)
+
 ## VimScript
 
 > vim本身提供一种脚本语言，帮助进行个性化操作。
+
+### 相关资料
+
+- [Tutorial: vimscript](https://mmmnnnmmm.com/#tutorial_vimscript)
+- [Vimscript functions cheatsheet](https://devhints.io/vimscript-functions)
+- [VimScript 五分钟入门（翻译） - 知乎](https://zhuanlan.zhihu.com/p/37352209)
+- [Five Minute Vimscript](http://andrewscala.com/vimscript/)
+- [Vim documentation: usr_41](http://vimdoc.sourceforge.net/htmldoc/usr_41.html)
 
 ### 场景一：繁琐内容处理
 
