@@ -199,8 +199,14 @@
 <ul>
 <li><a href="#vim%E4%B8%93%E4%B8%9A%E4%BD%BF%E7%94%A8">vim专业使用</a>
 <ul>
+<li><a href="#macros">Macros</a>
+<ul>
+<li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">相关资料</a></li>
+</ul>
+</li>
 <li><a href="#vimscript">VimScript</a>
 <ul>
+<li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99-1">相关资料</a></li>
 <li><a href="#%E5%9C%BA%E6%99%AF%E4%B8%80%E7%B9%81%E7%90%90%E5%86%85%E5%AE%B9%E5%A4%84%E7%90%86">场景一：繁琐内容处理</a>
 <ul>
 <li><a href="#%E4%BB%A3%E7%A0%81%E5%86%85%E5%AE%B9">代码内容</a></li>
@@ -213,12 +219,39 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Fri Sep 16 04:05:21 UTC 2022 -->
+<!-- Added by: runner, at: Fri Sep 16 04:08:19 UTC 2022 -->
 <!--te-->
+<h2 id="macros"><a class="header" href="#macros">Macros</a></h2>
+<blockquote>
+<p>对于临时的复杂操作，可以使用宏。这里举例一下</p>
+</blockquote>
+<ol>
+<li>浏览模式下按 q</li>
+<li>选择一个 mark， 比如 e</li>
+<li>开始记录批量操作</li>
+<li>按 q 退出宏记录</li>
+<li>:echo @e 或者:reg @e 可以查看宏记录</li>
+<li>编辑修改：打开新的 vim，“ep, 编辑修改，复制，“eyy</li>
+<li>列出所有的宏：:reg</li>
+<li>清除指定宏：:let @e=‘’</li>
+</ol>
+<h3 id="相关资料"><a class="header" href="#相关资料">相关资料</a></h3>
+<ul>
+<li><a href="marginnote3app://note/91233E56-7CF4-48CD-9FD9-CA75C4DF930B">recording macros</a></li>
+<li><a href="https://chuguo.pro/share/473">vim 编辑器宏的使用 – 初果编程</a></li>
+</ul>
 <h2 id="vimscript"><a class="header" href="#vimscript">VimScript</a></h2>
 <blockquote>
 <p>vim本身提供一种脚本语言，帮助进行个性化操作。</p>
 </blockquote>
+<h3 id="相关资料-1"><a class="header" href="#相关资料-1">相关资料</a></h3>
+<ul>
+<li><a href="https://mmmnnnmmm.com/#tutorial_vimscript">Tutorial: vimscript</a></li>
+<li><a href="https://devhints.io/vimscript-functions">Vimscript functions cheatsheet</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/37352209">VimScript 五分钟入门（翻译） - 知乎</a></li>
+<li><a href="http://andrewscala.com/vimscript/">Five Minute Vimscript</a></li>
+<li><a href="http://vimdoc.sourceforge.net/htmldoc/usr_41.html">Vim documentation: usr_41</a></li>
+</ul>
 <h3 id="场景一繁琐内容处理"><a class="header" href="#场景一繁琐内容处理">场景一：繁琐内容处理</a></h3>
 <blockquote>
 <p>我比较喜欢在idea里面写markdown文档，但是idea格式化mdbook的include语法时会出现问题, 自动添加空格导致语法失效。</p>
