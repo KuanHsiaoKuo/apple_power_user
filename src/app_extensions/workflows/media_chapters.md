@@ -1,12 +1,13 @@
 # 多媒体资料章节化工作流
 
 <!--ts-->
+
 * [多媒体资料章节化工作流](#多媒体资料章节化工作流)
-   * [缘起](#缘起)
-   * [Step1. 相关视频/音频合并-ffmpeg](#step1-相关视频音频合并-ffmpeg)
-   * [Step2. 使用IINA结合MPV的指令自动化创建章节](#step2-使用iina结合mpv的指令自动化创建章节)
-   * [Step3. 将章节文本压入到多媒体文件-ffmpeg](#step3-将章节文本压入到多媒体文件-ffmpeg)
-   * [Step4. 播放工具选择](#step4-播放工具选择)
+    * [缘起](#缘起)
+    * [Step1. 相关视频/音频合并-ffmpeg](#step1-相关视频音频合并-ffmpeg)
+    * [Step2. 使用IINA结合MPV的指令自动化创建章节](#step2-使用iina结合mpv的指令自动化创建章节)
+    * [Step3. 将章节文本压入到多媒体文件-ffmpeg](#step3-将章节文本压入到多媒体文件-ffmpeg)
+    * [Step4. 播放工具选择](#step4-播放工具选择)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
 <!-- Added by: runner, at: Sat Sep 17 13:43:51 UTC 2022 -->
@@ -38,3 +39,16 @@
 
 - [VLC vs mpv, Which one is the best? - LinuxForDevices](https://www.linuxfordevices.com/tutorials/linux/vlc-vs-mpv)
 - [开源视频播放器介绍 - 掘金](https://juejin.cn/post/6844903662796406792)
+
+## 关于音频文件处理
+
+> 可以添加图片，将mp3转为mp4
+
+```shell
+# 转化图片格式
+ffmpeg -i 07.ownership.webp 07.ownership.jpg
+# 提取mp3
+ffmpeg -i 07.ownership.mp4 -f mp3 -vn 07.ownership.mp3
+# 合并为mp4
+ffmpeg -loop 1 -i 07.ownership.jpg -i 07.ownership.mp3 -c:a copy -c:v libx264 -shortest out.mp4
+```
