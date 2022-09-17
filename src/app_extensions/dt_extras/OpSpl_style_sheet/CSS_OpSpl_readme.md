@@ -5,7 +5,7 @@
    * [History and credentials](#history-and-credentials)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Fri Sep 16 12:26:18 UTC 2022 -->
+<!-- Added by: runner, at: Sat Sep 17 13:43:50 UTC 2022 -->
 
 <!--te-->
 I’m not a designer, nor a programmer. So I went through some tutorials and some reference material in order to arrive to something satisfactory, at least for me — and it took some time. So, I’d like, here, to give other laymen/laywomen in CSS the barely minimal knowledge so they can edit a CSS to their personal taste.
