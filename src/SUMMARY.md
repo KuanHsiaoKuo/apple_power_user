@@ -36,6 +36,7 @@
         - [Tamper Monkey🐒](app_deepin/tampermonkey.md)
     - [工作流](app_extensions/workflows/workflows.md)
         - [Anki与marginnote协同](app_extensions/workflows/marginnote_anki.md)
+        - [多媒体文件章节化](app_extensions/workflows/media_chapters.md)
 
 
 
