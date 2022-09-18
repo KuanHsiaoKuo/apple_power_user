@@ -186,7 +186,7 @@ Git LFS 是 Github 开发的一个 Git 的扩展，用于实现 Git 对大文件
 
 ### Rust Playground页面执行
 
-- 默认支持
+#### 默认支持
 
 ```rust
 #![allow(unused)]
@@ -196,7 +196,7 @@ fn main() {
 }
 ```
 
-- 指定不支持
+#### 指定不支持
 
 ```rust,noplayground
 let mut name = String::new();
@@ -279,6 +279,21 @@ println!("Hello {}!", name);
 ```
 
 #### 指定锚点部分
+
+#### 打开行数
+
+- [output.html.playground](https://rust-lang.github.io/mdBook/format/configuration/renderers.html?highlight=book.toml#outputhtmlplayground)
+
+```toml
+[output.html.playground]
+editable = false         # allows editing the source code
+copyable = true          # include the copy button for copying code snippets
+copy-js = true           # includes the JavaScript for the code editor
+line-numbers = false     # displays line numbers for editable code
+runnable = true          # displays a run button for rust code
+```
+
+> line-numbers Display line numbers on editable sections of code. Requires both editable and copy-js to be true. Defaults to false.
 
 ### 插入代码
 
