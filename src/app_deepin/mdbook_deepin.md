@@ -11,10 +11,13 @@
    * [Rust特供功能](#rust特供功能)
       * [隐藏代码行](#隐藏代码行)
       * [Rust Playground页面执行](#rust-playground页面执行)
+         * [默认支持](#默认支持)
+         * [指定不支持](#指定不支持)
       * [包含文件自动渲染为md](#包含文件自动渲染为md)
          * [全文件包含](#全文件包含)
          * [指定行数](#指定行数)
          * [指定锚点部分](#指定锚点部分)
+         * [打开行数](#打开行数)
       * [插入代码](#插入代码)
          * [插入可运行代码: 只支持rust](#插入可运行代码-只支持rust)
          * [页面直接编辑代码: *, editable](#页面直接编辑代码--editable)
@@ -87,7 +90,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Sep 17 16:38:08 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep 18 05:19:01 UTC 2022 -->
 
 <!--te-->
 
