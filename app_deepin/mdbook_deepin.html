@@ -214,12 +214,18 @@
 <li><a href="#rust%E7%89%B9%E4%BE%9B%E5%8A%9F%E8%83%BD">Rust特供功能</a>
 <ul>
 <li><a href="#%E9%9A%90%E8%97%8F%E4%BB%A3%E7%A0%81%E8%A1%8C">隐藏代码行</a></li>
-<li><a href="#rust-playground%E9%A1%B5%E9%9D%A2%E6%89%A7%E8%A1%8C">Rust Playground页面执行</a></li>
+<li><a href="#rust-playground%E9%A1%B5%E9%9D%A2%E6%89%A7%E8%A1%8C">Rust Playground页面执行</a>
+<ul>
+<li><a href="#%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81">默认支持</a></li>
+<li><a href="#%E6%8C%87%E5%AE%9A%E4%B8%8D%E6%94%AF%E6%8C%81">指定不支持</a></li>
+</ul>
+</li>
 <li><a href="#%E5%8C%85%E5%90%AB%E6%96%87%E4%BB%B6%E8%87%AA%E5%8A%A8%E6%B8%B2%E6%9F%93%E4%B8%BAmd">包含文件自动渲染为md</a>
 <ul>
 <li><a href="#%E5%85%A8%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB">全文件包含</a></li>
 <li><a href="#%E6%8C%87%E5%AE%9A%E8%A1%8C%E6%95%B0">指定行数</a></li>
 <li><a href="#%E6%8C%87%E5%AE%9A%E9%94%9A%E7%82%B9%E9%83%A8%E5%88%86">指定锚点部分</a></li>
+<li><a href="#%E6%89%93%E5%BC%80%E8%A1%8C%E6%95%B0">打开行数</a></li>
 </ul>
 </li>
 <li><a href="#%E6%8F%92%E5%85%A5%E4%BB%A3%E7%A0%81">插入代码</a>
@@ -338,7 +344,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Sep 17 16:38:08 UTC 2022 -->
+<!-- Added by: runner, at: Sun Sep 18 05:19:01 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -419,18 +425,14 @@
 </span>}
 </code></pre></pre>
 <h3 id="rust-playground页面执行"><a class="header" href="#rust-playground页面执行">Rust Playground页面执行</a></h3>
-<ul>
-<li>默认支持</li>
-</ul>
+<h4 id="默认支持"><a class="header" href="#默认支持">默认支持</a></h4>
 <pre><pre class="playground"><code class="language-rust">#![allow(unused)]
 
 fn main() {
     println!(&quot;Hello, World!&quot;);
 }
 </code></pre></pre>
-<ul>
-<li>指定不支持</li>
-</ul>
+<h4 id="指定不支持"><a class="header" href="#指定不支持">指定不支持</a></h4>
 <pre><code class="language-rust noplayground">let mut name = String::new();
 std::io::stdin().read_line(&amp;mut name).expect(&quot;failed to read line&quot;);
 println!(&quot;Hello {}!&quot;, name);
@@ -529,6 +531,20 @@ do
   then
 </code></pre>
 <h4 id="指定锚点部分"><a class="header" href="#指定锚点部分">指定锚点部分</a></h4>
+<h4 id="打开行数"><a class="header" href="#打开行数">打开行数</a></h4>
+<ul>
+<li><a href="https://rust-lang.github.io/mdBook/format/configuration/renderers.html?highlight=book.toml#outputhtmlplayground">output.html.playground</a></li>
+</ul>
+<pre><code class="language-toml">[output.html.playground]
+editable = false         # allows editing the source code
+copyable = true          # include the copy button for copying code snippets
+copy-js = true           # includes the JavaScript for the code editor
+line-numbers = false     # displays line numbers for editable code
+runnable = true          # displays a run button for rust code
+</code></pre>
+<blockquote>
+<p>line-numbers Display line numbers on editable sections of code. Requires both editable and copy-js to be true. Defaults to false.</p>
+</blockquote>
 <h3 id="插入代码"><a class="header" href="#插入代码">插入代码</a></h3>
 <h4 id="插入可运行代码-只支持rust"><a class="header" href="#插入可运行代码-只支持rust">插入可运行代码: 只支持rust</a></h4>
 <h4 id="页面直接编辑代码--editable"><a class="header" href="#页面直接编辑代码--editable">页面直接编辑代码: *, editable</a></h4>
@@ -705,21 +721,21 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 88K
-drwxr-xr-x 4 runner docker 4.0K Sep 17 16:38 .
-drwxr-xr-x 4 runner docker 4.0K Sep 17 16:38 ..
--rw-r--r-- 1 runner docker 1.5K Sep 17 16:38 IINA_deepin.md
-drwxr-xr-x 2 runner docker 4.0K Sep 17 16:38 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Sep 17 16:38 alfred.md
--rw-r--r-- 1 runner docker   23 Sep 17 16:37 app_deepin.md
--rw-r--r-- 1 runner docker  698 Sep 17 16:38 drafts.md
--rw-r--r-- 1 runner docker  859 Sep 17 16:38 goodnotes.md
--rw-r--r-- 1 runner docker 1.5K Sep 17 16:38 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Sep 17 16:38 karabiner
--rw-r--r-- 1 runner docker 2.7K Sep 17 16:38 marginnote_deepin.md
--rw-r--r-- 1 runner docker  29K Sep 17 16:38 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Sep 17 16:37 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Sep 17 16:38 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Sep 17 16:37 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Sep 18 05:19 .
+drwxr-xr-x 4 runner docker 4.0K Sep 18 05:19 ..
+-rw-r--r-- 1 runner docker 1.5K Sep 18 05:18 IINA_deepin.md
+drwxr-xr-x 2 runner docker 4.0K Sep 18 05:18 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Sep 18 05:18 alfred.md
+-rw-r--r-- 1 runner docker   23 Sep 18 05:18 app_deepin.md
+-rw-r--r-- 1 runner docker  698 Sep 18 05:19 drafts.md
+-rw-r--r-- 1 runner docker  859 Sep 18 05:19 goodnotes.md
+-rw-r--r-- 1 runner docker 1.5K Sep 18 05:19 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Sep 18 05:19 karabiner
+-rw-r--r-- 1 runner docker 2.7K Sep 18 05:19 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  30K Sep 18 05:19 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Sep 18 05:18 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Sep 18 05:19 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Sep 18 05:18 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
