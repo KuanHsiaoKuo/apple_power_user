@@ -6,6 +6,7 @@ function! MdbookIncludeSyntaxFormatInWholeBuffer()
       \ '\/ ': '\/',
       \ ' \/': '\/',
       \ ': ': ':',
+      \ ' }}': '}}'
     \ }
     let l = 1
     for line in getline(1,"$")

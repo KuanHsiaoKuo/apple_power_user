@@ -74,6 +74,7 @@ def get_title_pic(title, pic_path):
         jpg_pic_path = pic_path.replace(pic_format, 'jpg')
         convert_cmd = f"ffmpeg -i {pic_path} {jpg_pic_path}"
         subprocess_run(convert_cmd)
+        print(convert_cmd)
         target_pic_path = jpg_pic_path
         rm_convert_jpg_cmd = f"rm {target_pic_path}"
     else:
@@ -93,6 +94,7 @@ def get_title_pic(title, pic_path):
     drawtext = ':'.join([f"{key}={value}" for key, value in drawtext_config.items()])
     insert_cmd = f'ffmpeg  -i {target_pic_path}  -vf drawtext={drawtext} -y {output_path}'
     subprocess_run(insert_cmd)
+    print(insert_cmd)
     if rm_convert_jpg_cmd:
         subprocess_run(rm_convert_jpg_cmd)
     return output_path
@@ -110,6 +112,7 @@ def get_cover_video(video_path):
     cover_video = f"{video_dir}/{video_name}_covered.mp4"
     convered_mp4_cmd = f"ffmpeg -loop 1 -i {cover_path} -i {mp3_path} -c:a copy -c:v libx264 -shortest {cover_video}"
     subprocess_run(convered_mp4_cmd)
+    print(convered_mp4_cmd)
     subprocess_run(f"rm {mp3_path}")
     subprocess_run(f"rm {cover_path}")
     return cover_video
@@ -143,13 +146,14 @@ def merge(target_dir, covered=False):
 
 
 def main():
-    if len(sys.argv) == 1:
-        sys.exit("请传入待合并视频文件夹📁目录")
-    else:
-        target_dir = sys.argv[1]
-    target_dirs = [target_dir]
+    # if len(sys.argv) == 1:
+    #     sys.exit("请传入待合并视频文件夹📁目录")
+    # else:
+    #     target_dir = sys.argv[1]
+    # target_dirs = [target_dir]
+    target_dirs = ['']
     for item in target_dirs:
-        merge(item)
+        merge(item, covered=True)
 
 
 if __name__ == "__main__":
