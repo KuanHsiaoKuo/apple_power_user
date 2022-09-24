@@ -27,6 +27,7 @@
    * [关于book](#关于book)
    * [关于mdbook serve panit-失败](#关于mdbook-serve-panit-失败)
    * [关于主题修改(theme)](#关于主题修改theme)
+   * [关于markdown table](#关于markdown-table)
 * [mdbook插件推荐](#mdbook插件推荐)
    * [自动检查](#自动检查)
       * [MDBook Link-Check](#mdbook-link-check)
@@ -90,7 +91,7 @@
    * [资源链接](#资源链接)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep 22 13:00:29 UTC 2022 -->
+<!-- Added by: runner, at: Sat Sep 24 09:14:04 UTC 2022 -->
 
 <!--te-->
 
