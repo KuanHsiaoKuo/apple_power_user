@@ -377,6 +377,40 @@ mytheme
 - [mdbook-extended-markdown-table - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-extended-markdown-table)
 ~~~
 
+~~~admonish tip title='格式注意'
+1. 其实就是类似ASCII渲染，所见即所得
+2. 每一行长度需要一致, 所以注意不要中英文混合
+3. 每一行之间要有分割线
+
+\`\`\`extended-markdown-table
+```extended-markdown-table
+|          |                                      Tool                                   |
+|          |------------------|----------------------|-----------------------------------|
+|          |                  | Markdown Tables      | Extended Markdown Tables          |
+| Feature  |------------------|----------------------|-----------------------------------|
+| Support  |                  |                      | Horizontal      |        ✓        |
+|          | Merged cells     |          ✗           |-----------------|-----------------|
+|          |                  |                      | Vertical        |        ✓        |
+```
+\`\`\`
+
+\`\`\`extended-markdown-table
+```extended-markdown-table
+| Macros                     | Define                                                         | Usage                | note   | Example    |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Declarative Macro          | #[macro_export]/macro_rules! macro_name{}                      | macro_name!()        |        | println!   |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Function Macro             | #[proc_macros]/pub fn macro_name                               | macro_name!()        |        |            |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Derive Macro               | #[proc_macros_derive(DeriveMacroName)]/pub  fn other_fn_name   | DeriveMacroName!()   |        |            |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Attritubte Macro           |                                                                |                      |        |            |
+```
+\`\`\`
+~~~
+
+
+
 # mdbook插件推荐
 
 ## 自动检查
