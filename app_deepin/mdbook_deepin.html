@@ -345,7 +345,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Sep 24 09:14:04 UTC 2022 -->
+<!-- Added by: runner, at: Sat Sep 24 14:06:15 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -626,6 +626,41 @@ mytheme
 </ul>
 </div>
 </div>
+<div id="admonition-格式注意" class="admonition tip">
+<div class="admonition-title">
+<p>格式注意</p>
+<p><a class="admonition-anchor-link" href="#admonition-格式注意"></a></p>
+</div>
+<div>
+<ol>
+<li>其实就是类似ASCII渲染，所见即所得</li>
+<li>每一行长度需要一致, 所以注意不要中英文混合</li>
+<li>每一行之间要有分割线</li>
+</ol>
+<p>```extended-markdown-table</p>
+<pre><code class="language-extended-markdown-table">|          |                                      Tool                                   |
+|          |------------------|----------------------|-----------------------------------|
+|          |                  | Markdown Tables      | Extended Markdown Tables          |
+| Feature  |------------------|----------------------|-----------------------------------|
+| Support  |                  |                      | Horizontal      |        ✓        |
+|          | Merged cells     |          ✗           |-----------------|-----------------|
+|          |                  |                      | Vertical        |        ✓        |
+</code></pre>
+<p>```</p>
+<p>```extended-markdown-table</p>
+<pre><code class="language-extended-markdown-table">| Macros                     | Define                                                         | Usage                | note   | Example    |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Declarative Macro          | #[macro_export]/macro_rules! macro_name{}                      | macro_name!()        |        | println!   |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Function Macro             | #[proc_macros]/pub fn macro_name                               | macro_name!()        |        |            |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Derive Macro               | #[proc_macros_derive(DeriveMacroName)]/pub  fn other_fn_name   | DeriveMacroName!()   |        |            |
+|----------------------------|----------------------------------------------------------------|----------------------|--------|------------|
+| Attritubte Macro           |                                                                |                      |        |            |
+</code></pre>
+<p>```</p>
+</div>
+</div>
 <h1 id="mdbook插件推荐"><a class="header" href="#mdbook插件推荐">mdbook插件推荐</a></h1>
 <h2 id="自动检查"><a class="header" href="#自动检查">自动检查</a></h2>
 <h3 id="mdbook-link-check"><a class="header" href="#mdbook-link-check">MDBook Link-Check</a></h3>
@@ -734,22 +769,22 @@ with the goal of eventually contributing back upstream.</p>
 <ol>
 <li>Shell</li>
 </ol>
-<pre><code class="language-console">total 88K
-drwxr-xr-x 4 runner docker 4.0K Sep 24 09:14 .
-drwxr-xr-x 4 runner docker 4.0K Sep 24 09:14 ..
--rw-r--r-- 1 runner docker 1.5K Sep 24 09:13 IINA_deepin.md
-drwxr-xr-x 2 runner docker 4.0K Sep 24 09:14 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Sep 24 09:14 alfred.md
--rw-r--r-- 1 runner docker   23 Sep 24 09:13 app_deepin.md
--rw-r--r-- 1 runner docker  698 Sep 24 09:14 drafts.md
--rw-r--r-- 1 runner docker  859 Sep 24 09:14 goodnotes.md
--rw-r--r-- 1 runner docker 1.5K Sep 24 09:14 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Sep 24 09:14 karabiner
--rw-r--r-- 1 runner docker 2.7K Sep 24 09:14 marginnote_deepin.md
--rw-r--r-- 1 runner docker  30K Sep 24 09:14 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Sep 24 09:13 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Sep 24 09:14 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Sep 24 09:13 typora_deepin.md
+<pre><code class="language-console">total 92K
+drwxr-xr-x 4 runner docker 4.0K Sep 24 14:06 .
+drwxr-xr-x 4 runner docker 4.0K Sep 24 14:06 ..
+-rw-r--r-- 1 runner docker 1.5K Sep 24 14:06 IINA_deepin.md
+drwxr-xr-x 2 runner docker 4.0K Sep 24 14:06 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Sep 24 14:06 alfred.md
+-rw-r--r-- 1 runner docker   23 Sep 24 14:05 app_deepin.md
+-rw-r--r-- 1 runner docker  698 Sep 24 14:06 drafts.md
+-rw-r--r-- 1 runner docker  859 Sep 24 14:06 goodnotes.md
+-rw-r--r-- 1 runner docker 1.5K Sep 24 14:06 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Sep 24 14:06 karabiner
+-rw-r--r-- 1 runner docker 2.7K Sep 24 14:06 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  33K Sep 24 14:06 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Sep 24 14:05 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Sep 24 14:06 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Sep 24 14:05 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
