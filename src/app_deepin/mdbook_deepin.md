@@ -370,6 +370,13 @@ mytheme
 
 [Theme - mdBook Documentation](https://rust-lang.github.io/mdBook/format/theme/index.html?highlight=theme#theme)
 
+## 关于markdown table
+~~~admonish tip title="mdbook原生不支持table"
+可以添加preprocessor：mdbook-extended-markdown
+
+- [mdbook-extended-markdown-table - crates.io: Rust Package Registry](https://crates.io/crates/mdbook-extended-markdown-table)
+~~~
+
 # mdbook插件推荐
 
 ## 自动检查
