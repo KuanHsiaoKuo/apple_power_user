@@ -248,6 +248,7 @@
 <li><a href="#%E5%85%B3%E4%BA%8Ebook">关于book</a></li>
 <li><a href="#%E5%85%B3%E4%BA%8Emdbook-serve-panit-%E5%A4%B1%E8%B4%A5">关于mdbook serve panit-失败</a></li>
 <li><a href="#%E5%85%B3%E4%BA%8E%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9theme">关于主题修改(theme)</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8Emarkdown-table">关于markdown table</a></li>
 </ul>
 </li>
 <li><a href="#mdbook%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90">mdbook插件推荐</a>
@@ -344,7 +345,7 @@
 </li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Sep 22 13:00:29 UTC 2022 -->
+<!-- Added by: runner, at: Sat Sep 24 09:14:04 UTC 2022 -->
 <!--te-->
 <h2 id="使用要点"><a class="header" href="#使用要点">使用要点</a></h2>
 <h3 id="基本结构"><a class="header" href="#基本结构">基本结构</a></h3>
@@ -612,6 +613,19 @@ mytheme
 <li>只有指定文件名才会被用来渲染网页</li>
 </ol>
 <p><a href="https://rust-lang.github.io/mdBook/format/theme/index.html?highlight=theme#theme">Theme - mdBook Documentation</a></p>
+<h2 id="关于markdown-table"><a class="header" href="#关于markdown-table">关于markdown table</a></h2>
+<div id="admonition-mdbook原生不支持table" class="admonition tip">
+<div class="admonition-title">
+<p>mdbook原生不支持table</p>
+<p><a class="admonition-anchor-link" href="#admonition-mdbook原生不支持table"></a></p>
+</div>
+<div>
+<p>可以添加preprocessor：mdbook-extended-markdown</p>
+<ul>
+<li><a href="https://crates.io/crates/mdbook-extended-markdown-table">mdbook-extended-markdown-table - crates.io: Rust Package Registry</a></li>
+</ul>
+</div>
+</div>
 <h1 id="mdbook插件推荐"><a class="header" href="#mdbook插件推荐">mdbook插件推荐</a></h1>
 <h2 id="自动检查"><a class="header" href="#自动检查">自动检查</a></h2>
 <h3 id="mdbook-link-check"><a class="header" href="#mdbook-link-check">MDBook Link-Check</a></h3>
@@ -721,21 +735,21 @@ with the goal of eventually contributing back upstream.</p>
 <li>Shell</li>
 </ol>
 <pre><code class="language-console">total 88K
-drwxr-xr-x 4 runner docker 4.0K Sep 22 13:00 .
-drwxr-xr-x 4 runner docker 4.0K Sep 22 13:00 ..
--rw-r--r-- 1 runner docker 1.5K Sep 22 13:00 IINA_deepin.md
-drwxr-xr-x 2 runner docker 4.0K Sep 22 13:00 OmniGroups
--rw-r--r-- 1 runner docker 1.6K Sep 22 13:00 alfred.md
--rw-r--r-- 1 runner docker   23 Sep 22 13:00 app_deepin.md
--rw-r--r-- 1 runner docker  698 Sep 22 13:00 drafts.md
--rw-r--r-- 1 runner docker  859 Sep 22 13:00 goodnotes.md
--rw-r--r-- 1 runner docker 1.5K Sep 22 13:00 jetbrains_ide.md
-drwxr-xr-x 2 runner docker 4.0K Sep 22 13:00 karabiner
--rw-r--r-- 1 runner docker 2.7K Sep 22 13:00 marginnote_deepin.md
--rw-r--r-- 1 runner docker  30K Sep 22 13:00 mdbook_deepin.md
--rw-r--r-- 1 runner docker  238 Sep 22 13:00 picGo_deepin.md
--rw-r--r-- 1 runner docker 2.8K Sep 22 13:00 tampermonkey.md
--rw-r--r-- 1 runner docker  677 Sep 22 13:00 typora_deepin.md
+drwxr-xr-x 4 runner docker 4.0K Sep 24 09:14 .
+drwxr-xr-x 4 runner docker 4.0K Sep 24 09:14 ..
+-rw-r--r-- 1 runner docker 1.5K Sep 24 09:13 IINA_deepin.md
+drwxr-xr-x 2 runner docker 4.0K Sep 24 09:14 OmniGroups
+-rw-r--r-- 1 runner docker 1.6K Sep 24 09:14 alfred.md
+-rw-r--r-- 1 runner docker   23 Sep 24 09:13 app_deepin.md
+-rw-r--r-- 1 runner docker  698 Sep 24 09:14 drafts.md
+-rw-r--r-- 1 runner docker  859 Sep 24 09:14 goodnotes.md
+-rw-r--r-- 1 runner docker 1.5K Sep 24 09:14 jetbrains_ide.md
+drwxr-xr-x 2 runner docker 4.0K Sep 24 09:14 karabiner
+-rw-r--r-- 1 runner docker 2.7K Sep 24 09:14 marginnote_deepin.md
+-rw-r--r-- 1 runner docker  30K Sep 24 09:14 mdbook_deepin.md
+-rw-r--r-- 1 runner docker  238 Sep 24 09:13 picGo_deepin.md
+-rw-r--r-- 1 runner docker 2.8K Sep 24 09:14 tampermonkey.md
+-rw-r--r-- 1 runner docker  677 Sep 24 09:13 typora_deepin.md
 </code></pre>
 <ol start="2">
 <li>Bash Script</li>
