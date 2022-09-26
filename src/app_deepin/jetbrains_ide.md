@@ -1,16 +1,16 @@
 # Jetbrains系列IDE共性与特性介绍
 
 <!--ts-->
-
 * [Jetbrains系列IDE共性与特性介绍](#jetbrains系列ide共性与特性介绍)
-    * [共性](#共性)
-        * [快捷键整理](#快捷键整理)
-            * [python配置虚拟环境](#python配置虚拟环境)
-        * [Tab方式打开项目](#tab方式打开项目)
-        * [配置代理](#配置代理)
+   * [共性](#共性)
+      * [快捷键整理](#快捷键整理)
+         * [python配置虚拟环境](#python配置虚拟环境)
+      * [Tab方式打开项目](#tab方式打开项目)
+      * [配置代理](#配置代理)
+      * [指定项目root](#指定项目root)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sat Sep 24 14:06:13 UTC 2022 -->
+<!-- Added by: runner, at: Mon Sep 26 03:06:27 UTC 2022 -->
 
 <!--te-->
 
