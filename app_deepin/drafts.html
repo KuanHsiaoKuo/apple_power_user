@@ -199,15 +199,61 @@
 <ul>
 <li><a href="#drafts%E6%B7%B1%E5%BA%A6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">drafts深度使用技巧</a>
 <ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7">使用技巧</a>
+<ul>
+<li><a href="#%E5%8F%8C%E5%90%91%E9%93%BE%E6%8E%A5">双向链接</a>
+<ul>
+<li><a href="#%E7%9B%B8%E5%85%B3actions">相关actions</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A8%A1%E7%89%88%E5%86%99%E4%BD%9C">模版写作</a></li>
+<li><a href="#%E8%8D%89%E7%A8%BF%E5%BC%95%E7%94%A8">草稿引用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8A%A8%E4%BD%9C%E6%94%B6%E9%9B%86">动作收集</a>
+<ul>
 <li><a href="#md%E6%A0%BC%E5%BC%8F%E5%8C%96">md格式化</a></li>
 <li><a href="#preview">preview</a></li>
 </ul>
 </li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89-%E9%9C%80%E8%A6%81pro%E7%89%88%E6%9C%AC">自定义: 需要pro版本</a>
+<ul>
+<li><a href="#%E6%89%93%E5%BC%80%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F">打开开发者模式</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE">自定义语法高亮</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Sep 26 03:06:27 UTC 2022 -->
+<!-- Added by: runner, at: Sat Oct  1 15:32:55 UTC 2022 -->
 <!--te-->
-<h2 id="md格式化"><a class="header" href="#md格式化">md格式化</a></h2>
+<h2 id="使用技巧"><a class="header" href="#使用技巧">使用技巧</a></h2>
+<h3 id="双向链接"><a class="header" href="#双向链接">双向链接</a></h3>
+<ul>
+<li><a href="https://docs.getdrafts.com/docs/drafts/cross-linking#wiki-style-cross-linking-drafts">Wiki-Style Cross-Linking Drafts</a></li>
+</ul>
+<p><img src="https://docs.getdrafts.com/images/docs/drafts/linking-drafts.png" alt="" /></p>
+<p>官方的叫法是 Wiki-Style Cross-Linking，这是一个很不错的功能，方便同一个主题的草稿下跳转，既可以链接文章，也可以进行关键词搜索。先在草稿中输入 [[，然后 Drafts
+就会自动跳出待选的草稿标题，点击即可创建跳转链接。</p>
+<h4 id="相关actions"><a class="header" href="#相关actions">相关actions</a></h4>
+<ul>
+<li><a href="https://actions.getdrafts.com/a/2AO">New Linked Draft | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1xD">run shortcuts from wikilink | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1rv">Add Backlinks | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1ru">Check Wikilinks | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1qj">Insert Wikilink | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1mh">New draft from selection/line with back-link | Drafts Directory</a></li>
+<li><a href="https://actions.getdrafts.com/a/1fY">Search for Back Links | Drafts Directory</a></li>
+</ul>
+<h3 id="模版写作"><a class="header" href="#模版写作">模版写作</a></h3>
+<h3 id="草稿引用"><a class="header" href="#草稿引用">草稿引用</a></h3>
+<p>在版本 29 更新中，更新了一个名为「Insert Full Text of Other Drafts」的功能，翻译过来就是草稿全文的引用。它的语法和标准 Markdown 有些类似，在 Markdown 中引用是一个 &gt;，而 Drafts
+中如果需要对某个草稿进行全文引用，可以输入 &lt;&lt; 进行选择引用。输入两个 &lt; 之后，Drafts 弹出了草稿选择列表，选择需要引用插入的草稿，Drafts
+就会直接将这段文本复制进来，而不用手动切会草稿列表，复制之后再粘贴过来。如果在 Drafts 中之前有很多零碎的想法，在需要将这些想法汇总，写成具有条理性的文章，那么这个功能就可以帮用户快速引用其他草稿。</p>
+<h2 id="动作收集"><a class="header" href="#动作收集">动作收集</a></h2>
+<h3 id="md格式化"><a class="header" href="#md格式化">md格式化</a></h3>
 <blockquote>
 <p>只支持macOS</p>
 </blockquote>
@@ -217,9 +263,22 @@
 </ul>
 <pre><code class="language-shell">npm install -g prettier 
 </code></pre>
-<h2 id="preview"><a class="header" href="#preview">preview</a></h2>
+<h3 id="preview"><a class="header" href="#preview">preview</a></h3>
 <ul>
 <li><a href="https://actions.getdrafts.com/a/2Bz">Preview - Adjustable | Drafts Directory</a></li>
+</ul>
+<h2 id="自定义-需要pro版本"><a class="header" href="#自定义-需要pro版本">自定义: 需要pro版本</a></h2>
+<h3 id="打开开发者模式"><a class="header" href="#打开开发者模式">打开开发者模式</a></h3>
+<ul>
+<li><a href="https://docs.getdrafts.com/extending/development#what-is-developer-mode-pro">什么是开发者模式</a></li>
+</ul>
+<h3 id="自定义语法高亮"><a class="header" href="#自定义语法高亮">自定义语法高亮</a></h3>
+<ul>
+<li><a href="https://docs.getdrafts.com/docs/extending/development/syntax-format">Creating Syntaxes - Drafts User Guide</a></li>
+</ul>
+<h3 id="自定义主题"><a class="header" href="#自定义主题">自定义主题</a></h3>
+<ul>
+<li><a href="https://docs.getdrafts.com/docs/extending/development/theme-format">Creating Themes - Drafts User Guide</a></li>
 </ul>
 <footer id="open-on-gh">Found a bug? <a href="https://github.com/KuanHsiaoKuo/osx_basic_configuration.git/edit/main/src/app_deepin/drafts.md">Edit this page on GitHub.</a></footer>
 <script>var PresentationMode;!function(t){t[t.Slides=0]="Slides",t[t.Web=1]="Web"}(PresentationMode=PresentationMode||{});var PresentationModeHider=function(){function t(){var e=this;this.queryKey="presentation_mode",this.webClass="article-content",this.preClass="presentation-only",this.mode=this.getMode(),this.setMode(),this.assignClassesViaComments(),this.tryMoveToFirstChapter(),window.addEventListener("keyup",function(t){t.altKey&&("p"!=t.key&&"P"!=t.key&&"KeyP"!=t.code||e.toggle())})}return t.prototype.tryMoveToFirstChapter=function(){if(this.mode===PresentationMode.Slides&&(""===location.pathname||"/"===location.pathname)){var t=document.querySelector(".sidebar .chapter");if(!t)return console.error("unable to find chapter 1 link for paging. Please manually click into chapter 1");t.firstChild.firstChild.click()}},t.prototype.assignClassesViaComments=function(){for(var t,e=document.createNodeIterator(document.body,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_COMMENT,null),n=this.mode===PresentationMode.Web?"not-presenting":"presenting",o=null;t=e.nextNode();)if(8===t.nodeType){var i=t.nodeValue.trim();"web-only"===i?o=this.webClass:"slides-only"===i?o=this.preClass:i.startsWith("notes")?this.processNotes(i):"web-only-end"!==i&&"slides-only-end"!==i&&"notes-end"!==i||(o=null)}else 1===t.nodeType&&null!==o&&t.classList.add(o,n)},t.prototype.getMode=function(){var e=localStorage.getItem(this.queryKey);if(null===e)return PresentationMode.Web;try{var t=parseInt(e);return 1<t||t<0?(console.error("presentation_mode was out of range",t),PresentationMode.Web):t}catch(t){return console.error("presentation_mode present in localStorage but value is not an integer",e,t),PresentationMode.Web}},t.prototype.setMode=function(){localStorage.setItem(this.queryKey,this.mode.toString())},t.prototype.updatePage=function(){this.updateElements(document.querySelectorAll(".presentation-only")),this.updateElements(document.querySelectorAll(".article-content"))},t.prototype.updateElements=function(t){for(var e=0;e<t.length;e++){var n=t[e];this.mode===PresentationMode.Slides?n.classList.replace("not-presenting","presenting"):n.classList.replace("presenting","not-presenting")}},t.prototype.toggle=function(){switch(this.mode){case PresentationMode.Slides:this.mode=PresentationMode.Web;break;case PresentationMode.Web:this.mode=PresentationMode.Slides}this.setMode(),this.updatePage()},t.prototype.processNotes=function(t){var e=t.indexOf("\n");console.log("%c"+t.substr(e+1),"font-size: 14pt;")},t}(),___presentationModeHider=new PresentationModeHider,END_KEY="end-date",MIN_KEY="total-minutes",PresentationTimer=function(){function t(){var e=this;window.addEventListener("keyup",function(t){if(t.altKey)switch(t.key){case"g":return e.start();case"ArrowUp":return e.updateEnd(1);case"ArrowDown":return e.updateEnd(-1);case"m":return e.promptForMinutes();case".":return e.stop()}});var t=this.getEnd();t&&(this.end=new Date(t),this.tick())}return t.prototype.tick=function(){this.timeout=null;var t=new Date;if(t>=this.end)return this.update(0,0);var e=+this.end-+t,n=Math.floor(e/1e3),o=Math.floor(n/60);this.update(o,n-60*o),this.timeout=window.setTimeout(this.tick.bind(this),1e3)},t.prototype.getEnd=function(){var t=localStorage.getItem(END_KEY);this.minutes=+localStorage.getItem(MIN_KEY)||45;var e=new Date;if(e.setHours(e.getHours()+1),t&&!(+t<+e))return t;localStorage.removeItem(END_KEY)},t.prototype.start=function(){var t=new Date,e=t.getMinutes();t.setMinutes(e+this.minutes),this.end=t,this.saveGlobals(),this.tick()},t.prototype.stop=function(){this.timeout&&clearTimeout(this.timeout),localStorage.removeItem(END_KEY);var t=document.getElementById("counter");t&&t.parentElement.removeChild(t)},t.prototype.update=function(t,e){var n=this.getCounterEl();n.innerHTML=this.formatTime(t,e),n.style.borderColor=this.getColor(60*t+e)},t.prototype.formatTime=function(t,e){if(60<=t){var n=Math.floor(t/60);return t-=60*n,n+":"+this.twoDigits(t)+":"+this.twoDigits(e)}return this.twoDigits(t)+":"+this.twoDigits(e)},t.prototype.twoDigits=function(t){return("0"+t).substr(-2)},t.prototype.getCounterEl=function(){var t=document.getElementById("counter");return t||((t=document.createElement("div")).style.position="fixed",t.style.left="calc(100% - 10px)",t.style.top="55px",t.style.width="70px",t.style.textAlign="right",t.style.border="2px solid var(--quote-border)",t.style.color="var(--fg)",t.style.borderRadius="5px",t.style.paddingLeft="5px",t.style.backgroundColor="var(--bg)",t.setAttribute("id","counter"),t.addEventListener("mouseenter",function(t){t.currentTarget.style.left="calc(100% - 70px)",t.currentTarget.style.textAlign="left"}),t.addEventListener("mouseleave",function(t){t.currentTarget.style.left="calc(100% - 10px)",t.currentTarget.style.textAlign="right"}),document.body.appendChild(t),t)},t.prototype.getColor=function(t){var e=t/(60*this.minutes),n=1-e,o=0,i=0;return n<.5?o=i=255*n*2:i=2*e*(o=255),"rgb("+o.toFixed(2)+", "+i.toFixed(2)+", 0)"},t.prototype.updateEnd=function(t){this.timeout&&(clearTimeout(this.timeout),this.timeout=null);var e=this.end.getMinutes();e+=t,this.minutes+=t,this.end.setMinutes(e),this.saveGlobals(),this.tick()},t.prototype.saveGlobals=function(){localStorage.setItem(END_KEY,this.end.toString()),this.saveMinutes()},t.prototype.saveMinutes=function(){localStorage.setItem(MIN_KEY,this.minutes.toString())},t.prototype.promptForMinutes=function(){if(!document.getElementById("minutes-prompt")){var t=document.createElement("div");t.setAttribute("id","minutes-prompt"),t.style.position="absolute",t.style.left="calc(50% - 50px)",t.style.top="calc(50% - 25px)",t.style.display="flex",t.style.flexFlow="column",t.style.justifyContent="space-between",t.style.alignItems="center",t.style.boxShadow="1px 1px 1px 1px var(--quote-border)",t.style.backgroundColor="var(--bg)",t.style.padding="5px";var e=document.createElement("label");e.setAttribute("for","minutes-inputs"),e.appendChild(document.createTextNode("Presentation Length"));var n=document.createElement("input");n.setAttribute("type","number"),n.setAttribute("min","1"),n.setAttribute("name","minutes-input"),n.setAttribute("id","minutes-input"),n.value=(this.minutes||0).toString();var o=document.createElement("button");o.setAttribute("type","button"),o.addEventListener("click",this.promptOk.bind(this)),o.appendChild(document.createTextNode("OK")),t.appendChild(e),t.appendChild(n),t.appendChild(o),document.body.appendChild(t),n.focus()}},t.prototype.promptOk=function(){var t=document.getElementById("minutes-input");if(t){var e=+t.value;this.end?this.updateEnd(e-this.minutes):(this.minutes=e,this.saveMinutes())}t.parentElement.parentElement.removeChild(t.parentElement)},t}(),___presentationTimer=new PresentationTimer;</script>
