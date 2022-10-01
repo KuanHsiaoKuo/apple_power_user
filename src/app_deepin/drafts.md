@@ -1,13 +1,22 @@
 # drafts深度使用技巧
 
 <!--ts-->
-
 * [drafts深度使用技巧](#drafts深度使用技巧)
-    * [md格式化](#md格式化)
-    * [preview](#preview)
+   * [使用技巧](#使用技巧)
+      * [双向链接](#双向链接)
+         * [相关actions](#相关actions)
+      * [模版写作](#模版写作)
+      * [草稿引用](#草稿引用)
+   * [动作收集](#动作收集)
+      * [md格式化](#md格式化)
+      * [preview](#preview)
+   * [自定义: 需要pro版本](#自定义-需要pro版本)
+      * [打开开发者模式](#打开开发者模式)
+      * [自定义语法高亮](#自定义语法高亮)
+      * [自定义主题](#自定义主题)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Mon Sep 26 03:06:27 UTC 2022 -->
+<!-- Added by: runner, at: Sat Oct  1 15:32:55 UTC 2022 -->
 
 <!--te-->
 
