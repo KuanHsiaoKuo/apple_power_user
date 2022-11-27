@@ -1,13 +1,10 @@
 # karabiner配置说明
 
 <!--ts-->
-* [karabiner配置说明](#karabiner配置说明)
-   * [路径](#路径)
-   * [karabiner.json](#karabinerjson)
-   * [参考资源](#参考资源)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:16 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:33 UTC 2022 -->
 
 <!--te-->
 

@@ -4,30 +4,10 @@
 
 
 <!--ts-->
-* [Chrome插件整理](#chrome插件整理)
-   * [工具篇](#工具篇)
-      * [Smart TOC: 自动生成右侧TOC](#smart-toc-自动生成右侧toc)
-      * [Vimium](#vimium)
-      * [Omni](#omni)
-      * [flowy: 一款用js写的自动化工具](#flowy-一款用js写的自动化工具)
-      * [screenity: 网页录像/截图/标注工具](#screenity-网页录像截图标注工具)
-      * [animockup: 制作网页动图](#animockup-制作网页动图)
-   * [学习篇](#学习篇)
-      * [Relingo：在阅读中掌握单词](#relingo在阅读中掌握单词)
-      * [Hypothesis: 网页&amp;PDF标注工具](#hypothesis-网页pdf标注工具)
-   * [资料篇](#资料篇)
-      * [SingleFile: 全文保存工具](#singlefile-全文保存工具)
-      * [Inoreader RSS Reader Extension](#inoreader-rss-reader-extension)
-      * [Zoetero Connector](#zoetero-connector)
-   * [开发篇](#开发篇)
-      * [Rust 搜索插件](#rust-搜索插件)
-      * [Rust宏可视化插件](#rust宏可视化插件)
-      * [Octotree: github侧边栏](#octotree-github侧边栏)
-      * [github 三维展示](#github-三维展示)
-         * [Jiffy Reader: Bionic Reader](#jiffy-reader-bionic-reader)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:19 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:38 UTC 2022 -->
 
 <!--te-->
 

@@ -1,24 +1,10 @@
 # MacOS X 专用命令行梳理
 
 <!--ts-->
-* [MacOS X 专用命令行梳理](#macos-x-专用命令行梳理)
-   * [open](#open)
-   * [pbcopy and pbpaste](#pbcopy-and-pbpaste)
-   * [mdfind](#mdfind)
-   * [screencapture](#screencapture)
-   * [launchctl](#launchctl)
-   * [say](#say)
-   * [diskutil](#diskutil)
-   * [brew](#brew)
-   * [列表清单](#列表清单)
-      * [快捷操作](#快捷操作)
-      * [基础操作](#基础操作)
-      * [list](#list)
-      * [文件磁盘](#文件磁盘)
-   * [参考资源](#参考资源)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:18 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:36 UTC 2022 -->
 
 <!--te-->
 

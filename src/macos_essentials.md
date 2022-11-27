@@ -1,35 +1,10 @@
 # OSX迁移基础配置
 
 <!--ts-->
-* [OSX迁移基础配置](#osx迁移基础配置)
-* [一、资料打包迁移:](#一资料打包迁移)
-   * [代码：github/gitee/gitlab](#代码githubgiteegitlab)
-   * [app自存储：](#app自存储)
-      * [wechat: 备份数据之后再恢复](#wechat-备份数据之后再恢复)
-      * [DT:](#dt)
-         * [本地数据库配置](#本地数据库配置)
-         * [PDF Expert: 作为dt中pdf的外置阅读器](#pdf-expert-作为dt中pdf的外置阅读器)
-         * [typora：作为dt中md的外置阅读器](#typora作为dt中md的外置阅读器)
-         * [自动化脚本](#自动化脚本)
-         * [SingleFile: 可以将网页保存为单独文件后存入dt](#singlefile-可以将网页保存为单独文件后存入dt)
-      * [Eagle: 本地数据库配置](#eagle-本地数据库配置)
-      * [xmind/mindnode/drafts/marginnote：iCloud](#xmindmindnodedraftsmarginnoteicloud)
-   * [分类打包：](#分类打包)
-* [二、系统重装](#二系统重装)
-* [三、系统设置](#三系统设置)
-* [四、最优安装顺序](#四最优安装顺序)
-   * [1. ClashX](#1-clashx)
-   * [2. iTerm2](#2-iterm2)
-   * [3. github/gitlab ssh key](#3-githubgitlab-ssh-key)
-   * [4. vim config](#4-vim-config)
-   * [5. karabiner](#5-karabiner)
-   * [6. manico/moom/popclip/Alfred](#6-manicomoompopclipalfred)
-   * [7. iTerm2 Around:](#7-iterm2-around)
-   * [8. DT/Marginnote3/xmind](#8-dtmarginnote3xmind)
-   * [9. Jetbrains Sync](#9-jetbrains-sync)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:19 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:38 UTC 2022 -->
 
 <!--te-->
 

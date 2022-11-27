@@ -1,12 +1,10 @@
 # goodnotes小技巧
 
 <!--ts-->
-* [goodnotes小技巧](#goodnotes小技巧)
-   * [添加超链接](#添加超链接)
-   * [在浏览器随时查看](#在浏览器随时查看)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:15 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:32 UTC 2022 -->
 
 <!--te-->
 

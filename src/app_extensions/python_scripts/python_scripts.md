@@ -1,19 +1,10 @@
 # python处理脚本收集
 
 <!--ts-->
-* [python处理脚本收集](#python处理脚本收集)
-   * [将字幕文件转为json](#将字幕文件转为json)
-      * [spaCy自然语言处理](#spacy自然语言处理)
-      * [源码](#源码)
-   * [ffmpeg合并视频文件](#ffmpeg合并视频文件)
-   * [IINA与ffmpeg给视频添加章节](#iina与ffmpeg给视频添加章节)
-      * [ffmpeg](#ffmpeg)
-      * [mpv screenshot template](#mpv-screenshot-template)
-      * [思路](#思路)
-      * [源码](#源码-1)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:18 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:37 UTC 2022 -->
 
 <!--te-->
 

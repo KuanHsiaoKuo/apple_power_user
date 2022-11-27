@@ -1,13 +1,10 @@
 # Anki使用维护技巧
 
 <!--ts-->
-* [Anki使用维护技巧](#anki使用维护技巧)
-   * [牌组设计理念](#牌组设计理念)
-      * [以主题为真实牌组](#以主题为真实牌组)
-      * [使用标签分为子组](#使用标签分为子组)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:17 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:35 UTC 2022 -->
 
 <!--te-->
 

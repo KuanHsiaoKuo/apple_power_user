@@ -1,14 +1,10 @@
 # 油猴深度使用
 
 <!--ts-->
-* [油猴深度使用](#油猴深度使用)
-   * [精选脚本](#精选脚本)
-      * [Userscript-plus: 显示当前网站可用油猴脚本](#userscript-plus-显示当前网站可用油猴脚本)
-   * [集锦](#集锦)
-   * [参考资源](#参考资源)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:16 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:34 UTC 2022 -->
 
 <!--te-->
 

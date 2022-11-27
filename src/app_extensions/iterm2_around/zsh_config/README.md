@@ -1,18 +1,10 @@
 # zsh_config使用
 
 <!--ts-->
-* [zsh_config使用](#zsh_config使用)
-   * [首先安装zsh](#首先安装zsh)
-   * [接着安装oh my zsh](#接着安装oh-my-zsh)
-   * [zsh-config](#zsh-config)
-      * [zsh-syntax-hightlighting插件安装](#zsh-syntax-hightlighting插件安装)
-      * [zsh-autosuggestion](#zsh-autosuggestion)
-      * [安装powerlevel10k主题](#安装powerlevel10k主题)
-      * [nerd fonts使用](#nerd-fonts使用)
-      * [一些终端小工具的安装，非zsh/oh-my-zsh](#一些终端小工具的安装非zshoh-my-zsh)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:18 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:37 UTC 2022 -->
 
 <!--te-->
 

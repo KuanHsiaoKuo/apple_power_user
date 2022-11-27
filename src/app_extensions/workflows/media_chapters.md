@@ -1,16 +1,10 @@
 # 多媒体资料章节化工作流
 
 <!--ts-->
-* [多媒体资料章节化工作流](#多媒体资料章节化工作流)
-   * [缘起](#缘起)
-   * [Step1. 相关视频/音频合并-ffmpeg](#step1-相关视频音频合并-ffmpeg)
-   * [Step2. 使用IINA结合MPV的指令自动化创建章节](#step2-使用iina结合mpv的指令自动化创建章节)
-   * [Step3. 将章节文本压入到多媒体文件-ffmpeg](#step3-将章节文本压入到多媒体文件-ffmpeg)
-   * [Step4. 播放工具选择](#step4-播放工具选择)
-   * [关于音频文件处理](#关于音频文件处理)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:19 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:38 UTC 2022 -->
 
 <!--te-->
 

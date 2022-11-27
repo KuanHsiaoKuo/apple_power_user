@@ -1,11 +1,10 @@
 # 使用GoKu简化KM的配置
 
 <!--ts-->
-* [使用GoKu简化KM的配置](#使用goku简化km的配置)
-   * [参考资源](#参考资源)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:15 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:33 UTC 2022 -->
 
 <!--te-->
 

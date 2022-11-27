@@ -1,22 +1,10 @@
 # iTerm2配置
 
 <!--ts-->
-* [iTerm2配置](#iterm2配置)
-   * [下载并设置环境变量](#下载并设置环境变量)
-   * [iterm2同步配置方式](#iterm2同步配置方式)
-   * [同步范围](#同步范围)
-* [环境套件资料](#环境套件资料)
-   * [A. Homebrew Around](#a-homebrew-around)
-   * [B. tmux配置：tmux_config.md](#b-tmux配置tmux_configmd)
-   * [C. zsh/Oh my zsh + plugins](#c-zshoh-my-zsh--plugins)
-   * [D. vim配置](#d-vim配置)
-      * [修改vimrc](#修改vimrc)
-      * [进入vim，会自动激活~/.vimrc](#进入vim会自动激活vimrc)
-      * [关于colorscheme设置为solarized(分支已经包含，可以不用下载)](#关于colorscheme设置为solarized分支已经包含可以不用下载)
-      * [主要分为这几个部分：](#主要分为这几个部分)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:18 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:36 UTC 2022 -->
 
 <!--te-->
 

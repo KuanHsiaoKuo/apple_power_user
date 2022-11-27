@@ -1,12 +1,10 @@
 # 关于marginnote使用自定义模版
 > 由于marginnote自带的模版太简单，所以找了一下如何使用自定义模版导出
 <!--ts-->
-* [关于marginnote使用自定义模版](#关于marginnote使用自定义模版)
-   * [一、自定义模版导出：不可行](#一自定义模版导出不可行)
-   * [二、自动在anki中修改模版](#二自动在anki中修改模版)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:19 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:37 UTC 2022 -->
 
 <!--te-->
 ## 一、自定义模版导出：不可行

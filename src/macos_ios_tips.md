@@ -1,9 +1,9 @@
 # osx系统设置
 <!--ts-->
-* [osx系统设置](#osx系统设置)
+
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Thu Oct 27 08:42:19 UTC 2022 -->
+<!-- Added by: runner, at: Sun Nov 27 15:02:39 UTC 2022 -->
 
 <!--te-->
 1. 指定后缀名打开方式
