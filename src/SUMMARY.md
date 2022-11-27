@@ -14,6 +14,7 @@
             - [自定义Anki卡片md模版](app_extensions/Anki_around/custom_md_template.md)
         - [Drafts](app_deepin/drafts.md)
             - [toc脚本](app_extensions/drafts/table_of_contont.js)
+        - [Sigil Epub Editor](app_deepin/sigil_epub_editor.md)
         - [Karabiner Maestro](app_deepin/karabiner/karabiner.md)
             - [分层设置](app_deepin/karabiner/layers_config.md)
         - [Goodnotes](app_deepin/goodnotes.md)
