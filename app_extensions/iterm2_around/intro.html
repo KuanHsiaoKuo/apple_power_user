@@ -197,7 +197,7 @@
 <h1 id="iterm2配置"><a class="header" href="#iterm2配置">iTerm2配置</a></h1>
 <!--ts-->
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Nov 27 15:02:36 UTC 2022 -->
+<!-- Added by: runner, at: Fri Dec 19 17:17:53 UTC 2025 -->
 <!--te-->
 <h2 id="status-bar-很多内容值得管理"><a class="header" href="#status-bar-很多内容值得管理"><a href="https://iterm2.com/documentation-status-bar.html">Status Bar</a>: 很多内容，值得管理</a></h2>
 <h2 id="下载并设置环境变量"><a class="header" href="#下载并设置环境变量">下载并设置环境变量</a></h2>
@@ -245,55 +245,27 @@ export ZC=$APU/src/app_extensions/iterm2_around/zsh_config
 <p>但是自动输入密码的文件在~/.ssh/logins，需要另外同步</p>
 </blockquote>
 <h1 id="环境套件资料"><a class="header" href="#环境套件资料">环境套件资料</a></h1>
-<pre><svg xmlns="http://www.w3.org/2000/svg" width="440" height="336">
-  <style>
-    line, path, circle, rect, polygon{stroke:black;stroke-width:2;stroke-opacity:1;fill-opacity:1;stroke-linecap:round;stroke-linejoin:miter;}text{font-family:Iosevka Fixed, monospace;font-size:14px;}rect.backdrop{stroke:none;fill:white;}.broken{stroke-dasharray:8;}.filled{fill:black;}.bg_filled{fill:white;}.nofill{fill:white;}.end_marked_arrow{marker-end:url(#arrow);}.start_marked_arrow{marker-start:url(#arrow);}.end_marked_diamond{marker-end:url(#diamond);}.start_marked_diamond{marker-start:url(#diamond);}.end_marked_circle{marker-end:url(#circle);}.start_marked_circle{marker-start:url(#circle);}.end_marked_open_circle{marker-end:url(#open_circle);}.start_marked_open_circle{marker-start:url(#open_circle);}.end_marked_big_open_circle{marker-end:url(#big_open_circle);}.start_marked_big_open_circle{marker-start:url(#big_open_circle);}
-    <!--separator-->
-    
-  </style>
-  <defs>
-    <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <polygon points="0,0 0,4 4,2 0,0"></polygon>
-    </marker>
-    <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
-    </marker>
-    <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <circle cx="4" cy="4" r="2" class="filled"></circle>
-    </marker>
-    <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
-    </marker>
-    <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
-    </marker>
-  </defs>
-  <rect class="backdrop" x="0" y="0" width="440" height="336"></rect>
-  <rect x="4" y="24" width="424" height="288" class="solid nofill" rx="0"></rect>
-  <rect x="60" y="72" width="288" height="208" class="solid nofill" rx="0"></rect>
-  <rect x="124" y="120" width="176" height="112" class="solid nofill" rx="0"></rect>
-  <rect x="164" y="168" width="88" height="32" class="solid nofill" rx="0"></rect>
-  <text x="202" y="188" >vim</text>
-  <text x="162" y="156" >zsh</text>
-  <line x1="192" y1="144" x2="184" y2="160" class="solid"></line>
-  <text x="194" y="156" >Oh</text>
-  <text x="218" y="156" >my</text>
-  <text x="242" y="156" >zsh</text>
-  <text x="114" y="108" >Tmux</text>
-  <text x="154" y="108" >+</text>
-  <text x="170" y="108" >config</text>
-  <text x="226" y="108" >+</text>
-  <text x="242" y="108" >plugins</text>
-  <text x="138" y="60" >HomeBrew</text>
-  <text x="210" y="60" >+</text>
-  <text x="226" y="60" >Plugins</text>
-  <text x="2" y="12" >iTerm2</text>
-  <text x="58" y="12" >+</text>
-  <text x="74" y="12" >config</text>
-  <text x="130" y="12" >+</text>
-  <text x="146" y="12" >plugins</text>
-</svg>
-</pre>
+<pre><code class="language-kroki-svgbob">iTerm2 + config + plugins
++----------------------------------------------------+
+|                                                    |
+|                HomeBrew + Plugins                  |
+|      +-----------------------------------+         |
+|      |                                   |         |
+|      |      Tmux + config + plugins      |         |
+|      |       +---------------------+     |         |
+|      |       |                     |     |         |
+|      |       |    zsh/Oh my zsh    |     |         |
+|      |       |    +----------+     |     |         |
+|      |       |    |    vim   |     |     |         |
+|      |       |    +----------+     |     |         |
+|      |       |                     |     |         |
+|      |       +---------------------+     |         |
+|      |                                   |         |
+|      |                                   |         |
+|      +-----------------------------------+         |
+|                                                    |
++----------------------------------------------------+
+</code></pre>
 <h2 id="a-homebrew-around"><a class="header" href="#a-homebrew-around">A. Homebrew Around</a></h2>
 <ol>
 <li><a href="https://brew.sh/">The Missing Package Manager for macOS (or Linux) — Homebrew</a></li>
@@ -367,7 +339,7 @@ echo 'source $VC/tab_key' &gt;&gt; ~/.vimrc
 <p><a class="admonition-anchor-link" href="#admonition-source-filename-与-sh-filename-及filename执行脚本的区别在那里呢"></a></p>
 </div>
 <div>
-<p>1.当shell脚本具有可执行权限时，用sh filename与./filename执行脚本是没有区别得。./filename是因为当前目录没有在PATH中，所有“.“是用来表示当前目录的。</p>
+<p>1.当shell脚本具有可执行权限时，用sh filename与./filename执行脚本是没有区别得。./filename是因为当前目录没有在PATH中，所有&quot;.&quot;是用来表示当前目录的。</p>
 <p>2.sh filename 重新建立一个子shell，在子shell中执行脚本里面的语句，该子shell继承父shell的环境变量，但子shell新建的、改变的变量不会被带回父shell，除非使用export。</p>
 <p>3.source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。（当这个shell关闭后就失效了）</p>
 </div>

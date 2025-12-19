@@ -200,20 +200,20 @@ String.prototype.format = function () {
 if (arguments.length == 0) return this;
 var param = arguments[0];
 var s = this;
-if (typeof (param) == ‘object’) {
+if (typeof (param) == 'object') {
 for (var key in param)
-s = s.replace(new RegExp(“\{” + key + “\}”, “g”), param[key]);
+s = s.replace(new RegExp(&quot;\{&quot; + key + &quot;\}&quot;, &quot;g&quot;), param[key]);
 return s;
 } else {
 for (var i = 0; i &lt; arguments.length; i++)
-s = s.replace(new RegExp(“\{” + i + “\}”, “g”), arguments[i]);
+s = s.replace(new RegExp(&quot;\{&quot; + i + &quot;\}&quot;, &quot;g&quot;), arguments[i]);
 return s;
 }
 }
 const addToc = content =&gt; {
-const headerLines = content.split(‘\n’).filter(line =&gt; /^#+\s+<sup class="footnote-reference"><a href="#\s">1</a></sup>+/.test(line))
+const headerLines = content.split('\n').filter(line =&gt; /^#+\s+<sup class="footnote-reference"><a href="#\s">1</a></sup>+/.test(line))
 if (headerLines.length == 0) {
-alert(“No Markdown headers (e.g. ## Header) found”)
+alert(&quot;No Markdown headers (e.g. ## Header) found&quot;)
 return
 }
 const tocLines = []
@@ -223,20 +223,20 @@ const splitMatch = headerLines[i].match(/^(#+)\s+(.<em>)$/)
 // - 2 assumes the first header is h2
 const level = splitMatch[1].length - 2
 if (level &lt; 0) {
-alert(“h1 headers (#) are not compatible with Table of Contents. Please use h2 headers (##) and below.”)
+alert(&quot;h1 headers (#) are not compatible with Table of Contents. Please use h2 headers (##) and below.&quot;)
 return null
 }
 if (level &gt; lastLevel + 1) {
-alert(“Cannot make a table of contents if header levels are skipped, e.g. ## followed by ####”)
+alert(&quot;Cannot make a table of contents if header levels are skipped, e.g. ## followed by ####&quot;)
 return
 }
 lastLevel = level
 const headerText = splitMatch[2]
-// tocLines.push(“    “.repeat(level) + “</em> “ + headerText + “test_toc”)
-tocLines.push(“{0}* <a href="#%7B2%7D">{1}</a>”.format(“    “.repeat(level), headerText, headerText))
+// tocLines.push(&quot;    &quot;.repeat(level) + &quot;</em> &quot; + headerText + &quot;test_toc&quot;)
+tocLines.push(&quot;{0}* <a href="#%7B2%7D">{1}</a>&quot;.format(&quot;    &quot;.repeat(level), headerText, headerText))
 }
-if (tocLines[0][0] != “*”) {
-alert(“The first header must be a h2 (##)”)
+if (tocLines[0][0] != &quot;*&quot;) {
+alert(&quot;The first header must be a h2 (##)&quot;)
 return
 }</p>
 <pre><code>// 为了和github上传自动添加toc的脚本一致
@@ -261,7 +261,7 @@ const endPos = endMatch.index
 return `${content.substring(0, startPos)}\n${tocLines.join(&quot;\n&quot;)}\n${content.substring(endPos)}`
 </code></pre>
 <p>}</p>
-<p>const newBody = addToc(draft.lines.slice(1).join(“\n”))
+<p>const newBody = addToc(draft.lines.slice(1).join(&quot;\n&quot;))
 if (newBody != null) {
 draft.content = <code>${draft.lines[0]}\n${newBody}</code>
 draft.update()
