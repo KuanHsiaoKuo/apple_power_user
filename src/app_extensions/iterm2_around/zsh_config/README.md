@@ -29,20 +29,46 @@ chmod u+x oh_my_zsh_install.sh
 
 ## zsh-config
 
-我的zsh配置
+我的zsh配置，采用两层配置结构：
 
-> 在指定目录git clone之后，在~/.zshrc添加一行
+- `~/.zshrc`：本地文件（不纳入 Git），只配置路径环境变量
+- `custom_config` + `alias_collections`：通用配置（Git 管理）
+
+### 配置步骤
+
+1. 在指定目录 git clone 本仓库
+
+2. 创建 `~/.zshrc` 文件，内容如下（根据实际路径修改 `ZSH_CONFIG`）：
 
 ```shell
-source ~/Developer/spare_projects/apple_power_user/src/app_extensions/iterm2_around/zsh_config/custom_config¬
+# ============================================
+# 本地环境变量配置（根据实际路径修改）
+# ============================================
+export ZSH="$HOME/.oh-my-zsh"
+
+# 指向 Git 仓库中 zsh_config 的路径
+export ZSH_CONFIG="$HOME/Projects/apple_power_user/src/app_extensions/iterm2_around/zsh_config"
+
+# ============================================
+# 加载 Git 管理的通用配置
+# ============================================
+source "$ZSH_CONFIG/custom_config"
 ```
 
-> 然后执行指令：
+3. 执行指令生效：
 
-```
+```shell
 # 可能需要切换到zsh
 source ~/.zshrc
 ```
+
+### 文件说明
+
+| 文件 | 管理方式 | 职责 |
+|------|----------|------|
+| `~/.zshrc` | 本地（不入 Git） | 定义 `ZSH`、`ZSH_CONFIG` 路径，然后 source 通用配置 |
+| `custom_config` | Git | 主题、插件、通用设置 |
+| `alias_collections` | Git | 所有 alias 定义 |
 
 ### zsh-syntax-hightlighting插件安装
 
