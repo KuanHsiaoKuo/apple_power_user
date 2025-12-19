@@ -3,7 +3,7 @@
 
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: runner, at: Sun Nov 27 15:02:36 UTC 2022 -->
+<!-- Added by: runner, at: Fri Dec 19 17:17:53 UTC 2025 -->
 
 <!--te-->
 As any *Markdown* user knows or should know, beside the [*CommonMark*](https://commonmark.org/) initiative and [specification](spec.commonmark.org), there’s nothing really “standard” with *Markdown* syntax, only “vastly agreed upon” practices. As long as you don’t stray too far away from this “common practice”, you shouldn’t run into issues. This document, unless explicitly mentioned, strives to stay within these limits.
